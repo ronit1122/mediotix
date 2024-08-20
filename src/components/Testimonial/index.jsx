@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
 import {gauravKumar} from './../../assets/home/export.js';
 import Image from "next/image";
 import { IoChevronForward } from "react-icons/io5";
@@ -62,13 +61,11 @@ const Carousel = ({ props }) => {
 
 
       <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] h-[100%] max-h-[350px] p-[30px]  text-[#263238]"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
-        <Fade bottom distance="20px" delay={300}>
+     
           <p className="text-[clamp(13px, 3vw, 16px)] pt-8 font-semibold">
             {carouselInfo[imgIndex].statement}
           </p>
-        </Fade>
 
-        <Fade bottom distance="20px" delay={300}>
           <div className="flex gap-5 items-center" >
             <Image
               className="w-16 h-16 object-cover aspect-square rounded-full"
@@ -81,18 +78,15 @@ const Carousel = ({ props }) => {
             <p className="text-base">{carouselInfo[imgIndex].profile}</p>
             </div>
           </div>
-        </Fade>
       </div>
 
 
       <div className="flex flex-col bg-white items-start justify-between min-h-[350px] h-[100%] max-h-[350px] p-[30px]  text-[#263238]"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
-        <Fade bottom distance="20px" delay={300}>
+       
           <p className="text-[clamp(13px, 3vw, 16px)] pt-8 font-semibold">
             {carouselInfo[imgIndex].statement}
           </p>
-        </Fade>
 
-        <Fade bottom distance="20px" delay={300}>
           <div className="flex gap-6 items-center">
             <Image
               className="w-16 h-16 object-cover aspect-square rounded-full"
@@ -105,7 +99,6 @@ const Carousel = ({ props }) => {
               <p className="text-base">{carouselInfo[imgIndex].profile}</p>
             </div>
           </div>
-        </Fade>
       </div>
       </div>
 

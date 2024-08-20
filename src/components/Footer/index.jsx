@@ -3,7 +3,6 @@ import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from 'next/link';
-import Fade from "react-reveal/Fade";
 import Image from 'next/image';
 import {googlePartner, microsoftPartner, googleMapsPartner, shopifyPartner} from './../../assets/footer/export.js';
 import {mediotixLogoWhite} from './../../assets/companyLogo/export.js';
