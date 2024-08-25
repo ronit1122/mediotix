@@ -29,7 +29,7 @@ function Index() {
     <div style={{background: "linear-gradient(270deg, #FF9363 0%, #FF7D78 100%)", fontSize: "clamp(12px, 3vw, 15px)" }} className="font-montserrat text-white flex flex-col ">
 
       <div className="flex flex-col w-[95%] md:w-[85%] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between pt-12 mt-10 mb-16 pb-8 gap-8">
+        <div className="flex flex-col md:flex-row justify-between pt-12 mt-10 mb-16 pb-8 gap-4">
           <div className="flex flex-col gap-4 w-full md:w-[30%]">
             <Link
               href="/"
@@ -77,51 +77,46 @@ function Index() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-evenly md:w-[30%] gap-4 text-center md:text-left">
-            <div className="flex flex-col gap-8 w-full md:w-full">
-              <Link
-                // onClick={() => _DataLayerFooterClicks("/about-us")}
-                href="/about-us"
-                aria-label="about-us"
-              >
-                <p className="">Solution</p>
+            <div className="flex flex-col gap-2 w-[70%] ">
+              <h3 className="mb-[10px] font-semibold">Solution</h3>
+              <Link href="/about-us" aria-label="about-us">
+                <p className="">Advanced Funnel Optimization</p>
               </Link>
               <Link href="/blog" aria-label="blog">
-                <p className="]">Resources</p>
+                <p className="">Conversion Rate Optimization</p>
               </Link>
-              <Link
-                // onClick={() => _DataLayerFooterClicks("/contact-us")}
-                href="/contact-us"
-                aria-label="contact-us"
-              >
-                <p className="">Mx360</p>
+              <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">Google Maps Platform</p>
+              </Link>
+              <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">Media Analytics</p>
+              </Link>
+              <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">App Analytics</p>
               </Link>
             </div>
 
-            <div className="flex flex-col gap-8 w-full md:w-full">
-              <Link
-                // onClick={() => _DataLayerFooterClicks("/integrations")}
-                href="/integrations"
-                aria-label="integrations"
-              >
+            <div className="flex flex-col gap-2 w-[30%]">
+            <h3 className="mb-[10px] font-semibold">Quick Links</h3>
+            <Link href="/contact-us" aria-label="contact-us" >
                 <p className="">About Us</p>
-              </Link>
-              <Link
-                // onClick={() => _DataLayerFooterClicks("/features")}
-                href="/features"
-                aria-label="features"
-              >
-                <p className="">Contact Us</p>
-              </Link>
-              <Link
-                // onClick={() => _DataLayerFooterClicks("/pricing")}
-                href="/pricing"
-                aria-label="pricing"
-              >
-                <p className="">Lorem Ipsum</p>
-              </Link>
+            </Link>
+            <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">Mx360</p>
+            </Link>
+            <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">Case Studies</p>
+            </Link>
+            <Link href="/contact-us" aria-label="contact-us" >
+                <p className="">Privacy Policy</p>
+            </Link>
+            <Link href="/contact-us" aria-label="contact-us" >
+                <p className="block">Term and Conditions</p>
+            </Link>
+          
             </div>
 
-            <div className="flex flex-col gap-8 w-full md:w-full">
+            {/* <div className="flex flex-col gap-8 w-full md:w-full">
               <Link
                 // onClick={() => _DataLayerFooterClicks("/case-studies")}
                 href="/case-studies"
@@ -143,27 +138,27 @@ function Index() {
               >
                 <p className="">Privacy Policy</p>
               </Link>
-            </div>
+            </div> */}
           </div>
 
-          <div className="flex flex-wrap justify-center md:justify-end items-start gap-4 w-full md:w-[40%]">
+          <div className="flex flex-wrap justify-center md:justify-end items-start gap-0 w-full md:w-[40%]">
             <Image
-              className="w-[clamp(60px,6vw,90px)]"
+              className="w-[clamp(60px,7.5vw,120px)]"
               src={googlePartner}
               alt="Google Partner"
             />
               <Image
-                className="w-[clamp(60px,6vw,90px)]"
+                className="w-[clamp(60px,7.5vw,120px)]"
                 src={microsoftPartner}
                 alt="Microsoft Partner"
               />
             <Image
-              className="w-[clamp(60px,6vw,90px)]"
+              className="w-[clamp(60px,7.5vw,120px)]"
               src={googleMapsPartner}
               alt="google maps Partner"
             />
             <Image
-              className="w-[clamp(60px,6vw,90px)]"
+              className="w-[clamp(60px,7.5vw,120px)]"
               src={shopifyPartner}
               alt="shopify Partner"
             />

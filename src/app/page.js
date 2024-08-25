@@ -96,8 +96,9 @@ export default function Home() {
       {/* section 1 */}
       <div className="flex items-center justify-center text-center h-[700px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
-          <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%", opacity: "0.5"}}/>
+          <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
+         <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
          <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-[50%] justify-between text-white">
           <div className="flex flex-col items-center gap-3">
            <div className="border-b-2 w-fit">
@@ -105,6 +106,7 @@ export default function Home() {
            </div>
            <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2>
            <h1 className="text-5xl font-black">Intelligent Marketing & AI Power Analytics</h1>
+           <p className=" mt-[30px] font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
            <button className="naviteButton">Lets Talk</button>
          </div>
@@ -116,32 +118,32 @@ export default function Home() {
          {/* section 1 */}
          <div className="w-[85%] flex justify-evenly mx-auto gap-[2%] translate-y-[-80px]"  style={{zIndex: "10"}}>
 
-          <div className="flex flex-col gap-2 justify-evenly w-[100%] items-center max-h-[250px] min-h-[200px] bg-white border-[2px] border-[#FF7D78] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px] h-[200px] max-w-[250px] min-w-[200px] w-[250px] bg-white border-[2px] border-[#FF7D78] p-[20px] rounded-[8px]">
             <Image src={pvr} alt="pvr"/>
-            <p className="text-[20px] font-black">20%</p>
-            <p className="text-[20px] font-medium">Increase Leads</p>
-            <div className="w-fit p-[5px] rounded-[5px] bg-[#FFCB05] text-[12px] ">conversion rate optimization</div>
+            <p className="text-[20px] font-black">35%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] rounded-[5px] bg-[#FFCB05] text-[12px] ">Increase ticket bookings  </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly w-[100%] items-center max-h-[250px] min-h-[200px] bg-white  border-[2px] border-[#004185] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px] h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#004185] p-[20px] rounded-[8px]">
             <Image src={maxHealth} alt="maxHealth"/>
-            <p className="text-[20px] font-black">20%</p>
-            <p className="text-[20px] font-medium">Increase Leads</p>
-            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#004185] text-[12px] ">conversion rate optimization</div>
+            <p className="text-[20px] font-black">150%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#004185] text-[12px] ">Increase in Doctor consultancy</div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly w-[100%] items-center max-h-[250px] min-h-[200px] bg-white  border-[2px] border-[#000000] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]   max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#000000] p-[20px] rounded-[8px]">
             <Image src={diceAcademy} alt="diceAcademy"/>
-            <p className="text-[20px] font-black">20%</p>
-            <p className="text-[20px] font-medium">Increase Leads</p>
-            <div className="w-fit p-[5px] text-white rounded-[5px] bg-[#000000] text-[12px] ">conversion rate optimization</div>
+            <p className="text-[20px] font-black">500%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] text-white rounded-[5px] bg-[#000000] text-[12px] ">Boost in Admissions leads </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly w-[100%] items-center max-h-[250px] min-h-[200px] bg-white  border-[2px] border-[#FA5306] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#FA5306] p-[20px] rounded-[8px]">
             <Image src={gsk} alt="gsk"/>
-            <p className="text-[20px] font-black">20%</p>
-            <p className="text-[20px] font-medium">Increase Leads</p>
-            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#FA5306] text-[12px] ">conversion rate optimization</div>
+            <p className="text-[20px] font-black">120%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#FA5306] text-[12px] ">Return on Investment</div>
           </div>
 
          </div>
@@ -164,7 +166,7 @@ export default function Home() {
 
       {/* section 3 */}
       <div className="bg-white">
-      <div className="flex flex-col w-[85%] gap-[4%] py-[7%] mx-auto">
+        <div className="flex flex-col w-[85%] gap-[4%] py-[7%] mx-auto">
           <h2 style={{fontSize: "clamp(18px, 3vw, 30px)"}} className="font-bold text-center text-[#FF7D78]" >What we do</h2>
           
           <div className="w-full flex gap-[4%] mt-8">
@@ -175,7 +177,7 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Solution</p>
               </div>
               {whatWeDoSolutionsData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px] hover:bg-[#ffdbdb] rounded-[5px] cursor-pointer">
+              <div className="mt-3 px-[15px] py-[5px] hover:bg-[#ffdbdb] hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
@@ -191,7 +193,7 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
               {whatWeDoMarketingData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px]  hover:bg-[#ffdbdb]  rounded-[5px]  cursor-pointer">
+              <div className="mt-3 px-[15px] py-[5px]  hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
@@ -207,7 +209,7 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Architecture</p>
               </div>
               {whatWeDoArchitectureData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px]   hover:bg-[#ffdbdb] rounded-[5px]  cursor-pointer">
+              <div className="mt-3 px-[15px] py-[5px]   hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px]  cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
@@ -219,25 +221,51 @@ export default function Home() {
             
           </div>
 
-      </div>
-      </div>
-      {/* section 4 */}
-      <div className="bg-white ">
-          <CaseStudies />
+        </div>
       </div>
 
+       {/* section 4  */}
+      <div className="bg-[#EAF6FF] ">
+      <Image src={mx360Logo} className="mx-auto pt-[50px]" style={{objectFit: "contain"}}/>
+      <div className=" flex w-[85%] gap-[4%] py-[6%] mx-auto bg-[#EAF6FF]">
+          <div className="w-[50%]">
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-black text-[#FF7D78] mb-4">"Digital Growth Pilot"</h2>
+            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>We are a full-service digital marketing agency providing unparalleled experience in the digital realm. With a combined legacy of 15 years in performance marketing, analytics, and conversion funnels, our motive is to help businesses reach new heights of success through effective media management and insightful reporting services. Our extensive portfolio and blend of creative minds in the team speak volumes about our dedication to drive growth for our esteemed clients.</p>
+            <br />
+            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p>
+          </div>
+          <div className="w-[50%]">
+            <Image src={sectionThreeImage} style={{objectFit: "contain"}} />
+          </div>
+      </div>
+      </div>
+
+
       {/* section 5 */}
+      <div className="bg-white relative">
+        <div style={{zIndex: "0"}} className=" absolute bottom-0 left-0  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[8rem]"></div>
+        <div  style={{zIndex: "0"}} className=" absolute bottom-[30%] right-[-5%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[8rem]"></div>
+         <div style={{zIndex: "10"}}>
+          <CaseStudies />
+         </div>
+      </div>
+
+      {/* section 6 */}
       <div className="bg-[#EAF6FF] ">
           <Testimonial />
       </div>
 
-      {/* section 6 */}
-      <div className="bg-white ">
+      {/* section 7 */}
+      <div className="bg-white relative ">
+      <div style={{zIndex: "0"}} className=" absolute top-[5%] left-0  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[8rem]"></div>
+        <div style={{zIndex: "10"}} >
           <PublicReactions />
+        </div>
       </div>
 
-      {/* section 6 */}
-      <div className="bg-white ">
+      {/* section 8 */}
+      <div className="bg-white relative">
           <GetInTouchForm />
       </div>
 

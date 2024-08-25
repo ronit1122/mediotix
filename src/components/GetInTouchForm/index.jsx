@@ -6,14 +6,13 @@ import {publicReactionsOne, publicReactionsTwo, publicReactionsThree, publicReac
 export default function Home() {
 
   return (
-    <div className=" flex w-[85%] gap-[4%] py-[4%] mx-auto">
-        <div class="grid grid-cols-2 gap-4 w-full">
+    <div className=" flex w-[85%] gap-[4%] py-[4%] mx-auto relative">
+        <div style={{zIndex: "10"}}  class="grid grid-cols-2 gap-4 w-full">
            <div className="">
               <h2 className=" text-[#FF7D78] text-[40px] font-bold">
                   Get in Touch
               </h2>
-              <p className="text-[#FF7D78]">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt ut labore et simply free text dolore magna aliqua lonm andhn 
-              personal touch</p>
+              <p className="text-[#FF7D78]">5X Growth Guaranteed with Mediotix's Proven Strategy</p>
            </div>
            <div className="rounded-[8px] flex flex-col gap-4 p-[30px]" style={{background: "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)"}}>
              <div>
@@ -31,6 +30,7 @@ export default function Home() {
              <button className="naviteButtonInverted">Get in touch</button>
            </div>
          </div>
+        <div style={{zIndex: "0"}} className=" absolute top-[-15%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
     </div>
   );
 }

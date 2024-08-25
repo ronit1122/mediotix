@@ -16,24 +16,13 @@
 
     const tabsList = [
       {
-        name: "Max Healthcare Case Study",
-        tagline:  "Know how 85% Increment happened in Conversion Rate within 3 months",
-        imgAltText: "icon of Max ",
-        bgAltText: "image of statoscope",
-        src: pvr,
+        name: "Cashkaro",
+        src: cashKaro,
+        tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
+        imgAltText: "icon of Dice",
+        bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
+        bg: testimonialOne,
         id: 1,
-        bg: testimonialOne,
-        route: "/case-studies",
-        width: "100px",
-      },
-      {
-        name: "GSK Case Study",
-        tagline: "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
-        imgAltText: "icon of Gsk",
-        bgAltText: "image of microscope plate",
-        src: watcho,
-        bg: testimonialOne,
-        id: 2,
         route: "/case-studies",
         width: "100px",
       },
@@ -45,8 +34,30 @@
         bgAltText: "A set of image of clapper board,Camera, reel, popcorn",
         bg: testimonialOne,
         route: "/case-studies",
-        id: 3,
+        id: 2,
         width: "80px",
+      },
+      {
+        name: "Max Healthcare Case Study",
+        tagline:  "Know how 85% Increment happened in Conversion Rate within 3 months",
+        imgAltText: "icon of Max ",
+        bgAltText: "image of statoscope",
+        src: pvr,
+        id: 3,
+        bg: testimonialOne,
+        route: "/case-studies",
+        width: "100px",
+      },
+      {
+        name: "GSK Case Study",
+        tagline: "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
+        imgAltText: "icon of Gsk",
+        bgAltText: "image of microscope plate",
+        src: watcho,
+        bg: testimonialOne,
+        id: 4,
+        route: "/case-studies",
+        width: "100px",
       },
       {
         name: "Qubo Case Study",
@@ -55,20 +66,9 @@
         imgAltText: "icon of Qubo",
         bgAltText: "image of Go Pro Camera ",
         bg: testimonialOne,
-        id: 4,
-        route: "/case-studies",
-        width: "120px",
-      },
-      {
-        name: "Dice Case Study",
-        src: cashKaro,
-        tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
-        imgAltText: "icon of Dice",
-        bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
-        bg: testimonialOne,
         id: 5,
         route: "/case-studies",
-        width: "100px",
+        width: "120px",
       },
     ];
   
@@ -81,17 +81,18 @@
           </h2>
         
         <div className="mt-[2rem] relative">
-          <div className="flex">
+          <div className="flex mb-[20px]">
             {tabsList.map((item) => (
               <button
-                className="w-full text-[14px] font-semibold cursor-pointer focus:outline-none active:bg-none"
+                className="w-full text-[14px] font-semibold cursor-pointer focus:outline-none active:bg-none justify-center"
+                style={{borderBottom: item?.id === currentTab ? "6px solid #FF9462" : "6px solid white"}}
                 key={uuidv4()}
                 aria-label={item?.name}
                 value={item}
                 onClick={() => setCurrentTab(item?.id)}
               >
                 <Image
-                  className="mx-[10px]"
+                  className="mx-auto"
                   width={item.width}
                   src={item.src}
                   alt={item?.imgAltText}
@@ -100,7 +101,7 @@
               </button>
             ))}
           </div>
-          <div className="mt-[5px] h-[3px] bg-[#FF9462] rounded-[1px]"></div>
+          {/* <div className="mt-[5px] h-[3px] bg-[#FF9462] rounded-[1px]"></div> */}
           <div>
             {tabsList?.map((item) => (
                item?.id === currentTab && <div key={uuidv4()}>
