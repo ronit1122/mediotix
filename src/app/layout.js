@@ -14,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
+        {/* <link
           href="https://db.onlinewebfonts.com/c/cefa2bca89ec27b6b9c51c215bce8ba2?family=Nexa-Regular"
           rel="stylesheet"
-        />
+        /> */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

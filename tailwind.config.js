@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nexa: ['Nexa-Regular', 'sans-serif'], // Define your custom font
+        nexa: ['Nexa', 'sans-serif'],// Define your custom font
       },
       clipPath: {
         'chamfered': 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',

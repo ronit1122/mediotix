@@ -8,5 +8,5 @@ import watcho from "./watcho.svg"
 import heroElectronix from "./heroElectronix.svg"
 import reliance from "./reliance.svg"
 import spinny from "./spinny.svg"
-
-export { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny}
+import digbiHealth from "./digbiHealth.png"
+export { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny, digbiHealth}

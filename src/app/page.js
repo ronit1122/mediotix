@@ -17,32 +17,32 @@ export default function Home() {
   const whatWeDoSolutionsData = [
     {
       title: "Measurement",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Use accurate measurement to unlock actionable insights and ensure that your business decisions are always based on data.",
       link: "/",
     },
     {
       title: "GA4",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Use Google Analytics 4 to track and analyze user behavior across your digital platforms for enhanced performance.",
       link: "/",
     },
     {
       title: "GTM360",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "streamlines tag management, resulting in seamless integration and efficient tracking of your marketing campaigns.",
       link: "/",
     },
     {
-      title: "Adobe Analytics",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      title: "Advanced Funnel Optimization",
+      desc: "Enhance your marketing funnel with data-driven insights and strategies to increase user journey efficiency and conversions at every step.",
       link: "/",
     },
     {
       title: "App Analytics",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Monitor and enhance your app’s performance with comprehensive analytics, driving user engagement and retention.",
       link: "/",
     },
     {
-      title: "E-commerce Analytics",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      title: "Conversion Rate Optimization",
+      desc: "Improve the percentage of visitors who complete desired actions on your website by analyzing user behaviour and making targeted changes.",
       link: "/",
     },
   ]
@@ -50,22 +50,22 @@ export default function Home() {
   const whatWeDoMarketingData = [
     {
       title: "Media Activation",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Maximize your media investments with strategic activation, ensuring your campaigns reach the right audience at the right time.",
       link: "/",
     },
     {
       title: "DV 360",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Utilize DV 360 for programmatic advertising, delivering targeted ads that boost conversions and ROI.",
       link: "/",
     },
     {
       title: "Affiliate Marketing",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Expand your reach and sales with effective affiliate marketing techniques compatible with your company's specific needs.",
       link: "/",
     },
     {
       title: "Paid Social",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Amplify your brand’s presence on social media with targeted paid campaigns that engage and convert.",
       link: "/",
     },
   ]
@@ -73,17 +73,17 @@ export default function Home() {
   const whatWeDoArchitectureData = [
     {
       title: "MX360",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Integrate, Automate and analyze with MX360, All-in-one data-driven marketing solution.",
       link: "/",
     },
     {
       title: "Google Map Platform",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Enhances your Hyperlocal-based services by delivering accurate and dependable mapping solutions.",
       link: "/",
     },
     {
       title: "Google Cloud Platform",
-      desc: "Ensuring higher returns on every marketing effort and resource leveraged.",
+      desc: "Scale your business with the robust and secure infrastructure of Google Cloud Platform and Big Query.",
       link: "/",
     },
   ]
@@ -99,16 +99,16 @@ export default function Home() {
           <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
          <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
-         <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-[50%] justify-between text-white">
-          <div className="flex flex-col items-center gap-3">
+         <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-[40%] mt-[5%]  text-white">
+          <div className="flex flex-col items-center gap-1">
            <div className="border-b-2 w-fit">
              <h3 className="font-medium ">Experience the Best Agency</h3>
            </div>
            <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2>
            <h1 className="text-5xl font-black">Intelligent Marketing & AI Power Analytics</h1>
-           <p className=" mt-[30px] font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
+           <p className=" mt-[10px] font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
-           <button className="naviteButton">Lets Talk</button>
+           <button className="naviteButton mt-[10px]">Lets Talk</button>
          </div>
       </div>
 
@@ -151,11 +151,11 @@ export default function Home() {
          {/* section 2 */}
          <div className=" flex w-[85%] gap-[4%] py-[7%] mx-auto">
           <div className="w-[50%]">
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2>
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-black text-[#FF7D78] mb-4">"Digital Growth Pilot"</h2>
-            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>We are a full-service digital marketing agency providing unparalleled experience in the digital realm. With a combined legacy of 15 years in performance marketing, analytics, and conversion funnels, our motive is to help businesses reach new heights of success through effective media management and insightful reporting services. Our extensive portfolio and blend of creative minds in the team speak volumes about our dedication to drive growth for our esteemed clients.</p>
+            {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[800] text-[#FF7D78] mb-4">Transform Data Insights into Business Success</h2>
+            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
             <br />
-            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p>
+            {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">
             <Image src={sectionTwoImage} style={{objectFit: "contain"}} />
@@ -167,7 +167,7 @@ export default function Home() {
       {/* section 3 */}
       <div className="bg-white">
         <div className="flex flex-col w-[85%] gap-[4%] py-[7%] mx-auto">
-          <h2 style={{fontSize: "clamp(18px, 3vw, 30px)"}} className="font-bold text-center text-[#FF7D78]" >What we do</h2>
+          <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What we do</h2>
           
           <div className="w-full flex gap-[4%] mt-8">
 
@@ -229,11 +229,11 @@ export default function Home() {
       <Image src={mx360Logo} className="mx-auto pt-[50px]" style={{objectFit: "contain"}}/>
       <div className=" flex w-[85%] gap-[4%] py-[6%] mx-auto bg-[#EAF6FF]">
           <div className="w-[50%]">
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2>
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-black text-[#FF7D78] mb-4">"Digital Growth Pilot"</h2>
-            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>We are a full-service digital marketing agency providing unparalleled experience in the digital realm. With a combined legacy of 15 years in performance marketing, analytics, and conversion funnels, our motive is to help businesses reach new heights of success through effective media management and insightful reporting services. Our extensive portfolio and blend of creative minds in the team speak volumes about our dedication to drive growth for our esteemed clients.</p>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[800] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[700] mb-6">with MX360, all-in-one data-driven marketing solution.</h2>
+            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
             <br />
-            <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p>
+            {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">
             <Image src={sectionThreeImage} style={{objectFit: "contain"}} />

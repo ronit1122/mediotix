@@ -1,10 +1,10 @@
 'use client'
 import React, {useState, useRef, useEffect} from "react"
-import { Box, Flex, Text, Link, Spacer } from "@chakra-ui/react";
-import {mediotixLogo} from './../../assets/companyLogo/export.js';
+import Link from 'next/link'
+import {mediotixLogo, mx360LogoWhite} from './../../assets/companyLogo/export.js';
 import Image from 'next/image';
 import {v4 as uuidv4} from "uuid";
-import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny} from './../../assets/clients/export.js';
+import { cashKaro, diceAcademy, finolex, gsk, maxHealth, digbiHealth, pvr, watcho, heroElectronix, reliance, spinny} from './../../assets/clients/export.js';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import {
   adobeAnalytics,
@@ -25,6 +25,7 @@ import {
   social,
   video
 } from './../../assets/navbar/export.js';
+import { digbiHealthBg } from "@/assets/caseStudies/export.js";
 export default function Navbar() {
   const [openNavbar, setOpenNavbar] = React.useState(false);
   const firstField = React.useRef();
@@ -38,6 +39,12 @@ export default function Navbar() {
     // if (timeoutRef.current) {
     //     clearTimeout(timeoutRef.current);
     // }
+
+
+    if(tab === "mx360" || tab === "contactUs") {
+      menuPanelRef.current.style.transform = "translateY(-800px)"
+      return;
+    }
      menuPanelRef.current.style.transform = "translateY(800px)"
      setHoveredTab(tab)
 
@@ -80,38 +87,55 @@ export default function Navbar() {
       hover: () => _handleTabsHover("aboutUs"),
     },
     {
-      name: "MX360",
-      takeTo: "/",
+      name: <Image  src={mx360LogoWhite} />,
+      takeTo: "https://mx360.io",
       hover: () => _handleTabsHover("mx360"),
     },
     {
       name: "Contact Us",
-      takeTo: "/",
+      takeTo: "/contactUs",
       hover: () => _handleTabsHover("contactUs"),
     },
   ];
 
   return (
-<div className=" h-[90px] w-full relative">
+<div className=" h-[70px] w-full relative">
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
     <div className="bg-white h-full w-[30%] flex items-center justify-center absolute" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
-     <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} alt="mediotix"/>
+     <Link href={"/"}>
+       <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} alt="mediotix"/>
+     </Link>
     </div>
 
     {/* Navigation Links */}
-    <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="flex items-center gap-16 w-full h-full justify-end px-[10%]">
-      {navbarLinksData?.map(item => (
-        <Link 
-         key={uuidv4()}
-         onMouseEnter={item.hover}
+    <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="flex items-center gap-12 w-full h-full justify-end px-[10%]">
+    {navbarLinksData?.map((item, index) => (
+    item?.name !== "Contact Us" ? 
+    <Link 
+        key={index}  // Consider using item.id if available
+        onMouseEnter={item.hover}
+        href={item?.takeTo}
+        className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
+        {item?.name}
+    </Link>
+    :
+    <Link 
+        key={index}  // Consider using item.id if available
+        href={item?.takeTo}
+        className="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-[10px] shadow-md group">
+        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#FF7F76] duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+        </span>
+        <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
+            Contact us
+        </span>
+        <span className="relative invisible">Button Text</span>
+    </Link>
+    ))}
 
-        //  onMouseLeave={() => handleMouseLeave()}
-        //  color={ location.pathname === item.takeTo ? "#ff7400" : "#263238" }
-         href={item?.takeTo} className={`${item?.name === "Contact Us" ? 'text-[#FF9363]' : 'text-white'} ${item?.name === "Contact Us" ? 'bg-white' : 'bg-gradient-to-b from-[#EA875B] to-[#FF7F76]'} font-semibold  h-fit p-[10px] rounded-[5px] flex items-center`}>
-           {item?.name}
-        </Link>
-      ))}
       {/* <Link href="#" className="text-white h-full flex items-center font-semibold">
         Resources
       </Link>
@@ -126,7 +150,7 @@ export default function Navbar() {
       </Link> */}
     </div>
   </div>
-  <div ref={menuPanelRef} onMouseLeave={() => handleMouseLeave()} className=" flex justify-start min-h-[600px] bg-red-500 w-full absolute top-[-800px] transition-all duration-700 left-0" style={{zIndex: 480, background: "linear-gradient(180deg, #FF9363 0%, #FF7D78 100%)" }}>
+  <div ref={menuPanelRef} onMouseLeave={() => handleMouseLeave()} className=" flex justify-start min-h-[500px] bg-red-500 w-full absolute top-[-800px] transition-all duration-700 left-0" style={{zIndex: 480, background: "linear-gradient(180deg, #FF9363 0%, #FF7D78 100%)" }}>
      <div className="w-[100%] mt-[150px] mx-auto">
         {hoveredTab === "solution" && <SolutionsMenuData />}
         {hoveredTab === "resources" && <ResourcesMenuData />}
@@ -269,19 +293,19 @@ const ResourcesMenuData = () => {
   const menuItems = {
     caseStudy: [
       {
-        icon: "",
+        icon: <Image src={pvr} className="object-contain" />,
         desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
       },
       {
-        icon: "",
+        icon: <Image src={maxHealth} className="object-contain" />,
         desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care."
       },
       {
-        icon: "",
+        icon: <Image src={digbiHealth} className="object-contain" />,
         desc: "Digbi Health : Digbi Health's seamless GA4 transition enhanced conversion funnel tracking, empowering data-driven decisions and ROI precision."
       },
       {
-        icon: "",
+        icon: <Image src={gsk} className="object-contain" />,
         desc: "gsk: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK."
       }
        
@@ -309,15 +333,19 @@ const ResourcesMenuData = () => {
   return (
     <div className=" w-[80%] mx-auto  relative ">
       <div className="flex justify-between">
-        <div className="h-[200px] w-[200px] flex flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
+        <div className="h-[200px] w-[300px] flex flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
          <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("caseStudy")}>Case study</button>
          <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("blogs")}>Blogs</button>
         </div>
-        <div className="p-[30px]  w-full grid grid-cols-2 gap-4">
+        <div className="p-[30px] pt-[0]  w-full grid grid-cols-2 gap-4">
         {menuItems?.[selectedMenu]?.map(item => (
             <div className="text-white flex gap-2">
-              <div className="min-h-[30px] min-w-[50px] bg-white"></div>
+              <div className="bg-white min-w-[100px] w-[100px] h-[70px] rounded-[5px] p-[10px] flex justify-center">
+                  {item?.icon}
+              </div>
+              <div>
               <p>{item?.desc}</p>
+              </div>
             </div>
         ))}
         </div>

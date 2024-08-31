@@ -1,6 +1,6 @@
 "use client"
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -30,7 +30,7 @@ function Index() {
 
       <div className="flex flex-col w-[95%] md:w-[85%] mx-auto">
         <div className="flex flex-col md:flex-row justify-between pt-12 mt-10 mb-16 pb-8 gap-4">
-          <div className="flex flex-col gap-4 w-full md:w-[30%]">
+          <div className="flex flex-col gap-4 w-full md:w-[25%]">
             <Link
               href="/"
               aria-label="home"
@@ -39,45 +39,46 @@ function Index() {
               <Image src={mediotixLogoWhite} alt="MX360 Logo" />
             </Link>
             <p className="mb-2">
-               A marketing automation tool brought into existence by Mediotix, with a combined legacy of 15 years into performance marketing and analytics.
+            We are a leading MarTech agency with a global presence, dedicated to helping businesses worldwide.
             </p>
             <div className="flex flex-col items-center md:items-start">
               <div className="flex gap-5">
                 <a
                 //   onClick={() => _DataLayerMediaIconsClicks("Linked In")}
-                  href="#"
+                  href="https://www.linkedin.com/company/14723077/admin/dashboard/"
                   aria-label="linkedin"
                 >
                   <FaLinkedin className="text-white text-xl" />
                 </a>
                 <a
                 //   onClick={() => _DataLayerMediaIconsClicks("Instagram")}
-                  href="#"
+                  href="https://www.instagram.com/mediotix?igsh=MTJubDJhaTdiZTlheg=="
                   aria-label="instagram"
                 >
                   <FaInstagram className="text-white text-xl" />
                 </a>
-                <a
-                //   onClick={() => _DataLayerMediaIconsClicks("Twitter")}
-                  href="#"
-                  aria-label="twitter"
-                >
-                  <FaXTwitter className="text-white text-xl" />
-                </a>
+               
                 <a
                 //   onClick={() => _DataLayerMediaIconsClicks("Facebook")}
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61555917506821"
                   aria-label="facebook"
                 >
                   <FaFacebookF className="text-white text-xl" />
+                </a>
+                <a
+                //   onClick={() => _DataLayerMediaIconsClicks("Twitter")}
+                  href="https://www.youtube.com/@mediotixindia2476"
+                  aria-label="twitter"
+                >
+                  <FaYoutube className="text-white text-xl" />
                 </a>
             
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-evenly md:w-[30%] gap-4 text-center md:text-left">
-            <div className="flex flex-col gap-2 w-[70%] ">
+          <div className="flex flex-col md:flex-row justify-evenly md:w-[35%] gap-4 text-center md:text-left">
+            <div className="flex flex-col gap-2 w-[60%] ">
               <h3 className="mb-[10px] font-semibold">Solution</h3>
               <Link href="/about-us" aria-label="about-us">
                 <p className="">Advanced Funnel Optimization</p>
@@ -96,10 +97,10 @@ function Index() {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-2 w-[30%]">
+            <div className="flex flex-col gap-2 w-[40%]">
             <h3 className="mb-[10px] font-semibold">Quick Links</h3>
             <Link href="/contact-us" aria-label="contact-us" >
-                <p className="">About Us</p>
+                <p className="">Contact Us</p>
             </Link>
             <Link href="/contact-us" aria-label="contact-us" >
                 <p className="">Mx360</p>
