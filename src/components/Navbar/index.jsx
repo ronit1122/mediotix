@@ -234,7 +234,7 @@ const SolutionsMenuData = () => {
           icon: <Image src={googleCloudPlatform} alt="google analytics" />
         },
         {
-          name: "Power BI & Look out and studio (JCP)",
+          name: "Power BI & Local studio",
           icon: <Image src={powerBi} alt="google analytics" />
         },
       ]

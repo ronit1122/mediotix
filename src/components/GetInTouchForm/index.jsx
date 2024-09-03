@@ -13,7 +13,8 @@ export default function Home() {
                   Get in Touch
               </h2>
               <p >Please feel free to connect with us for your quick enquiry
-              For additional enquiries or support, kindly drop us an email at info@mediotix.com.</p>
+                <br />
+              For additional enquiries or support, kindly drop us an email at <br /> info@mediotix.com.</p>
            </div>
            <div className="rounded-[8px] flex flex-col gap-4 p-[30px]" style={{background: "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)"}}>
              <div>

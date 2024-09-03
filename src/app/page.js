@@ -152,9 +152,10 @@ export default function Home() {
          <div className=" flex w-[85%] gap-[4%] py-[3%] mx-auto">
           <div className="w-[50%]">
             {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[800] text-[#FF7D78] mb-4">Transform Data Insights into Business Success</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] text-[#FF7D78] ">Transform Data Insights</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[40px]">into Business Success</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
-            <button className="gradientButton mt-[20px]">Know More</button>
+            <button className="gradientButton mt-[50px]">Know More</button>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">
@@ -177,13 +178,16 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Solution</p>
               </div>
               <div className="flex flex-col py-[30px]">
-              {whatWeDoSolutionsData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px] hover:bg-[#ffdbdb] hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
+              {whatWeDoSolutionsData?.map((item, index) => (
+              <div className="flex flex-col">
+              <div className=" px-[15px] py-[15px] hover:bg-[#ffdbdb]  cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
+              </div>
+              {whatWeDoSolutionsData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
               </div>
               ))}
               </div>
@@ -195,13 +199,16 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
               <div className="flex flex-col py-[30px]">
-              {whatWeDoMarketingData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px]  hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
+              {whatWeDoMarketingData?.map((item, index) => (
+              <div className="flex flex-col">
+              <div className=" px-[15px] py-[15px]  hover:bg-[#ffdbdb] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
+              </div>
+              {whatWeDoMarketingData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
               </div>
               ))}
               </div>
@@ -213,13 +220,16 @@ export default function Home() {
                  <p className="font-bold text-[20px]">Architecture</p>
               </div>
               <div className="flex flex-col py-[30px]">
-              {whatWeDoArchitectureData?.map(item => (
-              <div className="mt-3 px-[15px] py-[5px]   hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px]  cursor-pointer">
+              {whatWeDoArchitectureData?.map((item, index) => (
+              <div className="flex flex-col">
+              <div className=" px-[15px] py-[15px]   hover:bg-[#ffdbdb] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
+              </div>
+              {whatWeDoArchitectureData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
               </div>
               ))}
               </div>
@@ -238,10 +248,10 @@ export default function Home() {
       </div>
       <div className=" flex w-[85%] gap-[4%] pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className="w-[50%]">
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[900] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[900] mb-6">with MX360, all-in-one data-driven marketing solution.</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}}  className="font-[900] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[30px]">all-in-one data-driven marketing solution.</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
-            <button className="gradientButton mt-[20px]">Lets Talk</button>
+            <button className="gradientButton mt-[50px]">Book a demo</button>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">

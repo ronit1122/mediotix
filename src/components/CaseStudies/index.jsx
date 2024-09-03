@@ -109,7 +109,7 @@
                item?.id === currentTab && <div key={uuidv4()}>
                 <div className="relative flex justify-center items-center h-[600px] rounded-b-[40px]">
                   <Image
-                    className="w-full h-full object-contain rounded-b-[40px]"
+                    className="w-full h-full object-cover rounded-[50px]"
                     src={item.bg}
                     alt={item?.bgAltText}
                     loading="lazy"
