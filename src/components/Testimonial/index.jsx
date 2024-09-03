@@ -55,37 +55,29 @@ const Carousel = ({ props }) => {
   }, [imgIndex, carouselInfo]);
 
   return (
-    <div className="w-[85%] mx-auto min-h-[30rem] pb-[12%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
+    <div className="w-[90%] mx-auto min-h-[30rem] pb-[10%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
       {/* <!--Carousel items--> */}
-      <div className="flex justify-between">
+      <div className= " ml-[5%] flex justify-between items-center">
         <h2 className="pt-[5rem] pb-[2rem] text-[#000000] text-[40px] font-[900]">
             Testimonials
        </h2>
-       <div className="flex items-center gap-2">
-        <button
+      
+      </div>
+
+
+
+      <div className="flex justify-between gap-12">
+      <div className="h-fit my-auto">
+      <button
           aria-label="previous"
           className="w-10 h-10 rounded-full flex justify-center items-center text-white bg-[#F1856E] bg-none"
           onClick={prev}
-        >
+          >
 
           <IoChevronBackOutline />
-        </button>
-        <div className="flex justify-center  items-center p-5 w-4"></div>
-        <button
-          aria-label="next"
-          className="w-10 h-10 rounded-full flex justify-center items-center text-white bg-[#F1856E] bg-none"
-          onClick={next}
-        >
-          <IoChevronForward />
-        </button>
+      </button>
       </div>
-      </div>
-
-
-
-      <div className="flex gap-[4%]">
-
-      <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] h-[100%] max-h-[350px] p-[30px]  text-[#263238]"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+      <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] rounded-[8px] w-[50%] h-[100%] max-h-[350px] p-[30px] border-[2px] border-[#c0c0c0] text-[#263238]"  style={{boxShadow: ""}}>
      
           <p className="text-[clamp(13px, 3vw, 16px)] pt-8 font-semibold">
             {carouselInfo[imgIndex - 1 < 0 ? 4 : imgIndex - 1].statement}
@@ -117,7 +109,7 @@ const Carousel = ({ props }) => {
           </div>
       </div>
 
-      <div className="flex flex-col bg-white items-start justify-between min-h-[350px] h-[100%] max-h-[350px] p-[30px]  text-[#263238]"  style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+      <div className="flex flex-col bg-white items-start justify-between min-h-[350px]  rounded-[8px] w-[50%] h-[100%] max-h-[350px] p-[30px] border-[2px] border-[#c0c0c0] text-[#263238]"  style={{boxShadow: ""}}>
        
           <p className="text-[clamp(13px, 3vw, 16px)] pt-8 font-semibold">
             {carouselInfo[imgIndex].statement}
@@ -160,6 +152,16 @@ const Carousel = ({ props }) => {
               <p className="text-base">{carouselInfo[imgIndex].profile}</p>
             </div>
           </div> */}
+      </div>
+
+      <div className="h-fit my-auto">
+      <button
+          aria-label="next"
+          className="w-10 h-10 rounded-full flex justify-center items-center text-white bg-[#F1856E] bg-none"
+          onClick={next}
+        >
+          <IoChevronForward />
+      </button>
       </div>
 
       </div>

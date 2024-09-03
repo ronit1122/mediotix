@@ -6,8 +6,8 @@ import {publicReactionsOne, publicReactionsTwo, publicReactionsThree, publicReac
 export default function Home() {
 
   return (
-    <div className=" flex flex-col w-[85%] gap-[4%] py-[7%] mx-auto">
-        <h2 className="pt-[3rem] pb-[2rem] text-[#000000] text-[40px] text-center mb-20 font-semibold">
+    <div className=" flex flex-col w-[85%] gap-[4%] pt-[7%] pb-[2%] mx-auto">
+        <h2 className="pt-[2rem] pb-[2rem] text-[#000000] text-[40px] text-center mb-5 font-semibold">
            Public Reations with Mediotix
         </h2>
         <div class="grid grid-cols-4 gap-4 w-full">

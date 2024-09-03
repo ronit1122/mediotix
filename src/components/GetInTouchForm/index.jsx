@@ -6,7 +6,7 @@ import {publicReactionsOne, publicReactionsTwo, publicReactionsThree, publicReac
 export default function Home() {
 
   return (
-    <div className=" flex w-[85%] gap-[4%] py-[4%] mx-auto relative">
+    <div className=" flex w-[85%] gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
         <div style={{zIndex: "10"}}  class="grid grid-cols-2 gap-4 w-full">
            <div className=" mt-12">
               <h2 className=" text-[#FF7D78] text-[40px] font-[900]">

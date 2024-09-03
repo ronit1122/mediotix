@@ -21,7 +21,7 @@ export default function ContactUs() {
       <Navbar />
 
       {/* section 1 */}
-      <div className="flex items-center justify-center text-center h-[700px] relative">
+      <div className="flex items-center justify-center text-center h-[500px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
           <Image src={HeadBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
@@ -41,7 +41,7 @@ export default function ContactUs() {
 
 
       {/* section 8 */}
-      <div className="bg-white relative flex flex-col gap-6 py-[50px]">
+      <div className="bg-white relative flex flex-col gap-6  pt-[100px]">
            <div className=" mx-auto text-center">
               <h2 className=" text-[#FF7D78] text-[40px] font-[900]">
                   Get in Touch
@@ -52,7 +52,7 @@ export default function ContactUs() {
 
       </div>
 
-      <div className="bg-white relative flex flex-col gap-6 py-[50px] pb-[40px]">
+      <div className="bg-white relative flex flex-col gap-6 py-[50px] pb-[60px]">
       <div style={{zIndex: "0"}} className=" absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
       {/* <div style={{zIndex: "0"}} className=" absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
            <div className=" mx-auto text-center mb-[20px]">

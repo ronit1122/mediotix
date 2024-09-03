@@ -170,6 +170,19 @@ a {
   font-weight: 600;
 
 }
+.gradientButton {
+  width: fit-content;
+  height: 40px;
+  padding: 5px 25px 5px 25px;
+
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  background:linear-gradient(180deg, #FF9363 0%, #FF7D78 100%);
+  font-weight: 600;
+
+}
+
 .naviteButton:hover {
   width: fit-content;
   height: 40px;

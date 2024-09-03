@@ -9,7 +9,7 @@ import { HiMail } from "react-icons/hi";
 export default function Home() {
 
   return (
-    <div className=" flex w-[85%] gap-[4%] py-[4%] mx-auto relative">
+    <div className=" flex w-[85%] gap-[4%] py-[2%] mx-auto relative">
       {/* <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
       <div style={{zIndex: "0"}} className=" absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
 

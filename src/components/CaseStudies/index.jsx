@@ -76,7 +76,7 @@
   
   
     return (
-      <div className="flex flex-col pb-[12%] w-[85%] mx-auto rounded-[30px] text-[clamp(13px,1.5vw,15px)] font-medium">
+      <div className="flex flex-col pb-[8%] w-[85%] mx-auto rounded-[30px] text-[clamp(13px,1.5vw,15px)] font-medium">
   
           <h2 className="pt-[5rem] pb-[2rem] text-[#FF7D78] text-center text-[40px] font-[900]">
             Case Studies

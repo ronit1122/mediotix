@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from './../components/Navbar/index.jsx'
-import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo } from './../assets/home/export';
+import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo, whatWeDoThree} from './../assets/home/export';
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from './../assets/clients/export';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
@@ -94,7 +94,7 @@ export default function Home() {
       <Navbar />
 
       {/* section 1 */}
-      <div className="flex items-center justify-center text-center h-[700px] relative">
+      <div className="flex items-center justify-center text-center h-[620px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
           <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
@@ -149,12 +149,12 @@ export default function Home() {
          </div>
 
          {/* section 2 */}
-         <div className=" flex w-[85%] gap-[4%] py-[7%] mx-auto">
+         <div className=" flex w-[85%] gap-[4%] py-[3%] mx-auto">
           <div className="w-[50%]">
             {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[800] text-[#FF7D78] mb-4">Transform Data Insights into Business Success</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[800] text-[#FF7D78] mb-4">Transform Data Insights into Business Success</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
-            <br />
+            <button className="gradientButton mt-[20px]">Know More</button>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">
@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* section 3 */}
       <div className="bg-white">
-        <div className="flex flex-col w-[85%] gap-[4%] py-[7%] mx-auto">
+        <div className="flex flex-col w-[85%] gap-[4%] pt-[3%] pb-[7%] mx-auto">
           <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What we do</h2>
           
           <div className="w-full flex gap-[4%] mt-8">
@@ -176,6 +176,7 @@ export default function Home() {
                  <Image src={whatWeDoOne} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Solution</p>
               </div>
+              <div className="flex flex-col py-[30px]">
               {whatWeDoSolutionsData?.map(item => (
               <div className="mt-3 px-[15px] py-[5px] hover:bg-[#ffdbdb] hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
                 <div className="flex justify-between gap-3">
@@ -185,6 +186,7 @@ export default function Home() {
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
               ))}
+              </div>
           </div>
 
           <div className="w-[100%] p-[5px] border-[5px] border-[#FF9363] rounded-[10px] bg-[#feefef]">
@@ -192,6 +194,7 @@ export default function Home() {
                  <Image src={whatWeDoTwo} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
+              <div className="flex flex-col py-[30px]">
               {whatWeDoMarketingData?.map(item => (
               <div className="mt-3 px-[15px] py-[5px]  hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px] cursor-pointer">
                 <div className="flex justify-between gap-3">
@@ -201,13 +204,15 @@ export default function Home() {
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
               ))}
+              </div>
           </div>
 
           <div className="w-[100%] p-[5px] border-[5px] border-[#FF9363] rounded-[10px] bg-[#feefef]">
               <div className="h-[130px] p-[10px] flex flex-col justify-between rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
-                 <Image src={whatWeDoOne} alt="solution"  className="ml-3"/>
+                 <Image src={whatWeDoThree} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Architecture</p>
               </div>
+              <div className="flex flex-col py-[30px]">
               {whatWeDoArchitectureData?.map(item => (
               <div className="mt-3 px-[15px] py-[5px]   hover:bg-[#ffdbdb]  hover:border-b-[1px] border-[#ff9872] rounded-[5px]  cursor-pointer">
                 <div className="flex justify-between gap-3">
@@ -217,6 +222,7 @@ export default function Home() {
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
               ))}
+              </div>
           </div>
             
           </div>
@@ -226,13 +232,16 @@ export default function Home() {
 
        {/* section 4  */}
       <div className="bg-[#EAF6FF] ">
+      <div className="flex flex-col gap-2 w-fit mx-auto">
       <Image src={mx360Logo} className="mx-auto pt-[50px]" style={{objectFit: "contain"}}/>
-      <div className=" flex w-[85%] gap-[4%] py-[6%] mx-auto bg-[#EAF6FF]">
+      <p className="text-end font-[900]">Digital Growth Pilot</p>
+      </div>
+      <div className=" flex w-[85%] gap-[4%] pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className="w-[50%]">
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[800] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[700] mb-6">with MX360, all-in-one data-driven marketing solution.</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}}  className="font-[900] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-[900] mb-6">with MX360, all-in-one data-driven marketing solution.</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
-            <br />
+            <button className="gradientButton mt-[20px]">Lets Talk</button>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%]">

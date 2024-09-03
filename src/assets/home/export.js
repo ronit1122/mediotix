@@ -9,6 +9,7 @@ import sectionTwoImage from "./sectionTwoImage.png";
 import testimonialOne from "./testimonialOne.png";
 import whatWeDoOne from "./whatWeDoOne.svg";
 import whatWeDoTwo from "./whatWeDoTwo.svg";
+import whatWeDoThree from "./whatWeDoThree.svg";
 
 export {
   gauravKumar,
@@ -20,5 +21,6 @@ export {
   sectionThreeImage,
   sectionTwoImage,
   whatWeDoOne,
-  whatWeDoTwo
+  whatWeDoTwo,
+  whatWeDoThree
 };
