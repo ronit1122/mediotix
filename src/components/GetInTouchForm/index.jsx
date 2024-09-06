@@ -29,7 +29,7 @@ export default function Home() {
                <label for="first_name" class="block mb-2 text-sm font-medium text-white ">Phone Number</label>
                <input type="text" id="first_name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" required />
              </div>
-             <button className="naviteButtonInverted">Form submit</button>
+             <button className="naviteButtonInverted">Submit</button>
            </div>
          </div>
         <div style={{zIndex: "0"}} className=" absolute top-[-15%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>

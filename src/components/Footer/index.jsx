@@ -38,7 +38,7 @@ function Index() {
             >
               <Image src={mediotixLogoWhite} alt="MX360 Logo" />
             </Link>
-            <p className="mb-2">
+            <p className="mb-2  text-[14px]">
             We are a leading MarTech agency with a global presence, dedicated to helping businesses worldwide.
             </p>
             <div className="flex flex-col items-center md:items-start">
@@ -77,8 +77,8 @@ function Index() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-evenly md:w-[35%] gap-4 text-center md:text-left">
-            <div className="flex flex-col gap-2 w-[60%] ">
+          <div className="flex flex-col md:flex-row justify-evenly md:w-[30%] gap-4 text-center md:text-left">
+            <div className="flex flex-col gap-2 w-[60%]  text-[13px]">
               <h3 className="mb-[10px] font-semibold">Solution</h3>
               <Link href="/about-us" aria-label="about-us">
                 <p className="">Advanced Funnel Optimization</p>
@@ -97,21 +97,21 @@ function Index() {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-2 w-[40%]">
+            <div className="flex flex-col gap-2 w-[40%] text-[13px]">
             <h3 className="mb-[10px] font-semibold">Quick Links</h3>
             <Link href="/contact-us" aria-label="contact-us" >
                 <p className="">Contact Us</p>
             </Link>
-            <Link href="/contact-us" aria-label="contact-us" >
+            <Link href="https://mx360.io" aria-label="mx360" >
                 <p className="">Mx360</p>
             </Link>
             <Link href="/contact-us" aria-label="contact-us" >
                 <p className="">Case Studies</p>
             </Link>
-            <Link href="/contact-us" aria-label="contact-us" >
+            <Link href="/privacyPolicy" aria-label="privacyPolicy" >
                 <p className="">Privacy Policy</p>
             </Link>
-            <Link href="/contact-us" aria-label="contact-us" >
+            <Link href="/termsAndConditions" aria-label="termsAndConditions" >
                 <p className="block">Term and Conditions</p>
             </Link>
           
@@ -142,24 +142,24 @@ function Index() {
             </div> */}
           </div>
 
-          <div className="flex flex-wrap justify-center md:justify-end items-start gap-0 w-full md:w-[40%]">
+          <div className="flex flex-wrap justify-center md:justify-between items-start gap-3 w-full md:w-[45%]">
             <Image
-              className="w-[clamp(60px,7.5vw,120px)]"
+              className="w-[clamp(60px,7.5vw,130px)]"
               src={googlePartner}
               alt="Google Partner"
             />
               <Image
-                className="w-[clamp(60px,7.5vw,120px)]"
+                className="w-[clamp(60px,7.5vw,130px)]"
                 src={microsoftPartner}
                 alt="Microsoft Partner"
               />
             <Image
-              className="w-[clamp(60px,7.5vw,120px)]"
+              className="w-[clamp(60px,7.5vw,130px)]"
               src={googleMapsPartner}
               alt="google maps Partner"
             />
             <Image
-              className="w-[clamp(60px,7.5vw,120px)]"
+              className="w-[clamp(60px,7.5vw,130px)]"
               src={shopifyPartner}
               alt="shopify Partner"
             />

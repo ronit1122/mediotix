@@ -23,7 +23,11 @@ import {
   paidAds,
   powerBi,
   social,
-  video
+  video,
+  L1,
+  L2,
+  R1,
+  R2,
 } from './../../assets/navbar/export.js';
 import { digbiHealthBg } from "@/assets/caseStudies/export.js";
 export default function Navbar() {
@@ -312,19 +316,19 @@ const ResourcesMenuData = () => {
     ],
     blogs: [
       {
-        icon: "",
+        icon: <Image src={L1} className="object-cover" />,
         desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights"
       },
       {
-        icon: "",
+        icon: <Image src={R1} className="object-cover" />,
         desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights."
       },
       {
-        icon: "",
+        icon: <Image src={L2} className="object-cover" />,
         desc: "Explore How Big Data is Shaping the Future of Marketing Trends with 'Monday Analytics Insights."
       },
       {
-        icon: "",
+        icon: <Image src={R2} className="object-cover" />,
         desc: "Know full potential of your data with the latest Monday Analytics Insight!"
       }
     ]
@@ -340,7 +344,7 @@ const ResourcesMenuData = () => {
         <div className="p-[30px] pt-[0]  w-full grid grid-cols-2 gap-4">
         {menuItems?.[selectedMenu]?.map(item => (
             <div className="text-white flex gap-2">
-              <div className="bg-white min-w-[100px] w-[100px] h-[70px] rounded-[5px] p-[10px] flex justify-center">
+              <div className={`bg-white min-w-[100px] w-[100px] h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
               </div>
               <div>

@@ -180,7 +180,7 @@ const carouselInfo = [
       img: MaxHealthcare_VishalTrivedi,
       imgAltText: "Vishal",
       statement: "We saw a transformative shift in our marketing reports and are able to strategize even better than before. All thanks to that magical tool for delivering accurate insights that empowered our data-driven decisions eventually resulting in substantial ROI growth.",
-      rating: 4,
+      rating: 5,
       brandLogo: <Image src={maxHealth} className="object-cover w-[30px]" />,
     },
     {

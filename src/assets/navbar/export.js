@@ -15,6 +15,10 @@ import paidAds from './paidAds.svg';
 import powerBi from './powerBi.svg';
 import social from './social.svg';
 import video from './video.svg';
+import L1 from './L1.jpg';
+import L2 from './L2.png';
+import R1 from './R1.png';
+import R2 from './R2.jpg';
 
 export {
   adobeAnalytics,
@@ -33,5 +37,9 @@ export {
   paidAds,
   powerBi,
   social,
-  video
+  video,
+  L1,
+  L2,
+  R1,
+  R2,
 };

@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from './../components/Navbar/index.jsx'
 import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo, whatWeDoThree} from './../assets/home/export';
-import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from './../assets/clients/export';
+import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, qubo} from './../assets/clients/export';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
 import {mx360Logo} from './../assets/companyLogo/export';
@@ -11,6 +11,7 @@ import Testimonial from './../components/Testimonial/index.jsx'
 import Footer from './../components/Footer/index.jsx'
 import PublicReactions from './../components/PublicReactions/index.jsx'
 import GetInTouchForm from './../components/GetInTouchForm/index.jsx'
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
 
@@ -99,16 +100,16 @@ export default function Home() {
           <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
          <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
-         <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-[40%] mt-[5%]  text-white">
-          <div className="flex flex-col items-center gap-1">
+         <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-fit text-white">
+          <div className="flex flex-col items-center ">
            <div className="border-b-2 w-fit">
              <h3 className="font-medium ">Experience the Best Agency</h3>
            </div>
-           <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2>
+           <h2 className="text-5xl mt-[26px] font-medium font-nexa">Fueling Brand Growth with</h2>
            <h1 className="text-5xl font-black">Intelligent Marketing & AI Power Analytics</h1>
-           <p className=" mt-[10px] font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
+           <p className=" mt-[30px] font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
-           <button className="naviteButton mt-[10px]">Lets Talk</button>
+           <button className="naviteButton mt-[30px]">Lets Talk</button>
          </div>
       </div>
 
@@ -116,43 +117,57 @@ export default function Home() {
       <div className="flex flex-col h-fit bg-white color-[#000000]" style={{zIndex: "10"}} >
 
          {/* section 1 */}
-         <div className="w-[85%] flex justify-evenly mx-auto gap-[2%] translate-y-[-80px]"  style={{zIndex: "10"}}>
-
-          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px] h-[200px] max-w-[250px] min-w-[200px] w-[250px] bg-white border-[2px] border-[#FF7D78] p-[20px] rounded-[8px]">
+         <div className="w-[100%] flex justify-evenly mx-auto gap-[2%] translate-y-[-80px]"  style={{zIndex: "10"}}>
+         <Marquee loop={0} autoFill={false} speed={40} pauseOnHover={true}>
+          <div className="flex flex-col gap-2 justify-evenly ml-[50px] items-center max-h-[250px] min-h-[200px] h-[200px] max-w-[250px] min-w-[200px] w-[250px] bg-white border-[2px] border-[#FF7D78] p-[20px] rounded-[8px]">
             <Image src={pvr} alt="pvr"/>
             <p className="text-[20px] font-black">35%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
             <div className="w-fit p-[5px] rounded-[5px] bg-[#FFCB05] text-[12px] ">Increase ticket bookings  </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px] h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#004185] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly  ml-[50px] items-center max-h-[250px] min-h-[200px] h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#004185] p-[20px] rounded-[8px]">
             <Image src={maxHealth} alt="maxHealth"/>
             <p className="text-[20px] font-black">150%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
             <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#004185] text-[12px] ">Increase in Doctor consultancy</div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]   max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#000000] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly ml-[50px]  items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]   max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#000000] p-[20px] rounded-[8px]">
             <Image src={diceAcademy} alt="diceAcademy"/>
             <p className="text-[20px] font-black">500%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
             <div className="w-fit p-[5px] text-white rounded-[5px] bg-[#000000] text-[12px] ">Boost in Admissions leads </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-evenly items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#FA5306] p-[20px] rounded-[8px]">
+          <div className="flex flex-col gap-2 justify-evenly ml-[50px]  items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#FA5306] p-[20px] rounded-[8px]">
             <Image src={gsk} alt="gsk"/>
             <p className="text-[20px] font-black">120%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
             <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#FA5306] text-[12px] ">Return on Investment</div>
           </div>
 
+          <div className="flex flex-col gap-2 justify-evenly ml-[50px]  items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#E4235A] p-[20px] rounded-[8px]">
+            <Image src={watcho} alt="watcho"/>
+            <p className="text-[20px] font-black">48%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#E4235A] text-[12px] ">Increase in OTT Subcriptions</div>
+          </div>
+
+          <div className="flex flex-col gap-2 justify-evenly ml-[50px]  items-center max-h-[250px] min-h-[200px]  h-[200px] w-[250px]  max-w-[250px] min-w-[200px] bg-white  border-[2px] border-[#00AFCC] p-[20px] rounded-[8px]">
+            <Image src={qubo} alt="quibo"/>
+            <p className="text-[20px] font-black">72%</p>
+            {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
+            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#00AFCC] text-[12px] ">Increase in Transactions</div>
+          </div>
+          </Marquee>
          </div>
 
          {/* section 2 */}
          <div className=" flex w-[85%] gap-[4%] py-[3%] mx-auto">
           <div className="w-[50%]">
             {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] text-[#FF7D78] ">Transform Data Insights</h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Transform Data Insights</h2>
             <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[40px]">into Business Success</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
             <button className="gradientButton mt-[50px]">Know More</button>
@@ -172,64 +187,64 @@ export default function Home() {
           
           <div className="w-full flex gap-[4%] mt-8">
 
-          <div className="w-[100%] p-[5px] border-[5px] border-[#FF9363] rounded-[10px] bg-[#feefef]">
-              <div className="h-[130px] p-[10px] flex flex-col justify-between rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
+          <div className="w-[100%] p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+              <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoOne} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Solution</p>
               </div>
               <div className="flex flex-col py-[30px]">
               {whatWeDoSolutionsData?.map((item, index) => (
               <div className="flex flex-col">
-              <div className=" px-[15px] py-[15px] hover:bg-[#ffdbdb]  cursor-pointer">
+              <div className=" px-[15px] py-[15px] hover:bg-[#fff2ec]  cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
-              {whatWeDoSolutionsData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
+              {whatWeDoSolutionsData?.length - 1 !== index && <div className="border-b-[2px] border-[#fff2ec] w-full"></div>}
               </div>
               ))}
               </div>
           </div>
 
-          <div className="w-[100%] p-[5px] border-[5px] border-[#FF9363] rounded-[10px] bg-[#feefef]">
-              <div className="h-[130px] p-[10px] flex flex-col justify-between rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
+          <div className="w-[100%] p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+              <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoTwo} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
               <div className="flex flex-col py-[30px]">
               {whatWeDoMarketingData?.map((item, index) => (
               <div className="flex flex-col">
-              <div className=" px-[15px] py-[15px]  hover:bg-[#ffdbdb] cursor-pointer">
+              <div className=" px-[15px] py-[15px]  hover:bg-[#fff2ec] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
-              {whatWeDoMarketingData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
+              {whatWeDoMarketingData?.length - 1 !== index && <div className="border-b-[2px] border-[#fff2ec] w-full"></div>}
               </div>
               ))}
               </div>
           </div>
 
-          <div className="w-[100%] p-[5px] border-[5px] border-[#FF9363] rounded-[10px] bg-[#feefef]">
-              <div className="h-[130px] p-[10px] flex flex-col justify-between rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
+          <div className="w-[100%] p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+              <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoThree} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Architecture</p>
               </div>
               <div className="flex flex-col py-[30px]">
               {whatWeDoArchitectureData?.map((item, index) => (
               <div className="flex flex-col">
-              <div className=" px-[15px] py-[15px]   hover:bg-[#ffdbdb] cursor-pointer">
+              <div className=" px-[15px] py-[15px]   hover:bg-[#fff2ec] cursor-pointer">
                 <div className="flex justify-between gap-3">
                   <h2 style={{fontSize: "clamp(12px, 2vw, 15px)"}} className="font-bold">{item.title}</h2>
                   <Link href={item.link}><FaArrowRightLong /></Link>
                 </div>
                 <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>{item?.desc}</p>
               </div>
-              {whatWeDoArchitectureData?.length - 1 !== index && <div className="border-b-[2px] border-[#ffcdc9] w-full"></div>}
+              {whatWeDoArchitectureData?.length - 1 !== index && <div className="border-b-[2px] border-[#fff2ec] w-full"></div>}
               </div>
               ))}
               </div>
@@ -248,7 +263,7 @@ export default function Home() {
       </div>
       <div className=" flex w-[85%] gap-[4%] pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className="w-[50%]">
-            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}}  className="font-[900] text-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and analyze </h2>
             <h2 style={{fontSize: "clamp(18px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[30px]">all-in-one data-driven marketing solution.</h2>
             <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
             <button className="gradientButton mt-[50px]">Book a demo</button>
