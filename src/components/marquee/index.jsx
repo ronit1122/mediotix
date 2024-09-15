@@ -13,6 +13,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { useMediaQuery } from '@chakra-ui/react'
 
 const Carousel = ({ props }) => {
+  const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)')
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)')
@@ -21,7 +22,7 @@ const Carousel = ({ props }) => {
       <Swiper
       modules={[Autoplay]}
       spaceBetween={10} // Adjust the spacing between slides if needed
-      slidesPerView={isLargerThan1200 ? 4 : isLargerThan900 ? 3 : isLargerThan600 ? 2 : 2} // Show 4 slides at a time
+      slidesPerView={isLargerThan1200 ? 4 : isLargerThan900 ? 3 : isLargerThan600 ? 3 : isLargerThan400 ? 2 : 1} // Show 4 slides at a time
       loop={true} // Enable looping
       autoplay={{
         delay: 2000, // 5 seconds delay

@@ -6,9 +6,10 @@
   import { useRouter } from 'next/navigation';
   import Image from "next/image";
   import {diceAcademyBg, digbiHealthBg, homeDelhiBg, maxHealthBg, gskBg, pvr1Bg, prv2Bg, quboBg, relianceBg, cashKaroBg, watchoBg, finolexBg} from './../../assets/caseStudies/export.js';
+  import { useMediaQuery } from '@chakra-ui/react'
 
   export default function Third() {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [isSmallerThan800] = useMediaQuery('(max-width: 900px)')
     const router = useRouter();
 
     const [currentTab, setCurrentTab] = useState(1);
@@ -58,7 +59,7 @@
         id: 4,
         bg: pvr1Bg,
         route: "/case-studies",
-        width: width < 900 ? "35px" : "60px",
+        width: isSmallerThan800 ? "35px" : "60px",
       },
 
       {
@@ -70,12 +71,10 @@
         bg: maxHealthBg,
         id: 5,
         route: "/case-studies",
-        width:  width < 900 ? "70px" :"100px",
+        width:  isSmallerThan800 ? "70px" :"100px",
       },
     ];
   
-  
-    console.log(width, "width")
     return (
       <div className="flex flex-col pb-[8%] w-[95%] tablet:w-[85%] mx-auto rounded-[30px] text-[clamp(14px,1.5vw,16px)] font-medium">
   

@@ -119,7 +119,7 @@ export default function Home() {
       <div className="flex flex-col h-fit bg-white color-[#000000]" style={{zIndex: "10"}} >
 
          {/* section 1 */}
-         <div className=" w-[90%] mobile:w-[70%] flex justify-evenly mx-auto tablet:translate-y-[-80px] translate-y-[-50px]"  style={{zIndex: "10"}}>
+         <div className=" w-[90%] tablet:w-[70%] mobile:w-[80%] flex justify-evenly mx-auto tablet:translate-y-[-80px] translate-y-[-50px]"  style={{zIndex: "10"}}>
           <MarqueeComponent />
          </div>
 
