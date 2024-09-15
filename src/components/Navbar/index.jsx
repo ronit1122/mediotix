@@ -6,6 +6,7 @@ import Image from 'next/image';
 import {v4 as uuidv4} from "uuid";
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, digbiHealth, pvr, watcho, heroElectronix, reliance, spinny} from './../../assets/clients/export.js';
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { ChakraProvider } from '@chakra-ui/react'
 import {
   adobeAnalytics,
   affiliateMarketing,
@@ -30,13 +31,39 @@ import {
   R2,
 } from './../../assets/navbar/export.js';
 import { digbiHealthBg } from "@/assets/caseStudies/export.js";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  useDisclosure,
+  IconButton,
+  Box,
+  Button,
+  useMediaQuery,
+  Tabs, TabList, TabPanels, Tab, TabPanel 
+} from '@chakra-ui/react'
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
+
 export default function Navbar() {
   const [openNavbar, setOpenNavbar] = React.useState(false);
   const firstField = React.useRef();
   const [hoveredTab, setHoveredTab] = useState(null)
   const timeoutRef = useRef(null);
   const menuPanelRef = useRef(null)
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+  const [isLargerThan900] = useMediaQuery('(max-width: 900px)')
   const _handleTabsHover = (tab) => {
 
     // Clear any existing timeout
@@ -103,17 +130,19 @@ export default function Navbar() {
   ];
 
   return (
-<div className=" h-[70px] w-full relative">
+    <ChakraProvider>
+<div className=" h-[50px] tablet:h-[70px] w-full relative">
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
-    <div className="bg-white h-full w-[30%] flex items-center justify-center absolute" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
+    <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[45%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
      <Link href={"/"}>
-       <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} alt="mediotix"/>
+       <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} className="w-[70%] tablet:w-[100%] ml-[10px] tablet:ml-[0px]" alt="mediotix"/>
      </Link>
     </div>
 
     {/* Navigation Links */}
-    <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="flex items-center gap-12 w-full h-full justify-end px-[10%]">
+    <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="w-full h-full">
+    <div className="items-center gap-12 w-full h-full justify-end px-[10%] hidden tablet:flex">
     {navbarLinksData?.map((item, index) => (
     item?.name !== "Contact Us" ? 
     <Link 
@@ -139,36 +168,105 @@ export default function Navbar() {
         <span className="relative invisible">Button Text</span>
     </Link>
     ))}
-
-      {/* <Link href="#" className="text-white h-full flex items-center font-semibold">
-        Resources
-      </Link>
-      <Link href="#" className="text-white h-full flex items-center font-semibold">
-        About Us
-      </Link>
-      <Link href="#" className="text-white h-full flex items-center font-semibold">
-        MX360
-      </Link>
-      <Link href="#" className="text-white h-full flex items-center font-semibold">
-        Contact Us
-      </Link> */}
     </div>
+    <div  className='flex h-full items-center justify-end tablet:hidden ' >
+    <IconButton ref={btnRef} color='white'  onClick={onOpen} mr="6px"  isRound={true} variant='solid' colorScheme='whiteAlpha' aria-label='Done' fontSize='20px' icon={<RxHamburgerMenu />}>
+    </IconButton>
+    </div>
+    </div>
+    
   </div>
+
   <div ref={menuPanelRef} onMouseLeave={() => handleMouseLeave()} className=" flex justify-start min-h-[500px] bg-red-500 w-full absolute top-[-800px] transition-all duration-700 left-0" style={{zIndex: 480, background: "linear-gradient(180deg, #FF9363 0%, #FF7D78 100%)" }}>
      <div className="w-[100%] mt-[150px] mx-auto">
         {hoveredTab === "solution" && <SolutionsMenuData />}
         {hoveredTab === "resources" && <ResourcesMenuData />}
         {hoveredTab === "aboutUs" && <AboutUsMenuData />}
-        {/* {hoveredTab === "solution" && <SolutionsMenuData />} */}
      </div>
   </div>
+
+  <Drawer
+        isOpen={isOpen}
+        placement='right'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Menu</DrawerHeader>
+
+          <DrawerBody p="10px">
+            <Accordion allowToggle> 
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+           Solution
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel  pb={4}>
+       <SolutionsMenuData />
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+           Resources
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4} padding="0 !important">
+        <ResourcesMenuData />
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as='span' flex='1' textAlign='left'>
+          About Us
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+        <AboutUsMenuData />
+    </AccordionPanel>
+  </AccordionItem>
+            </Accordion>
+          </DrawerBody>
+
+          <DrawerFooter p="10px !important">
+          <Link 
+        href={"/contactUs"}>
+         <Button colorScheme='gray' variant='ghost'>
+    Contact us
+  </Button>
+    </Link>
+            <Button variant='outline' mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+
+  
 </div>
+</ChakraProvider>
 
   );
 }
 
 const SolutionsMenuData = () => {
   const [selectedMenu, setSelectedMenu] = useState("Measurement")
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
+
   const menuData = [
     { 
       name: "Measurement",
@@ -269,17 +367,17 @@ const SolutionsMenuData = () => {
   ];
 
   return (
-    <div className=" w-[600px] ml-[15%] relative ">
+    <div className=" w-full tablet:w-[600px] tablet:ml-[15%] relative ">
       <div className="flex flex-col justify-between">
-        <div className="h-fit bg-white flex justify-between items-center px-[20px] py-[10px] rounded-[10px]">
+        <div className="h-fit w-full bg-white grid grid-cols-2 gap-2 tablet:flex justify-between items-center tablet:px-[20px] tablet:py-[10px] rounded-[10px]">
           {menuData?.map(item => (
-            <div onClick={() => setSelectedMenu(item?.name)} className={`w-[120px] h-[40px] flex items-center justify-center text-center rounded-[5px] cursor-pointer ${selectedMenu === item?.name ? 'text-white bg-gradient-to-b from-[#FF9363] to-[#FF7D78]' : 'text-black bg-white hover:bg-slate-100'}`} >{item?.name}</div>
+            <div onClick={() => setSelectedMenu(item?.name)} className={` w-full tablet:w-[120px] h-[40px] flex items-center justify-center text-center rounded-[5px] cursor-pointer ${selectedMenu === item?.name ? 'text-white bg-gradient-to-b from-[#FF9363] to-[#FF7D78]' : 'text-black bg-white hover:bg-slate-100'}`} >{item?.name}</div>
           ))}
         </div>
-        <div className="p-[30px] flex flex-col gap-4">
+        <div className="tablet:p-[30px] mt-[15px] tablet:mt-[0px] flex flex-col gap-4">
         {menuData?.filter(item => item?.name === selectedMenu)?.[0]?.childs?.map(item => (
-          <div className="flex gap-3 text-white">
-              <div className="w-[30px] flex justify-center">
+          <div className="flex gap-3 tablet:text-white">
+              <div style={{background: !isLargerThan900 && "linear-gradient(#EA875B, #FF7F76)"}}  className="w-[30px] h-[30px] rounded-full tablet:rounded-none flex justify-center">
                 {item?.icon}
               </div>
               {item?.name}
@@ -289,11 +387,14 @@ const SolutionsMenuData = () => {
       </div>
 
     </div>
+
   )
 }
 
 const ResourcesMenuData = () => {
   const [selectedMenu, setSelectedMenu] = useState("caseStudy")
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
+
   const menuItems = {
     caseStudy: [
       {
@@ -335,20 +436,20 @@ const ResourcesMenuData = () => {
   }
 
   return (
-    <div className=" w-[80%] mx-auto  relative ">
-      <div className="flex justify-between">
-        <div className="h-[200px] w-[300px] flex flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
+    <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
+      <div className="flex flex-col tablet:flex-row justify-between">
+        <div className="w-full tablet:h-[200px] tablet:w-[300px] flex flex-row tablet:flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
          <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("caseStudy")}>Case study</button>
          <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("blogs")}>Blogs</button>
         </div>
-        <div className="p-[30px] pt-[0]  w-full grid grid-cols-2 gap-4">
+        <div className="p-[5px] tablet:p-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-4">
         {menuItems?.[selectedMenu]?.map(item => (
-            <div className="text-white flex gap-2">
-              <div className={`bg-white min-w-[100px] w-[100px] h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
+            <div className="tablet:text-white tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
+              <div style={{width: (selectedMenu === 'caseStudy' && !isLargerThan900) && "100px"}} className={` h-fit tablet:bg-white min-w-[100px] tablet:w-[100px] tablet:h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
               </div>
               <div>
-              <p>{item?.desc}</p>
+              <p className="text-[clamp(12px,3vw,14px)]">{item?.desc}</p>
               </div>
             </div>
         ))}
@@ -360,6 +461,7 @@ const ResourcesMenuData = () => {
 
 const AboutUsMenuData = () => {
   const [selectedMenu, setSelectedMenu] = useState("caseStudy")
+  const [isLargerThan900] = useMediaQuery('(max-width: 900px)')
 
   const menuItems = {
     caseStudy: [
@@ -402,15 +504,15 @@ const AboutUsMenuData = () => {
   }
 
   return (
-    <div className=" w-[80%] mx-auto relative ">
-      <div className="flex gap-6">
-        <div className=" w-[500px] flex flex-col  gap-2  text-start text-white">
+    <div className=" w-[100%] tablet:w-[80%] mx-auto relative ">
+      <div className="flex flex-col tablet:flex-row gap-6">
+        <div className=" tablet:w-[500px] flex flex-col  gap-2  text-start tablet:text-white">
            <p className="font-semibold mb-4">About Mediotix</p>
-           <p>Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
+           <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
         </div>
-        <div className="text-white">
+        <div className="tablet:text-white">
         <p className="font-semibold mb-4">About Clients</p>
-        <div className=" w-full grid grid-cols-4 gap-3">
+        <div className=" w-full grid grid-cols-2 tablet:grid-cols-4 gap-3">
           <div className="bg-white w-[100px] h-[60px] rounded-[5px] p-[10px] flex justify-center">
             <Image src={pvr} className="object-contain" />
           </div>

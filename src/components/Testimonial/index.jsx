@@ -17,6 +17,15 @@ import {
   QuboHeroElectronix_SaurabhjyotSingh,
   Spinny_AnuragGaggar,
 } from './../../assets/testimony/export.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
+// Import Swiper modules
+import { Navigation, Pagination } from 'swiper/modules';
+
 
 const Carousel = ({ props }) => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -57,16 +66,15 @@ const Carousel = ({ props }) => {
   return (
     <div className="w-[90%] mx-auto min-h-[30rem] pb-[10%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
       {/* <!--Carousel items--> */}
-      <div className= " ml-[5%] flex justify-between items-center">
-        <h2 className="pt-[5rem] pb-[2rem] text-[#000000] text-[40px] font-[900]">
+      <div className= " tablet:ml-[5%] w-full flex justify-center items-center">
+        <h2  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className=" py-[20px] tablet:pt-[5rem] tablet:pb-[2rem] text-[#000000] font-[900]">
             Testimonials
        </h2>
-      
       </div>
 
 
 
-      <div className="flex justify-between gap-12">
+      <div className=" justify-between gap-12 hidden tablet:flex">
       <div className="h-fit my-auto">
       <button
           aria-label="previous"
@@ -166,6 +174,60 @@ const Carousel = ({ props }) => {
 
       </div>
 
+      <div className=" justify-between gap-12 flex tablet:hidden">
+
+      <Swiper
+      // Configure Swiper options
+      // modules={[Navigation, Pagination]}
+      modules={[Autoplay, Pagination]}
+      spaceBetween={50}
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+      loop={true}
+      autoplay={{
+        delay: 3000, // 5000ms = 5 seconds
+        disableOnInteraction: false,
+      }}
+    >
+      {carouselInfo?.map((item, index) => (
+        <SwiperSlide>
+        <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] rounded-[8px] w-full h-[100%] max-h-[350px] p-[20px] border-[2px] border-[#c0c0c0] text-[#263238]"  style={{boxShadow: ""}}>
+       
+       <p className="text-[clamp(14px, 3vw, 16px)] pt-8 font-semibold">
+         {item.statement}
+       </p>
+  
+       <div className="flex gap-1 items-center " >
+         <div className="w-[120px] h-[100px] relative">
+           <div className="w-[100px] h-[100px] flex justify-center items-center">
+           <Image
+           className="object-cover aspect-square rounded-full w-full h-full"
+           loading="lazy"
+           src={item.img}
+           alt="Wild Landscape"
+           />
+           </div>
+           <div className="absolute bottom-0 right-0  w-[50px] h-[50px] flex justify-center items-center rounded-full bg-white ">
+             {item?.brandLogo}
+           </div>
+         </div>
+         <div className="flex flex-col ">
+         <div className=" flex ">
+            {giveRating(item?.rating)?.map((item) => (
+              <>{item}</>
+            ))}
+         </div>
+         <p className="text-base font-[900] text-[#FA5306]">{item.name}</p>
+         <p className="text-base">{item.profile}</p>
+         </div>
+       </div>
+   </div>
+        </SwiperSlide>
+      ))}
+     </Swiper>
+
+      </div>
+
     </div>
   );
 };
@@ -189,7 +251,7 @@ const carouselInfo = [
       imgAltText: "Nishant Kumar ",
       img: PVR_NishantKumar,
       statement: "Working with Mediotix has been a pleasure. Their team consistently demonstrates a high level of professionalism and expertise. Their dedication to delivering results is evident in the remarkable increase in our online visibility and engagement. Their insights and strategic approach have been instrumental in our success, and we highly recommend their services.",
-      rating: 4,
+      rating: 5,
       brandLogo: <Image src={pvr}className="object-cover w-[30px]" />,
     },
     {
@@ -207,7 +269,7 @@ const carouselInfo = [
       imgAltText: "Harsh Mehta",
       img: GSK_HarshMehta,
       statement: "“Their team is knowledgeable, responsive and committed to support our initiatives, making them invaluable partners, Mediotix has been involved in helping us build an incredible lead generating machine by funnel optimization & quick conversions”",
-      rating: 4,
+      rating: 5,
       brandLogo: <Image src={gsk}className="object-cover w-[30px]" />,
     },
     {
@@ -216,7 +278,7 @@ const carouselInfo = [
       imgAltText: "Dipu Pandey",
       img: DiceAcademy_DipuPandey,
       statement: "The PPC and ad services provided by our marketing agency – Mediotix have been a game-changer for us. Their strategic campaigns and meticulous optimization have led to impressive results. Our ROI has soared by 65%, and our online visibility has never been better. With their expertise, we're confidently scaling our digital advertising efforts for even greater success.",
-      rating: 4,
+      rating: 5,
       brandLogo: <Image src={diceAcademy}className="object-cover w-[30px]" />,
     },
   ];

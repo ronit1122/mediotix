@@ -15,7 +15,17 @@ module.exports = {
       },
       clipPath: {
         'chamfered': 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
-      }
+      },
+      screens: {
+        'mobile': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'tablet': '900px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],

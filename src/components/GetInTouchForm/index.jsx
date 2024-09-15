@@ -6,10 +6,10 @@ import {publicReactionsOne, publicReactionsTwo, publicReactionsThree, publicReac
 export default function Home() {
 
   return (
-    <div className=" flex w-[85%] gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
-        <div style={{zIndex: "10"}}  class="grid grid-cols-2 gap-4 w-full">
-           <div className=" mt-12">
-              <h2 className=" text-[#FF7D78] text-[40px] font-[900]">
+    <div className=" flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
+        <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-4 w-full">
+           <div className="mt-12">
+              <h2 className=" text-[#FF7D78] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
                   Get in Touch
               </h2>
               <p >Please feel free to connect with us for your quick enquiry
@@ -32,7 +32,7 @@ export default function Home() {
              <button className="naviteButtonInverted">Submit</button>
            </div>
          </div>
-        <div style={{zIndex: "0"}} className=" absolute top-[-15%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute top-[-15%] hidden tablet:block right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
     </div>
   );
 }

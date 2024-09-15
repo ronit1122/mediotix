@@ -163,6 +163,7 @@ a {
   height: 40px;
   padding: 5px 40px 5px 25px;
   border-left: 25px solid white;
+  font-size: clamp(13px, 3vw, 20px);
   border-radius: 10px;
   color: white;
   text-align: left;
@@ -174,7 +175,7 @@ a {
   width: fit-content;
   height: 40px;
   padding: 5px 25px 5px 25px;
-
+  font-size: clamp(13px, 3vw, 20px);
   border-radius: 10px;
   color: white;
   text-align: left;
@@ -183,17 +184,6 @@ a {
 
 }
 
-.naviteButton:hover {
-  width: fit-content;
-  height: 40px;
-  padding: 5px 25px 5px 40px;
-  border-left: 0 solid white;
-  border-right: 25px solid white;
-  border-radius: 10px;
-  text-align: left;
-  background:linear-gradient(180deg, #FF9363 0%, #FF7D78 100%);
-  transition: all 0.1s ease-in-out;
-}
 
 .naviteButtonInverted {
   width: fit-content;
@@ -232,4 +222,33 @@ a {
 .blob {
   background: radial-gradient(closest-side, #2dd4bf, rgba(233, 168, 2, 0));
   animation: blob-traverse 10s ease-in-out infinite alternate;
+}
+
+@media (max-width: 900px) {
+  .naviteButton {
+    font-weight: 500;
+  height: 30px;
+  padding: 5px 30px 5px 15px;
+  border-left: 15px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  }
+
+  .gradientButton {
+    font-weight: 500;
+  
+  }
+}
+@media (min-width: 900px) {
+  .naviteButton:hover {
+    width: fit-content;
+    height: 40px;
+    padding: 5px 25px 5px 40px;
+    border-left: 0 solid white;
+    border-right: 25px solid white;
+    border-radius: 10px;
+    text-align: left;
+    background:linear-gradient(180deg, #FF9363 0%, #FF7D78 100%);
+    transition: all 0.1s ease-in-out;
+  }
 }
