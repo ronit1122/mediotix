@@ -141,7 +141,7 @@ export default function Home() {
                 <FaLocationDot style={{ color: "#ff7554", fontSize: "25px" }} />
               </div>
               <div className="flex flex-col ">
-                <p className="hidden tablet:block">Address:</p>
+                <p className="">Address:</p>
                 <p>1094P, Oahfeo Frappe, sector 46 Gurgaon</p>
               </div>
             </div>
