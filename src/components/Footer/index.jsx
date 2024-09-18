@@ -36,7 +36,7 @@ function Index() {
               aria-label="home"
               className="mb-4"
             >
-              <Image src={mediotixLogoWhite} className="w-[180px] tablet:w-full" alt="MX360 Logo" />
+              <Image src={mediotixLogoWhite} className="w-[180px] tablet:w-[90%]" alt="MX360 Logo" />
             </Link>
             <p className="mb-2  text-[14px]">
             We are a leading MarTech agency with a global presence, dedicated to helping businesses worldwide.

@@ -143,34 +143,31 @@ export default function Home() {
       {/* section 3 */}
       <div className="bg-white">
         <div className="flex flex-col w-[90%] gap-[4%] pt-[3%] pb-[7%] mx-auto tablet:w-[85%]">
-          <h2 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What we do</h2>
+          <h2 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What We Do</h2>
           
           <div className="w-full flex flex-col gap-[10px] mt-8 tablet:flex-row ">
 
-          <div className="w-[100%] h-fit p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+          <div className="w-[100%] min-h-full p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
               <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoOne} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Solution</p>
               </div>
               <div className="flex flex-col py-[30px]">
                 <Accordion items={whatWeDoSolutionsData} />
-        
-           
               </div>
           </div>
 
-          <div className="w-[100%] h-fit p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+          <div className="w-[100%] min-h-full p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
               <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoTwo} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
-              <div className="flex flex-col py-[30px]">
+              <div className="flex flex-col h-full py-[30px]">
               <Accordion items={whatWeDoMarketingData} />
-             
               </div>
           </div>
 
-          <div className="w-[100%] h-fit p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
+          <div className="w-[100%] min-h-full p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
               <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
                  <Image src={whatWeDoThree} alt="solution"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Architecture</p>
@@ -193,7 +190,7 @@ export default function Home() {
       </div>
       <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className=" w-[100%] tablet:w-[50%]">
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and analyze </h2>
             <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]">all-in-one data-driven marketing solution.</h2>
             <div className="w-[100%] my-[20px] block tablet:hidden">
             <Image src={sectionThreeImage} style={{objectFit: "contain"}} />

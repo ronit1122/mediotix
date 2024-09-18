@@ -1,4 +1,5 @@
 'use client'
+import React, {useState} from "react"
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
@@ -12,32 +13,112 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 import { useMediaQuery } from '@chakra-ui/react'
+import { useMutation } from "@apollo/client";
+import { useToast } from '@chakra-ui/react'
+import emailjs from 'emailjs-com';
 
+// mutations
+import ContactUsFormMutation from './../../__mutations__/contactUsForm.mutation.js';
 
 export default function Home() {
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
 
+    // FORM MUTATION
+    const toast = useToast()
+    const [MutationContactUsForm, { loading: ContactUsFormMutationLoading }] = useMutation(ContactUsFormMutation);
+    const [email, setEmail] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [secondName, setSecondName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [message, setMessage] = useState('')
+
+
+      // FUNCTION TO DELETE REPORT
+      const _MutationContactUsForm = () => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            const { data } = await MutationContactUsForm({
+              variables: { 
+                email: email,
+                name: firstName + ' ' + secondName,
+                phone: Number(phone),
+                message: message,
+              },
+            });
+      
+
+            if (data?.FormContactUs?.status === "FORM_SUBMITTED") {
+              handleSendMail()
+              // Resolve the promise with the data
+              resolve(data);
+            } else {
+              // Reject the promise with an error message
+              reject(new Error('Form submission failed.'));
+            }
+          } catch (error) {
+            // Reject the promise with the caught error
+            reject(error);
+          }
+        });
+      };
+      
+      const handleSendMail = () => {
+
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_CONTACTUS_TEMPLATE_ID;
+        const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    
+        const userData = {
+            from_name: firstName + " " + secondName,
+            from_email: email,
+            from_phone: phone,
+            message: message,
+        }
+    
+        emailjs.send(serviceID, templateID, userData, userID)
+          .then((response) => {
+            setEmail('');
+            setFirstName('');
+            setSecondName('');
+            setPhone('');
+            setMessage('');
+          }, (error) => {
+    
+          });
+    
+      };
+  
+      const handleSubmit = (e) => {
+        e.preventDefault()
+        
+        toast.promise(_MutationContactUsForm(), {
+          success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
+          error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
+          loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
+        })
+      }
+    
   return (
     <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] py-[2%] mx-auto relative">
       {/* <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
-      <div
-        style={{ zIndex: "0" }}
-        className="absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"
-      ></div>
+      <div style={{ zIndex: "0" }} className="absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
 
-      <div style={{ zIndex: "10" }} class=" flex gap-4 flex-col tablet:flex-row w-full">
+      <div style={{ zIndex: "10" }} className=" flex gap-4 flex-col tablet:flex-row w-full">
         <div className="rounded-[15px] flex flex-col gap-6 p-[15px] tablet:p-[30px] w-[100%] tablet:w-[55%] border-[2px] border-[#d2d2d2] bg-white">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label
-                htmlFor="first_name"
+                htmlFor="firstName"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
                 First name
               </label>
               <input
                 type="text"
-                id="first_name"
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
+                id="firstname"
                 className="bg-gray-50 border  outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
                 placeholder="First name"
                 required
@@ -45,14 +126,16 @@ export default function Home() {
             </div>
             <div>
               <label
-                htmlFor="first_name"
+                htmlFor="lastName"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
                 Last name
               </label>
               <input
                 type="text"
-                id="first_name"
+                value={secondName}
+                onChange={e => setSecondName(e.target.value)}
+                id="lastName"
                 className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
                 placeholder="Last name"
                 required
@@ -67,8 +150,10 @@ export default function Home() {
               Business Email Address
             </label>
             <input
-              type="text"
+              type="email"
               id="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
               placeholder="Business Email Address"
               required
@@ -76,14 +161,16 @@ export default function Home() {
           </div>
           <div>
             <label
-              htmlFor="contact_us"
+              htmlFor="phone"
               className="block mb-2 text-sm font-medium text-gray-700"
             >
               Phone Number
             </label>
             <input
-              type="text"
-              id="contact_us"
+              type="tel"
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              id="phone"
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
               placeholder="Phone Number"
               required
@@ -91,21 +178,24 @@ export default function Home() {
           </div>
           <div>
             <label
-              htmlFor="contact_us"
+              htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-700"
             >
               Message
             </label>
             <textarea
+            value={message}
+            onChange={e => setMessage(e.target.value)}
               rows="3"
               type="text"
-              id="contact_us"
+              id="message"
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
               placeholder="Message"
               required
             />
           </div>
-          <button className="naviteButtonInverted">Submit</button>
+          <button type="submit" className="naviteButtonInverted">Submit</button>
+        </form>
         </div>
 
         <div className="min-w-[6px] max-w-[6px] min-h-full hidden tablet:block bg-[#FF9363]"></div>

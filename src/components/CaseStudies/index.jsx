@@ -120,7 +120,7 @@
                     
                      
                         <div className="order-2">
-                          <div className={`rounded-[25px] tablet:rounded-[10px] p-[2rem] tablet:p-[3rem] text-[#546E7A] flex flex-col bg-[rgba(255,255,255,0.4)]`}>
+                          <div className={`rounded-[25px] tablet:rounded-[10px] p-[2rem] tablet:p-[3rem] text-[#546E7A] flex flex-col bg-[rgba(255,255,255,0.72)]`}>
                             <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">
                               {item.tagline}
                             </p>

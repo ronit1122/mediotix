@@ -25,7 +25,7 @@ const Carousel = ({ props }) => {
       slidesPerView={isLargerThan1200 ? 4 : isLargerThan900 ? 3 : isLargerThan600 ? 3 : isLargerThan400 ? 2 : 1} // Show 4 slides at a time
       loop={true} // Enable looping
       autoplay={{
-        delay: 2000, // 5 seconds delay
+        delay: 3000, // 5 seconds delay
         disableOnInteraction: false,
       }}
     >

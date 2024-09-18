@@ -134,7 +134,7 @@ export default function Navbar() {
 <div className=" h-[50px] tablet:h-[70px] w-full relative">
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
-    <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[45%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
+    <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[35%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
      <Link href={"/"}>
        <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} className="w-[70%] tablet:w-[100%] ml-[10px] tablet:ml-[0px]" alt="mediotix"/>
      </Link>
@@ -142,7 +142,7 @@ export default function Navbar() {
 
     {/* Navigation Links */}
     <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="w-full h-full">
-    <div className="items-center gap-12 w-full h-full justify-end px-[10%] hidden tablet:flex">
+    <div className="items-center mobile:gap-4 tablet:gap-6 desktop:gap-10 w-full h-full justify-end tablet:px-[2%] desktop:px-[10%] hidden tablet:flex">
     {navbarLinksData?.map((item, index) => (
     item?.name !== "Contact Us" ? 
     <Link 
@@ -309,11 +309,15 @@ const SolutionsMenuData = () => {
           icon: <Image src={dv360} alt="google analytics" />
         },
         {
-          name: "Affiliate Marketing",
+          name: "Performance Marketing",
           icon: <Image src={affiliateMarketing} alt="google analytics" />
         },
         {
-          name: "Paid social",
+          name: "Hyper Local",
+          icon: <Image src={paidAds} alt="google analytics" />
+        },
+        {
+          name: "CRO",
           icon: <Image src={paidAds} alt="google analytics" />
         },
       ]
@@ -336,7 +340,7 @@ const SolutionsMenuData = () => {
           icon: <Image src={googleCloudPlatform} alt="google analytics" />
         },
         {
-          name: "Power BI & Local studio",
+          name: "Power BI & looker studio",
           icon: <Image src={powerBi} alt="google analytics" />
         },
       ]
@@ -347,19 +351,19 @@ const SolutionsMenuData = () => {
       hover: () => _handleTabsHover("Creative"),
       childs: [
         {
-          name: "Content",
+          name: "DCO",
           icon: <Image src={content} alt="google analytics" />
         },
         {
-          name: "Social",
+          name: "Social Communication",
           icon: <Image src={social} alt="google analytics" />
         },
         {
-          name: "Native content",
+          name: "Digital Content",
           icon: <Image src={nativeContent} alt="google analytics" />
         },
         {
-          name: "Video",
+          name: "Video Production",
           icon: <Image src={video} alt="google analytics" />
         },
       ]
