@@ -224,6 +224,10 @@ a {
   animation: blob-traverse 10s ease-in-out infinite alternate;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 900px) {
   .naviteButton {
     font-weight: 500;

@@ -117,14 +117,14 @@ export default function Navbar() {
       takeTo: "/",
       hover: () => _handleTabsHover("aboutUs"),
     },
-    {
-      name: <Image  src={mx360LogoWhite} />,
-      takeTo: "https://mx360.io",
-      hover: () => _handleTabsHover("mx360"),
-    },
+    // {
+    //   name: <Image  src={mx360LogoWhite} />,
+    //   takeTo: "https://mx360.io",
+    //   hover: () => _handleTabsHover("mx360"),
+    // },
     {
       name: "Contact Us",
-      takeTo: "/contactUs",
+      takeTo: "/contact-us",
       hover: () => _handleTabsHover("contactUs"),
     },
   ];
@@ -144,7 +144,6 @@ export default function Navbar() {
     <div style={{background: "linear-gradient(#EA875B, #FF7F76)"}} className="w-full h-full">
     <div className="items-center mobile:gap-4 tablet:gap-6 desktop:gap-10 w-full h-full justify-end tablet:px-[2%] desktop:px-[10%] hidden tablet:flex">
     {navbarLinksData?.map((item, index) => (
-    item?.name !== "Contact Us" ? 
     <Link 
         key={index}  // Consider using item.id if available
         onMouseEnter={item.hover}
@@ -152,10 +151,9 @@ export default function Navbar() {
         className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
         {item?.name}
     </Link>
-    :
+    ))}
     <Link 
-        key={index}  // Consider using item.id if available
-        href={item?.takeTo}
+        href={"https://mx360.io"}
         className="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-[10px] shadow-md group">
         <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#FF7F76] duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -163,11 +161,10 @@ export default function Navbar() {
             </svg>
         </span>
         <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
-            Contact us
+            <Image  src={mx360LogoWhite} />
         </span>
         <span className="relative invisible">Button Text</span>
     </Link>
-    ))}
     </div>
     <div  className='flex h-full items-center justify-end tablet:hidden ' >
     <IconButton ref={btnRef} color='white'  onClick={onOpen} mr="6px"  isRound={true} variant='solid' colorScheme='whiteAlpha' aria-label='Done' fontSize='20px' icon={<RxHamburgerMenu />}>
@@ -244,7 +241,7 @@ export default function Navbar() {
 
           <DrawerFooter p="10px !important">
           <Link 
-        href={"/contactUs"}>
+        href={"/contact-us"}>
          <Button colorScheme='gray' variant='ghost'>
     Contact us
   </Button>
@@ -301,7 +298,7 @@ const SolutionsMenuData = () => {
       hover: () => _handleTabsHover("Marketing"),
       childs: [
         {
-          name: "Media activation ",
+          name: "Media Activation ",
           icon: <Image src={mediaActivation} alt="google analytics" />
         },
         {
@@ -328,19 +325,19 @@ const SolutionsMenuData = () => {
       hover: () => _handleTabsHover("Tech"),
       childs: [
         {
-          name: "Mx360",
+          name: "MX360",
           icon: <Image src={mx360} alt="google analytics" />
         },
         {
-          name: "Google Maps platform (GMP)",
+          name: "Google Maps Platform (GMP)",
           icon: <Image src={googleMapsPlatform} alt="google analytics" />
         },
         {
-          name: "Google cloud platform (GCP)",
+          name: "Google Cloud Platform (GCP)",
           icon: <Image src={googleCloudPlatform} alt="google analytics" />
         },
         {
-          name: "Power BI & looker studio",
+          name: "Power BI & Looker Studio",
           icon: <Image src={powerBi} alt="google analytics" />
         },
       ]
@@ -544,7 +541,7 @@ const AboutUsMenuData = () => {
  
         </div>
         <div className="flex gap-1 items-center mt-4 hover:underline cursor-pointer">
-          <p className="font-light text-[13px] ">View all Clients</p>
+          <p className="font-light text-[13px] ">View All Clients</p>
           <IoIosArrowRoundForward />
         </div>
         </div>

@@ -38,7 +38,7 @@ function Index() {
             >
               <Image src={mediotixLogoWhite} className="w-[180px] tablet:w-[90%]" alt="MX360 Logo" />
             </Link>
-            <p className="mb-2  text-[14px]">
+            <p className="mb-2  text-[14px] font-[400]">
             We are a leading MarTech agency with a global presence, dedicated to helping businesses worldwide.
             </p>
             <div className="flex flex-col items-start">
@@ -80,39 +80,39 @@ function Index() {
           <div className="flex flex-col tablet:flex-row justify-evenly tablet:w-[30%] gap-4 text-left">
             <div className="flex flex-col gap-2 w-[60%]  text-[13px]">
               <h3 className="mb-[10px] font-semibold text-[14px]">Solution</h3>
-              <Link href="/about-us" aria-label="about-us">
-                <p className="">Advanced Funnel Optimization</p>
+              <Link href="/" aria-label="about-us" className="hover:underline">
+                <p className="font-[300]">Advanced Funnel Optimization</p>
               </Link>
-              <Link href="/blog" aria-label="blog">
-                <p className="">Conversion Rate Optimization</p>
+              <Link href="/" aria-label="blog" className="hover:underline">
+                <p className="font-[300]">Conversion Rate Optimization</p>
               </Link>
-              <Link href="/contact-us" aria-label="contact-us" >
-                <p className="">Google Maps Platform</p>
+              <Link href="/" aria-label="contact-us" className="hover:underline" >
+                <p className="font-[300]">Google Maps Platform</p>
               </Link>
-              <Link href="/contact-us" aria-label="contact-us" >
-                <p className="">Media Analytics</p>
+              <Link href="/" aria-label="contact-us" className="hover:underline" >
+                <p className="font-[300]">Media Analytics</p>
               </Link>
-              <Link href="/contact-us" aria-label="contact-us" >
-                <p className="">App Analytics</p>
+              <Link href="/" aria-label="contact-us"  className="hover:underline">
+                <p className="font-[300]">App Analytics</p>
               </Link>
             </div>
 
             <div className="flex flex-col gap-2 w-[40%] text-[13px] mt-[30px] tablet:mt-[0px] items-start text-left">
             <h3 className="mb-[10px] font-semibold text-[14px]">Quick Links</h3>
-            <Link href="/contactUs" aria-label="contact-us" >
-                <p className="">Contact Us</p>
+            <Link href="/contact-us" aria-label="contact-us"  className="hover:underline">
+                <p className="font-[300]">Contact Us</p>
             </Link>
-            <Link href="https://mx360.io" aria-label="mx360" >
-                <p className="">MX360</p>
+            <Link href="https://mx360.io" aria-label="mx360"  className="hover:underline">
+                <p className="font-[300]">MX360</p>
             </Link>
-            <Link href="/contactUs" aria-label="contact-us" >
-                <p className="">Case Studies</p>
+            <Link href="/" aria-label="contact-us"  className="hover:underline">
+                <p className="font-[300]">Case Studies</p>
             </Link>
-            <Link href="/privacyPolicy" aria-label="privacyPolicy" >
-                <p className="">Privacy Policy</p>
+            <Link href="/privacy-policy" aria-label="privacy-policy"  className="hover:underline">
+                <p className="font-[300]">Privacy Policy</p>
             </Link>
-            <Link href="/termsAndConditions" aria-label="termsAndConditions" >
-                <p className="block">Term and Conditions</p>
+            <Link href="/terms-and-conditions" aria-label="terms-and-conditions"  className="hover:underline">
+                <p className="block font-[300]">Term and Conditions</p>
             </Link>
           
             </div>
@@ -142,24 +142,24 @@ function Index() {
             </div> */}
           </div>
 
-          <div className="flex flex-wrap tablet:justify-between items-start gap-3 w-full tablet:w-[45%]">
+          <div className="flex flex-wrap tablet:justify-between items-start gap-3 w-full tablet:w-[35%]">
             <Image
-              className="w-[clamp(80px,7.5vw,130px)]"
+              className="w-[clamp(80px,7.5vw,90px)]"
               src={googlePartner}
               alt="Google Partner"
             />
               <Image
-                className="w-[clamp(80px,7.5vw,130px)]"
+                className="w-[clamp(80px,7.5vw,90px)]"
                 src={microsoftPartner}
                 alt="Microsoft Partner"
               />
             <Image
-              className="w-[clamp(80px,7.5vw,130px)]"
+              className="w-[clamp(80px,7.5vw,90px)]"
               src={googleMapsPartner}
               alt="google maps Partner"
             />
             <Image
-              className="w-[clamp(80px,7.5vw,130px)]"
+              className="w-[clamp(80px,7.5vw,90px)]"
               src={shopifyPartner}
               alt="shopify Partner"
             />

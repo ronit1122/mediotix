@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from 'next/head';
 import styles from "./page.module.css";
 import Navbar from './../components/Navbar/index.jsx'
 import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo, whatWeDoThree} from './../assets/home/export';
@@ -94,6 +95,13 @@ export default function Home() {
 
   return (
     <main className="font-nexa">
+      <Head>
+        <title>Mediotix MarTech Agency Contact Details | Phone & Address</title>
+        <meta name="description" content="Contact Mediotix for any analytics or digital marketing related requests. Our Branches are located in Gurgaon, New Delhi, Mumbai, Hyderabad in India" />
+        {/* <meta name="keywords" content="contact, data-driven insights, business analytics, advanced solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <link rel="canonical" href="https://mediotix.com/" />
+      </Head>
       <Navbar />
 
       {/* section 1 */}
@@ -107,11 +115,13 @@ export default function Home() {
            <div className="border-b-2 w-fit">
              <h3 className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</h3>
            </div>
-           <h2 className="text-[clamp(20px,4vw,48px)] mt-[0px] tablet:mt-[26px] font-medium font-nexa">Fueling Brand Growth with</h2>
-           <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h1>
+           <h1 className="text-[clamp(20px,4vw,48px)] mt-[0px] tablet:mt-[26px] font-medium font-nexa">Fueling Brand Growth with</h1>
+           <h2 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h2>
            <p className=" mt-[40px] hidden tablet:block font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
+          <a href="#contact-section">
            <button className="naviteButton mt-[30px]">Lets Talk</button>
+          </a>
          </div>
       </div>
 
@@ -119,7 +129,7 @@ export default function Home() {
       <div className="flex flex-col h-fit bg-white color-[#000000]" style={{zIndex: "10"}} >
 
          {/* section 1 */}
-         <div className=" w-[90%] tablet:w-[70%] mobile:w-[80%] flex justify-evenly mx-auto tablet:translate-y-[-80px] translate-y-[-50px]"  style={{zIndex: "10"}}>
+         <div className=" w-[90%] tablet:w-[85%] mobile:w-[80%] flex justify-evenly mx-auto tablet:translate-y-[-80px] translate-y-[-50px]"  style={{zIndex: "10"}}>
           <MarqueeComponent />
          </div>
 
@@ -127,7 +137,7 @@ export default function Home() {
          <div className=" flex w-[85%] gap-[4%] py-[3%] mx-auto">
           <div className="w-[100%] tablet:w-[50%]">
             {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Transform Data Insights</h2>
+            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}} className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Transform Data Insights</h2>
             <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">into Business Success</h2>
             <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
             <button className="gradientButton mt-[10px] tablet:mt-[50px]">Know More</button>
@@ -191,12 +201,14 @@ export default function Home() {
       <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className=" w-[100%] tablet:w-[50%]">
             <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and analyze </h2>
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]">all-in-one data-driven marketing solution.</h2>
+            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]" >All-In-One Data-Driven Marketing Solution.</h2>
             <div className="w-[100%] my-[20px] block tablet:hidden">
             <Image src={sectionThreeImage} style={{objectFit: "contain"}} />
             </div>
             <p style={{fontSize: "clamp(14px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
-            <button className="gradientButton mt-[10px] tablet:mt-[50px]">Book a demo</button>
+            <Link href="https://mx360.io" aria-label="mx360">
+            <button className="gradientButton mt-[10px] tablet:mt-[50px]">Book a Demo</button>
+            </Link>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%] hidden tablet:block">
@@ -229,7 +241,7 @@ export default function Home() {
       </div>
 
       {/* section 8 */}
-      <div className="bg-white relative">
+      <div className="bg-white relative" id="contact-section">
           <GetInTouchForm />
       </div>
 

@@ -1,15 +1,16 @@
 import Image from "next/image";
-import Navbar from './../../components/Navbar/index.jsx'
-import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo } from './../../assets/home/export';
-import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from './../../assets/clients/export';
+import Head from 'next/head';
+import Navbar from '../../components/Navbar/index.jsx'
+import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo } from '../../assets/home/export.js';
+import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from '../../assets/clients/export.js';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
-import {mx360Logo} from './../../assets/companyLogo/export';
-import CaseStudies from './../../components/CaseStudies/index.jsx'
-import Testimonial from './../../components/Testimonial/index.jsx'
-import Footer from './../../components/Footer/index.jsx'
-import PublicReactions from './../../components/PublicReactions/index.jsx'
-import ContactUsForm from './../../components/ContactUsForm/index.jsx';
+import {mx360Logo} from '../../assets/companyLogo/export.js';
+import CaseStudies from '../../components/CaseStudies/index.jsx'
+import Testimonial from '../../components/Testimonial/index.jsx'
+import Footer from '../../components/Footer/index.jsx'
+import PublicReactions from '../../components/PublicReactions/index.jsx'
+import ContactUsForm from '../../components/ContactUsForm/index.jsx';
 import HeadBanner from './../../assets/contactUs/headBanner.png';
 import worldMap from './../../assets/contactUs/worldMap.svg';
 
@@ -18,6 +19,13 @@ export default function ContactUs() {
 
   return (
     <main className="font-nexa">
+      <Head>
+        <title>Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix</title>
+        <meta name="description" content="Mediotix is an Award winning digital marketing and web analytics agency, Equipped with GAIQ Certified professionals. We are specialized team for GTM, Google Data Studio, Funnel Optimization etc" />
+        {/* <meta name="keywords" content="contact, data-driven insights, business analytics, advanced solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <link rel="canonical" href="https://mediotix.com/contact-us/" />
+      </Head>
       <Navbar />
 
       {/* section 1 */}

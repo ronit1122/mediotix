@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className=" flex flex-col w-[95%] tablet:w-[85%] gap-[4%] pt-[7%] pb-[2%] mx-auto">
         <h2  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className=" py-[20px] tablet:py-[2rem] text-[#000000] text-center mb-5 font-[900]">
-           Public Reactions with Mediotix
+           Public Relations with Mediotix
         </h2>
         <div class=" grid-cols-4 gap-4 w-full hidden tablet:grid">
            <div className="hover:scale-105 transition-all"><Image src={publicReactionsOne} alt="" /></div>
