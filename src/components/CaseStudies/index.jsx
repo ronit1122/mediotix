@@ -14,7 +14,6 @@
 
     const [currentTab, setCurrentTab] = useState(1);
 
-
     const tabsList = [
       {
         name: "Finolex Case Study",
@@ -23,57 +22,78 @@
         imgAltText: "icon of finolex",
         bgAltText: "A set of image of clapper board,Camera, reel, popcorn",
         bg: finolexBg,
-        route: "/case-studies",
+        route: "/",
         id: 1,
         width: "120px",
       },
       {
-        name: "GSK Case Study",
+        name: "Watcho Case Study",
         tagline: "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
         imgAltText: "icon of watcho",
         bgAltText: "image of microscope plate",
         src: watcho,
         bg: watchoBg,
         id: 2,
-        route: "/case-studies",
+        route: "/",
         width: "120px",
       },
       {
-        name: "Cashkaro",
+        name: "Cashkaro Case Study",
         src: cashKaro,
         tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
         imgAltText: "icon of cashkaro",
         bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
         bg: cashKaroBg,
         id: 3,
-        route: "/case-studies",
+        route: "/",
         width: "120px",
       },
 
       {
-        name: "Max Healthcare Case Study",
+        name: "PVR Case Study",
         tagline:  "Know how 85% Increment happened in Conversion Rate within 3 months",
         imgAltText: "icon of pvr ",
         bgAltText: "image of statoscope",
         src: pvr,
         id: 4,
         bg: pvr1Bg,
-        route: "/case-studies",
+        route: "/",
         width: isSmallerThan800 ? "35px" : "60px",
       },
 
       {
-        name: "Qubo Case Study",
+        name: "MaxHealth Study",
         src: maxHealth,
         tagline: "150% Increased Conversions Rate within 6 months by Optimizing Conversion Funnel",
         imgAltText: "icon of max health",
         bgAltText: "image of Go Pro Camera ",
         bg: maxHealthBg,
         id: 5,
-        route: "/case-studies",
+        route: "/",
         width:  isSmallerThan800 ? "70px" :"100px",
       },
     ];
+
+    const case_studies_click = (navigation) => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          dataLayer.push({
+              'event': 'case_studies_click',
+              'case_studies': navigation,
+          });
+        }
+        console.log('Event pushed to dataLayer');
+    };
+  
+
+    const case_studies_read_now = (navigation) => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          dataLayer.push({
+              'event': 'case_studies_read_now',
+              'case_studies': navigation,
+          });
+        }
+        console.log('Event pushed to dataLayer');
+    };
   
     return (
       <div className="flex flex-col pb-[8%] w-[95%] tablet:w-[85%] mx-auto rounded-[30px] text-[clamp(14px,1.5vw,16px)] font-medium">
@@ -91,7 +111,7 @@
                 key={uuidv4()}
                 aria-label={item?.name}
                 value={item}
-                onClick={() => setCurrentTab(item?.id)}
+                onClick={() => {setCurrentTab(item?.id); case_studies_click(item?.name)}}
               >
                 <Image
                   className="mx-auto"
@@ -125,10 +145,10 @@
                               {item.tagline}
                             </p>
                             <button
-                              
                               className="mt-[2rem] w-[10rem] text-white naviteButton"
                               onClick={() => {
                                 router.push(item.route);
+                                case_studies_read_now(item?.name)
                               }}
                             >
                               Read Now

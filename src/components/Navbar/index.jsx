@@ -101,6 +101,7 @@ export default function Navbar() {
 
 
   console.log(hoveredTab, "hoveredTab")
+
   const navbarLinksData = [
     { 
       name: "Solution",
@@ -122,12 +123,40 @@ export default function Navbar() {
     //   takeTo: "https://mx360.io",
     //   hover: () => _handleTabsHover("mx360"),
     // },
-    {
-      name: "Contact Us",
-      takeTo: "/contact-us",
-      hover: () => _handleTabsHover("contactUs"),
-    },
+    // {
+    //   name: "Contact Us",
+    //   takeTo: "/contact-us",
+    //   hover: () => _handleTabsHover("contactUs"),
+    // },
   ];
+
+  const handlemediotix_logo_click = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'mediotix_logo_click',
+      });
+    }
+    console.log('Event pushed to dataLayer');
+  };
+
+  const handletop_navi_contact_us  = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'top_navi_contact_us',
+      });
+    }
+    console.log('Event pushed to dataLayer');
+  };
+
+  const handletop_navi_mx360_click  = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'top_navi_mx360_click',
+      });
+    }
+    console.log('Event pushed to dataLayer');
+  };
+
 
   return (
     <ChakraProvider>
@@ -135,7 +164,7 @@ export default function Navbar() {
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
     <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[35%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
-     <Link href={"/"}>
+     <Link onClick={() => handlemediotix_logo_click()} href={"/"}>
        <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} className="w-[70%] tablet:w-[100%] ml-[10px] tablet:ml-[0px]" alt="mediotix"/>
      </Link>
     </div>
@@ -153,6 +182,13 @@ export default function Navbar() {
     </Link>
     ))}
     <Link 
+        onClick={() => handletop_navi_contact_us()}
+        href={'contact-us'}
+        className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
+        Contact Us
+    </Link>
+    <Link 
+        onClick={() => handletop_navi_mx360_click()}
         href={"https://mx360.io"}
         className="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-[10px] shadow-md group">
         <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#FF7F76] duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
@@ -165,6 +201,7 @@ export default function Navbar() {
         </span>
         <span className="relative invisible">Button Text</span>
     </Link>
+
     </div>
     <div  className='flex h-full items-center justify-end tablet:hidden ' >
     <IconButton ref={btnRef} color='white'  onClick={onOpen} mr="6px"  isRound={true} variant='solid' colorScheme='whiteAlpha' aria-label='Done' fontSize='20px' icon={<RxHamburgerMenu />}>
@@ -367,6 +404,17 @@ const SolutionsMenuData = () => {
     },
   ];
 
+  const top_navi_solution_click = (navigation) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'top_navi_solution_click',
+        'var_top_navi_solution': navigation
+       });
+      }
+      console.log('Event pushed to dataLayer');
+  };
+
+
   return (
     <div className=" w-full tablet:w-[600px] tablet:ml-[15%] relative ">
       <div className="flex flex-col justify-between">
@@ -377,7 +425,7 @@ const SolutionsMenuData = () => {
         </div>
         <div className="tablet:p-[30px] mt-[15px] tablet:mt-[0px] flex flex-col gap-4">
         {menuData?.filter(item => item?.name === selectedMenu)?.[0]?.childs?.map(item => (
-          <div className="flex gap-3 tablet:text-white">
+          <div  className="flex gap-3 cursor-pointer tablet:text-white" onClick={() => top_navi_solution_click(item?.name)}>
               <div style={{background: !isLargerThan900 && "linear-gradient(#EA875B, #FF7F76)"}}  className="w-[30px] h-[30px] rounded-full tablet:rounded-none flex justify-center">
                 {item?.icon}
               </div>
@@ -436,6 +484,17 @@ const ResourcesMenuData = () => {
     ]
   }
 
+  const top_navi_resources_click = (navigation) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'top_navi_resources_click',
+        'var_top_navi_resources': navigation
+      });
+      }
+      console.log('Event pushed to dataLayer');
+  };
+
+
   return (
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
       <div className="flex flex-col tablet:flex-row justify-between">
@@ -445,7 +504,7 @@ const ResourcesMenuData = () => {
         </div>
         <div className="p-[5px] tablet:p-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-4">
         {menuItems?.[selectedMenu]?.map(item => (
-            <div className="tablet:text-white tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
+            <div onClick={() => top_navi_resources_click(item?.desc)} className="tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
               <div style={{width: (selectedMenu === 'caseStudy' && !isLargerThan900) && "100px"}} className={` h-fit tablet:bg-white min-w-[100px] tablet:w-[100px] tablet:h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
               </div>
@@ -504,6 +563,16 @@ const AboutUsMenuData = () => {
     ]
   }
 
+  const top_navi_view_all_clients = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'top_navi_view_all_clients'
+      });
+      }
+      console.log('Event pushed to dataLayer');
+  };
+
+
   return (
     <div className=" w-[100%] tablet:w-[80%] mx-auto relative ">
       <div className="flex flex-col tablet:flex-row gap-6">
@@ -540,7 +609,7 @@ const AboutUsMenuData = () => {
           </div>
  
         </div>
-        <div className="flex gap-1 items-center mt-4 hover:underline cursor-pointer">
+        <div onClick={() => top_navi_view_all_clients()} className="flex gap-1 items-center mt-4 hover:underline cursor-pointer">
           <p className="font-light text-[13px] ">View All Clients</p>
           <IoIosArrowRoundForward />
         </div>

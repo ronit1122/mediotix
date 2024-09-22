@@ -15,6 +15,8 @@ import GetInTouchForm from './../components/GetInTouchForm/index.jsx'
 import Marquee from "react-fast-marquee";
 import Accordion from './../components/Accordion/index.jsx'
 import MarqueeComponent from './../components/marquee/index.jsx'
+import LetsTalkButton from './../components/Buttons/letsTalkButton';
+import BookADemoButton from './../components/Buttons/bookADemo';
 
 export default function Home() {
 
@@ -93,6 +95,16 @@ export default function Home() {
   ]
 
 
+
+  const book_a_demo  = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'book_a_demo',
+      });
+    }
+    console.log('Event pushed to dataLayer');
+  };
+
   return (
     <main className="font-nexa">
       <Head>
@@ -119,9 +131,7 @@ export default function Home() {
            <h2 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h2>
            <p className=" mt-[40px] hidden tablet:block font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
-          <a href="#contact-section">
-           <button className="naviteButton mt-[30px]">Lets Talk</button>
-          </a>
+           <LetsTalkButton />
          </div>
       </div>
 
@@ -207,7 +217,7 @@ export default function Home() {
             </div>
             <p style={{fontSize: "clamp(14px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
             <Link href="https://mx360.io" aria-label="mx360">
-            <button className="gradientButton mt-[10px] tablet:mt-[50px]">Book a Demo</button>
+             <BookADemoButton />
             </Link>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>

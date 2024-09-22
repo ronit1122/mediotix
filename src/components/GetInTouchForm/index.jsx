@@ -35,7 +35,8 @@ export default function Home() {
           if (data?.FormHomePage?.status === "FORM_SUBMITTED") {
             // Reset form fields
            
-            handleSendMail()
+            handleSendMail() // handle mail send
+            home_get_in_touch_form_submit() // handle data layer push
             // Resolve the promise with the data
             resolve(data);
           } else {
@@ -84,6 +85,15 @@ export default function Home() {
 
       
     }
+
+    const home_get_in_touch_form_submit = () => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          dataLayer.push({
+              'event': 'home_get_in_touch_form_submit'
+          });
+        }
+        console.log('Event pushed to dataLayer');
+    };
   
   return (
     <div className=" flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">

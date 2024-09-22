@@ -2,17 +2,22 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import theme from "./theme.js"; 
 import ApolloClientProvider from './apolloProvider';
-const inter = Inter({ subsets: ["latin"] });
+import DataLayerInitializer from './../utils/dataLayerInitializer';
 
+
+const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mediotix",
   description: "A leading MarTech agency with a global presence, dedicated to helping businesses worldwide.",
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <head>
+         <link rel="icon" href="/favicon.ico" />
          {/* Google Tag Manager */}
          <script
           dangerouslySetInnerHTML={{
@@ -43,6 +48,7 @@ export default function RootLayout({ children }) {
           </noscript>
           {/* End Google Tag Manager (noscript) */}
         <ApolloClientProvider>
+          <DataLayerInitializer />
           {children}
         </ApolloClientProvider>
       </body>

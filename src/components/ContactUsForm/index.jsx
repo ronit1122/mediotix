@@ -48,7 +48,8 @@ export default function Home() {
       
 
             if (data?.FormContactUs?.status === "FORM_SUBMITTED") {
-              handleSendMail()
+              handleSendMail() // handle send mail
+              contactus_get_in_touch_form_submit() // handle push data layer
               // Resolve the promise with the data
               resolve(data);
             } else {
@@ -98,6 +99,16 @@ export default function Home() {
         })
       }
     
+
+      
+  const contactus_get_in_touch_form_submit = (navigation) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'contactus_get_in_touch_form_submit',
+      });
+      }
+      console.log('Event pushed to dataLayer');
+  };
   return (
     <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] py-[2%] mx-auto relative">
       {/* <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}

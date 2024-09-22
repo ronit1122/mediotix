@@ -10,20 +10,25 @@ import {mediotixLogoWhite} from './../../assets/companyLogo/export.js';
 
 function Index() {
 
-//   function _DataLayerFooterClicks(routeName) {
-//     window.dataLayer.push({
-//       event: "footer_navi_click",
-//       footer_navigation_click: routeName,
-//     });
-//   }
+  const bottom_navi_click = (navigation) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'bottom_navi_click',
+        'var_bottom_navi': navigation
+      });
+      }
+      console.log('Event pushed to dataLayer');
+  };
 
-//   function _DataLayerMediaIconsClicks(routeName) {
-//     window.dataLayer.push({
-//       event: "footer_navi_social_media_click",
-//       social_media: routeName,
-//     });
-//   }
-
+  const social_media_link_click = (navigation) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      dataLayer.push({
+        'event': 'social_media_link_click',
+        'social_media': navigation
+      });
+      }
+      console.log('Event pushed to dataLayer');
+  };
 
   return (
     <div style={{background: "linear-gradient(270deg, #FF9363 0%, #FF7D78 100%)", fontSize: "clamp(12px, 3vw, 15px)" }} className="font-montserrat text-white flex flex-col ">
@@ -44,14 +49,14 @@ function Index() {
             <div className="flex flex-col items-start">
               <div className="flex gap-5">
                 <a
-                //   onClick={() => _DataLayerMediaIconsClicks("Linked In")}
+                  onClick={() => social_media_link_click("Linked In")}
                   href="https://www.linkedin.com/company/14723077/admin/dashboard/"
                   aria-label="linkedin"
                 >
                   <FaLinkedin className="text-white text-xl" />
                 </a>
                 <a
-                //   onClick={() => _DataLayerMediaIconsClicks("Instagram")}
+                  onClick={() => social_media_link_click("Instagram")}
                   href="https://www.instagram.com/mediotix?igsh=MTJubDJhaTdiZTlheg=="
                   aria-label="instagram"
                 >
@@ -59,16 +64,16 @@ function Index() {
                 </a>
                
                 <a
-                //   onClick={() => _DataLayerMediaIconsClicks("Facebook")}
+                  onClick={() => social_media_link_click("Facebook")}
                   href="https://www.facebook.com/profile.php?id=61555917506821"
                   aria-label="facebook"
                 >
                   <FaFacebookF className="text-white text-xl" />
                 </a>
                 <a
-                //   onClick={() => _DataLayerMediaIconsClicks("Twitter")}
+                  onClick={() => social_media_link_click("youtube")}
                   href="https://www.youtube.com/@mediotixindia2476"
-                  aria-label="twitter"
+                  aria-label="youtube"
                 >
                   <FaYoutube className="text-white text-xl" />
                 </a>
@@ -80,38 +85,38 @@ function Index() {
           <div className="flex flex-col tablet:flex-row justify-evenly tablet:w-[30%] gap-4 text-left">
             <div className="flex flex-col gap-2 w-[60%]  text-[13px]">
               <h3 className="mb-[10px] font-semibold text-[14px]">Solution</h3>
-              <Link href="/" aria-label="about-us" className="hover:underline">
+              <Link onClick={() => bottom_navi_click("Advanced Funnel Optimization")} href="/" aria-label="about-us" className="hover:underline">
                 <p className="font-[300]">Advanced Funnel Optimization</p>
               </Link>
-              <Link href="/" aria-label="blog" className="hover:underline">
+              <Link onClick={() => bottom_navi_click("Conversion Rate Optimization")} href="/" aria-label="blog" className="hover:underline">
                 <p className="font-[300]">Conversion Rate Optimization</p>
               </Link>
-              <Link href="/" aria-label="contact-us" className="hover:underline" >
+              <Link onClick={() => bottom_navi_click("Google Maps Platform")} href="/" aria-label="contact-us" className="hover:underline" >
                 <p className="font-[300]">Google Maps Platform</p>
               </Link>
-              <Link href="/" aria-label="contact-us" className="hover:underline" >
+              <Link onClick={() => bottom_navi_click("Media Analytics")} href="/" aria-label="contact-us" className="hover:underline" >
                 <p className="font-[300]">Media Analytics</p>
               </Link>
-              <Link href="/" aria-label="contact-us"  className="hover:underline">
+              <Link onClick={() => bottom_navi_click("App Analytics")} href="/" aria-label="contact-us"  className="hover:underline">
                 <p className="font-[300]">App Analytics</p>
               </Link>
             </div>
 
             <div className="flex flex-col gap-2 w-[40%] text-[13px] mt-[30px] tablet:mt-[0px] items-start text-left">
             <h3 className="mb-[10px] font-semibold text-[14px]">Quick Links</h3>
-            <Link href="/contact-us" aria-label="contact-us"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("Contact Us")} href="/contact-us" aria-label="contact-us"  className="hover:underline">
                 <p className="font-[300]">Contact Us</p>
             </Link>
-            <Link href="https://mx360.io" aria-label="mx360"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("MX360")} href="https://mx360.io" aria-label="mx360"  className="hover:underline">
                 <p className="font-[300]">MX360</p>
             </Link>
-            <Link href="/" aria-label="contact-us"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("Case Studies")} href="/" aria-label="contact-us"  className="hover:underline">
                 <p className="font-[300]">Case Studies</p>
             </Link>
-            <Link href="/privacy-policy" aria-label="privacy-policy"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("Privacy Policy")} href="/privacy-policy" aria-label="privacy-policy"  className="hover:underline">
                 <p className="font-[300]">Privacy Policy</p>
             </Link>
-            <Link href="/terms-and-conditions" aria-label="terms-and-conditions"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("Term and Conditions")} href="/terms-and-conditions" aria-label="terms-and-conditions"  className="hover:underline">
                 <p className="block font-[300]">Term and Conditions</p>
             </Link>
           
