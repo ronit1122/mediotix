@@ -420,12 +420,12 @@ const SolutionsMenuData = () => {
       <div className="flex flex-col justify-between">
         <div className="h-fit w-full bg-white grid grid-cols-2 gap-2 tablet:flex justify-between items-center tablet:px-[20px] tablet:py-[10px] rounded-[10px]">
           {menuData?.map(item => (
-            <div onClick={() => setSelectedMenu(item?.name)} className={` w-full tablet:w-[120px] h-[40px] flex items-center justify-center text-center rounded-[5px] cursor-pointer ${selectedMenu === item?.name ? 'text-white bg-gradient-to-b from-[#FF9363] to-[#FF7D78]' : 'text-black bg-white hover:bg-slate-100'}`} >{item?.name}</div>
+            <div onClick={() => {setSelectedMenu(item?.name); top_navi_solution_click(item?.name)}} className={` w-full tablet:w-[120px] h-[40px] flex items-center justify-center text-center rounded-[5px] cursor-pointer ${selectedMenu === item?.name ? 'text-white bg-gradient-to-b from-[#FF9363] to-[#FF7D78]' : 'text-black bg-white hover:bg-slate-100'}`} >{item?.name}</div>
           ))}
         </div>
         <div className="tablet:p-[30px] mt-[15px] tablet:mt-[0px] flex flex-col gap-4">
         {menuData?.filter(item => item?.name === selectedMenu)?.[0]?.childs?.map(item => (
-          <div  className="flex gap-3 cursor-pointer tablet:text-white" onClick={() => top_navi_solution_click(item?.name)}>
+          <div  className="flex gap-3 cursor-pointer tablet:text-white">
               <div style={{background: !isLargerThan900 && "linear-gradient(#EA875B, #FF7F76)"}}  className="w-[30px] h-[30px] rounded-full tablet:rounded-none flex justify-center">
                 {item?.icon}
               </div>
@@ -499,12 +499,12 @@ const ResourcesMenuData = () => {
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
       <div className="flex flex-col tablet:flex-row justify-between">
         <div className="w-full tablet:h-[200px] tablet:w-[300px] flex flex-row tablet:flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
-         <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("caseStudy")}>Case study</button>
-         <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => setSelectedMenu("blogs")}>Blogs</button>
+         <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() =>{ setSelectedMenu("caseStudy"); top_navi_resources_click("Case study")}}>Case study</button>
+         <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => {setSelectedMenu("blogs"); top_navi_resources_click("Blogs")}}>Blogs</button>
         </div>
         <div className="p-[5px] tablet:p-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-4">
         {menuItems?.[selectedMenu]?.map(item => (
-            <div onClick={() => top_navi_resources_click(item?.desc)} className="tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
+            <div className="tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
               <div style={{width: (selectedMenu === 'caseStudy' && !isLargerThan900) && "100px"}} className={` h-fit tablet:bg-white min-w-[100px] tablet:w-[100px] tablet:h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
               </div>
