@@ -52,7 +52,7 @@ import {
   Tabs, TabList, TabPanels, Tab, TabPanel 
 } from '@chakra-ui/react'
 import { RxHamburgerMenu } from "react-icons/rx";
-
+import MediotixLogoGif from './../../assets/navbar/mediotixLogo.gif';
 
 
 export default function Navbar() {
@@ -164,8 +164,8 @@ export default function Navbar() {
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
     <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[35%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
-     <Link onClick={() => handlemediotix_logo_click()} href={"/"}>
-       <Image src={mediotixLogo} style={{objectFit: "contain", marginRight: "10%"}} className="w-[70%] tablet:w-[100%] ml-[10px] tablet:ml-[0px]" alt="mediotix"/>
+     <Link onClick={() => handlemediotix_logo_click()} href={"/"} style={{display: "flex", justifyContent: "center"}}>
+       <Image src={MediotixLogoGif} style={{objectFit: "contain", marginRight: "13%"}} className="w-[70%] tablet:max-w-[45%] ml-[10px] tablet:ml-[0px]" alt="mediotix"/>
      </Link>
     </div>
 

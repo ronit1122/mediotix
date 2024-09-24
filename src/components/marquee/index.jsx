@@ -34,7 +34,7 @@ const Carousel = ({ props }) => {
             <Image src={pvr} alt="pvr"/>
             <p className="text-[20px] font-black">35%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
-            <div className="w-fit p-[5px] rounded-[5px] bg-[#FFCB05] text-[12px] ">Increase ticket bookings  </div>
+            <div className="w-fit p-[5px] rounded-[5px] bg-[#FFCB05] text-[12px] ">Increase Ticket Bookings</div>
           </div>
         </SwiperSlide>
           <SwiperSlide>
@@ -42,7 +42,7 @@ const Carousel = ({ props }) => {
             <Image src={maxHealth} alt="maxHealth"/>
             <p className="text-[20px] font-black">150%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
-            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#004185] text-[12px] ">Increase in Doctor consultancy</div>
+            <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#004185] text-[12px] ">Increase in Doctor Consultancy</div>
           </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -50,7 +50,7 @@ const Carousel = ({ props }) => {
             <Image src={diceAcademy} alt="diceAcademy"/>
             <p className="text-[20px] font-black">500%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
-            <div className="w-fit p-[5px] text-white rounded-[5px] bg-[#000000] text-[12px] ">Boost in Admissions leads </div>
+            <div className="w-fit p-[5px] text-white rounded-[5px] bg-[#000000] text-[12px] ">Boost in Admissions Leads </div>
           </div>
           </SwiperSlide>
           <SwiperSlide>

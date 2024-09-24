@@ -3,70 +3,18 @@ import React from "react";
 import LandingFooter from './../../components/Footer/index.jsx';
 import LandingNavbar from './../../components/Navbar/index.jsx';
 
-const data = [
-  {
-    data: `Mediotix understands the privacy and security concerns you may have about your personal information. Acknowledging the sensitivity, we leave no stone unturned to protect your data from all sorts of risks, and make sure it is used in compliance with the law. This privacy policy has been compiled to better serve those who are concerned with how their ‘Personally Identifiable Information’ (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context.`
+export const metadata = {
+  title: 'Privacy Policy | How Mediotix Protects Your Personal Data',
+  description: 'Understand how Mediotix handles your personal data with transparency and care. Review our Privacy Policy for details on data collection and protection',
+  alternates: {
+    canonical: 'https://mediotix.com/privacy-policy/',
   },
-  {
-    data: `Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.`
-  },
-  {
-    heading: "How We Collect Information",
-    data: 'Refers to information concerning an identifiable living person derived from specific data or a combination of that data and additional information in our possession or likely to be acquired.',
-    list: [
-        `Log Files: Like many other Web sites, our site makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.`,
-        `Cookies and Web Beacons: We use cookies to store information about visitors’ preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.`
-    ]
-  },
-  {
-    heading: "How We Use Your Information",
-    data: 'We may use the information we collect from you when you fill out a form or sign up for our newsletter, respond to a survey or marketing communication in the following ways:',
-    list: [
-        `To allow us to better service you in responding to your requests.`,
-        `To send periodic emails regarding our services and vital updates.`
-    ],
-    desc: `NOTE: We do not sell, misuse or distribute your data for any purpose, unless required by law or as authorized by you or your signatory. We are obligated to share your information in case it is required by law or when required by law-enforcement or government officials.`
-  },
-  {
-    heading: "How We Protect Your Information",
-    data: 'We maintain strict technical, administrative, and physical safeguards to protect your personal information against loss, misuse, or unauthorized access. We train our employees to maintain appropriate standards of conduct with regard to the protection of information. We also take the necessary steps to require that third parties who assist in our provision of services follow our privacy practices and comply with data protection laws',
-    desc: 'Our data Privacy Policy is protected by Industry endorsed technology and widely deployed security protocol used in today’s cut-throat market scenarios. Bringing such advanced and stringent security protocol into the practice ensures you a safe transmission of collected data.'
-  },
-  {
-    heading: "Third Party Links",
-    data: 'Occasionally, at our discretion, we may include or offer third party products or services on our website. These third party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.'
-  },
-  {
-    heading: "Policy Changes",
-    data: `These policies may be amended by us at any time and without notice, but will be posted on this page. You agree that your continued use of our websites, product or service after that date will constitute your consent and acceptance of the amendment.`
-  },
-  {
-    heading: "Disclaimer",
-    data: `Information shared over the Internet is subject to several security perils. Therefore, in the case of any losses/damage, alteration or deletion, incidental or consequential or any malfunction in the system due to unlawful use or access, Mediotix holds no responsibilities for any such consequences.`
-  },
+};
 
-  {
-    heading: 'Google Play Distribution Agreement',
-    data: 'Please be aware that our app, when distributed on Google Play, is subject to the Google Play Developer Distribution Agreement.'
-  },
-  // {
-  //   heading:'Contact Us',
-  //   data:'For questions regarding these policies, please contact us.'
-  // }
-];
 export default function Privacy() {
   // Hii
   return (
-    <>
-    {/* <Helmet>
-        <title itemprop="name">MX360 | Privacy Policy</title>
-        <meta
-          name="description"
-          content="Your privacy matters to us. MX360 is committed to ensuring your comfort when using our website."
-        />
-       <link rel="canonical" herf="https://www.mx360.io/privacy-policy/" />
-    </Helmet> */}
-    <div className="flex flex-col bg-white">
+    <main className="flex flex-col bg-white">
   <LandingNavbar />
   <div
     id="content"
@@ -119,8 +67,59 @@ export default function Privacy() {
     {/* <p>13th Nov 2023</p> */}
   </div>
   <LandingFooter />
-</div>
-
-    </>
+    </main>
   );
 }
+
+
+const data = [
+  {
+    data: `Mediotix understands the privacy and security concerns you may have about your personal information. Acknowledging the sensitivity, we leave no stone unturned to protect your data from all sorts of risks, and make sure it is used in compliance with the law. This privacy policy has been compiled to better serve those who are concerned with how their ‘Personally Identifiable Information’ (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context.`
+  },
+  {
+    data: `Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.`
+  },
+  {
+    heading: "How We Collect Information",
+    data: 'Refers to information concerning an identifiable living person derived from specific data or a combination of that data and additional information in our possession or likely to be acquired.',
+    list: [
+        `Log Files: Like many other Web sites, our site makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.`,
+        `Cookies and Web Beacons: We use cookies to store information about visitors’ preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.`
+    ]
+  },
+  {
+    heading: "How We Use Your Information",
+    data: 'We may use the information we collect from you when you fill out a form or sign up for our newsletter, respond to a survey or marketing communication in the following ways:',
+    list: [
+        `To allow us to better service you in responding to your requests.`,
+        `To send periodic emails regarding our services and vital updates.`
+    ],
+    desc: `NOTE: We do not sell, misuse or distribute your data for any purpose, unless required by law or as authorized by you or your signatory. We are obligated to share your information in case it is required by law or when required by law-enforcement or government officials.`
+  },
+  {
+    heading: "How We Protect Your Information",
+    data: 'We maintain strict technical, administrative, and physical safeguards to protect your personal information against loss, misuse, or unauthorized access. We train our employees to maintain appropriate standards of conduct with regard to the protection of information. We also take the necessary steps to require that third parties who assist in our provision of services follow our privacy practices and comply with data protection laws',
+    desc: 'Our data Privacy Policy is protected by Industry endorsed technology and widely deployed security protocol used in today’s cut-throat market scenarios. Bringing such advanced and stringent security protocol into the practice ensures you a safe transmission of collected data.'
+  },
+  {
+    heading: "Third Party Links",
+    data: 'Occasionally, at our discretion, we may include or offer third party products or services on our website. These third party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.'
+  },
+  {
+    heading: "Policy Changes",
+    data: `These policies may be amended by us at any time and without notice, but will be posted on this page. You agree that your continued use of our websites, product or service after that date will constitute your consent and acceptance of the amendment.`
+  },
+  {
+    heading: "Disclaimer",
+    data: `Information shared over the Internet is subject to several security perils. Therefore, in the case of any losses/damage, alteration or deletion, incidental or consequential or any malfunction in the system due to unlawful use or access, Mediotix holds no responsibilities for any such consequences.`
+  },
+
+  {
+    heading: 'Google Play Distribution Agreement',
+    data: 'Please be aware that our app, when distributed on Google Play, is subject to the Google Play Developer Distribution Agreement.'
+  },
+  // {
+  //   heading:'Contact Us',
+  //   data:'For questions regarding these policies, please contact us.'
+  // }
+];

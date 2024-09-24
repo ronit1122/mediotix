@@ -14,18 +14,18 @@ import ContactUsForm from '../../components/ContactUsForm/index.jsx';
 import HeadBanner from './../../assets/contactUs/headBanner.png';
 import worldMap from './../../assets/contactUs/worldMap.svg';
 
+export const metadata = {
+  title: 'Mediotix MarTech Agency Contact Details | Phone & Address',
+  description: 'Contact Mediotix for any analytics or digital marketing related requests. Our Branches are located in Gurgaon, New Delhi, Mumbai, Hyderabad in India',
+  alternates: {
+    canonical: 'https://mediotix.com/contact-us/',
+  },
+};
 export default function ContactUs() {
 
 
   return (
     <main className="font-nexa">
-      <Head>
-        <title>Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix</title>
-        <meta name="description" content="Mediotix is an Award winning digital marketing and web analytics agency, Equipped with GAIQ Certified professionals. We are specialized team for GTM, Google Data Studio, Funnel Optimization etc" />
-        {/* <meta name="keywords" content="contact, data-driven insights, business analytics, advanced solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
-        <link rel="canonical" href="https://mediotix.com/contact-us/" />
-      </Head>
       <Navbar />
 
       {/* section 1 */}

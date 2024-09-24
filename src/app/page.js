@@ -17,6 +17,15 @@ import Accordion from './../components/Accordion/index.jsx'
 import MarqueeComponent from './../components/marquee/index.jsx'
 import LetsTalkButton from './../components/Buttons/letsTalkButton';
 import BookADemoButton from './../components/Buttons/bookADemo';
+import { Metadata } from 'next';
+
+export const metadata = {
+  title: 'Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix',
+  description: 'An Award winning digital marketing & web analytics agency, Equipped with GAIQ Certified professionals. Specialized team for GTM, Google Data Studio, Funnel Optimization etc',
+  alternates: {
+    canonical: 'https://mediotix.com/',
+  },
+};
 
 export default function Home() {
 
@@ -107,13 +116,11 @@ export default function Home() {
 
   return (
     <main className="font-nexa">
-      <Head>
+      {/* <Head>
         <title>Mediotix MarTech Agency Contact Details | Phone & Address</title>
-        <meta name="description" content="Contact Mediotix for any analytics or digital marketing related requests. Our Branches are located in Gurgaon, New Delhi, Mumbai, Hyderabad in India" />
-        {/* <meta name="keywords" content="contact, data-driven insights, business analytics, advanced solutions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <meta name="description" content="An Award winning digital marketing & web analytics agency, Equipped with GAIQ Certified professionals. Specialized team for GTM, Google Data Studio, Funnel Optimization etc" />
         <link rel="canonical" href="https://mediotix.com/" />
-      </Head>
+      </Head> */}
       <Navbar />
 
       {/* section 1 */}
@@ -128,7 +135,7 @@ export default function Home() {
              <h3 className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</h3>
            </div>
            <h1 className="text-[clamp(20px,4vw,48px)] mt-[0px] tablet:mt-[26px] font-medium font-nexa">Fueling Brand Growth with</h1>
-           <h2 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h2>
+           <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h1>
            <p className=" mt-[40px] hidden tablet:block font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
            <LetsTalkButton />
@@ -210,7 +217,7 @@ export default function Home() {
       </div>
       <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className=" w-[100%] tablet:w-[50%]">
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and analyze </h2>
+            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and Analyze </h2>
             <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]" >All-In-One Data-Driven Marketing Solution.</h2>
             <div className="w-[100%] my-[20px] block tablet:hidden">
             <Image src={sectionThreeImage} style={{objectFit: "contain"}} />
