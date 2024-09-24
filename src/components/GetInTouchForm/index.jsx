@@ -9,16 +9,19 @@ import { useToast } from '@chakra-ui/react'
 import emailjs from 'emailjs-com';
 // mutations
 import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutation.js';
-
+import { useMediaQuery } from '@chakra-ui/react'
 
 export default function Home() {
 
   // FORM MUTATION
   const toast = useToast()
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [MutationGetInTouchForm, { loading: GetInTouchFormMutationLoading }] = useMutation(GetInTouchFormMutation);
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [mobileFormVisible, setMobileFormVisible] = useState(false)
+
     // FUNCTION TO DELETE REPORT
     const _MutationGetInTouchForm = () => {
       return new Promise(async (resolve, reject) => {
@@ -105,24 +108,43 @@ export default function Home() {
               <p >Please feel free to connect with us for your quick enquiry
                 <br />
               For additional enquiries or support, kindly drop us an email at <br /> <a className="text-[#ff7554] hover:underline" href="mailto:info@mediotix.com">info@mediotix.com</a>.</p>
+              <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-7 tablet:hidden">Apply Now</button>
            </div>
-           <form onSubmit={handleSubmit}>
-           <div className="rounded-[8px] flex flex-col gap-4 p-[30px]" style={{background: "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)"}}>
+          {isLargerThan900 &&  <form onSubmit={handleSubmit}>
+           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
              <div>
-               <label for="name" class="block mb-2 text-sm font-medium text-white ">Full name</label>
+               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
                <input required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
              </div>
              <div>
-               <label for="email" class="block mb-2 text-sm font-medium text-white ">Business Email Address</label>
+               <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
                <input required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
              </div>
              <div>
-               <label for="phone" class="block mb-2 text-sm font-medium text-white ">Phone Number</label>
+               <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
                <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
              </div>
              <button type="submit" className="naviteButtonInverted">Submit</button>
            </div>
-           </form>
+           </form>}
+
+          {(!isLargerThan900 && mobileFormVisible) &&  <form onSubmit={handleSubmit}>
+           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
+             <div>
+               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
+               <input required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
+             </div>
+             <div>
+               <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
+               <input required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
+             </div>
+             <div>
+               <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
+               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
+             </div>
+             <button type="submit" className="naviteButtonInverted">Submit</button>
+           </div>
+           </form>}
          </div>
         <div style={{zIndex: "0"}} className="absolute top-[-15%] hidden tablet:block right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
     </div>
