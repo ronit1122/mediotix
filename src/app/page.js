@@ -134,8 +134,8 @@ export default function Home() {
            <div className="border-b-2 w-fit">
              <h3 className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</h3>
            </div>
-           <h1 className="text-[clamp(20px,4vw,48px)] mt-[0px] tablet:mt-[26px] font-medium font-nexa">Fueling Brand Growth with</h1>
-           <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]">Intelligent Marketing & AI Power Analytics</h1>
+           <h1 className="text-[clamp(20px,4vw,48px)] font-[800] tablet:leading-[1.1]">Fueling Brand Growth with <br/> Intelligent Marketing & AI Power Analytics</h1>
+           {/* <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]"></h1> */}
            <p className=" mt-[40px] hidden tablet:block font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>
            <LetsTalkButton />
