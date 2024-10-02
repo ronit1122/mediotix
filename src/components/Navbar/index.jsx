@@ -1,7 +1,7 @@
 'use client'
 import React, {useState, useRef, useEffect} from "react"
 import Link from 'next/link'
-import {mediotixLogo, mx360LogoWhite} from './../../assets/companyLogo/export.js';
+import {mediotixLogo, mx360LogoWhite, mx360Logo} from './../../assets/companyLogo/export.js';
 import Image from 'next/image';
 import {v4 as uuidv4} from "uuid";
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, digbiHealth, pvr, watcho, heroElectronix, reliance, spinny} from './../../assets/clients/export.js';
@@ -191,13 +191,13 @@ export default function Navbar() {
         onClick={() => handletop_navi_mx360_click()}
         href={"https://mx360.io"}
         className="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-[10px] shadow-md group">
-        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#FF7F76] duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#FF7F76] duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+            <svg className="w-6 h-6" fill="white" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
         </span>
-        <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
-            <Image  src={mx360LogoWhite} />
+        <span className="absolute flex items-center justify-center w-full h-full text-white bg-white transition-all duration-300 transform group-hover:translate-x-full ease">
+            <Image  src={mx360Logo} className="w-[90px]" />
         </span>
         <span className="relative invisible">Button Text</span>
     </Link>
