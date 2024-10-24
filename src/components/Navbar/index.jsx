@@ -160,7 +160,7 @@ export default function Navbar() {
 
   return (
     <ChakraProvider>
-<div className=" h-[50px] tablet:h-[70px] w-full relative">
+<div className=" h-[50px] tablet:h-[70px] w-full relative" style={{boxShadow: "0px 4px 7px 5px #00000033"}}>
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
     <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[35%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>

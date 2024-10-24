@@ -110,7 +110,7 @@ function Index() {
             <Link onClick={() => bottom_navi_click("MX360")} href="https://mx360.io" aria-label="mx360"  className="hover:underline">
                 <p className="font-[300]">MX360</p>
             </Link>
-            <Link onClick={() => bottom_navi_click("Case Studies")} href="/" aria-label="contact-us"  className="hover:underline">
+            <Link onClick={() => bottom_navi_click("Case Studies")} href="/case-studies" aria-label="case-studies"  className="hover:underline">
                 <p className="font-[300]">Case Studies</p>
             </Link>
             <Link onClick={() => bottom_navi_click("Privacy Policy")} href="/privacy-policy" aria-label="privacy-policy"  className="hover:underline">

@@ -23,7 +23,7 @@ export const metadata = {
   title: 'Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix',
   description: 'An Award winning digital marketing & web analytics agency, Equipped with GAIQ Certified professionals. Specialized team for GTM, Google Data Studio, Funnel Optimization etc',
   alternates: {
-    canonical: 'https://mediotix.com/',
+    canonical: 'https://www.mediotix.com/',
   },
 };
 

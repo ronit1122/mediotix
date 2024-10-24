@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Mediotix Terms & Conditions | Billing, Service Policies & Agreement',
   description: 'Read the Mediotix Terms & Conditions to understand service charges, billing policies, cancellation terms, & legal agreements.',
   alternates: {
-    canonical: 'https://mediotix.com/terms-and-conditions/',
+    canonical: 'https://www.mediotix.com/terms-and-conditions/',
   },
 };
 

@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
          <link rel="icon" href="/favicon.ico" />
+         <meta name="robots" content="index, follow" />
          {/* Google Tag Manager */}
          <script
           dangerouslySetInnerHTML={{
@@ -30,11 +31,36 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+         <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Mediotix",
+            "url": "https://www.mediotix.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.mediotix.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mediotix",
+            "alternateName": "Mediotix",
+            "url": "https://www.mediotix.com/",
+            "logo": "https://www.mediotix.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FmediotixLogo.27576937.gif&w=1920&q=75",
+            "sameAs": [
+              "https://www.instagram.com/mediotix/",
+              "https://www.youtube.com/@mediotixindia2476",
+              "https://www.facebook.com/profile.php?id=61555917506821",
+              "https://www.linkedin.com/company/mediotix"
+            ]
+          })
+        }} />
         {/* End Google Tag Manager */}
-        {/* <link
-          href="https://db.onlinewebfonts.com/c/cefa2bca89ec27b6b9c51c215bce8ba2?family=Nexa-Regular"
-          rel="stylesheet"
-        /> */}
       </head>
       <body className={inter.className}>
           {/* Google Tag Manager (noscript) */}
