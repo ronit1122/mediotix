@@ -1,10 +1,10 @@
 'use client'
 import React from "react";
 import { Flex, SimpleGrid, Text, useMediaQuery, Box } from "@chakra-ui/react";
-import CardComp from './../../components/CaseStudiesCard/index.jsx';
-import {cases} from './../../components/CaseStudiesData/index.jsx';
-import Navbar from './../../components/Navbar/index.jsx';
-import Footer from './../../components/Footer/index.jsx';
+import CardComp from '../../components/BlogsCard/index.jsx';
+import {blogs} from '../../components/BlogsData/index.jsx';
+import Navbar from '../../components/Navbar/index.jsx';
+import Footer from '../../components/Footer/index.jsx';
 import {v4 as uuidv4} from 'uuid';
 
 
@@ -20,6 +20,7 @@ export default function Index() {
       fontSize={["clamp(13px, 1.5vw, 15px)"]}
       fontWeight="500"
       color="#263238"
+      bg='white'
 
     >
       <Navbar />
@@ -38,10 +39,10 @@ export default function Index() {
             color="#263238"
             as="h1"
           >
-            Case Studies
+            Blogs
           </Text>
           <Text>
-             Here’s a glimpse into the potential outcomes we have carefully curated for our cherished clients. Your brand <br /> can be the next success story to be highlighted on this wall because we believe the best is yet to come.
+          Transform your data into actionable insights. Unlock growth and drive <br /> smarter decisions with powerful analytics solutions today!
           </Text>
         </Flex>
         <Flex position='relative' >
@@ -53,7 +54,7 @@ export default function Index() {
             columns={isLargerThan900 ? 3 : isLargerThan600 ? 2 : 1}
             spacing={40}
           >
-            {cases?.map((item) => (
+            {blogs?.map((item) => (
               <React.Fragment key={uuidv4()}>
                 <CardComp item={item} />
               </React.Fragment>

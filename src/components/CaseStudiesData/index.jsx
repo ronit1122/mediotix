@@ -12,14 +12,24 @@ import {
     pvrBg,
     watchoBg
   } from './../../assets/caseStudiesPage/export.js';
-
+import {
+  cashkaroWhite,
+  diceWhite,
+  finolexWhite,
+  gskWhite,
+  heroElectronixWhite,
+  homeDelhiWhite,
+  maxHealthWhite,
+  pvrWhite,
+  watchoWhite,
+} from './../../assets/clientsWhiteLogos/export.js';
 
   export const cases = [
     {
         name: "Qubo Hero Electronix",
         logoAlt: "Dice Academy logo",
         imgAlt: "Dice Academy background image",
-        logo: qubo,
+        logo: heroElectronixWhite,
         img: heroElectronixBg,
         tagline:
           "150% Increased Conversions Rate within 6 months by Optimizing Conversion Funnel",
@@ -61,7 +71,7 @@ import {
         name: "GSK",
         logoAlt: "GSK logo",
         imgAlt: "GSK background image",
-        logo: gsk,
+        logo: gskWhite,
         img: gskBg,
         tagline:
           "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
@@ -103,7 +113,7 @@ import {
         name: "Dice Academy",
         logoAlt: "Dice Academy logo",
         imgAlt: "Dice Academy background image",
-        logo: diceAcademy,
+        logo: diceWhite,
         img: diceBg,
         tagline:
           "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
@@ -145,7 +155,7 @@ import {
         name: "Watcho",
         logoAlt: "watcho logo",
         imgAlt: "watcho image",
-        logo: watcho,
+        logo: watchoWhite,
         img: watchoBg,
         tagline: "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
         desc: "Dice Academy is an academic institute located in New Delhi, India. The Academy offers online and offline courses in Graphics, Motion Graphics, Web Design, Web development, and Web Animation. They have trained over 5000 students.",
@@ -184,7 +194,7 @@ import {
     },
     {
         name: "Max Healthcare",
-        logo: maxHealth,
+        logo: maxHealthWhite,
         logoAlt: "Max Healthcare Logo",
         imgAlt: "Max Healthcare background Image",
         tagline: `Know how 85% Increment happened in Conversion Rate within 3 months`,
@@ -225,7 +235,7 @@ import {
     },
     {
         name: "Cashkaro",
-        logo: cashKaro,
+        logo: cashkaroWhite,
         logoAlt: "Max Healthcare Logo",
         imgAlt: "Max Healthcare background Image",
         tagline: `Know how 85% Increment happened in Conversion Rate within 3 months`,
@@ -268,7 +278,7 @@ import {
       name: "PVR Cinemas",
       logoAlt: "Pvr Cinemas logo",
       imgAlt: "Pvr Cinemas background Image",
-      logo: pvr,
+      logo: pvrWhite,
       tagline: "An Innovative Analytics Approach that Delivered 150% Increase in Conversions",
       img: pvrBg,
       desc: "India’s leading cinema exhibitor company with 1704 screens across 114 cities, renowned for its world-class multiplexes & immersive cinematic experiences.",
@@ -305,12 +315,11 @@ import {
       ],
       route: '/case-studies/card/:pvr'
     },
-
     {
       name: "FINOLEX PIPES & FITTING",
       logoAlt: "FINOLEX PIPES & FITTING Logo",
       imgAlt: "FINOLEX PIPES & FITTING Image",
-      logo: finolex,
+      logo: finolexWhite,
       img: finolexBg,
       tagline: "Discover LYF’s High Rankings Journey on SERP",
       desc: "Reliance LYF is one of India's beloved brands for making innovative products and performance-based electronics accessible to everyone. They are highly committed to enhancing customer lifestyle with their range of products.",
@@ -347,12 +356,11 @@ import {
       route: '/case-studies/card/:reliance'
   
     },
-
     {
       name: "Home Delhi",
       logoAlt: "Home Delhi logo",
       imgAlt: "Home Delhi background image",
-      logo:finolex,
+      logo:homeDelhiWhite,
       img: homeDelhiBg,
       tagline:"Integrated SEO Strategy which Resulted in 90% Increased Ranking on Keywords",
       desc: "Home is Delhi’s quintessential home away from home. A beacon for the arts, hospitality, and entertainment in all their forms. Nestled in the heart of South Delhi.",

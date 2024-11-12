@@ -27,15 +27,10 @@ export default function CardComp({ item }) {
     desc,
     tagline,
     img,
+    views,
     imgAlt,
-    logoAlt,
-    challenges,
-    approach,
-    outcomes,
+    dateCreated,
     logo,
-    solution,
-    vertical,
-    primeTg,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
@@ -43,7 +38,7 @@ export default function CardComp({ item }) {
 
 
   return (
-  <Link href={`/case-studies/${name}`} >
+  <Link href={`/blogs/${name}`} >
     <Flex
     h="100%"
       classname="font-nexa"
@@ -63,8 +58,11 @@ export default function CardComp({ item }) {
           <Image src={logo} style={{position: "absolute", objectFit: "contain", bottom: "10px", right: "10px"}} />
         </Flex>
         <Stack mt="6" spacing="3" p='20px'>
+          <Flex mb="13px">
+            <Text mr="8px">{dateCreated}</Text> | <Text ml="8px">{views}</Text>
+          </Flex>
           <Heading size="md" fontWeight="900">{name}</Heading>
-          <Text>{tagline}</Text>
+          <Text>{desc}</Text>
         </Stack>
       </Flex>
       <Flex p="20px">

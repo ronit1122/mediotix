@@ -213,6 +213,16 @@ a {
 }
 
 
+/* styles.css */
+.hover-overlay {
+  @apply w-48 h-48 bg-black transition duration-300;
+}
+
+.hover-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 
 @keyframes blob-traverse {
   100% {

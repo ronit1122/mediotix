@@ -449,37 +449,45 @@ const ResourcesMenuData = () => {
       {
         icon: <Image src={pvr} className="object-contain" />,
         desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
+        takeTo: "/case-studies/PVR%20Cinemas"
       },
       {
         icon: <Image src={maxHealth} className="object-contain" />,
-        desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care."
+        desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
+        takeTo: "/case-studies/Max%20Healthcare"
       },
       {
         icon: <Image src={digbiHealth} className="object-contain" />,
-        desc: "Digbi Health : Digbi Health's seamless GA4 transition enhanced conversion funnel tracking, empowering data-driven decisions and ROI precision."
+        desc: "Digbi Health : Digbi Health's seamless GA4 transition enhanced conversion funnel tracking, empowering data-driven decisions and ROI precision.",
+        takeTo: "/case-studies/Home%20Delhi"
       },
       {
         icon: <Image src={gsk} className="object-contain" />,
-        desc: "gsk: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK."
+        desc: "gsk: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
+        takeTo: "/case-studies/GSK"
       }
        
     ],
     blogs: [
       {
         icon: <Image src={L1} className="object-cover" />,
-        desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights"
+        desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights",
+        takeTo: "/blogs/card/:pvr"
       },
       {
         icon: <Image src={R1} className="object-cover" />,
-        desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights."
+        desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.",
+        takeTo: "/blogs/card/:pvr"
       },
       {
         icon: <Image src={L2} className="object-cover" />,
-        desc: "Explore How Big Data is Shaping the Future of Marketing Trends with 'Monday Analytics Insights."
+        desc: "Explore How Big Data is Shaping the Future of Marketing Trends with 'Monday Analytics Insights.",
+        takeTo: "/blogs/card/:pvr"
       },
       {
         icon: <Image src={R2} className="object-cover" />,
-        desc: "Know full potential of your data with the latest Monday Analytics Insight!"
+        desc: "Know full potential of your data with the latest Monday Analytics Insight!",
+        takeTo: "/blogs/card/:pvr"
       }
     ]
   }
@@ -502,9 +510,11 @@ const ResourcesMenuData = () => {
          <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() =>{ setSelectedMenu("caseStudy"); top_navi_resources_click("Case study")}}>Case study</button>
          <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => {setSelectedMenu("blogs"); top_navi_resources_click("Blogs")}}>Blogs</button>
         </div>
-        <div className="p-[5px] tablet:p-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-4">
+        <div className="w-full">
+        <div className="p-[5px] tablet:px-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-3 ">
         {menuItems?.[selectedMenu]?.map(item => (
-            <div className="tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-0 bg-[#f4f4f5] tablet:bg-transparent rounded-md flex flex-col tablet:flex-row gap-2">
+           <Link href={item?.takeTo}>
+            <div className="  tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-[5px] bg-[#f4f4f5] tablet:bg-white tablet:bg-opacity-0 tablet:hover:bg-opacity-20  rounded-md flex flex-col tablet:flex-row gap-2">
               <div style={{width: (selectedMenu === 'caseStudy' && !isLargerThan900) && "100px"}} className={` h-fit tablet:bg-white min-w-[100px] tablet:w-[100px] tablet:h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
               </div>
@@ -512,7 +522,15 @@ const ResourcesMenuData = () => {
               <p className="text-[clamp(12px,3vw,14px)]">{item?.desc}</p>
               </div>
             </div>
+           </Link>
         ))}
+        </div>
+        <Link href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
+         <div onClick={() => {}} className="flex gap-1 p-[5px] mt-[10px] tablet:px-[30px] text-white items-center hover:underline cursor-pointer">
+          <p className="font-[500] text-[13px] text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
+          <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>
+         </div>
+        </Link>
         </div>
       </div>
     </div>
