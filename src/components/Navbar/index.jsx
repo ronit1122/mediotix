@@ -53,7 +53,7 @@ import {
 } from '@chakra-ui/react'
 import { RxHamburgerMenu } from "react-icons/rx";
 import MediotixLogoGif from './../../assets/navbar/mediotixLogo.gif';
-
+import {contentPerformanceAnalysis, aiAwakens} from './../../assets/blogsPage/export.js';
 
 export default function Navbar() {
   const [openNavbar, setOpenNavbar] = React.useState(false);
@@ -472,22 +472,22 @@ const ResourcesMenuData = () => {
       {
         icon: <Image src={L1} className="object-cover" />,
         desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights",
-        takeTo: "/blogs/card/:pvr"
+        takeTo: "/blogs/Data%20Visualization:%20Turning%20Numbers%20into%20Actionable%20Insights"
       },
       {
         icon: <Image src={R1} className="object-cover" />,
         desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.",
-        takeTo: "/blogs/card/:pvr"
+        takeTo: "/blogs/Optimizing%20Your%20Referral%20Traffic%20in%20GA4%20for%20Better%20Insights"
       },
       {
-        icon: <Image src={L2} className="object-cover" />,
-        desc: "Explore How Big Data is Shaping the Future of Marketing Trends with 'Monday Analytics Insights.",
-        takeTo: "/blogs/card/:pvr"
+        icon: <Image src={contentPerformanceAnalysis} className="object-cover" />,
+        desc: "Content Performance Analysis: Measuring What Matters Most",
+        takeTo: "/blogs/Content%20Performance%20Analysis:%20Measuring%20What%20Matters%20Most"
       },
       {
-        icon: <Image src={R2} className="object-cover" />,
-        desc: "Know full potential of your data with the latest Monday Analytics Insight!",
-        takeTo: "/blogs/card/:pvr"
+        icon: <Image src={aiAwakens} className="object-cover" />,
+        desc: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
+        takeTo: "/blogs/AI%20Awakens:%20Redefining%20Marketing%20Analytics%20for%20the%20Digital%20Era"
       }
     ]
   }
@@ -526,9 +526,9 @@ const ResourcesMenuData = () => {
         ))}
         </div>
         <Link href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
-         <div onClick={() => {}} className="flex gap-1 p-[5px] mt-[10px] tablet:px-[30px] text-white items-center hover:underline cursor-pointer">
+         <div onClick={() => {}} className="flex gap-1 p-[5px] mt-[30px]  text-white items-center hover:underline cursor-pointer">
           <p className="font-[500] text-[13px] text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
-          <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>
+            <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>
          </div>
         </Link>
         </div>

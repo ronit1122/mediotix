@@ -31,8 +31,7 @@ import {
         imgAlt: "Dice Academy background image",
         logo: heroElectronixWhite,
         img: heroElectronixBg,
-        tagline:
-          "150% Increased Conversions Rate within 6 months by Optimizing Conversion Funnel",
+        tagline: <p><span style={{fontWeight: 900}}>150%</span> Increased Conversions Rate within 6 months by Optimizing Conversion Funnel</p>,
         desc: "Qubo is Hero Electronix’s, A Hero Group Company, foray into the Consumer Technology Market with the launch of a range of Connected Smart Devices. Their vision is to create connected & smart solutions powered by advanced artificial intelligence making lives better connected to the things that matter the most.",
         challenges: [
           "Improve the customer experience and prepare for an increase in smart camera and door locator orders.",
@@ -73,8 +72,7 @@ import {
         imgAlt: "GSK background image",
         logo: gskWhite,
         img: gskBg,
-        tagline:
-          "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
+        tagline: <p>A Well-informed Data-driven Strategy that Boosted Sign-ups by <span  style={{fontWeight: 900}}>200%</span></p>,
         desc: "GSK is a global biopharma company with a purpose to unite science, technology, and talent to get ahead of disease together. They prioritize innovation in vaccines and specialty medicines to prevent and treat disease.",
         challenges: [
           "Drive valuable traffic to the website",
@@ -115,8 +113,7 @@ import {
         imgAlt: "Dice Academy background image",
         logo: diceWhite,
         img: diceBg,
-        tagline:
-          "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
+        tagline: <p>The Story of How a Marketing Strategy Helped in Growth of Conversions by <span style={{fontWeight: 900}}>700%</span></p>,
         desc: "Dice Academy is an academic institute located in New Delhi, India. The Academy offers online and offline courses in Graphics, Motion Graphics, Web Design, Web development, and Web Animation. They have trained over 5000 students.",
         challenges: [
           "Investing in advertising efforts but not achieving expected ROI",
@@ -157,7 +154,7 @@ import {
         imgAlt: "watcho image",
         logo: watchoWhite,
         img: watchoBg,
-        tagline: "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
+        tagline: <p>A Well-informed Data-driven Strategy that Boosted Sign-ups by <span  style={{fontWeight: 900}}>200%</span></p>,
         desc: "Dice Academy is an academic institute located in New Delhi, India. The Academy offers online and offline courses in Graphics, Motion Graphics, Web Design, Web development, and Web Animation. They have trained over 5000 students.",
         challenges: [
           "Investing in advertising efforts but not achieving expected ROI",
@@ -197,7 +194,7 @@ import {
         logo: maxHealthWhite,
         logoAlt: "Max Healthcare Logo",
         imgAlt: "Max Healthcare background Image",
-        tagline: `Know how 85% Increment happened in Conversion Rate within 3 months`,
+        tagline: <p>Know how <span  style={{fontWeight: 900}}>850%</span> Increment happened in Conversion Rate within 3 months</p>,
         img: maxHealthBg,
         desc: "India’s largest healthcare organizations operating 17 healthcare facilities (3500+ beds) across the NCR Delhi, Haryana, Punjab, Uttarakhand, and Maharashtra. Their vision is to provide the highest standards of clinical excellence and patient care.",
         challenges: [
@@ -238,7 +235,7 @@ import {
         logo: cashkaroWhite,
         logoAlt: "Max Healthcare Logo",
         imgAlt: "Max Healthcare background Image",
-        tagline: `Know how 85% Increment happened in Conversion Rate within 3 months`,
+        tagline: <p>The Story of How a Marketing Strategy Helped in Growth of Conversions by <span  style={{fontWeight: 900}}>700%</span></p>,
         img: cashkaroBg,
         desc: "India’s largest healthcare organizations operating 17 healthcare facilities (3500+ beds) across the NCR Delhi, Haryana, Punjab, Uttarakhand, and Maharashtra. Their vision is to provide the highest standards of clinical excellence and patient care.",
         challenges: [
@@ -279,7 +276,7 @@ import {
       logoAlt: "Pvr Cinemas logo",
       imgAlt: "Pvr Cinemas background Image",
       logo: pvrWhite,
-      tagline: "An Innovative Analytics Approach that Delivered 150% Increase in Conversions",
+      tagline: <p>An Innovative Analytics Approach that Delivered <span  style={{fontWeight: 900}}>150%</span> Increase in Conversions</p>,
       img: pvrBg,
       desc: "India’s leading cinema exhibitor company with 1704 screens across 114 cities, renowned for its world-class multiplexes & immersive cinematic experiences.",
       challenges: [
@@ -321,7 +318,7 @@ import {
       imgAlt: "FINOLEX PIPES & FITTING Image",
       logo: finolexWhite,
       img: finolexBg,
-      tagline: "Discover LYF’s High Rankings Journey on SERP",
+      tagline: <p>Unique SEO Strategy that Achieved <span  style={{fontWeight: 900}}>90%</span> Boost in Keyword Visibility & Performance</p>,
       desc: "Reliance LYF is one of India's beloved brands for making innovative products and performance-based electronics accessible to everyone. They are highly committed to enhancing customer lifestyle with their range of products.",
       challenges: [
         "Difficulty in ranking high search volume keywords due to limited brand awareness",
@@ -362,7 +359,7 @@ import {
       imgAlt: "Home Delhi background image",
       logo:homeDelhiWhite,
       img: homeDelhiBg,
-      tagline:"Integrated SEO Strategy which Resulted in 90% Increased Ranking on Keywords",
+      tagline:<p>Integrated SEO Strategy which Resulted in <span  style={{fontWeight: 900}}>90%</span> Increased Ranking on Keywords</p>,
       desc: "Home is Delhi’s quintessential home away from home. A beacon for the arts, hospitality, and entertainment in all their forms. Nestled in the heart of South Delhi.",
       challenges: [
         "Low Indexing & Google crawling rate",
