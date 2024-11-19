@@ -7,8 +7,6 @@ import Navbar from './../../components/Navbar/index.jsx';
 import Footer from './../../components/Footer/index.jsx';
 import {v4 as uuidv4} from 'uuid';
 
-
-
 export default function Index() {
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
@@ -30,7 +28,7 @@ export default function Index() {
         mx="auto"
         pb="5rem"
       >
-        <Flex position='relative' py="4rem" flexDir="column" textAlign="center">
+        <Flex position='relative' py="100px" flexDir="column" textAlign="center">
         <div style={{zIndex: "0"}} className="hidden tablet:block absolute top-[20%] left-[-20%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
           <Text
             fontSize={["clamp(25px, 3vw, 48px)"]}

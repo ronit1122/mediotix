@@ -191,9 +191,9 @@ const Carousel = ({ props }) => {
     >
       {carouselInfo?.map((item, index) => (
         <SwiperSlide>
-        <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] rounded-[8px] w-full h-[100%] max-h-[350px] p-[20px] border-[2px] border-[#c0c0c0] text-[#263238]"  style={{boxShadow: ""}}>
+        <div className="flex flex-col bg-white  items-start justify-between min-h-[350px] rounded-[8px] w-full h-[100%] max-h-[500px] p-[20px] border-[2px] border-[#c0c0c0] text-[#263238]"  style={{boxShadow: ""}}>
        
-       <p className="text-[clamp(14px, 3vw, 16px)] pt-8 font-semibold">
+       <p className="text-[clamp(14px, 3vw, 16px)] pt-0 pb-10 tablet:pb-0 tablet:pt-8 font-semibold">
          {item.statement}
        </p>
   

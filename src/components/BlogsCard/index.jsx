@@ -31,6 +31,7 @@ export default function CardComp({ item }) {
     imgAlt,
     dateCreated,
     logo,
+    url,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
@@ -38,7 +39,7 @@ export default function CardComp({ item }) {
 
 
   return (
-  <Link href={`/blogs/${name}`} >
+  <Link href={`/blogs/${url}`} >
     <Flex
     h="100%"
       classname="font-nexa"

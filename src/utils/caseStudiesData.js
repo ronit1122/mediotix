@@ -1,6 +1,5 @@
 
 
-import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny, digbiHealth, qubo} from './../../assets/clients/export.js';
 import {
     cashkaroBg,
     diceBg,
@@ -11,7 +10,7 @@ import {
     maxHealthBg,
     pvrBg,
     watchoBg
-  } from './../../assets/caseStudiesPage/export.js';
+  } from './../assets/caseStudiesPage/export';
 import {
   cashkaroWhite,
   diceWhite,
@@ -22,7 +21,8 @@ import {
   maxHealthWhite,
   pvrWhite,
   watchoWhite,
-} from './../../assets/clientsWhiteLogos/export.js';
+} from './../assets/clientsWhiteLogos/export.js';
+
 
   export const cases = [
     {
@@ -67,62 +67,6 @@ import {
         metaTitle: "Qubo Hero Electronix Case Study | 150% Conversion boost",
         metaDescription: "Mediotix’s marketing success stories—conversions, sign-ups, & SEO growth through innovative strategies, Transform your brand with us!",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/qubo-hero-electronix" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Qubo Hero Electronix",
-          "description": "Case study showing how Mediotix helped Qubo Hero Electronix enhance their digital marketing strategies.",
-          "image": "https://www.mediotix.com/images/qubo-hero-electronix.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/qubo-hero-electronix"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Qubo Hero Electronix",
-              "item": "https://www.mediotix.com/case-studies/qubo-hero-electronix"
-            }
-          ]
-        },
     },
     {
         name: "GSK",
@@ -166,62 +110,7 @@ import {
         metaTitle: "GSK Case Study: 75% More Reach & 200% Growth in Sign-Ups",
         metaDescription: "Mediotix helped GSK boost vaccination sign-ups by 200% through data-driven strategies, GA4, & optimized ad targeting for better performance",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/gsk" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "GSK",
-          "description": "Mediotix helped GSK enhance their online presence through strategic digital marketing efforts.",
-          "image": "https://www.mediotix.com/images/gsk-case-study.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/gsk"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "GSK",
-              "item": "https://www.mediotix.com/case-studies/gsk"
-            }
-          ]
-        },
+    
     },
     {
         name: "Dice Academy",
@@ -265,62 +154,7 @@ import {
         metaTitle: "Dice Academy Case Study: 10X Leads & 65% Spam Reduction",
         metaDescription: "Dice Academy achieved a 10X increase in leads and a 65% reduction in spam entries through optimized ad campaigns and targeted strategies from Mediotix",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/dice-academy" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Dice Academy",
-          "description": "Case study on how Mediotix helped Dice Academy increase its online visibility and student engagement.",
-          "image": "https://www.mediotix.com/images/dice-academy.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/dice-academy"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Dice Academy",
-              "item": "https://www.mediotix.com/case-studies/dice-academy"
-            }
-          ]
-        },
+    
     },
     {
         name: "Watcho",
@@ -364,62 +198,7 @@ import {
         metaTitle: "Watcho Case Study: Boosting Engagement & Conversions ",
         metaDescription: "Know how Mediotix helped Watcho increase user engagement and conversions through targeted marketing strategies",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/watcho" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Watcho",
-          "description": "This case study illustrates how Mediotix helped Watcho boost their digital presence and marketing efforts.",
-          "image": "https://www.mediotix.com/images/watcho-case-study.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/watcho"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Watcho",
-              "item": "https://www.mediotix.com/case-studies/watcho"
-            }
-          ]
-        },
+    
     },
     {
         name: "Max Healthcare",
@@ -463,62 +242,7 @@ import {
         metaTitle: "Max Healthcare: Boosting Consultations & Conversions",
         metaDescription: "Max Healthcare boosted consultations and conversion rates through targeted strategies & optimized campaigns in this case study",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/max-healthcare" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Max Healthcare",
-          "description": "A case study demonstrating how Mediotix enhanced Max Healthcare's digital presence and marketing strategies.",
-          "image": "https://www.mediotix.com/images/max-healthcare.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/max-healthcare"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Max Healthcare",
-              "item": "https://www.mediotix.com/case-studies/max-healthcare"
-            }
-          ]
-        },
+    
     },
     {
         name: "Cashkaro",
@@ -562,62 +286,7 @@ import {
         metaTitle: "CashKaro Case Study: Boosting Cashback & Conversions",
         metaDescription: "Mediotix helped CashKaro increase cashback conversions & drive higher engagement through optimized campaigns & data-driven marketing strategies",
         canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/cashkaro" />`,
-        organizationSchema: {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mediotix",
-          "url": "https://www.mediotix.com",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-999-066-3211",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": "English"
-          }
-        },
-        articleSchema: {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "CashKaro",
-          "description": "Learn how Mediotix helped CashKaro grow its online presence and expand its user base.",
-          "image": "https://www.mediotix.com/images/cashkaro-case-study.jpg",
-          "author": {
-            "@type": "Person",
-            "name": "Mediotix Team"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mediotix",
-            "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-          },
-          "datePublished": "2024-11-19",
-          "mainEntityOfPage": "https://www.mediotix.com/case-studies/cashkaro"
-        },
-        breadcrumbSchema: {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.mediotix.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Case Studies",
-              "item": "https://www.mediotix.com/case-studies"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "CashKaro",
-              "item": "https://www.mediotix.com/case-studies/cashkaro"
-            }
-          ]
-        },
+    
     },
     {
       name: "PVR Cinemas",
@@ -662,62 +331,7 @@ import {
       metaTitle: "PVR Cinemas Case Study: Boosting Bookings & Reducing Costs",
       metaDescription: "PVR Cinemas optimized ticket booking, reduced drop-offs by 2X, and grew affiliate partnerships with Mediotix’s targeted strategy & tagging techniques",
       canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/pvr-cinemas" />`,
-      organizationSchema: {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mediotix",
-        "url": "https://www.mediotix.com",
-        "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-999-066-3211",
-          "contactType": "Customer Service",
-          "areaServed": "Worldwide",
-          "availableLanguage": "English"
-        }
-      },
-      articleSchema: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "PVR Cinemas",
-        "description": "Explore how Mediotix helped PVR Cinemas enhance its digital marketing strategies and audience engagement.",
-        "image": "https://www.mediotix.com/images/pvr-cinemas.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Mediotix Team"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mediotix",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-        },
-        "datePublished": "2024-11-19",
-        "mainEntityOfPage": "https://www.mediotix.com/case-studies/pvr-cinemas"
-      },
-      breadcrumbSchema: {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.mediotix.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Case Studies",
-            "item": "https://www.mediotix.com/case-studies"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "PVR Cinemas",
-            "item": "https://www.mediotix.com/case-studies/pvr-cinemas"
-          }
-        ]
-      },
+    
     },
     {
       name: "Finolex Pipes & Fitting",
@@ -761,62 +375,7 @@ import {
       metaTitle: "Finolex Pipes Case Study: Boosted Conversions & Engagement",
       metaDescription: "Mediotix helped Finolex Pipes drive higher conversions and improve user engagement with targeted, data-driven marketing strategies",
       canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/finolex-pipes-and-fitting" />`,
-      organizationSchema: {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mediotix",
-        "url": "https://www.mediotix.com",
-        "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-999-066-3211",
-          "contactType": "Customer Service",
-          "areaServed": "Worldwide",
-          "availableLanguage": "English"
-        }
-      },
-      articleSchema: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Finolex Pipes and Fittings",
-        "description": "How Mediotix helped Finolex improve its marketing presence and drive more business through digital strategies.",
-        "image": "https://www.mediotix.com/images/finolex-pipes-and-fittings.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Mediotix Team"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mediotix",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-        },
-        "datePublished": "2024-11-19",
-        "mainEntityOfPage": "https://www.mediotix.com/case-studies/finolex-pipes-and-fitting"
-      },
-      breadcrumbSchema: {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.mediotix.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Case Studies",
-            "item": "https://www.mediotix.com/case-studies"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Finolex Pipes and Fittings",
-            "item": "https://www.mediotix.com/case-studies/finolex-pipes-and-fitting"
-          }
-        ]
-      },
+  
     },
     {
       name: "Home Delhi",
@@ -860,62 +419,7 @@ import {
       metaTitle: "Home Delhi Case Study | Improved Organic Traffic & Rankings ",
       metaDescription: "Home Delhi saw a 150% boost in keyword rankings and 2X growth in organic traffic through Mediotix’s strategic SEO",
       canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/home-delhi" />`,
-      organizationSchema: {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mediotix",
-        "url": "https://www.mediotix.com",
-        "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-999-066-3211",
-          "contactType": "Customer Service",
-          "areaServed": "Worldwide",
-          "availableLanguage": "English"
-        }
-      },
-      articleSchema: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Home Delhi",
-        "description": "Discover how Mediotix supported Home Delhi in achieving its marketing objectives through innovative digital strategies.",
-        "image": "https://www.mediotix.com/images/home-delhi.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Mediotix Team"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mediotix",
-          "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-        },
-        "datePublished": "2024-11-19",
-        "mainEntityOfPage": "https://www.mediotix.com/case-studies/home-delhi"
-      },
-      breadcrumbSchema: {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.mediotix.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Case Studies",
-            "item": "https://www.mediotix.com/case-studies"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Home Delhi",
-            "item": "https://www.mediotix.com/case-studies/home-delhi"
-          }
-        ]
-      },
+  
     },
   ];
   

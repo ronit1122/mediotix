@@ -113,6 +113,9 @@ function Index() {
             <Link onClick={() => bottom_navi_click("Case Studies")} href="/case-studies" aria-label="case-studies"  className="hover:underline">
                 <p className="font-[300]">Case Studies</p>
             </Link>
+            <Link onClick={() => bottom_navi_click("blogs")} href="/blogs" aria-label="blogs" className="hover:underline">
+                <p className="font-[300]">Blogs</p>
+            </Link>
             <Link onClick={() => bottom_navi_click("Privacy Policy")} href="/privacy-policy" aria-label="privacy-policy"  className="hover:underline">
                 <p className="font-[300]">Privacy Policy</p>
             </Link>

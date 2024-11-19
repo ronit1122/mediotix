@@ -22,6 +22,63 @@ import {
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
       img: quantifyingSuccess,
+      url: "power-of-digital-analytics-in-marketing",
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Power of Digital Analytics in Marketing",
+        "description": "This article explores the importance of digital analytics in shaping marketing strategies for better customer engagement.",
+        "image": "https://www.mediotix.com/images/analytics-marketing.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blogs/power-of-digital-analytics-in-marketing"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Power of Digital Analytics in Marketing",
+            "item": "https://www.mediotix.com/blogs/power-of-digital-analytics-in-marketing"
+          }
+        ]
+      },
       htmlString:`
 
 <p>In the fast-paced world of modern digital marketing, businesses increasingly depend on data to shape their strategies. As digital platforms and online marketing channels grow in importance, the ability to measure and interpret data has become a key factor for success. Digital analytics plays a crucial role in this, enabling marketers to assess the performance of their campaigns and make informed decisions for future initiatives.</p>
@@ -76,11 +133,68 @@ import {
       name: "Retention Roadmap: Tracking User Trends with GA4",
       desc: "Use GA4 to map user behaviour trends, enhance retention, and drive growth with data-driven insights.",
       dateCreated: "May 13, 2024",
-      views: "231",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
       img: retentionRoadmap,
+      url: "retention-roadmap-tracking-user-trends-with-ga4",
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Retention Roadmap: Tracking User Trends with GA4",
+        "description": "Learn how to use GA4 to track user retention and gain insights into user behavior trends.",
+        "image": "https://www.mediotix.com/images/ga4-user-trends.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/retention-roadmap-tracking-user-trends-with-ga4"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Retention Roadmap: Tracking User Trends with GA4",
+            "item": "https://www.mediotix.com/blog/retention-roadmap-tracking-user-trends-with-ga4"
+          }
+        ]
+      },
       htmlString:`
 <p>In today's digital landscape, understanding user behaviour is crucial for businesses aiming to improve customer retention. With the evolution of analytics tools like Google Analytics 4 (GA4), companies have unprecedented access to insights that can guide retention strategies. In this blog, we'll explore how GA4 can serve as a powerful tool for mapping user behaviour trends and ultimately enhancing retention rates.</p>
 <ul>
@@ -141,11 +255,68 @@ import {
       name: "The Power of BigQuery Integration in Google Analytics 4",
       desc: "Unlock advanced insights with BigQuery integration in GA4 for deeper data analysis and improved decision-making.",
       dateCreated: "September 25, 2023",
-      views: "312",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "the-power-of-bigquery-integration-in-ga4",
       img: thePowerOfBigQuery,
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Power of BigQuery Integration in GA4",
+        "description": "This article discusses the benefits and use of BigQuery integration in GA4 to enhance data analysis capabilities.",
+        "image": "https://www.mediotix.com/images/bigquery-ga4.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Power of BigQuery Integration in GA4",
+            "item": "https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4"
+          }
+        ]
+      },
       htmlString:`
 <div>
   <p>
@@ -213,11 +384,68 @@ import {
       name: "Firebase & Google Analytics: Powering Mobile App Insights",
       desc: "Unlock mobile app success with Firebase + Google Analytics for powerful insights and optimized user experiences.",
       dateCreated: "October 9, 2023 ",
-      views: "236",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "firebase-google-analytics-mobile-app-insights",
       img: firebaseAndGoogleAnalytics,
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Firebase Google Analytics: Mobile App Insights",
+        "description": "This article explores how Firebase and Google Analytics can help you gather valuable insights into your mobile app’s performance.",
+        "image": "https://www.mediotix.com/images/firebase-analytics.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/firebase-google-analytics-mobile-app-insights"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Firebase Google Analytics: Mobile App Insights",
+            "item": "https://www.mediotix.com/blog/firebase-google-analytics-mobile-app-insights"
+          }
+        ]
+      },  
       htmlString:`
 <div>
   <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Introduction</h2>
@@ -260,11 +488,68 @@ import {
       name: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
       desc: "Discover how AI transforms marketing analytics with real-time insights, predictive strategies, and ethical practices.",
       dateCreated: "March 11, 2024",
-      views: "279",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "how-ai-redefines-marketing-analytics",
       img: aiAwakens,
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How AI Redefines Marketing Analytics",
+        "description": "Explore how artificial intelligence is transforming marketing analytics and enabling more effective data-driven decision making.",
+        "image": "https://www.mediotix.com/images/ai-marketing.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/how-ai-redefines-marketing-analytics"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How AI Redefines Marketing Analytics",
+            "item": "https://www.mediotix.com/blog/how-ai-redefines-marketing-analytics"
+          }
+        ]
+      },  
       htmlString:`
 <div>
   <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Introduction</h2>
@@ -310,11 +595,68 @@ import {
       name: "Top Data Analytics Tools and Software for 2024",
       desc: "Explore the top data analytics tools for 2024, including Tableau, Power BI, Looker, Qlik Sense, and SAS Analytics.",
       dateCreated: "September 2, 2024",
-      views: "204",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "best-data-analytics-tools-and-software",
       img: topDataAnalyticsTools,
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Data Analytics Tools and Software",
+        "description": "Find out about the best data analytics tools and software for businesses to make informed decisions and drive growth.",
+        "image": "https://www.mediotix.com/images/data-analytics-tools.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/best-data-analytics-tools-and-software"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Best Data Analytics Tools and Software",
+            "item": "https://www.mediotix.com/blog/best-data-analytics-tools-and-software"
+          }
+        ]
+      },   
       htmlString:`
  <div>
   <p>
@@ -378,11 +720,15 @@ import {
       name: "Content Performance Analysis: Measuring What Matters Most",
       desc: "Measure key content metrics to boost engagement and conversions. Learn how content analysis drives results effectively.",
       dateCreated: "June 17, 2024",
-      views: "215",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "content-performance-analysis",
       img: contentPerformanceAnalysis,
+      organizationSchema: "",
+      articleSchema: "",
+      breadcrumbSchema: "",
       htmlString:`
       <div>
   <p>
@@ -453,11 +799,68 @@ import {
       name: "Optimizing Your Referral Traffic in GA4 for Better Insights",
       desc: "Optimize referral traffic with GA4. Analyze key metrics, gain insights, and implement strategies to boost conversions.",
       dateCreated: "July 30, 2024",
-      views: "257",
+      views: "255",
       category: "Informative",
       logoAlt: "Dice Academy logo",
       imgAlt: "Dice Academy background image",
+      url: "ga4-referral-traffic-optimization",
       img: optimizingReferral,
+      organizationSchema: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mediotix",
+        "url": "https://www.mediotix.com",
+        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-999-066-3211",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        }
+      },
+      articleSchema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "GA4 Referral Traffic Optimization",
+        "description": "Discover how to optimize referral traffic in GA4 and gain deeper insights into your website’s performance.",
+        "image": "https://www.mediotix.com/images/ga4-traffic.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Mediotix Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mediotix",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+        },
+        "datePublished": "2024-11-19",
+        "mainEntityOfPage": "https://www.mediotix.com/blog/ga4-referral-traffic-optimization"
+      },
+      breadcrumbSchema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.mediotix.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "https://www.mediotix.com/blogs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GA4 Referral Traffic Optimization",
+            "item": "https://www.mediotix.com/blog/ga4-referral-traffic-optimization"
+          }
+        ]
+      },    
       htmlString:`
       <div>
       <p>
@@ -524,11 +927,68 @@ import {
         name: "Data Visualization: Turning Numbers into Actionable Insights",
         desc: "Businesses need data visualization to turn complex data into understandable, actionable insights for meaningful decisions.",
         dateCreated: "August 5, 2024",
-        views: "234",
+        views: "255",
         category: "Informative",
         logoAlt: "Dice Academy logo",
         imgAlt: "Dice Academy background image",
+        url: "data-visualization-for-actionable-insights",
         img: dataVisualization,
+        organizationSchema: {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mediotix",
+          "url": "https://www.mediotix.com",
+          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-999-066-3211",
+            "contactType": "Customer Service",
+            "areaServed": "Worldwide",
+            "availableLanguage": "English"
+          }
+        },
+        articleSchema: {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Data Visualization for Actionable Insights",
+          "description": "Learn how data visualization can transform complex data into actionable insights that drive decision-making.",
+          "image": "https://www.mediotix.com/images/data-visualization.jpg",
+          "author": {
+            "@type": "Person",
+            "name": "Mediotix Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Mediotix",
+            "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
+          },
+          "datePublished": "2024-11-19",
+          "mainEntityOfPage": "https://www.mediotix.com/blog/data-visualization-for-actionable-insights"
+        },
+        breadcrumbSchema: {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.mediotix.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blogs",
+              "item": "https://www.mediotix.com/blogs"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Data Visualization for Actionable Insights",
+              "item": "https://www.mediotix.com/blog/data-visualization-for-actionable-insights"
+            }
+          ]
+        },       
         htmlString:`
  <div>
     <p style="font-size: 1rem; line-height: 1.5;">

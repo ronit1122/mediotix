@@ -36,6 +36,7 @@ export default function CardComp({ item }) {
     solution,
     vertical,
     primeTg,
+    route
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
@@ -43,7 +44,7 @@ export default function CardComp({ item }) {
 
 
   return (
-  <Link href={`/case-studies/${name}`} >
+  <Link href={`/case-studies/${route}`} >
     <Flex
     h="100%"
       classname="font-nexa"
@@ -59,12 +60,12 @@ export default function CardComp({ item }) {
     >
       <Flex flexDir="column" >
         <Flex h="180px" cursor='pointer' position='relative'>
-          <Image borderRadius="20px" objectFit="cover" src={img} loading='lazy' alt={imgAlt}/>
+          <Image  objectFit="cover" src={img} loading='lazy' alt={imgAlt}/>
           <Image src={logo} style={{position: "absolute", objectFit: "contain", bottom: "10px", right: "10px"}} />
         </Flex>
         <Stack mt="6" spacing="3" p='20px'>
-          <Heading size="md" fontWeight="900">{name}</Heading>
-          <Text>{tagline}</Text>
+          <Text fontSize="18px" fontWeight="900">{name}</Text>
+           {tagline}
         </Stack>
       </Flex>
       <Flex p="20px">

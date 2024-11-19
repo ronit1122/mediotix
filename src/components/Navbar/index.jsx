@@ -505,8 +505,8 @@ const ResourcesMenuData = () => {
 
   return (
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
-      <div className="flex flex-col tablet:flex-row justify-between">
-        <div className="w-full tablet:h-[200px] tablet:w-[300px] flex flex-row tablet:flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
+      <div className="flex flex-col tablet:flex-row justify-between items-center">
+        <div className="w-full tablet:h-[250px] tablet:w-[350px] flex flex-row tablet:flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
          <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() =>{ setSelectedMenu("caseStudy"); top_navi_resources_click("Case study")}}>Case study</button>
          <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => {setSelectedMenu("blogs"); top_navi_resources_click("Blogs")}}>Blogs</button>
         </div>
@@ -526,7 +526,7 @@ const ResourcesMenuData = () => {
         ))}
         </div>
         <Link href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
-         <div onClick={() => {}} className="flex gap-1 p-[5px] mt-[30px]  text-white items-center hover:underline cursor-pointer">
+         <div onClick={() => {}} className="flex gap-1 pl-[30px] mt-[5px]  text-white items-center hover:underline cursor-pointer">
           <p className="font-[500] text-[13px] text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
             <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>
          </div>

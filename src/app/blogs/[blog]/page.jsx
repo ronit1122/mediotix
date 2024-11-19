@@ -17,6 +17,7 @@ import diceBanner from './../../../assets/caseStudiesPage/diceBanner.png';
 import DownloadForm from './../../../components/DownloadCaseStudyForm/index.jsx';
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+import Head from 'next/head';
 
 
 export default function Index() {
@@ -25,8 +26,7 @@ export default function Index() {
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
 
-  const blogData = blogs?.filter((item) => item?.name === decodedBlogName)?.[0];
-  console.log(blogData, decodedBlogName, "blogData");
+  const blogData = blogs?.filter((item) => item?.url === decodedBlogName)?.[0];
 
   const openPopup = (url) => {
     const width = 600;
@@ -62,6 +62,24 @@ export default function Index() {
   
   return (
     <>
+      <Head>
+       {/* Injecting JSON-LD */}
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.organizationSchema) }}
+        />
+        {/* Inject Article Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.articleSchema) }}
+        />
+        {/* Inject Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.breadcrumbSchema) }}
+        />
+      </Head>
+      <main>
       <Box
         className="font-nexa"
         fontSize={["clamp(13px, 1.5vw, 15px)"]}
@@ -130,8 +148,8 @@ export default function Index() {
             </Flex>
           </Flex>
           <Flex py="80px" w={isLargerThan900 ? "80%" : "95%"} mx='auto' gap="20px" justifyContent='space-between' position='relative'>
-            <Flex  dangerouslySetInnerHTML={{ __html: blogData?.htmlString }} flexDir='column' w="65%">
-           
+            <Flex flexDir='column' w="65%" maxH="70vh" overflowY='scroll'>
+              <Flex  dangerouslySetInnerHTML={{ __html: blogData?.htmlString }}></Flex>
             </Flex>
             <Flex w="30%" flexDir='column'>
               <div>
@@ -197,7 +215,7 @@ export default function Index() {
           </Flex>
           <Flex bg="#EAF6FFCC" mt="80px">
             <Flex w={isLargerThan900 ? "80%" : "95%"} flexDir='column' minH="75vh" pb="50px" mx='auto' alignItems="center" >
-              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Case Studies</Text>
+              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Blogs</Text>
             <SimpleGrid
             mx="auto"
             columns={isLargerThan900 ? 3 : isLargerThan600 ? 2 : 1}
@@ -214,6 +232,7 @@ export default function Index() {
         </Flex>
         <Footer />
       </Box>
+      </main>
     </>
   );
 }

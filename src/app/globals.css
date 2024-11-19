@@ -223,6 +223,26 @@ a {
 }
 
 
+/* For the entire scrollbar track */
+::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+  height: 10px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+/* For the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #0000002e; /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+   /* Optional: adds space around the thumb */
+}
+
+/* For the scrollbar track (the background area) */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Background color of the track */
+  border-radius: 10px; /* Optional: rounded corners for the track */
+}
+
+
 
 @keyframes blob-traverse {
   100% {
