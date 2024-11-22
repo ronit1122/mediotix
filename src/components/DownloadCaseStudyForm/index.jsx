@@ -117,11 +117,11 @@ export default function Home() {
              </div>
              <div>
                {/* <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Company Name</label> */}
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
+               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="companyName*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Company Name*" />
              </div>
              <div>
                {/* <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Designation</label> */}
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
+               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="designation*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Designation*" />
              </div>
              <button type="submit" className="naviteButtonInverted">Get Case Studies</button>
            </div>

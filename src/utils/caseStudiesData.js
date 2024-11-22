@@ -66,7 +66,7 @@ import {
         route: 'qubo-hero-electronix',
         metaTitle: "Qubo Hero Electronix Case Study | 150% Conversion boost",
         metaDescription: "Mediotix’s marketing success stories—conversions, sign-ups, & SEO growth through innovative strategies, Transform your brand with us!",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/qubo-hero-electronix" />`,
+        canonical: `https://www.mediotix.com/case-studies/qubo-hero-electronix`,
     },
     {
         name: "GSK",
@@ -109,7 +109,7 @@ import {
         route: 'gsk',
         metaTitle: "GSK Case Study: 75% More Reach & 200% Growth in Sign-Ups",
         metaDescription: "Mediotix helped GSK boost vaccination sign-ups by 200% through data-driven strategies, GA4, & optimized ad targeting for better performance",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/gsk" />`,
+        canonical: "https://www.mediotix.com/case-studies/gsk",
     
     },
     {
@@ -153,7 +153,7 @@ import {
         route: 'dice-academy',
         metaTitle: "Dice Academy Case Study: 10X Leads & 65% Spam Reduction",
         metaDescription: "Dice Academy achieved a 10X increase in leads and a 65% reduction in spam entries through optimized ad campaigns and targeted strategies from Mediotix",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/dice-academy" />`,
+        canonical: "https://www.mediotix.com/case-studies/dice-academy",
     
     },
     {
@@ -197,7 +197,7 @@ import {
         route: 'watcho',
         metaTitle: "Watcho Case Study: Boosting Engagement & Conversions ",
         metaDescription: "Know how Mediotix helped Watcho increase user engagement and conversions through targeted marketing strategies",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/watcho" />`,
+        canonical: "https://www.mediotix.com/case-studies/watcho",
     
     },
     {
@@ -241,7 +241,7 @@ import {
         route: 'max-healthcare',
         metaTitle: "Max Healthcare: Boosting Consultations & Conversions",
         metaDescription: "Max Healthcare boosted consultations and conversion rates through targeted strategies & optimized campaigns in this case study",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/max-healthcare" />`,
+        canonical: "https://www.mediotix.com/case-studies/max-healthcare",
     
     },
     {
@@ -285,7 +285,7 @@ import {
         route: 'cashkaro',
         metaTitle: "CashKaro Case Study: Boosting Cashback & Conversions",
         metaDescription: "Mediotix helped CashKaro increase cashback conversions & drive higher engagement through optimized campaigns & data-driven marketing strategies",
-        canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/cashkaro" />`,
+        canonical: "https://www.mediotix.com/case-studies/cashkaro",
     
     },
     {
@@ -330,7 +330,7 @@ import {
       route: 'pvr-cinemas',
       metaTitle: "PVR Cinemas Case Study: Boosting Bookings & Reducing Costs",
       metaDescription: "PVR Cinemas optimized ticket booking, reduced drop-offs by 2X, and grew affiliate partnerships with Mediotix’s targeted strategy & tagging techniques",
-      canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/pvr-cinemas" />`,
+      canonical: "https://www.mediotix.com/case-studies/pvr-cinemas",
     
     },
     {
@@ -374,7 +374,7 @@ import {
       route: 'finolex-pipes-and-fitting',
       metaTitle: "Finolex Pipes Case Study: Boosted Conversions & Engagement",
       metaDescription: "Mediotix helped Finolex Pipes drive higher conversions and improve user engagement with targeted, data-driven marketing strategies",
-      canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/finolex-pipes-and-fitting" />`,
+      canonical: "https://www.mediotix.com/case-studies/finolex-pipes-and-fitting",
   
     },
     {
@@ -418,7 +418,7 @@ import {
       route: 'home-delhi',
       metaTitle: "Home Delhi Case Study | Improved Organic Traffic & Rankings ",
       metaDescription: "Home Delhi saw a 150% boost in keyword rankings and 2X growth in organic traffic through Mediotix’s strategic SEO",
-      canonical: `<link rel="canonical" href="https://www.mediotix.com/case-studies/home-delhi" />`,
+      canonical: "https://www.mediotix.com/case-studies/home-delhi",
   
     },
   ];
