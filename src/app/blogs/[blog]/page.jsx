@@ -66,17 +66,17 @@ export default function Index() {
        {/* Injecting JSON-LD */}
        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.organizationSchema) }}
         />
         {/* Inject Article Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.articleSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.articleSchema) }}
         />
         {/* Inject Breadcrumb Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.breadcrumbSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.breadcrumbSchema) }}
         />
       </Head>
       <main>
@@ -148,7 +148,7 @@ export default function Index() {
             </Flex>
           </Flex>
           <Flex py="80px" w={isLargerThan900 ? "80%" : "95%"} mx='auto' gap="20px" justifyContent='space-between' position='relative'>
-            <Flex flexDir='column' w="65%" maxH="70vh" overflowY='scroll'>
+            <Flex flexDir='column' w="65%" maxH="90vh" overflowY='scroll'>
               <Flex  dangerouslySetInnerHTML={{ __html: blogData?.htmlString }}></Flex>
             </Flex>
             <Flex w="30%" flexDir='column'>

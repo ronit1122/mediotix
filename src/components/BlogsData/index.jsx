@@ -80,7 +80,7 @@ import {
         ]
       },
       htmlString:`
-
+      <div>
 <p>In the fast-paced world of modern digital marketing, businesses increasingly depend on data to shape their strategies. As digital platforms and online marketing channels grow in importance, the ability to measure and interpret data has become a key factor for success. Digital analytics plays a crucial role in this, enabling marketers to assess the performance of their campaigns and make informed decisions for future initiatives.</p>
 <ul  style="list-style-type: decimal; margin-left: 20px; padding-left: 20px; font-size: 1rem; line-height: 1.8;">
   <li>
@@ -125,6 +125,7 @@ import {
     </p>
   </li>
 </ul>
+</div>
 
       `
 
@@ -196,6 +197,7 @@ import {
         ]
       },
       htmlString:`
+  <div>
 <p>In today's digital landscape, understanding user behaviour is crucial for businesses aiming to improve customer retention. With the evolution of analytics tools like Google Analytics 4 (GA4), companies have unprecedented access to insights that can guide retention strategies. In this blog, we'll explore how GA4 can serve as a powerful tool for mapping user behaviour trends and ultimately enhancing retention rates.</p>
 <ul>
   <li>
@@ -247,6 +249,7 @@ import {
     </p>
   </li>
 </ul>
+</div>
 
       `
 

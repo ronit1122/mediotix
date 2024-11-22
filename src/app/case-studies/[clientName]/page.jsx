@@ -1,5 +1,6 @@
 import CaseStudyDetails from './../../../components/CaseStudiesPage/index.jsx';
 import {cases} from './../../../utils/caseStudiesData.js';
+import Head from 'next/head';
 
 
 export async function generateMetadata({ params }) {
@@ -31,17 +32,17 @@ export async function generateMetadata({ params }) {
        {/* Injecting JSON-LD */}
        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData.organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.organizationSchema) }}
         />
         {/* Inject Article Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData.articleSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.articleSchema) }}
         />
         {/* Inject Breadcrumb Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData.breadcrumbSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.breadcrumbSchema) }}
         />
       </Head>
       <main>

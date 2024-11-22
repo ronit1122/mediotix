@@ -54,6 +54,7 @@ import {
 import { RxHamburgerMenu } from "react-icons/rx";
 import MediotixLogoGif from './../../assets/navbar/mediotixLogo.gif';
 import {contentPerformanceAnalysis, aiAwakens} from './../../assets/blogsPage/export.js';
+import { cashkaroBg } from "@/assets/caseStudiesPage/export.js";
 
 export default function Navbar() {
   const [openNavbar, setOpenNavbar] = React.useState(false);
@@ -449,22 +450,22 @@ const ResourcesMenuData = () => {
       {
         icon: <Image src={pvr} className="object-contain" />,
         desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
-        takeTo: "/case-studies/PVR%20Cinemas"
+        takeTo: "/case-studies/pvr-cinemas"
       },
       {
         icon: <Image src={maxHealth} className="object-contain" />,
         desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
-        takeTo: "/case-studies/Max%20Healthcare"
+        takeTo: "/case-studies/max-healthcare"
       },
       {
-        icon: <Image src={digbiHealth} className="object-contain" />,
-        desc: "Digbi Health : Digbi Health's seamless GA4 transition enhanced conversion funnel tracking, empowering data-driven decisions and ROI precision.",
-        takeTo: "/case-studies/Home%20Delhi"
+        icon: <Image src={cashKaro} className="object-contain" />,
+        desc: "Cashkaro: The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
+        takeTo: "/case-studies/cashkaro"
       },
       {
         icon: <Image src={gsk} className="object-contain" />,
         desc: "gsk: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
-        takeTo: "/case-studies/GSK"
+        takeTo: "/case-studies/gsk"
       }
        
     ],
@@ -472,22 +473,22 @@ const ResourcesMenuData = () => {
       {
         icon: <Image src={L1} className="object-cover" />,
         desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights",
-        takeTo: "/blogs/Data%20Visualization:%20Turning%20Numbers%20into%20Actionable%20Insights"
+        takeTo: "/blogs/data-visualization-for-actionable-insights"
       },
       {
         icon: <Image src={R1} className="object-cover" />,
         desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.",
-        takeTo: "/blogs/Optimizing%20Your%20Referral%20Traffic%20in%20GA4%20for%20Better%20Insights"
+        takeTo: "/blogs/ga4-referral-traffic-optimization"
       },
       {
         icon: <Image src={contentPerformanceAnalysis} className="object-cover" />,
         desc: "Content Performance Analysis: Measuring What Matters Most",
-        takeTo: "/blogs/Content%20Performance%20Analysis:%20Measuring%20What%20Matters%20Most"
+        takeTo: "/blogs/content-performance-analysis"
       },
       {
         icon: <Image src={aiAwakens} className="object-cover" />,
         desc: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
-        takeTo: "/blogs/AI%20Awakens:%20Redefining%20Marketing%20Analytics%20for%20the%20Digital%20Era"
+        takeTo: "/blogs/how-ai-redefines-marketing-analytics"
       }
     ]
   }
