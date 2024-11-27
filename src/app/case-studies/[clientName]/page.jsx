@@ -1,4 +1,4 @@
-import CaseStudyDetails from './../../../components/CaseStudiesPage/index.jsx';
+import CaseStudyDetails from '../../../components/CaseStudiesDetailPage/index.jsx';
 import {cases} from './../../../utils/caseStudiesData.js';
 import Head from 'next/head';
 
@@ -10,6 +10,7 @@ export async function generateMetadata({ params }) {
     const title = `${caseStudyData?.metaTitle}`;
     const description = `${caseStudyData?.metaDescription}`;
   
+    console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
     return {
       title,
       description,
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }) {
     const { clientName } = params;
     const caseStudyData = cases?.filter((item) => item?.route === decodeURIComponent(clientName))?.[0];
 
+    console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
     return (
       <>
       <Head>

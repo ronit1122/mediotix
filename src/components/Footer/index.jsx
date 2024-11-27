@@ -4,6 +4,7 @@ import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from 'next/link';
 import Image from 'next/image';
+import {Flex} from "@chakra-ui/react"
 import {googlePartner, microsoftPartner, googleMapsPartner, shopifyPartner} from './../../assets/footer/export.js';
 import {mediotixLogoWhite} from './../../assets/companyLogo/export.js';
 
@@ -34,7 +35,7 @@ function Index() {
     <div style={{background: "linear-gradient(270deg, #FF9363 0%, #FF7D78 100%)", fontSize: "clamp(12px, 3vw, 15px)" }} className="font-montserrat text-white flex flex-col ">
 
       <div className="flex flex-col w-[95%] tablet:w-[85%] mx-auto">
-        <div className="flex flex-col tablet:flex-row justify-between pt-12 mt-[0px] mb-0 tablet:mt-10 tablet:mb-16 pb-8 gap-4">
+        <div className="flex flex-col tablet:flex-row justify-between pt-12 mt-[0px] mb-0 tablet:mt-10 tablet:mb-16 pb-8 gap-[20px]">
           <div className="flex flex-col gap-4 w-full tablet:w-[25%]">
             <Link
               href="/"
@@ -150,7 +151,8 @@ function Index() {
             </div> */}
           </div>
 
-          <div className="flex flex-wrap tablet:justify-between items-start gap-3 w-full tablet:w-[35%]">
+          <div className="flex flex-wrap items-start gap-[15px] w-full tablet:w-[35%]">
+            <Flex gap="15px">
             <Image
               className="w-[clamp(80px,7.5vw,90px)]"
               src={googlePartner}
@@ -161,6 +163,8 @@ function Index() {
                 src={microsoftPartner}
                 alt="Microsoft Partner"
               />
+              </Flex>
+              <Flex  gap="15px">
             <Image
               className="w-[clamp(80px,7.5vw,90px)]"
               src={googleMapsPartner}
@@ -171,6 +175,7 @@ function Index() {
               src={shopifyPartner}
               alt="shopify Partner"
             />
+            </Flex>
           </div>
         </div>
 

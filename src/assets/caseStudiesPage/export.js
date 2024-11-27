@@ -8,6 +8,11 @@ import homeDelhiBg from './homeDelhiBg.png';
 import maxHealthBg from './maxHealthBg.png';
 import pvrBg from './pvrBg.png';
 import watchoBg from './watchoBg.png';
+import azentioBg from './azentioBg.png';
+import euroKidsBg from './euroKidsBg.png';
+import investUpBg from './investUpBg.png';
+import lakmeAcademySeoBg from './lakmeAcademySeoBg.png';
+import lakmeAcademyPaidAdsBg from './lakmeAcademyPaidAdsBg.png';
 
 // Exporting all images
 export {
@@ -19,5 +24,10 @@ export {
   homeDelhiBg,
   maxHealthBg,
   pvrBg,
-  watchoBg
+  watchoBg,
+  azentioBg,
+  euroKidsBg,
+  investUpBg,
+  lakmeAcademySeoBg,
+  lakmeAcademyPaidAdsBg,
 };

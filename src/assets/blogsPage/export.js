@@ -7,6 +7,7 @@ import quantifyingSuccess from './quantifyingSuccess.png';
 import retentionRoadmap from './retentionRoadmap.png';
 import thePowerOfBigQuery from './thePowerOfBigQuery.png';
 import topDataAnalyticsTools from './topDataAnalyticsTools.png';
+import essentialFeatures from './essentialFeatures.png';
 
 export {
   aiAwakens,
@@ -18,4 +19,5 @@ export {
   retentionRoadmap,
   thePowerOfBigQuery,
   topDataAnalyticsTools,
+  essentialFeatures,
 };

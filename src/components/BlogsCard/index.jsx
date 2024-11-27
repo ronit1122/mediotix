@@ -60,7 +60,7 @@ export default function CardComp({ item }) {
         </Flex>
         <Stack mt="6" spacing="3" p='20px'>
           <Flex mb="13px">
-            <Text mr="8px">{dateCreated}</Text> | <Text ml="8px">{views}</Text>
+            <Text mr="8px">{dateCreated}</Text> | <Text ml="8px">{views} views</Text>
           </Flex>
           <Heading size="md" fontWeight="900">{name}</Heading>
           <Text>{desc}</Text>

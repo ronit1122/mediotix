@@ -162,6 +162,16 @@ const nextConfig = {
           destination: '/',
           permanent: true,
         },
+        {
+          source: '/blog',
+          destination: '/blogs',
+          permanent: true,
+        },
+        {
+          source: '/case-study',
+          destination: '/case-studies',
+          permanent: true,
+        },
       ];
     },
   };
