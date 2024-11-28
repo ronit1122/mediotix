@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
@@ -12,7 +12,7 @@ import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutatio
 import { useMediaQuery } from '@chakra-ui/react'
 
 export default function Home() {
-
+  const formRef = useRef(null);
   // FORM MUTATION
   const toast = useToast()
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
@@ -34,10 +34,11 @@ export default function Home() {
             },
           });
     
-          console.log(data, data?.FormHomePage?.status === "FORM_SUBMITTED")
-          if (data?.FormHomePage?.status === "FORM_SUBMITTED") {
+
+          if (data?.FormHomepage?.status === "FORM_SUBMITTED") {
             // Reset form fields
            
+            handleRunDriveScript()
             handleSendMail() // handle mail send
             home_get_in_touch_form_submit() // handle data layer push
             // Resolve the promise with the data
@@ -68,13 +69,35 @@ export default function Home() {
   
       emailjs.send(serviceID, templateID, userData, userID)
         .then((response) => {
-          setEmail('');
-          setName('');
-          setPhone('');
+          // setEmail('');
+          // setName('');
+          // setPhone('');
         }, (error) => {
   
         });
   
+    };
+
+    const handleRunDriveScript = async () => {
+
+  
+      const url = "https://script.google.com/macros/s/AKfycbyAabmZmpaSdcBDCVTqaE3E11Aj2KstT9quMcANXz_4p5jvpexCYSB87Nqy4t7vOfnLfg/exec";
+  
+      if (formRef.current) {
+        const formData = new FormData(formRef.current);
+  
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            body: formData,
+          });
+  
+          const result = await response.text();
+          console.log("Response from Google Script:", result, formRef.current, formData);
+        } catch (error) {
+          console.error("Error submitting form:", error);
+        }
+      }
     };
 
     const handleSubmit = (e) => {
@@ -110,37 +133,37 @@ export default function Home() {
               For additional enquiries or support, kindly drop us an email at <br /> <a className="text-[#ff7554] hover:underline" href="mailto:info@mediotix.com">info@mediotix.com</a>.</p>
               <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-7 tablet:hidden">Apply Now</button>
            </div>
-          {isLargerThan900 &&  <form onSubmit={handleSubmit}>
+          {isLargerThan900 &&  <form ref={formRef}  onSubmit={handleSubmit}>
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
              <div>
                <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
-               <input required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
+               <input name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
              </div>
              <div>
                <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
-               <input required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
+               <input name="email" required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
              </div>
              <div>
                <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
+               <input name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
              </div>
              <button type="submit" className="naviteButtonInverted">Submit</button>
            </div>
            </form>}
 
-          {(!isLargerThan900 && mobileFormVisible) &&  <form onSubmit={handleSubmit}>
+          {(!isLargerThan900 && mobileFormVisible) &&  <form ref={formRef} onSubmit={handleSubmit}>
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
              <div>
                <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
-               <input required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
+               <input name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
              </div>
              <div>
                <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
-               <input required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
+               <input name="email" required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
              </div>
              <div>
                <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
+               <input name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
              </div>
              <button type="submit" className="naviteButtonInverted">Submit</button>
            </div>

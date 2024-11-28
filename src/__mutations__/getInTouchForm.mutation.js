@@ -7,8 +7,8 @@ import { gql } from "@apollo/client"; // Npm: Apollo client for handling graphql
  * GRAPHS
  */
 const Index = gql`
-mutation FormHomePageMutation($email: String!, $name: String!, $phone: Float!) {
-  FormHomePage(email: $email, name: $name, phone: $phone) {
+mutation FormHomepageMutation ($email: String!, $name: String!, $phone: Float!) {
+  FormHomepage(email: $email, name: $name, phone: $phone) {
     status
     message
   }

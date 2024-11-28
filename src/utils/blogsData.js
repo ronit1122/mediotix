@@ -310,15 +310,28 @@ import {
     "@type": "Organization",
     "name": "Mediotix",
     "url": "https://www.mediotix.com",
-    "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+    "logo": "https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
+    "sameAs": [
+      "https://www.facebook.com/MediotixGlobal",
+      "https://www.linkedin.com/company/mediotix"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-999-066-3211",
-      "contactType": "Customer Service",
-      "areaServed": "Worldwide",
-      "availableLanguage": "English"
+      "contactType": "Customer Service"
     }
   },
+  websiteSchema: {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mediotix",
+    "url": "https://www.mediotix.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.mediotix.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },  
   articleSchema: {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -337,7 +350,7 @@ import {
     "datePublished": "2024-11-19",
     "mainEntityOfPage": "https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4"
   },
-  breadcrumbSchema: {
+  blogPostingSchema: {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -345,19 +358,19 @@ import {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.mediotix.com"
+        "item": "https://www.mediotix.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blogs",
-        "item": "https://www.mediotix.com/blogs"
+        "item": "https://www.mediotix.com/blogs/"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "The Power of BigQuery Integration in GA4",
-        "item": "https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4"
+        "name": "Essential Features of GMB to Dominate Hyperlocal Markets",
+        "item": "https://www.mediotix.com/blogs/features-of-gmb-to-dominate-hyperlocal-markets"
       }
     ]
   },

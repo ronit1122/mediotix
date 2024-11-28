@@ -46,6 +46,11 @@ export async function generateMetadata({ params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.breadcrumbSchema) }}
         />
+        {/* Inject website Schema */}
+        {caseStudyData?.websiteSchema && <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.websiteSchema) }}
+        />}
       </Head>
       <main>
         <CaseStudyDetails clientName={clientName} />
