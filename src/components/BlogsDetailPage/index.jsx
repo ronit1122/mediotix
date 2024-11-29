@@ -13,11 +13,10 @@ import Footer from "../Footer/index.jsx";
 import Navbar from "../Navbar/index.jsx";
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
-import Head from 'next/head';
 import {blogs} from './../../utils/blogsData.js';
 
-export default function Index() {
-  const { blog } = useParams();
+
+export default function Index({blog}) {
   const decodedBlogName = decodeURIComponent(blog);
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
@@ -57,25 +56,6 @@ export default function Index() {
   
   
   return (
-    <>
-      <Head>
-       {/* Injecting JSON-LD */}
-       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.organizationSchema) }}
-        />
-        {/* Inject Article Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.articleSchema) }}
-        />
-        {/* Inject Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.breadcrumbSchema) }}
-        />
-      </Head>
-      <main>
       <Box
         className="font-nexa"
         fontSize={["clamp(13px, 1.5vw, 15px)"]}
@@ -144,12 +124,16 @@ export default function Index() {
           </Flex>
           <Flex py="80px" w={isLargerThan900 ? "80%" : "95%"} mx='auto' gap="20px" justifyContent='space-between' position='relative'>
             <Flex flexDir='column' w="65%" maxH="90vh" overflowY='scroll'>
-              <Flex  dangerouslySetInnerHTML={{ __html: blogData?.htmlString }}></Flex>
+            {blogData?.htmlString ? (
+    <Flex dangerouslySetInnerHTML={{ __html: blogData.htmlString }} />
+  ) : (
+    <p>Content is unavailable.</p>
+  )}
             </Flex>
             <Flex w="30%" flexDir='column'>
               <div>
                {/* <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label> */}
-               <input required value={name} type="text" id="name" class="bg-white border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Search" />
+               <input type="text" id="name" class="bg-white border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Search" />
               </div>
               <Text fontSize="18px" mt="22px" fontWeight="900">Categories</Text>
               <UnorderedList>
@@ -227,7 +211,5 @@ export default function Index() {
         </Flex>
         <Footer />
       </Box>
-      </main>
-    </>
   );
 }

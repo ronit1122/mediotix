@@ -54,7 +54,7 @@ export default function Index({clientName}) {
   
   
   return (
-    <>
+   
       <Box
         className="font-nexa"
         fontSize={["clamp(13px, 1.5vw, 15px)"]}
@@ -171,6 +171,6 @@ export default function Index({clientName}) {
         </Flex>
         <Footer />
       </Box>
-    </>
+  
   );
 }

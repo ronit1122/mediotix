@@ -27,62 +27,7 @@ import {
       metaTitle: "Data Visualization | Turning Data into Actionable Strategies",
       metaDesc: "Discover how data visualization simplifies complex data, uncovers trends, & drives actionable insights with best practices for better decision-making",
       canonical: `https://www.mediotix.com/blog/data-visualization-for-actionable-insights/`,
-      organizationSchema: {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mediotix",
-        "url": "https://www.mediotix.com",
-        "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-999-066-3211",
-          "contactType": "Customer Service",
-          "areaServed": "Worldwide",
-          "availableLanguage": "English"
-        }
-      },
-      articleSchema: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Data Visualization for Actionable Insights",
-        "description": "Learn how data visualization can transform complex data into actionable insights that drive decision-making.",
-        "image": "https://www.mediotix.com/images/data-visualization.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Mediotix Team"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mediotix",
-          "logo": "  https://www.mediotix.com/_next/static/media/mediotixLogoWhite.48d1f3e1.svg"
-        },
-        "datePublished": "2024-11-19",
-        "mainEntityOfPage": "https://www.mediotix.com/blog/data-visualization-for-actionable-insights"
-      },
-      breadcrumbSchema: {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.mediotix.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blogs",
-            "item": "https://www.mediotix.com/blogs"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Data Visualization for Actionable Insights",
-            "item": "https://www.mediotix.com/blog/data-visualization-for-actionable-insights"
-          }
-        ]
-      },       
+     
       htmlString:`
 <div>
   <p style="font-size: 1rem; line-height: 1.5;">

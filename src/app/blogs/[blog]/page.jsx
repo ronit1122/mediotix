@@ -1,5 +1,4 @@
 import { blogs } from "../../../utils/blogsData.js";
-import Head from 'next/head';
 import BlogsDetailPage from './../../../components/BlogsDetailPage/index.jsx';
 
 
@@ -11,12 +10,18 @@ export async function generateMetadata({ params }) {
     const title = `${blogData?.metaTitle}`;
     const description = `${blogData?.metaDesc}`;
 
+
+    console.log(blogData, blog, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
   
     return {
       title,
       description,
       alternates: {
         canonical: `${blogData?.canonical}`,
+      },
+      robots: {
+        index: true,
+        follow: true,
       },
       meta: [
         { name: 'robots', content: 'index, follow' },
@@ -31,37 +36,38 @@ export default function Index({params}) {
   
   
   return (
-    <>
-      <Head>
-       {/* Injecting JSON-LD */}
-       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.organizationSchema) }}
-        />
-        {/* Inject Article Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.articleSchema) }}
-        />
-        {/* Inject Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.breadcrumbSchema) }}
-        />
-        {/* Inject website Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.websiteSchema) }}
-        />
-        {/* Inject blogPostingSchema Schema */}
-        {blogData?.blogPostingSchema && <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData?.blogPostingSchema) }}
-        />}
-      </Head>
       <main>
-         <BlogsDetailPage />
+      {blogData?.organizationSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.organizationSchema) }}
+        />
+      )}
+      {blogData?.articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.articleSchema) }}
+        />
+      )}
+      {blogData?.breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.breadcrumbSchema) }}
+        />
+      )}
+      {blogData?.websiteSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.websiteSchema) }}
+        />
+      )}
+      {blogData?.blogPostingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogData.blogPostingSchema) }}
+        />
+      )}
+         <BlogsDetailPage blog={blog}/>
       </main>
-    </>
   );
 }

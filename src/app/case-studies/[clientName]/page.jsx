@@ -17,6 +17,10 @@ export async function generateMetadata({ params }) {
       alternates: {
         canonical: `${caseStudyData?.canonical}`,
       },
+      robots: {
+        index: true,
+        follow: true,
+      },
       meta: [
         { name: 'robots', content: 'index, follow' },
       ],
@@ -29,33 +33,29 @@ export async function generateMetadata({ params }) {
 
     console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
     return (
-      <>
-      <Head>
-       {/* Injecting JSON-LD */}
-       <script
+      <main>
+        {caseStudyData?.organizationSchema && <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.organizationSchema) }}
-        />
+        />}
         {/* Inject Article Schema */}
-        <script
+        {caseStudyData?.articleSchema && <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.articleSchema) }}
-        />
+        />}
         {/* Inject Breadcrumb Schema */}
-        <script
+        {caseStudyData?.breadcrumbSchema && <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.breadcrumbSchema) }}
-        />
+        />}
         {/* Inject website Schema */}
         {caseStudyData?.websiteSchema && <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyData?.websiteSchema) }}
         />}
-      </Head>
-      <main>
         <CaseStudyDetails clientName={clientName} />
       </main>
-      </>
+    
     );
   }
   
