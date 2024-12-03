@@ -2,7 +2,6 @@ import CaseStudyDetails from '../../../components/CaseStudiesDetailPage/index.js
 import {cases} from './../../../utils/caseStudiesData.js';
 import Head from 'next/head';
 
-
 export async function generateMetadata({ params }) {
     const { clientName } = params;
     const caseStudyData = cases?.filter((item) => item?.route === decodeURIComponent(clientName))?.[0];
@@ -32,6 +31,8 @@ export async function generateMetadata({ params }) {
     const caseStudyData = cases?.filter((item) => item?.route === decodeURIComponent(clientName))?.[0];
 
     console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
+
+    
     return (
       <main>
         {caseStudyData?.organizationSchema && <script

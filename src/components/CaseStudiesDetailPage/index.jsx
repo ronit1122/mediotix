@@ -37,17 +37,40 @@ export default function Index({clientName}) {
   };
 
   
+  const shareCaseStudiesDataLayerPush = (socialMedia) => {
+    
+    if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'share_case_study_on',
+          'social_media': socialMedia,
+        });   
+    };
+  }
+  
+  const readOtherCaseStudiesDataLayerPush = (caseStudyName) => {
+    
+    if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'other_case_studies_read_more',
+          'case_studies': caseStudyName
+        });  
+    };
+  }
+
   const shareOnInstagram = () => {
+    shareCaseStudiesDataLayerPush("instagram");
     const url = "https://www.instagram.com/";
     window.open(url, "_blank");
   };
 
   const shareOnLinkedIn = () => {
+    shareCaseStudiesDataLayerPush("linkedin");
     const url = encodeURIComponent("https://mediotix.com"); // Replace with the page URL
     openPopup(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
   };
   
   const shareOnFacebookMessenger = () => {
+    shareCaseStudiesDataLayerPush("facebook");
     const url = encodeURIComponent("https://mediotix.com"); // Replace with the page URL
     openPopup(`https://www.facebook.com/dialog/send?link=${url}&app_id=YOUR_APP_ID&redirect_uri=${url}`);
   };
@@ -110,7 +133,7 @@ export default function Index({clientName}) {
             </UnorderedList>
             </Flex>
             <Flex w="40%" flexDir='column'>
-               <DownloadForm />
+               <DownloadForm clientName={clientName} />
                <Text fontSize="18px" fontWeight="900">Share Case Study on</Text>
                <div className="flex gap-5 mt-[20px]">
                <Flex
@@ -162,7 +185,7 @@ export default function Index({clientName}) {
           >
             {cases?.slice(0,3)?.map((item) => (
               <React.Fragment key={uuidv4()}>
-                <CardComp item={item} />
+                <CardComp item={item} readOtherCaseStudiesDataLayerPush={readOtherCaseStudiesDataLayerPush}  />
               </React.Fragment>
             ))}
             </SimpleGrid>

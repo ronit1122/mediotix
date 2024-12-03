@@ -1,32 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://www.mediotix.com/</loc>
-  <lastmod>2024-09-23T05:52:33+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.mediotix.com/</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.mediotix.com/contact-us</loc>
-  <lastmod>2024-09-23T05:52:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.mediotix.com/contact-us</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.mediotix.com/privacy-policy</loc>
-  <lastmod>2024-09-23T05:52:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.mediotix.com/case-studies</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.mediotix.com/terms-and-conditions</loc>
-  <lastmod>2024-09-23T05:52:33+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.mediotix.com/blogs</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.mediotix.com/privacy-policy</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/terms-and-conditions</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/watcho</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/max-healthcare</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/lakme-academy-paidAds</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/pvr-cinemas</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/finolex-pipes-and-fitting</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/euro-kids</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/invest-up</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/lakme-academy-seo</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/azentio</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/data-visualization-for-actionable-insights</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/ga4-referral-traffic-optimization</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/features-of-gmb-to-dominate-hyperlocal-markets</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/best-data-analytics-tools-and-software</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/how-ai-redefines-marketing-analytics</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/firebase-google-analytics-mobile-app-insights</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/the-power-of-bigquery-integration-in-ga4</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/retention-roadmap-tracking-user-trends-with-ga4</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/blogs/power-of-digital-analytics-in-marketing</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.mediotix.com/case-studies/contact-us</loc>
+<lastmod>2024-12-02T05:47:27+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+</url>
 </urlset>

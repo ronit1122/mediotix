@@ -445,27 +445,56 @@ const ResourcesMenuData = () => {
   const [selectedMenu, setSelectedMenu] = useState("caseStudy")
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
 
+
+  const caseStudyDataLayerPush = (caseStudyName) => {
+    
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'top_navi_case_studies_click',
+            'case_studies': caseStudyName
+        });
+    };
+
+  }
+
+  const blogsDataLayerPush = (blogName) => {
+    
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'top_navi_blogs_click',
+            'blogs': blogName
+        });
+    };
+
+  }
   const menuItems = {
     caseStudy: [
       {
         icon: <Image src={pvr} className="object-contain" />,
         desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
-        takeTo: "/case-studies/pvr-cinemas"
+        takeTo: "/case-studies/pvr-cinemas",
+        dataLayer: () => caseStudyDataLayerPush("PVR")
       },
       {
         icon: <Image src={maxHealth} className="object-contain" />,
         desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
-        takeTo: "/case-studies/max-healthcare"
+        takeTo: "/case-studies/max-healthcare",
+        dataLayer: () => caseStudyDataLayerPush("Max Healthcare")
+
       },
       {
         icon: <Image src={cashKaro} className="object-contain" />,
         desc: "Cashkaro: The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
-        takeTo: "/case-studies/cashkaro"
+        takeTo: "/case-studies/cashkaro",
+        dataLayer: () => caseStudyDataLayerPush("Cashkaro")
+
       },
       {
         icon: <Image src={gsk} className="object-contain" />,
-        desc: "gsk: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
-        takeTo: "/case-studies/gsk"
+        desc: "GSK: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
+        takeTo: "/case-studies/gsk",
+        dataLayer: () => caseStudyDataLayerPush("GSK")
+
       }
        
     ],
@@ -473,22 +502,26 @@ const ResourcesMenuData = () => {
       {
         icon: <Image src={L1} className="object-cover" />,
         desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights",
-        takeTo: "/blogs/data-visualization-for-actionable-insights"
+        takeTo: "/blogs/data-visualization-for-actionable-insights",
+        dataLayer: () => blogsDataLayerPush("Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights")
       },
       {
         icon: <Image src={R1} className="object-cover" />,
         desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.",
-        takeTo: "/blogs/ga4-referral-traffic-optimization"
+        takeTo: "/blogs/ga4-referral-traffic-optimization",
+        dataLayer: () => blogsDataLayerPush("Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.")
       },
       {
         icon: <Image src={contentPerformanceAnalysis} className="object-cover" />,
         desc: "Content Performance Analysis: Measuring What Matters Most",
-        takeTo: "/blogs/content-performance-analysis"
+        takeTo: "/blogs/content-performance-analysis",
+        dataLayer: () => blogsDataLayerPush("Content Performance Analysis: Measuring What Matters Most")
       },
       {
         icon: <Image src={aiAwakens} className="object-cover" />,
         desc: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
-        takeTo: "/blogs/how-ai-redefines-marketing-analytics"
+        takeTo: "/blogs/how-ai-redefines-marketing-analytics",
+        dataLayer: () => blogsDataLayerPush("AI Awakens: Redefining Marketing Analytics for the Digital Era")
       }
     ]
   }
@@ -503,6 +536,25 @@ const ResourcesMenuData = () => {
       console.log('Event pushed to dataLayer');
   };
 
+  const viewAllCaseStudiesDataLayerPush = () => {
+    
+    if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'top_navi_view_all_case_studies'
+        })
+          
+  };
+  }
+
+  const viewAllBlogsDataLayerPush = () => {
+    
+    if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+         'event': 'top_navi_view_all_blogs'
+        })
+          
+  };
+  }
 
   return (
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
@@ -526,7 +578,7 @@ const ResourcesMenuData = () => {
            </Link>
         ))}
         </div>
-        <Link href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
+        <Link onClick={() => selectedMenu === 'caseStudy' ? viewAllCaseStudiesDataLayerPush() : viewAllBlogsDataLayerPush()} href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
          <div onClick={() => {}} className="flex gap-1 pl-[30px] mt-[5px]  text-white items-center hover:underline cursor-pointer">
           <p className="font-[500] text-[13px] text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
             <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>

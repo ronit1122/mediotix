@@ -36,18 +36,31 @@ export default function Index({blog}) {
     );
   };
 
+  const shareBlogsDataLayerPush = (socialMedia) => {
+    
+    if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'share_blogs_on',
+          'social_media': socialMedia
+        });   
+    };
+  }
+  
   
   const shareOnInstagram = () => {
+    shareBlogsDataLayerPush("instagram");
     const url = "https://www.instagram.com/";
     window.open(url, "_blank");
   };
 
   const shareOnLinkedIn = () => {
+    shareBlogsDataLayerPush("linkedin");
     const url = encodeURIComponent("https://mediotix.com"); // Replace with the page URL
     openPopup(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
   };
   
   const shareOnFacebookMessenger = () => {
+    shareBlogsDataLayerPush('facebook')
     const url = encodeURIComponent("https://mediotix.com"); // Replace with the page URL
     openPopup(`https://www.facebook.com/dialog/send?link=${url}&app_id=YOUR_APP_ID&redirect_uri=${url}`);
   };

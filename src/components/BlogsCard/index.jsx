@@ -32,6 +32,7 @@ export default function CardComp({ item }) {
     dateCreated,
     logo,
     url,
+    blogsReadMoreClickDataLayerPush,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
@@ -39,7 +40,7 @@ export default function CardComp({ item }) {
 
 
   return (
-  <Link href={`/blogs/${url}`} >
+  <Link onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} href={`/blogs/${url}`} >
     <Flex
     h="100%"
       classname="font-nexa"
@@ -67,7 +68,7 @@ export default function CardComp({ item }) {
         </Stack>
       </Flex>
       <Flex p="20px">
-      <button style={{fontSize:"15px"}} className="naviteButton">
+      <button onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} style={{fontSize:"15px"}} className="naviteButton">
         Read More
       </button>
       </Flex>

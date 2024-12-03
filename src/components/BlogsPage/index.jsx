@@ -13,6 +13,14 @@ export default function Index() {
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
 
+  const blogsReadMoreClickDataLayerPush = (blog) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'other_blogs_read_more',
+        'blogs': blog
+      });  
+  };
+  }
 
   return (
     <Box
@@ -56,7 +64,7 @@ export default function Index() {
           >
             {blogs?.map((item) => (
               <React.Fragment key={uuidv4()}>
-                <CardComp item={item} />
+                <CardComp item={item} blogsReadMoreClickDataLayerPush={blogsReadMoreClickDataLayerPush} />
               </React.Fragment>
             ))}
           </SimpleGrid>

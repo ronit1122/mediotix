@@ -43,11 +43,6 @@ const nextConfig = {
           permanent: true,
         },
         {
-          source: '/case-study',
-          destination: '/',
-          permanent: true,
-        },
-        {
           source: '/google-tag-manager',
           destination: '/',
           permanent: true,
@@ -99,11 +94,6 @@ const nextConfig = {
         },
         {
           source: '/testimonial/google-tag-manager',
-          destination: '/',
-          permanent: true,
-        },
-        {
-          source: '/blog',
           destination: '/',
           permanent: true,
         },

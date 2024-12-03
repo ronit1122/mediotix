@@ -36,15 +36,13 @@ export default function CardComp({ item }) {
     solution,
     vertical,
     primeTg,
-    route
+    route,
+    readOtherCaseStudiesDataLayerPush,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
-
-
-
   return (
-  <Link href={`/case-studies/${route}`} >
+  <Link onClick={() => readOtherCaseStudiesDataLayerPush && readOtherCaseStudiesDataLayerPush()} href={`/case-studies/${route}`} >
     <Flex
     h="100%"
       classname="font-nexa"
@@ -69,7 +67,7 @@ export default function CardComp({ item }) {
         </Stack>
       </Flex>
       <Flex p="20px">
-      <button style={{fontSize:"15px"}} className="naviteButton">
+      <button onClick={() => readOtherCaseStudiesDataLayerPush &&  readOtherCaseStudiesDataLayerPush()} style={{fontSize:"15px"}} className="naviteButton">
         Read More
       </button>
       </Flex>

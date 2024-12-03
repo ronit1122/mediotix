@@ -11,7 +11,7 @@ import emailjs from 'emailjs-com';
 import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutation.js';
 import { useMediaQuery } from '@chakra-ui/react'
 
-export default function Home() {
+export default function Home({clientName}) {
 
   // FORM MUTATION
   const toast = useToast()
@@ -40,6 +40,7 @@ export default function Home() {
            
             handleSendMail() // handle mail send
             home_get_in_touch_form_submit() // handle data layer push
+            downloadCaseStudiesDataLayerPush()
             // Resolve the promise with the data
             resolve(data);
           } else {
@@ -77,6 +78,17 @@ export default function Home() {
   
     };
 
+    const downloadCaseStudiesDataLayerPush = () => {
+    
+      if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'get_case_studies',
+            'case_studies': clientName,
+          });   
+      };
+    }
+
+    
     const handleSubmit = (e) => {
       e.preventDefault()
       
