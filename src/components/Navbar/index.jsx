@@ -483,10 +483,10 @@ const ResourcesMenuData = () => {
 
       },
       {
-        icon: <Image src={cashKaro} className="object-contain" />,
-        desc: "Cashkaro: The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
-        takeTo: "/case-studies/cashkaro",
-        dataLayer: () => caseStudyDataLayerPush("Cashkaro")
+        icon: <Image src={finolex} className="object-contain" />,
+        desc: "Finolex Pipes & Fitting: Unique SEO Strategy that Achieved 90% Boost in Keyword Visibility & Performance",
+        takeTo: "/case-studies/finolex-pipes-and-fitting",
+        dataLayer: () => caseStudyDataLayerPush("Finolex pipes & fitting")
 
       },
       {
@@ -649,7 +649,7 @@ const AboutUsMenuData = () => {
       <div className="flex flex-col tablet:flex-row gap-6">
         <div className=" tablet:w-[500px] flex flex-col  gap-2  text-start tablet:text-white">
            <p className="font-semibold mb-4">About Mediotix</p>
-           <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
+           <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself.</p>
         </div>
         <div className="tablet:text-white">
         <p className="font-semibold mb-4">About Clients</p>

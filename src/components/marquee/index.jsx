@@ -8,11 +8,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
+import { useRouter } from 'next/navigation';
+
 // Import Swiper modules
 import { Navigation, Pagination } from 'swiper/modules';
 import { useMediaQuery } from '@chakra-ui/react'
 
 const Carousel = ({ props }) => {
+  const router = useRouter()
   const [isLargerThan400] = useMediaQuery('(min-width: 400px)')
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)')
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
@@ -30,7 +33,7 @@ const Carousel = ({ props }) => {
       }}
     >
         <SwiperSlide>
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px] items-center  min-h-[150px] h-[150px] tablet:h-[200px]  bg-white border-[2px] border-[#FF7D78]  p-[10px] tablet:p-[20px] rounded-[8px]">
+          <div onClick={() => router.push("/case-studies/pvr")} className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px] items-center  min-h-[150px] h-[150px] tablet:h-[200px]  bg-white border-[2px] border-[#FF7D78]  p-[10px] tablet:p-[20px] rounded-[8px]">
             <Image src={pvr} alt="pvr"/>
             <p className="text-[20px] font-black">35%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
@@ -38,7 +41,7 @@ const Carousel = ({ props }) => {
           </div>
         </SwiperSlide>
           <SwiperSlide>
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px] items-center  min-h-[150px] h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#004185] p-[10px] tablet:p-[20px] rounded-[8px]">
+          <div onClick={() => router.push("/case-studies/max-healthcare")}  className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px] items-center  min-h-[150px] h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#004185] p-[10px] tablet:p-[20px] rounded-[8px]">
             <Image src={maxHealth} alt="maxHealth"/>
             <p className="text-[20px] font-black">150%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
@@ -46,7 +49,7 @@ const Carousel = ({ props }) => {
           </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly  tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#000000] p-[10px] tablet:p-[20px] rounded-[8px]">
+          <div onClick={() => router.push("/case-studies/dice-academy")}  className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly  tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#000000] p-[10px] tablet:p-[20px] rounded-[8px]">
             <Image src={diceAcademy} alt="diceAcademy"/>
             <p className="text-[20px] font-black">500%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
@@ -54,7 +57,7 @@ const Carousel = ({ props }) => {
           </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly  tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#FA5306] p-[10px] tablet:p-[20px] rounded-[8px]">
+          <div onClick={() => router.push("/case-studies/gsk")}  className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly  tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#FA5306] p-[10px] tablet:p-[20px] rounded-[8px]">
             <Image src={gsk} alt="gsk"/>
             <p className="text-[20px] font-black">120%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
@@ -62,7 +65,7 @@ const Carousel = ({ props }) => {
           </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#E4235A] p-[10px] tablet:p-[20px] rounded-[8px]">
+          <div onClick={() => router.push("/case-studies/watcho")}  className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px] bg-white  border-[2px] border-[#E4235A] p-[10px] tablet:p-[20px] rounded-[8px]">
             <Image src={watcho} alt="watcho"/>
             <p className="text-[20px] font-black">48%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
@@ -71,8 +74,8 @@ const Carousel = ({ props }) => {
           </SwiperSlide>
           <SwiperSlide>
 
-          <div className="flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px]  bg-white  border-[2px] border-[#00AFCC] p-[10px] tablet:p-[20px] rounded-[8px]">
-            <Image src={qubo} alt="quibo"/>
+          <div onClick={() => router.push("/case-studies/qubo-hero-electronix")}  className="cursor-pointer flex flex-col gap-2 justify-between tablet:justify-evenly tablet:ml-[50px]  items-center  min-h-[150px]  h-[150px] tablet:h-[200px]  bg-white  border-[2px] border-[#00AFCC] p-[10px] tablet:p-[20px] rounded-[8px]">
+            <Image src={qubo} alt="qubo"/>
             <p className="text-[20px] font-black">72%</p>
             {/* <p className="text-[20px] font-medium">Increase Leads</p> */}
             <div className="w-fit p-[5px] rounded-[5px] text-white bg-[#00AFCC] text-[12px]  text-center">Increase in Transactions</div>

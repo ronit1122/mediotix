@@ -22,9 +22,10 @@
         imgAltText: "icon of finolex",
         bgAltText: "A set of image of clapper board,Camera, reel, popcorn",
         bg: finolexBg,
-        route: "/",
+        route: "finolex-pipes-and-fitting",
         id: 1,
         width: "120px",
+
       },
       {
         name: "Watcho Case Study",
@@ -34,20 +35,20 @@
         src: watcho,
         bg: watchoBg,
         id: 2,
-        route: "/",
+        route: "watcho",
         width: "120px",
       },
-      {
-        name: "Cashkaro Case Study",
-        src: cashKaro,
-        tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
-        imgAltText: "icon of cashkaro",
-        bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
-        bg: cashKaroBg,
-        id: 3,
-        route: "/",
-        width: "120px",
-      },
+      // {
+      //   name: "Cashkaro Case Study",
+      //   src: cashKaro,
+      //   tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
+      //   imgAltText: "icon of cashkaro",
+      //   bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
+      //   bg: cashKaroBg,
+      //   id: 3,
+      //   route: "/",
+      //   width: "120px",
+      // },
 
       {
         name: "PVR Case Study",
@@ -57,7 +58,7 @@
         src: pvr,
         id: 4,
         bg: pvr1Bg,
-        route: "/",
+        route: "pvr",
         width: isSmallerThan800 ? "35px" : "60px",
       },
 
@@ -69,7 +70,7 @@
         bgAltText: "image of Go Pro Camera ",
         bg: maxHealthBg,
         id: 5,
-        route: "/",
+        route: "max-healthcare",
         width:  isSmallerThan800 ? "70px" :"100px",
       },
     ];
@@ -147,7 +148,7 @@
                             <button
                               className="mt-[2rem] w-[10rem] text-white naviteButton"
                               onClick={() => {
-                                router.push(item.route);
+                                router.push(`/case-studies/${item.route}`);
                                 case_studies_read_now(item?.name)
                               }}
                             >

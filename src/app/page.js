@@ -131,7 +131,7 @@ export default function Home() {
          <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
          <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-fit text-white">
           <div className="flex flex-col items-center ">
-           <div className="border-b-2 w-fit">
+           <div className="border-b-2 w-fit mb-[26px]">
              <h3 className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</h3>
            </div>
            <h1 className="text-[clamp(20px,4vw,48px)] font-[800] tablet:leading-[1.1]">Fueling Brand Growth with <br/> Intelligent Marketing & AI Power Analytics</h1>

@@ -40,7 +40,7 @@ export default function CardComp({ item }) {
 
 
   return (
-  <Link onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} href={`/blogs/${url}`} >
+  <Link style={{zIndex: "5"}} onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} href={`/blogs/${url}`} >
     <Flex
     h="100%"
       classname="font-nexa"
