@@ -21,6 +21,8 @@ export default function Index({clientName}) {
   const decodedClientName = decodeURIComponent(clientName);
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
+  const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
+  const [isLargerThan500] = useMediaQuery("(min-width: 500px)");
   const caseStudyData = cases?.filter((item) => item?.route === decodedClientName)?.[0];
 
   const openPopup = (url) => {
@@ -89,6 +91,8 @@ export default function Index({clientName}) {
           id="content"
           flexDir="column"
           mx="auto"
+           paddingTop="70px"
+         
         >
           <Flex w='100%' minH="400px" maxH="450px" position="relative" justifyContent="center" bg='white' color='white'>
             <Flex style={{ backgroundImage: 'linear-gradient(to right, #F06D5A 54%, rgba(255, 125, 120, 0) 100%)', minHeight:"100%", minWidth:"100%", position: "absolute"}} ></Flex>
@@ -101,38 +105,41 @@ export default function Index({clientName}) {
             </Flex>
             </Flex>
           </Flex>
+
           <Flex w={isLargerThan900 ? "80%" : "95%"} my="80px" mx='auto' position='relative'>
             <div style={{zIndex: "-1"}} className="hidden tablet:block absolute top-[-50%] right-[-30%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
-            <SimpleGrid columns={3} spacing={30} className="w-full">
+            <SimpleGrid columns={isLargerThan500 ? 3 : 1} spacing={isLargerThan500 ? 30 : 10} className="w-full">
              {caseStudyData?.outcomes?.map((item, index) => (
               <Flex key={index} zIndex="5" bg="white" className="rounded-[10px] px-[10px] border-[4px] min-h-[240px] border-[#FF7D78] flex flex-col items-center justify-center gap-[20]">
                 <Text
-                  className="text-[64px] font-[900] bg-clip-text text-transparent"
+                  fontSize={["clamp(30px, 4vw, 64px)"]} 
+                  className=" font-[900] bg-clip-text text-transparent"
                   style={{ backgroundImage: "linear-gradient(to bottom, #FF7D78, #FF9363)"}}
                 >
                  {item.value}
                 </Text>
-                <Text fontSize={["clamp(18px, 3vw, 24px)"]} textAlign='center' className='font-[400]'>{item.desc}</Text>
+                <Text fontSize={["clamp(14px, 2vw, 24px)"]} textAlign='center' className='font-[400]'>{item.desc}</Text>
               </Flex>
              ))}
             </SimpleGrid>
           </Flex>
-          <Flex  w={isLargerThan900 ? "80%" : "95%"} mx='auto' gap="20px" position='relative'>
-            <Flex flexDir='column' w="60%">
+
+          <Flex  w={isLargerThan900 ? "80%" : "95%"} flexDir={isLargerThan700 ? "row" : "column"} mx='auto' gap="20px" position='relative'>
+            <Flex flexDir='column' w={isLargerThan700 ? "60%" : "100%"}>
             <Text fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Challenges</Text>
             <UnorderedList my="24px">
               {caseStudyData?.challenges?.map((item, index) => (
-                <ListItem key={index}  fontSize={["clamp(13px, 3vw, 18px)"]} >{item}</ListItem>
+                <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>
               ))}
             </UnorderedList>
             <Text fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Approach</Text>
             <UnorderedList my="24px">
             {caseStudyData?.approach?.map((item, index) => (
-                <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px)"]} >{item}</ListItem>
+                <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>
               ))}
             </UnorderedList>
             </Flex>
-            <Flex w="40%" flexDir='column'>
+            <Flex w={isLargerThan700 ? "40%" : "100%"} flexDir='column'>
                <DownloadForm clientName={clientName} />
                <Text fontSize="18px" fontWeight="900">Share Case Study on</Text>
                <div className="flex gap-5 mt-[20px]">
@@ -175,6 +182,7 @@ export default function Index({clientName}) {
             </Flex>
             <div style={{zIndex: "-1"}} className="hidden tablet:block absolute top-[30%] right-[-30%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
           </Flex>
+
           <Flex bg="#EAF6FFCC" mt="80px">
             <Flex w={isLargerThan900 ? "80%" : "95%"} flexDir='column' minH="75vh" mx='auto' alignItems="center" >
               <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Case Studies</Text>

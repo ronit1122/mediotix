@@ -16,7 +16,7 @@ export default function Privacy() {
   return (
     <main className="flex flex-col min-h-screen bg-white">
       <LandingNavbar />
-      <main id="content" className="container w-[80%] mx-auto py-20 px-4 md:px-0 ">
+      <main style={{paddingTop: "150px"}}  id="content" className="container w-[80%] mx-auto py-20 px-4 md:px-0 ">
         <h1 className="text-center text-3xl font-bold text-gray-800 mb-10">
           Terms and Conditions
         </h1>

@@ -20,7 +20,8 @@ export default function Home({clientName}) {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [mobileFormVisible, setMobileFormVisible] = useState(false)
+  const [companyName, setCompanyName] = useState('')
+  const [designation, setDesignation] = useState('')
 
     // FUNCTION TO DELETE REPORT
     const _MutationGetInTouchForm = () => {
@@ -34,10 +35,8 @@ export default function Home({clientName}) {
             },
           });
     
-          console.log(data, data?.FormHomePage?.status === "FORM_SUBMITTED")
-          if (data?.FormHomePage?.status === "FORM_SUBMITTED") {
+          if (data?.FormHomepage?.status === "FORM_SUBMITTED") {
             // Reset form fields
-           
             handleSendMail() // handle mail send
             home_get_in_touch_form_submit() // handle data layer push
             downloadCaseStudiesDataLayerPush()
@@ -72,6 +71,8 @@ export default function Home({clientName}) {
           setEmail('');
           setName('');
           setPhone('');
+          setCompanyName('')
+          setDesignation('')
         }, (error) => {
   
         });
@@ -111,9 +112,9 @@ export default function Home({clientName}) {
     };
   
   return (
-    <div className=" flex w-[90%] tablet:w-[100%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
-          {isLargerThan900 &&  <form onSubmit={handleSubmit} style={{width: "100%"}}>
-           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px] w-full" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
+    <div className=" flex w-[100%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
+           <form onSubmit={handleSubmit} style={{width: "100%"}}>
+           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px] w-full" style={{background: "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" }}>
             <p className="text-[18px] font-[900] text-white">Download Case Study</p>
              <div>
                {/* <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label> */}
@@ -129,33 +130,17 @@ export default function Home({clientName}) {
              </div>
              <div>
                {/* <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Company Name</label> */}
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="companyName*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Company Name*" />
+               <input required onChange={(e) => setCompanyName(e.target.value)} value={companyName} type="tel" id="companyName*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Company Name*" />
              </div>
              <div>
                {/* <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Designation</label> */}
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="designation*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Designation*" />
+               <input required onChange={(e) => setDesignation(e.target.value)} value={designation} type="tel" id="designation*" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Designation*" />
              </div>
              <button type="submit" className="naviteButtonInverted">Get Case Studies</button>
            </div>
-           </form>}
+           </form>
 
-          {(!isLargerThan900 && mobileFormVisible) &&  <form onSubmit={handleSubmit}>
-           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
-             <div>
-               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
-               <input required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
-             </div>
-             <div>
-               <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
-               <input required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
-             </div>
-             <div>
-               <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
-               <input required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
-             </div>
-             <button type="submit" className="naviteButtonInverted">Submit</button>
-           </div>
-           </form>}
+       
         {/* <div style={{zIndex: "0"}} className="absolute top-[-15%] hidden tablet:block right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
     </div>
   );

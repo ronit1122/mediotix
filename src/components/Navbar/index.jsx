@@ -6,7 +6,7 @@ import Image from 'next/image';
 import {v4 as uuidv4} from "uuid";
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, digbiHealth, pvr, watcho, heroElectronix, reliance, spinny} from './../../assets/clients/export.js';
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Flex } from '@chakra-ui/react'
 import {
   adobeAnalytics,
   affiliateMarketing,
@@ -53,7 +53,7 @@ import {
 } from '@chakra-ui/react'
 import { RxHamburgerMenu } from "react-icons/rx";
 import MediotixLogoGif from './../../assets/navbar/mediotixLogo.gif';
-import {contentPerformanceAnalysis, aiAwakens} from './../../assets/blogsPage/export.js';
+import {contentPerformanceAnalysis, aiAwakens, essentialFeatures} from './../../assets/blogsPage/export.js';
 import { cashkaroBg } from "@/assets/caseStudiesPage/export.js";
 
 export default function Navbar() {
@@ -161,7 +161,7 @@ export default function Navbar() {
 
   return (
     <ChakraProvider>
-<div className=" h-[50px] tablet:h-[70px] w-full relative" style={{boxShadow: "0px 4px 7px 5px #00000033"}}>
+<div  className=" h-[70px] tablet:h-[70px] w-full relative" style={{boxShadow: "0px 4px 7px 5px #00000033", position: "fixed", zIndex: 999}}>
   <div style={{zIndex: 500}} className="flex items-center h-full  relative">
     {/* Logo Section */}
     <div className="bg-white h-full w-[30%] flex items-center justify-center absolute tablet:w-[35%]" style={{clipPath: "polygon(0 0, 100% 0, 80% 100%, 0% 100%)"}}>
@@ -184,7 +184,7 @@ export default function Navbar() {
     ))}
     <Link 
         onClick={() => handletop_navi_contact_us()}
-        href={'contact-us'}
+        href={'/contact-us'}
         className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
         Contact Us
     </Link>
@@ -227,7 +227,7 @@ export default function Navbar() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent >
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
 
@@ -512,9 +512,9 @@ const ResourcesMenuData = () => {
         dataLayer: () => blogsDataLayerPush("Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.")
       },
       {
-        icon: <Image src={contentPerformanceAnalysis} className="object-cover" />,
-        desc: "Content Performance Analysis: Measuring What Matters Most",
-        takeTo: "/blogs/content-performance-analysis",
+        icon: <Image src={essentialFeatures} className="object-cover" />,
+        desc: "Essential Features of GMB to Dominate Hyperlocal Markets",
+        takeTo: "/blogs/features-of-gmb-to-dominate-hyperlocal-markets",
         dataLayer: () => blogsDataLayerPush("Content Performance Analysis: Measuring What Matters Most")
       },
       {
@@ -566,7 +566,7 @@ const ResourcesMenuData = () => {
         <div className="w-full">
         <div className="p-[5px] tablet:px-[30px] pt-[0]  w-full grid grid-cols-1 tablet:grid-cols-2 gap-3 ">
         {menuItems?.[selectedMenu]?.map(item => (
-           <Link href={item?.takeTo}>
+           <Link onClick={item?.dataLayer} href={item?.takeTo}>
             <div className="  tablet:text-white cursor-pointer tablet:bg-none p-[10px] tablet:p-[5px] bg-[#f4f4f5] tablet:bg-white tablet:bg-opacity-0 tablet:hover:bg-opacity-20  rounded-md flex flex-col tablet:flex-row gap-2">
               <div style={{width: (selectedMenu === 'caseStudy' && !isLargerThan900) && "100px"}} className={` h-fit tablet:bg-white min-w-[100px] tablet:w-[100px] tablet:h-[70px] rounded-[5px] ${selectedMenu === "caseStudy" && "p-[10px]"} overflow-hidden flex justify-center`}>
                   {item?.icon}
@@ -578,10 +578,10 @@ const ResourcesMenuData = () => {
            </Link>
         ))}
         </div>
-        <Link onClick={() => selectedMenu === 'caseStudy' ? viewAllCaseStudiesDataLayerPush() : viewAllBlogsDataLayerPush()} href={selectedMenu === 'caseStudy' ? "case-studies" : "blogs"}>
-         <div onClick={() => {}} className="flex gap-1 pl-[30px] mt-[5px]  text-white items-center hover:underline cursor-pointer">
-          <p className="font-[500] text-[13px] text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
-            <IoIosArrowRoundForward  style={{color: "white", fontSize: "25px"}}/>
+        <Link onClick={() => selectedMenu === 'caseStudy' ? viewAllCaseStudiesDataLayerPush() : viewAllBlogsDataLayerPush()} href={selectedMenu === 'caseStudy' ? "/case-studies" : "/blogs"}>
+         <div onClick={() => {}} className="flex gap-1 pl-[30px] mt-[5px] mb-[10px] text-black tablet:text-white items-center hover:underline cursor-pointer">
+          <p className="font-[500] text-[13px] text-black tablet:text-white">View All {selectedMenu === 'caseStudy' ? 'Case Studies' : "Blogs"}</p>
+            <IoIosArrowRoundForward  style={{color: isLargerThan900 ? "white" : "black", fontSize: "25px"}}/>
          </div>
         </Link>
         </div>

@@ -41,6 +41,7 @@ export default function Index() {
         w={isLargerThan900 ? "80%" : "95%"}
         mx="auto"
         pb="5rem"
+        style={{paddingTop: "70px"}} 
       >
         <Flex position='relative' py="100px" flexDir="column" textAlign="center">
         <div style={{zIndex: "0"}} className="hidden tablet:block absolute top-[20%] left-[-20%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>

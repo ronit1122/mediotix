@@ -124,7 +124,7 @@ export default function Home() {
       <Navbar />
 
       {/* section 1 */}
-      <div className="flex items-center justify-center text-center h-[370px] tablet:h-[620px] relative">
+      <div style={{paddingTop: "70px"}}  className="flex items-center justify-center text-center h-[370px] tablet:h-[620px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
           <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>

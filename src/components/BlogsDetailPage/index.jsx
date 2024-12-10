@@ -80,6 +80,7 @@ export default function Index({blog}) {
           id="content"
           flexDir="column"
           mx="auto"
+           paddingTop="70px"
         >
           <Flex w='100%' minH="400px" maxH="450px" position="relative" justifyContent="center" bg='white' color='white'>
             <Flex style={{ backgroundImage: 'linear-gradient(to right, #F06D5A 45%, #ffc3b7 100%)', minHeight:"100%", minWidth:"100%", position: "absolute"}} ></Flex>
