@@ -73,7 +73,7 @@ import {
         'Students, Professionals, etc'
       ],
       route: 'watcho',
-      metaTitle: "Watcho Case Study: Boosting Engagement & Conversions ",
+      metaTitle: "Watcho Case Study: Boosting Engagement & Conversions",
       metaDescription: "Know how Mediotix helped Watcho increase user engagement and conversions through targeted marketing strategies",
       canonical: "https://www.mediotix.com/case-studies/watcho",
       organizationSchema: {

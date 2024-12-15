@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
@@ -25,6 +25,7 @@ export default function Home() {
 
     // FORM MUTATION
     const toast = useToast()
+    const formRef = useRef(null); // Reference for the form element
     const [MutationContactUsForm, { loading: ContactUsFormMutationLoading }] = useMutation(ContactUsFormMutation);
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
@@ -49,6 +50,7 @@ export default function Home() {
 
             if (data?.FormContactUs?.status === "FORM_SUBMITTED") {
               handleSendMail() // handle send mail
+              handleRunDriveScript()
               contactus_get_in_touch_form_submit() // handle push data layer
               // Resolve the promise with the data
               resolve(data);
@@ -98,6 +100,30 @@ export default function Home() {
           loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
         })
       }
+
+      
+      const handleRunDriveScript = async () => {
+    
+        const url = "https://script.google.com/macros/s/AKfycbwrcLuzyTlMx5WDLCUXr31XRI3VXHKVI-cTA9V0I9qxyy1q4P-IibCAQtAyw4NoCVIvdA/exec";
+    
+        if (formRef.current) {
+          const formData = new FormData(formRef.current);
+    
+          console.log(formData, "formData")
+          try {
+            const response = await fetch(url, {
+              method: "POST",
+              body: formData,
+            });
+    
+            const result = await response.text();
+            console.log("Response from Google Script:", result, formRef.current, formData);
+          } catch (error) {
+            console.error("Error submitting form:", error);
+          }
+        }
+      };
+    
     
 
       
@@ -109,6 +135,8 @@ export default function Home() {
       }
       console.log('Event pushed to dataLayer');
   };
+
+
   return (
     <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] py-[2%] mx-auto relative">
       {/* <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
@@ -116,7 +144,7 @@ export default function Home() {
 
       <div style={{ zIndex: "10" }} className=" flex gap-4 flex-col tablet:flex-row w-full">
         <div className="rounded-[15px] flex flex-col gap-6 p-[15px] tablet:p-[30px] w-[100%] tablet:w-[55%] border-[2px] border-[#d2d2d2] bg-white">
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
+        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label
@@ -129,6 +157,7 @@ export default function Home() {
                 type="text"
                 value={firstName}
                 onChange={e => setFirstName(e.target.value)}
+                name="firstname"
                 id="firstname"
                 className="bg-gray-50 border  outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
                 placeholder="First name"
@@ -145,6 +174,7 @@ export default function Home() {
               <input
                 type="text"
                 value={secondName}
+                name="lastname"
                 onChange={e => setSecondName(e.target.value)}
                 id="lastName"
                 className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
@@ -164,6 +194,7 @@ export default function Home() {
               type="email"
               id="email"
               value={email}
+              name="email"
               onChange={e => setEmail(e.target.value)}
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
               placeholder="Business Email Address"
@@ -180,6 +211,7 @@ export default function Home() {
             <input
               type="tel"
               value={phone}
+              name="Phone"
               onChange={e => setPhone(e.target.value)}
               id="phone"
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
@@ -199,6 +231,7 @@ export default function Home() {
             onChange={e => setMessage(e.target.value)}
               rows="3"
               type="text"
+              name="Message"
               id="message"
               className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
               placeholder="Message"

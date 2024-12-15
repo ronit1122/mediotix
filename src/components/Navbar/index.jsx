@@ -680,10 +680,12 @@ const AboutUsMenuData = () => {
           </div>
  
         </div>
+        <Link href={"/case-studies"}>
         <div onClick={() => top_navi_view_all_clients()} className="flex gap-1 items-center mt-4 hover:underline cursor-pointer">
           <p className="font-light text-[13px] ">View All Clients</p>
           <IoIosArrowRoundForward />
         </div>
+        </Link>
         </div>
 
       </div>

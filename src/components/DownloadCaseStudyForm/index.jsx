@@ -23,6 +23,7 @@ export default function Home({clientName}) {
   const [companyName, setCompanyName] = useState('')
   const [designation, setDesignation] = useState('')
 
+
     // FUNCTION TO DELETE REPORT
     const _MutationGetInTouchForm = () => {
       return new Promise(async (resolve, reject) => {
@@ -38,7 +39,6 @@ export default function Home({clientName}) {
           if (data?.FormHomepage?.status === "FORM_SUBMITTED") {
             // Reset form fields
             handleSendMail() // handle mail send
-            home_get_in_touch_form_submit() // handle data layer push
             downloadCaseStudiesDataLayerPush()
             // Resolve the promise with the data
             resolve(data);
@@ -101,15 +101,6 @@ export default function Home({clientName}) {
 
       
     }
-
-    const home_get_in_touch_form_submit = () => {
-      if (typeof window !== 'undefined' && window.dataLayer) {
-          dataLayer.push({
-              'event': 'home_get_in_touch_form_submit'
-          });
-        }
-        console.log('Event pushed to dataLayer');
-    };
   
   return (
     <div className=" flex w-[100%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">

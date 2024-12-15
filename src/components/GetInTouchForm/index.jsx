@@ -67,25 +67,23 @@ export default function Home() {
           from_phone: phone,
       }
   
-      emailjs.send(serviceID, templateID, userData, userID)
-        .then((response) => {
-          // setEmail('');
-          // setName('');
-          // setPhone('');
-        }, (error) => {
+      // emailjs.send(serviceID, templateID, userData, userID)
+      //   .then((response) => {
+      //   }, (error) => {
   
-        });
+      //   });
   
     };
 
     const handleRunDriveScript = async () => {
 
-  
       const url = "https://script.google.com/macros/s/AKfycbyAabmZmpaSdcBDCVTqaE3E11Aj2KstT9quMcANXz_4p5jvpexCYSB87Nqy4t7vOfnLfg/exec";
   
+      
       if (formRef.current) {
         const formData = new FormData(formRef.current);
   
+        console.log(formData, "formData")
         try {
           const response = await fetch(url, {
             method: "POST",

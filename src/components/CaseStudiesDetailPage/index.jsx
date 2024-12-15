@@ -106,11 +106,11 @@ export default function Index({clientName}) {
             </Flex>
           </Flex>
 
-          <Flex w={isLargerThan900 ? "80%" : "95%"} my="80px" mx='auto' position='relative'>
+          <Flex w={isLargerThan900 ? "80%" : "95%"} my={isLargerThan900 ? "80px" : "40px"} mx='auto' position='relative'>
             <div style={{zIndex: "-1"}} className="hidden tablet:block absolute top-[-50%] right-[-30%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
             <SimpleGrid columns={isLargerThan500 ? 3 : 1} spacing={isLargerThan500 ? 30 : 10} className="w-full">
              {caseStudyData?.outcomes?.map((item, index) => (
-              <Flex key={index} zIndex="5" bg="white" className="rounded-[10px] px-[10px] border-[4px] min-h-[240px] border-[#FF7D78] flex flex-col items-center justify-center gap-[20]">
+              <Flex key={index} zIndex="5" bg="white" className="rounded-[10px] px-[10px] border-[4px] h-[150px] tablet:min-h-[240px] border-[#FF7D78] flex flex-col items-center justify-center gap-[20]">
                 <Text
                   fontSize={["clamp(30px, 4vw, 64px)"]} 
                   className=" font-[900] bg-clip-text text-transparent"
@@ -118,7 +118,7 @@ export default function Index({clientName}) {
                 >
                  {item.value}
                 </Text>
-                <Text fontSize={["clamp(14px, 2vw, 24px)"]} textAlign='center' className='font-[400]'>{item.desc}</Text>
+                <Text fontSize={["clamp(13px, 2vw, 24px)"]} textAlign='center' className='font-[400]'>{item.desc}</Text>
               </Flex>
              ))}
             </SimpleGrid>
@@ -183,7 +183,7 @@ export default function Index({clientName}) {
             <div style={{zIndex: "-1"}} className="hidden tablet:block absolute top-[30%] right-[-30%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
           </Flex>
 
-          <Flex bg="#EAF6FFCC" mt="80px">
+          <Flex bg="#EAF6FFCC" mt="80px" pb={"50px" }>
             <Flex w={isLargerThan900 ? "80%" : "95%"} flexDir='column' minH="75vh" mx='auto' alignItems="center" >
               <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Case Studies</Text>
             <SimpleGrid
