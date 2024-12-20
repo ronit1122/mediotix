@@ -21,7 +21,7 @@ import {v4 as uuidv4} from 'uuid';
 import Link from "next/link"
 import Image from "next/image"
 
-export default function CardComp({ item }) {
+export default function CardComp({ item, readOtherCaseStudiesDataLayerPush }) {
   const {
     name,
     desc,
@@ -37,13 +37,14 @@ export default function CardComp({ item }) {
     vertical,
     primeTg,
     route,
-    readOtherCaseStudiesDataLayerPush,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
+
   return (
-  <Link onClick={() => readOtherCaseStudiesDataLayerPush && readOtherCaseStudiesDataLayerPush()} href={`/case-studies/${route}`} >
+  <Link  href={`/case-studies/${route}`} >
     <Flex
+    onClick={(e) => { readOtherCaseStudiesDataLayerPush && readOtherCaseStudiesDataLayerPush(name)}}
     h="100%"
       classname="font-nexa"
       fontSize={["clamp(12px, 1.5vw, 15px)"]}
@@ -67,7 +68,7 @@ export default function CardComp({ item }) {
         </Stack>
       </Flex>
       <Flex p="20px">
-      <button onClick={() => readOtherCaseStudiesDataLayerPush &&  readOtherCaseStudiesDataLayerPush()} style={{fontSize:"15px"}} className="naviteButton">
+      <button style={{fontSize:"15px"}} className="naviteButton">
         Read More
       </button>
       </Flex>

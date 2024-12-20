@@ -1,6 +1,7 @@
 import CaseStudyDetails from '../../../components/CaseStudiesDetailPage/index.jsx';
 import {cases} from './../../../utils/caseStudiesData.js';
 import Head from 'next/head';
+import { notFound } from 'next/navigation'; 
 
 export async function generateMetadata({ params }) {
     const { clientName } = params;
@@ -9,7 +10,10 @@ export async function generateMetadata({ params }) {
     const title = `${caseStudyData?.metaTitle}`;
     const description = `${caseStudyData?.metaDescription}`;
   
-    console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
+    if (!caseStudyData) {
+       notFound(); // Redirect to the not-found page
+    }
+        
     return {
       title,
       description,

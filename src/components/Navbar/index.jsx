@@ -116,8 +116,8 @@ export default function Navbar() {
     },
     {
       name: "About Us",
-      takeTo: "/",
-      hover: () => _handleTabsHover("aboutUs"),
+      takeTo: "/about-us",
+      // hover: () => _handleTabsHover("aboutUs"),
     },
     // {
     //   name: <Image  src={mx360LogoWhite} />,
@@ -177,7 +177,7 @@ export default function Navbar() {
     <Link 
         key={index}  // Consider using item.id if available
         onMouseEnter={item.hover}
-        href={item?.takeTo}
+        href={"/about-us"}
         className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
         {item?.name}
     </Link>

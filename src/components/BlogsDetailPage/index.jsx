@@ -65,8 +65,18 @@ export default function Index({blog}) {
     openPopup(`https://www.facebook.com/dialog/send?link=${url}&app_id=YOUR_APP_ID&redirect_uri=${url}`);
   };
 
+  const blogsReadMoreClickDataLayerPush = (blog) => {
 
-  
+    console.log(blogsReadMoreClickDataLayerPush, 'blogsReadMoreClickDataLayerPush in main ')
+
+
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'other_blogs_read_more',
+        'blogs': blog
+      });  
+  };
+  }
   
   return (
       <Box
@@ -216,7 +226,7 @@ export default function Index({blog}) {
           >
             {blogs?.slice(0,3)?.map((item) => (
               <React.Fragment key={uuidv4()}>
-                <CardComp item={item} />
+                <CardComp item={item}  blogsReadMoreClickDataLayerPush={blogsReadMoreClickDataLayerPush} />
               </React.Fragment>
             ))}
             </SimpleGrid>

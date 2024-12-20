@@ -51,7 +51,7 @@ export default function Index({clientName}) {
   
   const readOtherCaseStudiesDataLayerPush = (caseStudyName) => {
     
-    if (typeof window !== 'undefined' && window.dataLayer) {
+    if (typeof window !== 'undefined' &&  window.dataLayer) {
         window.dataLayer.push({
           'event': 'other_case_studies_read_more',
           'case_studies': caseStudyName
@@ -193,7 +193,7 @@ export default function Index({clientName}) {
           >
             {cases?.slice(0,3)?.map((item) => (
               <React.Fragment key={uuidv4()}>
-                <CardComp item={item} readOtherCaseStudiesDataLayerPush={readOtherCaseStudiesDataLayerPush}  />
+                <CardComp item={item} readOtherCaseStudiesDataLayerPush={readOtherCaseStudiesDataLayerPush} />
               </React.Fragment>
             ))}
             </SimpleGrid>

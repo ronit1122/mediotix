@@ -48,11 +48,6 @@ const nextConfig = {
           permanent: true,
         },
         {
-          source: '/about-us',
-          destination: '/',
-          permanent: true,
-        },
-        {
           source: '/testimonial/testimonial-1',
           destination: '/',
           permanent: true,

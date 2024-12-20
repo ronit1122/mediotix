@@ -38,7 +38,7 @@ export default function Index() {
       <Flex
         id="content"
         flexDir="column"
-        w={isLargerThan900 ? "80%" : "95%"}
+        w={isLargerThan900 ? "80%" : "90%"}
         mx="auto"
         pb="5rem"
         style={{paddingTop: "70px"}} 

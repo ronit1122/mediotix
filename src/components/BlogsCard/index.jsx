@@ -21,7 +21,7 @@ import {v4 as uuidv4} from 'uuid';
 import Link from "next/link"
 import Image from "next/image"
 
-export default function CardComp({ item }) {
+export default function CardComp({ item, blogsReadMoreClickDataLayerPush}) {
   const {
     name,
     desc,
@@ -32,17 +32,16 @@ export default function CardComp({ item }) {
     dateCreated,
     logo,
     url,
-    blogsReadMoreClickDataLayerPush,
   } = item;
   const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
 
 
 
-
   return (
-  <Link style={{zIndex: "5"}} onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} href={`/blogs/${url}`} >
+  <Link style={{zIndex: "5"}}  href={`/blogs/${url}`} >
     <Flex
     h="100%"
+    onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush(name)}
       classname="font-nexa"
       fontSize={["clamp(12px, 1.5vw, 15px)"]}
       color="#000000"
@@ -68,7 +67,7 @@ export default function CardComp({ item }) {
         </Stack>
       </Flex>
       <Flex p="20px">
-      <button onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush()} style={{fontSize:"15px"}} className="naviteButton">
+      <button style={{fontSize:"15px"}} className="naviteButton">
         Read More
       </button>
       </Flex>

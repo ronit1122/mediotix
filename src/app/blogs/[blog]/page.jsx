@@ -1,6 +1,6 @@
 import { blogs } from "../../../utils/blogsData.js";
 import BlogsDetailPage from './../../../components/BlogsDetailPage/index.jsx';
-
+import { notFound } from 'next/navigation'; 
 
 export async function generateMetadata({ params }) {
     const {blog} = params;
@@ -10,9 +10,12 @@ export async function generateMetadata({ params }) {
     const title = `${blogData?.metaTitle}`;
     const description = `${blogData?.metaDesc}`;
 
+    console.log(blogData, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
 
-    console.log(blogData, blog, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
-  
+    if (!blogData) {
+      notFound(); // Redirect to the not-found page
+    }
+
     return {
       title,
       description,
@@ -34,6 +37,7 @@ export default function Index({params}) {
 
   const blogData = blogs?.filter((item) => item?.url === decodeURIComponent(blog))?.[0];
   
+  console.log(blogData, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
   
   return (
       <main>
