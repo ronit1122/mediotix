@@ -41,7 +41,7 @@ import {
       logo: watchoWhite,
       img: watchoBg,
       tagline: <p>A Well-informed Data-driven Strategy that Boosted Sign-ups by <span  style={{fontWeight: 900}}>200%</span></p>,
-      desc: "Dice Academy is an academic institute located in New Delhi, India. The Academy offers online and offline courses in Graphics, Motion Graphics, Web Design, Web development, and Web Animation. They have trained over 5000 students.",
+      desc: "Watcho, Dish TV’s premium OTT platform, offers endless entertainment with original web series, short films, and regional movies in Hindi, Tamil, Telugu, Kannada, and Malayalam. Stream Live TV, news, comedy, and more. Watcho Originals delivers exclusive, unique content for all entertainment lovers!",
       challenges: [
         "Missing e-commerce tracking to monitor the performance of Watcho’s subscription purchase journeys on all platforms (App, Web ).",
         "Inaccurate attribution tracking to identify the performance of various marketing campaigns.",

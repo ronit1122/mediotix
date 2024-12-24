@@ -20,39 +20,44 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+  const [job, setJob] = useState('')
   const [mobileFormVisible, setMobileFormVisible] = useState(false)
 
     // FUNCTION TO DELETE REPORT
     const _MutationGetInTouchForm = () => {
-      return new Promise(async (resolve, reject) => {
-        try {
-          const { data } = await MutationGetInTouchForm({
-            variables: { 
-              email: email,
-              name: name,
-              phone: Number(phone),
-            },
-          });
+      home_get_in_touch_form_submit()
+
+
+      // return new Promise(async (resolve, reject) => {
+      //   try {
+      //     const { data } = await MutationGetInTouchForm({
+      //       variables: { 
+      //         email: email,
+      //         name: name,
+      //         phone: Number(phone),
+      //       },
+      //     });
     
 
-          if (data?.FormHomepage?.status === "FORM_SUBMITTED") {
-            // Reset form fields
+      //     if (data?.FormHomepage?.status === "FORM_SUBMITTED") {
+      //       // Reset form fields
            
-            handleRunDriveScript()
-            handleSendMail() // handle mail send
-            home_get_in_touch_form_submit() // handle data layer push
-            // Resolve the promise with the data
-            resolve(data);
-          } else {
-            // Reject the promise with an error message
-            reject(new Error('Form submission failed.'));
-          }
-        } catch (error) {
-          console.log(error, "error")
-          // Reject the promise with the caught error
-          reject(error);
-        }
-      });
+      //       handleRunDriveScript()
+      //       handleSendMail() // handle mail send
+      //       home_get_in_touch_form_submit() // handle data layer push
+      //       // Resolve the promise with the data
+      //       resolve(data);
+      //     } else {
+      //       // Reject the promise with an error message
+      //       reject(new Error('Form submission failed.'));
+      //     }
+      //   } catch (error) {
+      //     console.log(error, "error")
+      //     // Reject the promise with the caught error
+      //     reject(error);
+      //   }
+      // });
     };
     
     const handleSendMail = () => {
@@ -100,24 +105,28 @@ export default function Home() {
 
     const handleSubmit = (e) => {
       e.preventDefault()
-      
-      toast.promise(_MutationGetInTouchForm(), {
-        success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
-        error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
-        loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
-      })
+      home_get_in_touch_form_submit()
+      // toast.promise(_MutationGetInTouchForm(), {
+      //   success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
+      //   error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
+      //   loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
+      // })
 
       
     }
 
     const home_get_in_touch_form_submit = () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
-          dataLayer.push({
-              'event': 'home_get_in_touch_form_submit'
-          });
+          window.dataLayer.push({
+            'event': 'join_our_team_form_submit',
+            'job_applied_for': job
+          })
         }
         console.log('Event pushed to dataLayer');
     };
+
+
+    
   
   return (
     <div className="  flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[6%] pb-[6%] mx-auto relative">
@@ -129,7 +138,7 @@ export default function Home() {
               <p className="mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
               <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-7 tablet:hidden">Apply Now</button>
            </div>
-          {isLargerThan900 &&  <form ref={formRef} >
+          {isLargerThan900 &&  <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
             
             <div className="grid grid-cols-2 gap-4">
@@ -150,13 +159,13 @@ export default function Home() {
              </div>
              <div>
                <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Job applied for</label>
-               <input name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter job" />
+               <input name="name" required onChange={(e) => setJob(e.target.value)} value={job} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter job" />
              </div>
              </div>
 
              <div>
                <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Message</label>
-               <textarea name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter message" />
+               <textarea name="name" required onChange={(e) => setMessage(e.target.value)} value={message} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter message" />
              </div>
              
              <button type="submit" className="naviteButtonInverted">Apply</button>

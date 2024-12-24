@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from 'next/head';
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from '../../components/Navbar/index.jsx'
+import { useRouter } from 'next/navigation';
 import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo } from '../../assets/home/export.js';
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from '../../assets/clients/export.js';
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -30,8 +31,28 @@ import {
 import WorkWithUsForm from './../../components/workWithUsForm/index.jsx';
 import FounderFootprints from './../../components/founderFootprints/index.jsx';
 
-export default function ContactUs() {
+export default function AboutUs() {
+   const router = useRouter()
+  
+  let handleMediotix_aboutUs_click = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'about_contact_us'
+      });
+    }
+    
+    router.push('/contact-us');
+  };
 
+
+  const handleMediotix_aboutUsMap_click = (location) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+      'event': 'view_larger_map',
+      'office': location
+      });
+    }
+  };
 
   return (
     <ChakraProvider>
@@ -62,7 +83,7 @@ export default function ContactUs() {
                 <div className="w-[100%] tablet:w-[50%]">
                   <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Rely on Experts for Value Driven Marketing Solutions.</h2>
                   <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading marketing technology agency with an international footprint. Serving clients globally through our extensive network of offices and strategic partnerships. Our team uses the exclusive "MX360" all-in-one data measurement tool to derive actionable insights that assist many companies in achieving remarkable progress and success. Our AI-driven growth pilot solutions provide valuable data, enhance advertising campaigns, and accelerate business growth.</p>
-                  <button className="naviteButton mt-[30px]">Contact Us</button>
+                  <button onClick={handleMediotix_aboutUs_click} className="naviteButton mt-[30px]">Contact Us</button>
                   {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
                 </div>
                 <div className="w-[50%] flex flex-col gap-[20px]">
@@ -127,13 +148,13 @@ export default function ContactUs() {
       <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Success Story of our company</h2>
       </div>
       <div className=" flex flex-row justify-center  w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
-            <Image src={successStory} style={{objectFit: "contain"}} />
+            <Image src={successStory} style={{objectFit: "contain", width: "100%"}} />
       </div>
       </div>
 
               {/* section 4 */}
-      <div className="w-[95%] tablet:w-[85%]  py-[5%] mx-auto ">
-      <div style={{width: "100%", display: "flex", justifyContent: "space-evenly", alignItems: "center", gap: "20px"}}>
+      <div className="w-[95%] tablet:w-[85%] py-[5%] mx-auto ">
+      <div style={{width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px"}}>
         <div style={{width: "30%"}}>
           <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Founder Footprints</h2>
           <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence and a proven track record; we're your trusted partner for all your digital needs. delivering cutting-edge solutions to clients worldwide.</p>

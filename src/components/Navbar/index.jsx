@@ -101,7 +101,14 @@ export default function Navbar() {
   };
 
 
-  console.log(hoveredTab, "hoveredTab")
+  let handleMediotix_aboutUs_click = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'top_navi_about_us'
+      })
+    }
+    console.log('Event pushed to dataLayer');
+  };
 
   const navbarLinksData = [
     { 
@@ -117,7 +124,8 @@ export default function Navbar() {
     {
       name: "About Us",
       takeTo: "/about-us",
-      // hover: () => _handleTabsHover("aboutUs"),
+      hover: () => _handleTabsHover("aboutUs"),
+      dataLayer: handleMediotix_aboutUs_click,
     },
     // {
     //   name: <Image  src={mx360LogoWhite} />,
@@ -130,6 +138,7 @@ export default function Navbar() {
     //   hover: () => _handleTabsHover("contactUs"),
     // },
   ];
+
 
   const handlemediotix_logo_click = () => {
     if (typeof window !== 'undefined' && window.dataLayer) {
@@ -178,6 +187,7 @@ export default function Navbar() {
         key={index}  // Consider using item.id if available
         onMouseEnter={item.hover}
         href={"/about-us"}
+        onClick={() => item.dataLayer && item.dataLayer()}
         className='text-white bg-gradient-to-b from-[#EA875B] to-[#FF7F76] font-semibold h-fit p-[10px] rounded-[5px] flex items-center'>
         {item?.name}
     </Link>

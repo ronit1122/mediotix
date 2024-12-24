@@ -45,7 +45,7 @@ const CardGrid = () => {
     desc: "Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. | EX-GroupM (WPP) & EX Dentsu.",
     instagram: "",
     linkedin: "",
-    email: "deepak.arya@mediotix.com",
+    email: "gaurav.k@mediotix.com",
     specialist: "Digital Analytics",
     qualification: "MBA",
     experience: "14",
@@ -55,15 +55,32 @@ const CardGrid = () => {
       <Image src={dominos} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
       <Image src={maxHealthcare} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
       <Image src={dulux} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-    ]
+    ],
+    dataLayer: () => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'founder_profile_view',
+          'founder_name': "Gaurav K Vats"
+        });
+      }
+    },
+    socialDataLayer: (socialName) => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+        'event': 'founders_social_media_link_click',
+        'founder_name': "Gaurav K Vats",
+        'social_media': socialName,
+        });
+      }
+    }
   }, 
   {
     name: "Deepak Arya", 
-    designation: "CMO",
+    designation: "COO",
     desc: "Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients.",
     instagram: "",
     linkedin: "",
-    email: "gaurav.k@mediotix.com",
+    email: "deepak.arya@mediotix.com",
     specialist: "Digital Performance Marketing",
     qualification: "MBA",
     experience: "14",
@@ -73,11 +90,28 @@ const CardGrid = () => {
       <Image src={zee5} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
       <Image src={airtel} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
       <Image src={azentio} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-    ]
+    ],
+    dataLayer: () => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'founder_profile_view',
+          'founder_name': "Deepak Arya"
+        });
+      }
+    },
+    socialDataLayer: (socialName) => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+        'event': 'founders_social_media_link_click',
+        'founder_name': "Deepak Arya",
+        'social_media': socialName,
+        });
+      }
+    }
   },
   {
     name: "Maansh Sambhal", 
-    designation: "CMO",
+    designation: "COO",
     desc: "Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.",
     instagram: "",
     linkedin: "",
@@ -87,20 +121,31 @@ const CardGrid = () => {
     experience: "14",
     brandImage: [
       <Image src={spinny} style={{objectFit: "contain", width: "60%", height: "60%"}} />,
-      <Image src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
+      <Image src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
       <Image src={pvr} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
       <Image src={lumen} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
       <Image src={dulux} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-    ]
+    ],
+    dataLayer: () => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'founder_profile_view',
+          'founder_name': "Maansh Sambhal"
+        });
+      }
+    },
+    socialDataLayer: (socialName) => {
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+        'event': 'founders_social_media_link_click',
+        'founder_name': "Maansh Sambhal",
+        'social_media': socialName,
+        });
+      }
+    }
   }
   ]
   
-
-  useEffect(() => {
-    const fetchedImages = Array.from({ length: 3 }, (_, key) => `https://source.unsplash.com/random?sig=${key}`);
-
-    // setImages(fetchedImages);
-  }, []);
 
   return (
     <Flex
@@ -185,7 +230,7 @@ const CardGrid = () => {
   <Text whiteSpace="nowrap" lineHeight="1" fontSize="25px" color='#FFFFFF'>{names?.[index]?.name}</Text>
   <Text ml="5px" whiteSpace="nowrap" fontSize="13px" color='#FFFFFF'>{names?.[index]?.designation}</Text>
   </Flex>
-  <Flex onClick={() => {onOpen(); setSelectedCard(index)}} h="100%" w="60px" alignItems="center" justifyContent="center" style={{background: 'linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)'}}>
+  <Flex onClick={() => {onOpen(); setSelectedCard(index); names?.[index]?.dataLayer() }} h="100%" w="60px" alignItems="center" justifyContent="center" style={{background: 'linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)'}}>
       <FaPlay color="white" />
   </Flex>
 </Flex>
@@ -230,10 +275,10 @@ const CardGrid = () => {
 
           {/* Social Icons */}
           <Flex gap={4} mt="20px">
-            <Flex cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
+            <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("linkedin")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
               <Image style={{width: "25px", height: "25px"}} src={linkedin} />
             </Flex>
-            <Flex cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
+            <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("instagram")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
               <Image style={{width: "30px", height: "30px"}} src={instagram} />
             </Flex>
           </Flex>

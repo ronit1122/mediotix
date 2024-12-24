@@ -10,4 +10,7 @@ import reliance from "./reliance.svg"
 import spinny from "./spinny.svg"
 import digbiHealth from "./digbiHealth.png"
 import qubo from "./qubo.svg"
-export { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny, digbiHealth, qubo}
+import lakme from "./lakme.png"
+
+
+export { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, heroElectronix, reliance, spinny, digbiHealth, qubo, lakme}

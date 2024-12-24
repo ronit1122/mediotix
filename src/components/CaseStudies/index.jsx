@@ -1,12 +1,14 @@
 "use client";
   import {v4 as uuidv4} from "uuid";
   import React, {useState} from "react";
-  import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho} from './../../assets/clients/export.js';
+  import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, lakme} from './../../assets/clients/export.js';
   import testimonialOne from './../../assets/home/testimonialOne.png';
   import { useRouter } from 'next/navigation';
   import Image from "next/image";
   import {diceAcademyBg, digbiHealthBg, homeDelhiBg, maxHealthBg, gskBg, pvr1Bg, prv2Bg, quboBg, relianceBg, cashKaroBg, watchoBg, finolexBg} from './../../assets/caseStudies/export.js';
   import { useMediaQuery } from '@chakra-ui/react'
+  import {lakmeAcademyPaidAdsBg} from './../../assets/caseStudiesPage/export.js';
+
 
   export default function Third() {
     const [isSmallerThan800] = useMediaQuery('(max-width: 900px)')
@@ -38,18 +40,17 @@
         route: "watcho",
         width: "120px",
       },
-      // {
-      //   name: "Cashkaro Case Study",
-      //   src: cashKaro,
-      //   tagline:  "The Story of How a Marketing Strategy Helped in Growth of Conversions by 700%",
-      //   imgAltText: "icon of cashkaro",
-      //   bgAltText: "A Set of image of Laptop, Headphone, Penstand, Calculator, Magnifying glass, Notebooks",
-      //   bg: cashKaroBg,
-      //   id: 3,
-      //   route: "/",
-      //   width: "120px",
-      // },
-
+      {
+        name: "Lakmé Academy (Paid ads)",
+        src: lakme,
+        tagline: "Boosting Results with 6X Better Quality Leads Through Paid Ads.",
+        imgAltText: "icon of lakme",
+        bgAltText: "image of a girl",
+        bg: lakmeAcademyPaidAdsBg,
+        id: 3,
+        route: "lakme-academy-paidAds",
+        width: "100px",
+      },
       {
         name: "PVR Case Study",
         tagline:  "Know how 85% Increment happened in Conversion Rate within 3 months",
