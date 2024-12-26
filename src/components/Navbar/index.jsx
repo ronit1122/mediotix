@@ -660,6 +660,9 @@ const AboutUsMenuData = () => {
         <div className=" tablet:w-[500px] flex flex-col  gap-2  text-start tablet:text-white">
            <p className="font-semibold mb-4">About Mediotix</p>
            <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself.</p>
+           <Link href={'/about-us'}>
+             <p className="text-[clamp(12px,3vw,10px)] font-[700] mt-[13px] cursor-pointer">Read more about Mediotix</p>
+           </Link>
         </div>
         <div className="tablet:text-white">
         <p className="font-semibold mb-4">About Clients</p>

@@ -81,7 +81,7 @@ export default function AboutUs() {
        {/* section 2  */}
         <div className=" flex w-[85%] gap-[4%] py-[150px] mx-auto bg-white">
                 <div className="w-[100%] tablet:w-[50%]">
-                  <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Rely on Experts for Value Driven Marketing Solutions.</h2>
+                  <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.3"}} className="font-[900] mb-[10px] tablet:mb-[20px]">Rely on Experts for Value Driven Marketing Solutions.</h2>
                   <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading marketing technology agency with an international footprint. Serving clients globally through our extensive network of offices and strategic partnerships. Our team uses the exclusive "MX360" all-in-one data measurement tool to derive actionable insights that assist many companies in achieving remarkable progress and success. Our AI-driven growth pilot solutions provide valuable data, enhance advertising campaigns, and accelerate business growth.</p>
                   <button onClick={handleMediotix_aboutUs_click} className="naviteButton mt-[30px]">Contact Us</button>
                   {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
@@ -94,13 +94,13 @@ export default function AboutUs() {
         <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
        
          <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={lightbulb} style={{ objectFit: "contain", marginLeft: "20px" }} />
+           <div className="w-[80px] h-[80px] flex flex-row items-center justify-center mr-[20px]">
+                <Image src={lightbulb} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%" }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex flex-col w-full items-start gap-[2px]">
            <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Our Vision</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">Leading digital marketing through AI, technology, and data-driven insights to enhance customer connections.</p>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Leading digital marketing through AI, technology, and data-driven insights to enhance customer connections.</p>
           </div>
          </div>
         </div>
@@ -111,12 +111,12 @@ export default function AboutUs() {
        
          <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
            <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={mission} style={{ objectFit: "contain", marginLeft: "20px" }} />
+                <Image src={mission} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%"  }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex w-full flex-col items-start  gap-[2px]">
            <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Our Mission</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">Delivering advanced marketing technology and analytics to drive growth, engagement, and innovation.</p>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Delivering advanced marketing technology and analytics to drive growth, engagement, and innovation.</p>
           </div>
          </div>
         </div>
@@ -126,14 +126,15 @@ export default function AboutUs() {
         <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
        
          <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={strategy} style={{ objectFit: "contain", marginLeft: "20px" }} />
+           <div className="w-[80px]  h-[80px] flex flex-row items-center justify-center  mr-[20px]">
+                <Image src={strategy} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%"  }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
-           <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Our Strategy</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">Investing in Technology and Innovation to stay ahead of industry trends and provide unique value to clients.</p>
+          <div className="flex flex-col w-full items-start gap-[2px]">
+           <h1 className="text-[clamp(14px,3vw,18px)] font-black">Our Strategy</h1>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Investing in Technology and Innovation to stay ahead of industry trends and provide unique value to clients.</p>
           </div>
+
          </div>
         </div>
 
@@ -156,7 +157,7 @@ export default function AboutUs() {
       <div className="w-[95%] tablet:w-[85%] py-[5%] mx-auto ">
       <div style={{width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px"}}>
         <div style={{width: "30%"}}>
-          <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Founder Footprints</h2>
+          <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]">Founder Footprints</h2>
           <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence and a proven track record; we're your trusted partner for all your digital needs. delivering cutting-edge solutions to clients worldwide.</p>
         </div>
         <div style={{width: "60%",  display: "flex", justifyContent: "flex-end"}}>
@@ -169,63 +170,63 @@ export default function AboutUs() {
       <div className="bg-[#EAF6FF] py-[3%] ">
       <div className="w-[95%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
         <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Values</h2>
-        <p className="text-center text-[14px]">At Mediotix, our values are the compass that guides us in everything we do. We are dedicated to unwavering ethical standards, taking responsibility for our clients' success, and embracing adaptability in an ever-changing landscape. These values define our culture and have guided us towards success!</p>
+        <p className="text-center text-[15px]">At Mediotix, our values are the compass that guides us in everything we do. We are dedicated to unwavering ethical standards, taking responsibility for <br /> our clients' success, and embracing adaptability in an ever-changing landscape. These values define our culture and have guided us towards success!</p>
       </div>
-      <div className="grid grid-cols-2 gap-4 w-[95%] tablet:w-[85%]  pt-[30px] tablet:pt-[4%] pb-[2%] mx-auto bg-[#EAF6FF]">
+      <div className="grid grid-cols-2 gap-[28px] w-[95%] tablet:w-[85%]  pt-[30px] tablet:pt-[4%] pb-[2%] mx-auto bg-[#EAF6FF]">
 
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] p-[10px] flex items-center justify-center mr-[20px]">
-                <Image src={mission} style={{ objectFit: "contain", marginLeft: "20px" }} />
+         <div style={{zIndex: "5"}} className="flex flex-row gap-[30px] items-center justify-between text-[#212121v]">
+           <div className="w-[80px] h-[80px] p-[5px] flex items-center justify-center ml-[20px]">
+                <Image src={approach} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex w-full flex-col items-start ">
            <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Approach</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">We base our decisions and strategies on strong data and analytics insights. </p>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">We base our decisions and strategies on strong data and analytics insights. </p>
           </div>
          </div>
       </div>
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={lightbulb} style={{ objectFit: "contain", marginLeft: "20px" }} />
+         <div style={{zIndex: "5"}} className="flex flex-row gap-[30px] items-center justify-between text-[#212121v]">
+           <div className="w-[80px] h-[80px] flex items-center justify-center ml-[20px]">
+                <Image src={lightbulb} style={{ objectFit: "contain",  width: "100%", height: "100%",}} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex w-full  flex-col items-start ">
            <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Innovation</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">To provide the most advanced solutions, always push the limits of data and technology.</p>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">To provide the most advanced solutions, always push the limits of data and technology.</p>
           </div>
          </div>
       </div>
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] p-[10px] flex items-center justify-center mr-[20px]">
-                <Image src={integrity} style={{ objectFit: "contain", marginLeft: "20px" }} />
+         <div style={{zIndex: "5"}} className="flex flex-row gap-[30px] items-center justify-between text-[#212121v]">
+           <div className="w-[80px] h-[80px] p-[10px] flex items-center justify-center ml-[20px]">
+                <Image src={integrity} style={{ objectFit: "contain",  width: "100%", height: "100%", }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
-           <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Integrity</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">Maintain the highest levels of honesty and transparency in all of our dealings.</p>
+          <div className="flex w-full  flex-col items-start ">
+           <h1 className="text-[clamp(14px,3vw,18px)] font-black">Integrity</h1>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Maintain the highest levels of honesty and transparency in all of our dealings.</p>
           </div>
          </div>
       </div>
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={excellence} style={{ objectFit: "contain", marginLeft: "20px" }} />
+         <div style={{zIndex: "5"}} className="flex flex-row gap-[30px] items-center justify-between text-[#212121v]">
+           <div className="w-[80px] h-[80px] flex items-center justify-center ml-[20px]">
+                <Image src={excellence} style={{ objectFit: "contain", width: "100%", height: "100%", }} />
            </div>
 
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex w-full  flex-col items-start ">
            <h1 className="text-[clamp(14px,3vw,18px)]  font-black">Excellence</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,14px)]">Commit to excellence in every aspect of our work, from strategy to execution.</p>
+           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Commit to excellence in every aspect of our work, from strategy to execution.</p>
           </div>
          </div>
       </div>
@@ -296,7 +297,7 @@ export default function AboutUs() {
 
   <div className="p-6 text-[14px] text-[#000000]">
     <h3 className="text-[24px] font-[900] text-[#212121]">US - Texas</h3>
-    <p className="mt-[20px]">Texasn ( Branch office)</p>
+    <p className="mt-[20px]">Texas ( Branch office)</p>
     <p className="mt-[8px]">Mediotix Agency</p>
     <p className=" mt-[16px]">3200 College Pk Dr, Unit 111, <br/> Round Rock, TX, 78665</p>
   </div>

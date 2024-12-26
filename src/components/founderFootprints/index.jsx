@@ -11,6 +11,7 @@ import { Box, Flex, Text,
   Button,
   Grid,
   SimpleGrid,
+  IconButton,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import {gaurav, maanas, deepak, instagram, linkedin, airtel,
@@ -30,6 +31,7 @@ import {gaurav, maanas, deepak, instagram, linkedin, airtel,
 } from './../../assets/aboutUs/export.js';
 import Image from "next/image"
 import { FaPlay } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
 
 
 const CardGrid = () => {
@@ -42,7 +44,7 @@ const CardGrid = () => {
   {
     name: "Gaurav K Vats", 
     designation: "CMO",
-    desc: "Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. | EX-GroupM (WPP) & EX Dentsu.",
+    desc: "Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients.",
     instagram: "",
     linkedin: "",
     email: "gaurav.k@mediotix.com",
@@ -77,7 +79,7 @@ const CardGrid = () => {
   {
     name: "Deepak Arya", 
     designation: "COO",
-    desc: "Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients.",
+    desc: "Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. | EX-GroupM (WPP) & EX Dentsu.",
     instagram: "",
     linkedin: "",
     email: "deepak.arya@mediotix.com",
@@ -110,7 +112,7 @@ const CardGrid = () => {
     }
   },
   {
-    name: "Maansh Sambhal", 
+    name: "Maanash Saamal", 
     designation: "COO",
     desc: "Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.",
     instagram: "",
@@ -130,7 +132,7 @@ const CardGrid = () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           'event': 'founder_profile_view',
-          'founder_name': "Maansh Sambhal"
+          'founder_name': "Maanash Saamal"
         });
       }
     },
@@ -164,6 +166,7 @@ const CardGrid = () => {
       >
         {images.map((src, index) => (
         <Box
+         onClick={() => {onOpen(); setSelectedCard(index); names?.[index]?.dataLayer() }}
          key={index}
          flex="1 1 calc(20% - 10px)"
          h="400px"
@@ -216,7 +219,7 @@ const CardGrid = () => {
   }}
   borderRadius="20px"
   h="55px"
-  w="80%"
+  w="90%"
   flexDir="row"
   alignItems="center"
   justifyContent="space-between"
@@ -241,11 +244,12 @@ const CardGrid = () => {
 
      <Modal w="fit-content" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent minW="fit-content">
-          <ModalBody p="0" w="60vw">
+        <ModalContent minW="fit-content" >
+          <ModalBody p="0" w="70vw">
           <Flex
       direction="column"
-      p={8}
+      p="40px"
+      pb="5px"
       borderRadius="md"
       boxShadow="lg"
       bg="white"
@@ -254,9 +258,9 @@ const CardGrid = () => {
       position="relative"
     >
       {/* Content */}
-      <Flex gap={8}>
+      <Flex gap="70px">
         {/* Left Section */}
-        <Box w="400px" h="380px">
+        <Box w="400px" h="380px" borderRadius="10px" overflow="hidden"> 
            <Image src={images?.[selectedCard]} style={{objectFit: "cover", width: "100%", height: "100%"}} />
         </Box>
 
@@ -265,11 +269,16 @@ const CardGrid = () => {
           direction="column"
           gap="5px"
           flex="2"
+           
+          color="#000000"
         >
-          <Text fontSize="clamp(25px,3vw,48px)" fontWeight="bold">
+          <Flex >
+          <Text  fontSize="clamp(25px,3vw,48px)" fontWeight="bold">
             {names?.[selectedCard]?.name}
           </Text>
-          <Text fontSize="13px" color="gray.600" w="90%">
+          <ModalCloseButton />
+          </Flex>
+          <Text color="#000000" fontSize="13px" w="90%">
             {names?.[selectedCard]?.desc}
           </Text>
 
