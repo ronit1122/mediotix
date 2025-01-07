@@ -155,6 +155,7 @@ const CardGrid = () => {
       width="100%"
       align="center"
       justify="center"
+       className="font-nexa"
     >
       <Flex
         wrap="wrap"
@@ -245,7 +246,7 @@ const CardGrid = () => {
      <Modal w="fit-content" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent minW="fit-content" >
-          <ModalBody p="0" w="70vw">
+          <ModalBody  className="font-nexa" p="0" w="70vw">
           <Flex
       direction="column"
       p="40px"
@@ -273,7 +274,7 @@ const CardGrid = () => {
           color="#000000"
         >
           <Flex >
-          <Text  fontSize="clamp(25px,3vw,48px)" fontWeight="bold">
+          <Text  fontSize="clamp(25px,3vw,48px)" fontWeight="900">
             {names?.[selectedCard]?.name}
           </Text>
           <ModalCloseButton />

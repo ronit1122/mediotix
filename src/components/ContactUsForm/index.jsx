@@ -19,6 +19,8 @@ import emailjs from 'emailjs-com';
 
 // mutations
 import ContactUsFormMutation from './../../__mutations__/contactUsForm.mutation.js';
+import sendDataToSheetMutation from './../../__mutations__/sendDataToSheetMutation.js';
+
 
 export default function Home() {
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
@@ -27,6 +29,7 @@ export default function Home() {
     const toast = useToast()
     const formRef = useRef(null); // Reference for the form element
     const [MutationContactUsForm, { loading: ContactUsFormMutationLoading }] = useMutation(ContactUsFormMutation);
+    const [MutationSendDataToSheet, { loading: sendDataToSheetMutationLoading }] = useMutation(sendDataToSheetMutation);
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
     const [secondName, setSecondName] = useState('')
@@ -50,8 +53,9 @@ export default function Home() {
 
             if (data?.FormContactUs?.status === "FORM_SUBMITTED") {
               handleSendMail() // handle send mail
-              handleRunDriveScript()
+              
               contactus_get_in_touch_form_submit() // handle push data layer
+              _MutationSendDataToSheet() // send data to sheet
               // Resolve the promise with the data
               resolve(data);
             } else {
@@ -64,6 +68,20 @@ export default function Home() {
           }
         });
       };
+
+      const _MutationSendDataToSheet = async() => {
+       
+        const { data } = await MutationSendDataToSheet({
+          variables: { 
+            email: email,
+            name: firstName + ' ' + secondName,
+            phone: Number(phone),
+            tabName: "Contact Us Get In Touch",
+            message: message,
+          },
+        });
+    
+      }
       
       const handleSendMail = () => {
 
@@ -101,30 +119,6 @@ export default function Home() {
         })
       }
 
-      
-      const handleRunDriveScript = async () => {
-    
-        const url = "https://script.google.com/macros/s/AKfycbwrcLuzyTlMx5WDLCUXr31XRI3VXHKVI-cTA9V0I9qxyy1q4P-IibCAQtAyw4NoCVIvdA/exec";
-    
-        if (formRef.current) {
-          const formData = new FormData(formRef.current);
-    
-          console.log(formData, "formData")
-          try {
-            const response = await fetch(url, {
-              method: "POST",
-              body: formData,
-            });
-    
-            const result = await response.text();
-            console.log("Response from Google Script:", result, formRef.current, formData);
-          } catch (error) {
-            console.error("Error submitting form:", error);
-          }
-        }
-      };
-    
-    
 
       
   const contactus_get_in_touch_form_submit = (navigation) => {

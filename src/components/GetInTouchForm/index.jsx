@@ -10,6 +10,8 @@ import emailjs from 'emailjs-com';
 // mutations
 import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutation.js';
 import { useMediaQuery } from '@chakra-ui/react'
+import sendDataToSheetMutation from './../../__mutations__/sendDataToSheetMutation.js';
+
 
 export default function Home() {
   const formRef = useRef(null);
@@ -17,12 +19,13 @@ export default function Home() {
   const toast = useToast()
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [MutationGetInTouchForm, { loading: GetInTouchFormMutationLoading }] = useMutation(GetInTouchFormMutation);
+  const [MutationSendDataToSheet, { loading: sendDataToSheetMutationLoading }] = useMutation(sendDataToSheetMutation);
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [mobileFormVisible, setMobileFormVisible] = useState(false)
 
-    // FUNCTION TO DELETE REPORT
+  
     const _MutationGetInTouchForm = () => {
       return new Promise(async (resolve, reject) => {
         try {
@@ -41,6 +44,7 @@ export default function Home() {
             handleRunDriveScript()
             handleSendMail() // handle mail send
             home_get_in_touch_form_submit() // handle data layer push
+            _MutationSendDataToSheet() // send data to sheet
             // Resolve the promise with the data
             resolve(data);
           } else {
@@ -54,6 +58,24 @@ export default function Home() {
         }
       });
     };
+  
+    const _MutationSendDataToSheet = async() => {
+       
+          const { data } = await MutationSendDataToSheet({
+            variables: { 
+              email: email,
+              name: name,
+              phone: Number(phone),
+              tabName: "Home Get In Touch"
+            },
+          });
+    
+
+          if (data?.FormGoogleSheet?.status === "FORM_SUBMITTED") {
+            
+          } 
+      
+    }
     
     const handleSendMail = () => {
 

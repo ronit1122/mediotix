@@ -10,6 +10,7 @@ import emailjs from 'emailjs-com';
 // mutations
 import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutation.js';
 import { useMediaQuery } from '@chakra-ui/react'
+import sendDataToSheetMutation from './../../__mutations__/sendDataToSheetMutation.js';
 
 export default function Home({clientName}) {
 
@@ -17,6 +18,7 @@ export default function Home({clientName}) {
   const toast = useToast()
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [MutationGetInTouchForm, { loading: GetInTouchFormMutationLoading }] = useMutation(GetInTouchFormMutation);
+  const [MutationSendDataToSheet, { loading: sendDataToSheetMutationLoading }] = useMutation(sendDataToSheetMutation);
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -40,6 +42,7 @@ export default function Home({clientName}) {
             // Reset form fields
             handleSendMail() // handle mail send
             downloadCaseStudiesDataLayerPush()
+            _MutationSendDataToSheet() // send data to sheet
             // Resolve the promise with the data
             resolve(data);
           } else {
@@ -53,6 +56,21 @@ export default function Home({clientName}) {
         }
       });
     };
+
+    const _MutationSendDataToSheet = async() => {
+       
+      const { data } = await MutationSendDataToSheet({
+        variables: { 
+          email: email,
+          name: name,
+          phone: Number(phone),
+          companyName: companyName,
+          designation: designation,
+          tabName: "Get Case Studies",
+        },
+      });
+  
+    }
     
     const handleSendMail = () => {
 

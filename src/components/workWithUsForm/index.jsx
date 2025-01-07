@@ -10,6 +10,8 @@ import emailjs from 'emailjs-com';
 // mutations
 import GetInTouchFormMutation from './../../__mutations__/getInTouchForm.mutation.js';
 import { useMediaQuery } from '@chakra-ui/react'
+import sendDataToSheetMutation from './../../__mutations__/sendDataToSheetMutation.js';
+
 
 export default function Home() {
   const formRef = useRef(null);
@@ -17,6 +19,7 @@ export default function Home() {
   const toast = useToast()
   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [MutationGetInTouchForm, { loading: GetInTouchFormMutationLoading }] = useMutation(GetInTouchFormMutation);
+  const [MutationSendDataToSheet, { loading: sendDataToSheetMutationLoading }] = useMutation(sendDataToSheetMutation);
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -26,8 +29,8 @@ export default function Home() {
 
     // FUNCTION TO DELETE REPORT
     const _MutationGetInTouchForm = () => {
-      home_get_in_touch_form_submit()
-
+    
+      _MutationSendDataToSheet()
 
       // return new Promise(async (resolve, reject) => {
       //   try {
@@ -59,6 +62,27 @@ export default function Home() {
       //   }
       // });
     };
+
+      
+    const _MutationSendDataToSheet = async() => {
+       
+      const { data } = await MutationSendDataToSheet({
+        variables: { 
+          email: email,
+          name: name,
+          phone: Number(phone),
+          jobName: job,
+          message: message,
+          tabName: "Join Our Team"
+        },
+      });
+
+
+      if (data?.FormGoogleSheet?.status === "FORM_SUBMITTED") {
+        
+      } 
+  
+}
     
     const handleSendMail = () => {
 
@@ -106,6 +130,7 @@ export default function Home() {
     const handleSubmit = (e) => {
       e.preventDefault()
       home_get_in_touch_form_submit()
+      _MutationGetInTouchForm()
       // toast.promise(_MutationGetInTouchForm(), {
       //   success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
       //   error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
@@ -133,7 +158,7 @@ export default function Home() {
         <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-4 w-full">
            <div className="mt-12">
               <h2 className=" text-[#212121] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
-                Want work with us? <br/> Join Our Team
+                Want to work with us? <br/> Join Our Team
               </h2>
               <p className="mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
               <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-7 tablet:hidden">Apply Now</button>
