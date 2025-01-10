@@ -64,10 +64,10 @@ const Carousel = ({ props }) => {
   }, [imgIndex, carouselInfo]);
 
   return (
-    <div className="w-[90%] mx-auto min-h-[30rem] pb-[10%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
+    <div className="w-[90%] mx-auto min-h-[30rem] py-[40px] tablet:pb-[10%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
       {/* <!--Carousel items--> */}
       <div className= " tablet:ml-[5%] w-full flex justify-center tablet:justify-start items-center">
-        <h2  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className=" py-[20px] tablet:pt-[5rem] tablet:pb-[2rem] text-[#000000] font-[900]">
+        <h2  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className="py-[10px] tablet:py-[30px] text-[#000000] font-[900]">
             Testimonials
        </h2>
       </div>

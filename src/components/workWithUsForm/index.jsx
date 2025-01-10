@@ -154,21 +154,21 @@ export default function Home() {
     
   
   return (
-    <div className="  flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[6%] pb-[6%] mx-auto relative">
-        <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-4 w-full">
-           <div className="mt-12">
+    <div className="  flex w-[90%] tablet:w-[85%]  gap-[4%] py-[50px] tablet:py-[6%] mx-auto relative">
+        <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-[35px] tablet:gap-4 w-full">
+           <div className="tablet:mt-12">
               <h2 className=" text-[#212121] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
                 Want to work with us? <br/> Join Our Team
               </h2>
-              <p className="mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
-              <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-7 tablet:hidden">Apply Now</button>
+              <p className="tablet:mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
+              <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-[20px] tablet:mt-7 tablet:hidden">Apply Now</button>
            </div>
-          {isLargerThan900 &&  <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
+           <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid mobile:grid-cols-2 gap-4">
              <div>
-               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
+               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full Name</label>
                <input name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter Full Name" />
              </div>
              <div>
@@ -177,13 +177,13 @@ export default function Home() {
              </div>
             </div>
 
-             <div className="grid grid-cols-2 gap-4">
+             <div className="grid mobile:grid-cols-2 gap-4">
              <div>
                <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
                <input name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
              </div>
              <div>
-               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Job applied for</label>
+               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Job Aplied For</label>
                <input name="name" required onChange={(e) => setJob(e.target.value)} value={job} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Enter job" />
              </div>
              </div>
@@ -195,27 +195,11 @@ export default function Home() {
              
              <button type="submit" className="naviteButtonInverted">Apply</button>
            </div>
-           </form>}
+           </form>
 
-          {/* (!isLargerThan900 && mobileFormVisible) &&  <form ref={formRef} onSubmit={handleSubmit}>
-           <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>
-             <div>
-               <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label>
-               <input name="name" required onChange={(e) => setName(e.target.value)} value={name} type="text" id="name" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Full Name" />
-             </div>
-             <div>
-               <label for="email" class="block mb-2 text-sm font-medium tablet:text-white ">Business Email Address</label>
-               <input name="email" required  onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Business Email Address" />
-             </div>
-             <div>
-               <label for="phone" class="block mb-2 text-sm font-medium tablet:text-white ">Phone Number</label>
-               <input name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone} type="tel" id="phone" class="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Phone Number" />
-             </div>
-             <button type="submit" className="naviteButtonInverted">Submit</button>
-           </div>
-           </form> */}
+        
          </div>
-        <div style={{zIndex: "0"}} className="absolute bottom-[-15%] hidden tablet:block left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[-15%]  left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Head from 'next/head';
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, useMediaQuery } from "@chakra-ui/react";
 import Navbar from '../../components/Navbar/index.jsx'
 import { useRouter } from 'next/navigation';
 import { gauravKumar, publicReactionsFour, publicReactionsOne, publicReactionsThree, publicReactionsTwo, sectionOneBanner, sectionThreeImage, sectionTwoImage, whatWeDoOne, whatWeDoTwo } from '../../assets/home/export.js';
@@ -27,13 +27,15 @@ import {
   mission,
   strategy,
   successStory,
+  successStoryMobile,
 } from './../../assets/aboutUs/export.js';
 import WorkWithUsForm from './../../components/workWithUsForm/index.jsx';
 import FounderFootprints from './../../components/founderFootprints/index.jsx';
 
 export default function AboutUs() {
    const router = useRouter()
-  
+   const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
+
   let handleMediotix_aboutUs_click = () => {
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
@@ -60,18 +62,18 @@ export default function AboutUs() {
       <Navbar />
 
       {/* section 1 */}
-      <div style={{paddingTop: "70px"}}  className="flex items-center justify-center text-center bg-[#feeae9] h-[320px] tablet:h-[450px] relative">
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[40%] right-[30%]  w-80 h-80 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[5rem]"></div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-80 h-80 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+      <div style={{paddingTop: "70px"}} className="flex items-center justify-center text-center  bg-[#feeae9] h-[320px] tablet:h-[450px] relative">
+        <div style={{zIndex: "0"}} className="absolute bottom-[40%] right-[12%] tablet:right-[30%] w-40 h-40 tablet:w-80 tablet:h-80 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[2rem] tablet:blur-[5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[0%] right-[-22%] tablet:right-[15%]  w-40 h-40  tablet:w-80 tablet:h-80 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[2rem] tablet:blur-[5rem]"></div>
        
-         <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center justify-between text-[#212121v]">
+         <div style={{zIndex: "5"}} className="flex flex-col gap-3 w-[90%] tablet:w-[85%] items-center justify-between text-[#212121v]">
           <div className="flex flex-col items-center gap-3">
            {/* <div className="border-b-2 w-fit">
              <h3 className="font-medium ">Experience the Best Agency</h3>
            </div> */}
            {/* <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2> */}
-           <h1 className="text-[clamp(25px,3vw,48px)]  font-black">About Us</h1>
-           <p className="font-[400] text-[clamp(13px,3vw,18px)]">Welcome to Mediotix, your trusted AI-powered MarTech solutions partner focusing on <br /> digital growth with data-driven actionable insights.</p>
+           <h1 className="text-[clamp(20px,3vw,48px)]  font-black">About Us</h1>
+           <p className="font-[400] text-[clamp(14px,3vw,18px)]">Welcome to Mediotix, your trusted AI-powered MarTech solutions partner focusing on <br /> digital growth with data-driven actionable insights.</p>
           </div>
            {/* <button className="naviteButton">Lets Talk</button> */}
          </div>
@@ -79,23 +81,23 @@ export default function AboutUs() {
 
 
        {/* section 2  */}
-        <div className=" flex w-[85%] gap-[4%] py-[150px] mx-auto bg-white">
+        <div className=" flex flex-col tablet:flex-row w-[90%] tablet:w-[85%] gap-[4%] py-[50px] tablet:py-[150px] mx-auto bg-white">
                 <div className="w-[100%] tablet:w-[50%]">
-                  <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.3"}} className="font-[900] mb-[10px] tablet:mb-[20px]">Rely on Experts for Value Driven Marketing Solutions.</h2>
+                  <h2 style={{fontSize: "clamp(20px, 3vw, 48px)", lineHeight: "1.3"}} className="font-[900] mb-[10px] tablet:mb-[20px]">Rely on Experts for Value Driven Marketing Solutions.</h2>
                   <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading marketing technology agency with an international footprint. Serving clients globally through our extensive network of offices and strategic partnerships. Our team uses the exclusive "MX360" all-in-one data measurement tool to derive actionable insights that assist many companies in achieving remarkable progress and success. Our AI-driven growth pilot solutions provide valuable data, enhance advertising campaigns, and accelerate business growth.</p>
                   <button onClick={handleMediotix_aboutUs_click} className="naviteButton mt-[30px]">Contact Us</button>
                   {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
                 </div>
-                <div className="w-[50%] flex flex-col gap-[20px]">
+                <div className="w-[100%] tablet:w-[50%] mt-[35px] tablet:mt-0 flex flex-col gap-[20px]">
                     
 
-        <div   className="flex items-center justify-start p-[15px] text-start bg-[#feeae9] minH-[135px] overflow-hidden rounded-[21px] relative">
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div className="flex items-center justify-start p-[15px] text-start bg-[#feeae9] minH-[135px] overflow-hidden rounded-[21px] relative">
+        <div style={{zIndex: "0"}} className=" absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex flex-row items-center justify-center mr-[20px]">
-                <Image src={lightbulb} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%" }} />
+         <div style={{zIndex: "5"}} className="flex flex-col tablet:flex-row gap-3 items-center justify-between text-[#212121v]">
+           <div className=" w-full  tablet:w-[80px] h-[80px] flex flex-row items-center  justify-start tablet:justify-center mr-[20px]">
+                <Image src={lightbulb} className="w-[50px] tablet:w-full tablet:h-full" style={{ objectFit: "contain", marginLeft: "20px"}} />
            </div>
 
           <div className="flex flex-col w-full items-start gap-[2px]">
@@ -106,12 +108,12 @@ export default function AboutUs() {
         </div>
 
         <div className="flex items-center justify-start p-[15px] text-start bg-[#feeae9] minH-[135px] overflow-hidden rounded-[21px] relative">
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div style={{zIndex: "0"}} className=" absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px] h-[80px] flex items-center justify-center mr-[20px]">
-                <Image src={mission} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%"  }} />
+         <div style={{zIndex: "5"}} className="flex  flex-col tablet:flex-row  gap-3 items-center justify-between text-[#212121v]">
+           <div className=" w-full  tablet:w-[80px]  h-[80px] flex items-center  justify-start tablet:justify-center mr-[20px]">
+                <Image src={mission} className="w-[50px] tablet:w-full tablet:h-full" style={{ objectFit: "contain", marginLeft: "20px" }} />
            </div>
 
           <div className="flex w-full flex-col items-start  gap-[2px]">
@@ -122,12 +124,12 @@ export default function AboutUs() {
         </div>
 
         <div   className="flex items-center justify-start p-[15px] text-start bg-[#feeae9] minH-[135px] overflow-hidden rounded-[21px] relative">
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[40%] right-[30%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[0%] right-[15%]  w-20 h-20 bg-[#fec1bf] rounded-full mix-blend-normal filter blur-[1.5rem]"></div>
        
-         <div style={{zIndex: "5"}} className="flex flex-row gap-3 items-center justify-between text-[#212121v]">
-           <div className="w-[80px]  h-[80px] flex flex-row items-center justify-center  mr-[20px]">
-                <Image src={strategy} style={{ objectFit: "contain", marginLeft: "20px", width: "100%", height: "100%"  }} />
+         <div style={{zIndex: "5"}} className="flex  flex-col tablet:flex-row  gap-3 items-center justify-between text-[#212121v]">
+           <div className=" w-full  tablet:w-[80px]  h-[80px] flex flex-row items-center justify-start tablet:justify-center  mr-[20px]">
+                <Image src={strategy} className="w-[50px] tablet:w-full tablet:h-full" style={{ objectFit: "contain", marginLeft: "20px"}} />
            </div>
 
           <div className="flex flex-col w-full items-start gap-[2px]">
@@ -139,41 +141,41 @@ export default function AboutUs() {
         </div>
 
 
-                </div>
+          </div>
         </div>
 
      {/* section 3 */}
-      <div className="bg-[#EAF6FF] py-[70px] ">
-      <div className="flex flex-col items-center justify-center gap-2 w-fit mx-auto">
-      <p className="text-end text-[14px]">Digital Growth Pilot</p>
-      <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Success Story of our company</h2>
+      <div className="bg-[#EAF6FF] py-[50px] tablet:py-[70px] ">
+      <div className="flex w-[90%] tablet:w-[85%] flex-col items-center justify-center gap-2 mx-auto">
+        <p className="text-end text-[clamp(10px,3vw,14px)] underline">Our History</p>
+        <h2 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] text-center mb-[10px] tablet:mb-[40px]">Success Story of our company</h2>
       </div>
-      <div className=" flex flex-row justify-center  w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
-            <Image src={successStory} style={{objectFit: "contain", width: "100%"}} />
+      <div className=" flex w-[90%] tablet:w-[85%] flex-row justify-center gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
+            <Image src={successStory} className="hidden mobile:block" style={{objectFit: "contain", width: "100%"}} />
+            <Image src={successStoryMobile} className="block mobile:hidden" style={{objectFit: "contain", width: "100%"}} />
       </div>
       </div>
 
-              {/* section 4 */}
-      <div className="w-[95%] tablet:w-[85%] py-[5%] mx-auto ">
-      <div style={{width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px"}}>
-        <div style={{width: "30%"}}>
+      {/* section 4 */}
+      <div className="w-[85%] py-[50px] tablet:py-[5%] mx-auto ">
+      <div className="w-full flex flex-col tablet:flex-row justify-between items-center gap-[20px]" >
+        <div className="tablet:w-[30%]">
           <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]">Founder Footprints</h2>
           <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence and a proven track record; we're your trusted partner for all your digital needs. delivering cutting-edge solutions to clients worldwide.</p>
         </div>
-        <div style={{width: "60%",  display: "flex", justifyContent: "flex-end"}}>
-         <FounderFootprints />
+        <div className="tablet:w-[60%] mt-[20px] tablet:mt-0 flex justify-end">
+          <FounderFootprints />
         </div>
       </div>
       </div>
 
      {/* section 5 */}
-      <div className="bg-[#EAF6FF] py-[3%] ">
-      <div className="w-[95%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
-        <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Values</h2>
-        <p className="text-center text-[15px]">At Mediotix, our values are the compass that guides us in everything we do. We are dedicated to unwavering ethical standards, taking responsibility for <br /> our clients' success, and embracing adaptability in an ever-changing landscape. These values define our culture and have guided us towards success!</p>
+      <div className="bg-[#EAF6FF] py-[40px] tablet:py-[3%] ">
+      <div className="w-[90%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
+        <h2 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Values</h2>
+        <p className="text-center text-[clamp(14px,3vw,15px)] ">At Mediotix, our values are the compass that guides us in everything we do. We are dedicated to unwavering ethical standards, taking responsibility for {isLargerThan900 && <br />} our clients' success, and embracing adaptability in an ever-changing landscape. These values define our culture and have guided us towards success!</p>
       </div>
-      <div className="grid grid-cols-2 gap-[28px] w-[95%] tablet:w-[85%]  pt-[30px] tablet:pt-[4%] pb-[2%] mx-auto bg-[#EAF6FF]">
-
+      <div className="grid grid-cols-1 tablet:grid-cols-2 gap-[28px] w-[90%] tablet:w-[85%]  pt-[30px] tablet:pt-[4%] pb-[2%] mx-auto bg-[#EAF6FF]">
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
        
@@ -236,15 +238,15 @@ export default function AboutUs() {
 
 
      {/* section 6 */}
-      <div className="bg-white py-[70px] relative">
-      <div className="w-[95%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
+      <div className="bg-white py-[40px] tablet:py-[70px] relative">
+      <div className="w-[90%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
         <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Presence</h2>
       </div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
-        <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+        <div style={{zIndex: "0"}} className="absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+        <div style={{zIndex: "0"}} className=" absolute bottom-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
 
 
-      <div className="grid grid-cols-3 gap-[30px] w-[95%] tablet:w-[85%]  pt-[30px] tablet:pt-[2%] pb-[4%] mx-auto bg-white">
+      <div className="grid grid-cols-1 tablet:grid-cols-3 gap-[30px] w-[90%] tablet:w-[85%]  pt-[30px] tablet:pt-[2%] pb-[4%] mx-auto bg-white">
 
         <div  style={{zIndex: "1"}} className=" overflow-hidden shadow-lg bg-white border-[1px] border-[#00000040]">
 

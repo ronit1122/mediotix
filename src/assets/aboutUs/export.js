@@ -8,6 +8,7 @@ import maanas from './maanas.png';
 import mission from './mission.png';
 import strategy from './strategy.png';
 import successStory from './successStory.svg';
+import successStoryMobile from './successStoryMobile.svg';
 import linkedin from './linkedin.svg';
 import instagram from './instagram.svg';
 
@@ -38,6 +39,7 @@ export {
   mission,
   strategy,
   successStory,
+  successStoryMobile,
   linkedin,
   instagram,
   // Exporting remaining images

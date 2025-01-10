@@ -12,6 +12,7 @@ import { Box, Flex, Text,
   Grid,
   SimpleGrid,
   IconButton,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import {gaurav, maanas, deepak, instagram, linkedin, airtel,
@@ -27,15 +28,15 @@ import {gaurav, maanas, deepak, instagram, linkedin, airtel,
   pvr,
   spinny,
   tataMotors,
-  zee5
+  zee5,
 } from './../../assets/aboutUs/export.js';
 import Image from "next/image"
 import { FaPlay } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
-
-
+import {watcho} from './../../assets/clients/export.js';
 const CardGrid = () => {
   const [images, setImages] = useState([gaurav, deepak, maanas]);
+  const [isLargerThan900] = useMediaQuery('(min-width: 900px)')
   const [hoveredCardId, setHoveredCardId] = useState(null)
   const [selectedCard, setSelectedCard] = useState(null)
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -113,7 +114,7 @@ const CardGrid = () => {
   },
   {
     name: "Maanash Saamal", 
-    designation: "COO",
+    designation: "CEO",
     desc: "Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.",
     instagram: "",
     linkedin: "",
@@ -126,7 +127,7 @@ const CardGrid = () => {
       <Image src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
       <Image src={pvr} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
       <Image src={lumen} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-      <Image src={dulux} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image src={watcho} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
     ],
     dataLayer: () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
@@ -140,7 +141,7 @@ const CardGrid = () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
         'event': 'founders_social_media_link_click',
-        'founder_name': "Maansh Sambhal",
+        'founder_name': "Maanash Saamal",
         'social_media': socialName,
         });
       }
@@ -164,6 +165,7 @@ const CardGrid = () => {
         w="100%"
         maxW="1200px"
         gap="20px"
+        flexDir={isLargerThan900 ? "row" : "column" }
       >
         {images.map((src, index) => (
         <Box
@@ -172,7 +174,6 @@ const CardGrid = () => {
          flex="1 1 calc(20% - 10px)"
          h="400px"
          bg="white"
-        //  bg="rgba(255, 255, 255, 0.25)"
          backdropFilter="blur(4px)"
          boxShadow="md"
          borderRadius="10px"
@@ -184,7 +185,6 @@ const CardGrid = () => {
          transition="0.3s all ease"
          onMouseEnter={() => setHoveredCardId(index)}
          onMouseLeave={() => setHoveredCardId(null)}
-
          _hover={{ flex: "2 1 calc(44% - 10px)"}}
          position="relative"
         >
@@ -194,7 +194,7 @@ const CardGrid = () => {
               style={{width: "100%", height: "100%", objectFit: "cover"}}
             />
 
-<Flex
+{isLargerThan900 && <Flex
   transition="transform 0.3s ease, background 0.3s ease-in"
   style={{
     transform: `${hoveredCardId === index ? "translateX(-100px)" : "translateX(0px)"} rotate(-90deg)`,
@@ -210,12 +210,12 @@ const CardGrid = () => {
   position="absolute"
 >
   <Text whiteSpace="nowrap" fontSize="25px" color='#FFFFFF'>{names?.[index]?.name}</Text>
-</Flex>
+</Flex>}
 
 <Flex
   transition="transform 0.3s ease, background 0.3s ease-in"
   style={{
-    transform: `${hoveredCardId === index ? "translateX(0px)" : "translateX(500px)"} rotate(0deg)`,
+    transform: isLargerThan900 && `${hoveredCardId === index ? "translateX(0px)" : "translateX(500px)"} rotate(0deg)`,
     background: 'linear-gradient(180deg, rgba(33, 33, 33, 0.9) 0%, rgba(33, 33, 33, 0.9) 100%)'
   }}
   borderRadius="20px"
@@ -231,8 +231,8 @@ const CardGrid = () => {
   overflow="hidden"
 >
   <Flex flexDir="column" alignItems="start">
-  <Text whiteSpace="nowrap" lineHeight="1" fontSize="25px" color='#FFFFFF'>{names?.[index]?.name}</Text>
-  <Text ml="5px" whiteSpace="nowrap" fontSize="13px" color='#FFFFFF'>{names?.[index]?.designation}</Text>
+  <Text className="text-[clamp(14px,3vw,25px)]" whiteSpace="nowrap" lineHeight="1" color='#FFFFFF'>{names?.[index]?.name}</Text>
+  <Text whiteSpace="nowrap"  className="text-[clamp(10px,3vw,13px)]" color='#FFFFFF'>{names?.[index]?.designation}</Text>
   </Flex>
   <Flex onClick={() => {onOpen(); setSelectedCard(index); names?.[index]?.dataLayer() }} h="100%" w="60px" alignItems="center" justifyContent="center" style={{background: 'linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)'}}>
       <FaPlay color="white" />
@@ -246,10 +246,11 @@ const CardGrid = () => {
      <Modal w="fit-content" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent minW="fit-content" >
-          <ModalBody  className="font-nexa" p="0" w="70vw">
+          <ModalBody  className="font-nexa" p="0" minW="100%" maxW="70vw">
           <Flex
       direction="column"
-      p="40px"
+  
+      p={isLargerThan900 ? "40px" : "30px"}
       pb="5px"
       borderRadius="md"
       boxShadow="lg"
@@ -259,9 +260,9 @@ const CardGrid = () => {
       position="relative"
     >
       {/* Content */}
-      <Flex gap="70px">
+      <Flex  mt={!isLargerThan900 && "20px"} gap={isLargerThan900 ? "70px" : "20px"} flexDir={isLargerThan900 ? "row" : "column" }>
         {/* Left Section */}
-        <Box w="400px" h="380px" borderRadius="10px" overflow="hidden"> 
+        <Box w="100%" maxW="400px" maxH="380px" borderRadius="10px" overflow="hidden"> 
            <Image src={images?.[selectedCard]} style={{objectFit: "cover", width: "100%", height: "100%"}} />
         </Box>
 
@@ -274,12 +275,12 @@ const CardGrid = () => {
           color="#000000"
         >
           <Flex >
-          <Text  fontSize="clamp(25px,3vw,48px)" fontWeight="900">
+          <Text  fontSize="clamp(24px,3vw,48px)" fontWeight="900">
             {names?.[selectedCard]?.name}
           </Text>
           <ModalCloseButton />
           </Flex>
-          <Text color="#000000" fontSize="13px" w="90%">
+          <Text  fontSize="15px"  color="#000000"  w="90%">
             {names?.[selectedCard]?.desc}
           </Text>
 
@@ -328,9 +329,9 @@ const CardGrid = () => {
       </Flex>
 
       {/* Footer logos */}
-      <SimpleGrid spacing={1} columns={5} justify="space-around" mt="20px" align="center">
+      <SimpleGrid spacing={1} columns={isLargerThan900 ? 5 : 2} justify="space-around" mt="20px" align="center">
         {names?.[selectedCard]?.brandImage?.map((item, index) => (
-          <Flex alignItems="center" justifyContent="center" borderRadius="md">
+          !(!isLargerThan900 && index === 4) && <Flex alignItems="center" justifyContent="center" borderRadius="md">
               {item}
           </Flex>
         ))}
