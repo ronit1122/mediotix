@@ -161,7 +161,6 @@ export default function Home() {
                 Want to work with us? <br/> Join Our Team
               </h2>
               <p className="tablet:mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
-              <button onClick={() => setMobileFormVisible(!mobileFormVisible)} className="naviteButton block mt-[20px] tablet:mt-7 tablet:hidden">Apply Now</button>
            </div>
            <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>

@@ -16,6 +16,14 @@ import PublicReactions from '../../components/PublicReactions/index.jsx'
 import ContactUsForm from '../../components/ContactUsForm/index.jsx';
 import HeadBanner from './../../assets/contactUs/headBanner.png';
 import worldMap from './../../assets/contactUs/worldMap.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
+// Import Swiper modules
+import { Navigation, Pagination } from 'swiper/modules';
 import {
   approach,
   deepak,
@@ -148,7 +156,7 @@ export default function AboutUs() {
       <div className="bg-[#EAF6FF] py-[50px] tablet:py-[70px] ">
       <div className="flex w-[90%] tablet:w-[85%] flex-col items-center justify-center gap-2 mx-auto">
         <p className="text-end text-[clamp(10px,3vw,14px)] underline">Our History</p>
-        <h2 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] text-center mb-[10px] tablet:mb-[40px]">Success Story of our company</h2>
+        <h2 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] text-center mb-[10px] tablet:mb-[40px]">Success Story <br/> of our company</h2>
       </div>
       <div className=" flex w-[90%] tablet:w-[85%] flex-row justify-center gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
             <Image src={successStory} className="hidden mobile:block" style={{objectFit: "contain", width: "100%"}} />
@@ -175,6 +183,8 @@ export default function AboutUs() {
         <h2 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Values</h2>
         <p className="text-center text-[clamp(14px,3vw,15px)] ">At Mediotix, our values are the compass that guides us in everything we do. We are dedicated to unwavering ethical standards, taking responsibility for {isLargerThan900 && <br />} our clients' success, and embracing adaptability in an ever-changing landscape. These values define our culture and have guided us towards success!</p>
       </div>
+
+
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-[28px] w-[90%] tablet:w-[85%]  pt-[30px] tablet:pt-[4%] pb-[2%] mx-auto bg-[#EAF6FF]">
 
       <div className="flex items-center justify-start p-[15px] text-start bg-[#ffffff] border-[1px] border-[#00000040] minH-[135px] overflow-hidden rounded-[21px] relative">
@@ -234,6 +244,8 @@ export default function AboutUs() {
       </div>
 
       </div>
+
+
       </div>
 
 
@@ -242,11 +254,11 @@ export default function AboutUs() {
       <div className="w-[90%] tablet:w-[85%] flex flex-col text-center items-center justify-center gap-2  mx-auto">
         <h2 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[35px]">Our Presence</h2>
       </div>
-        <div style={{zIndex: "0"}} className="absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
-        <div style={{zIndex: "0"}} className=" absolute bottom-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
+        {isLargerThan900 && <div style={{zIndex: "0"}} className="absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>}
+        {isLargerThan900 && <div style={{zIndex: "0"}} className=" absolute bottom-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>}
 
 
-      <div className="grid grid-cols-1 tablet:grid-cols-3 gap-[30px] w-[90%] tablet:w-[85%]  pt-[30px] tablet:pt-[2%] pb-[4%] mx-auto bg-white">
+      {isLargerThan900 && <div className="grid grid-cols-1 tablet:grid-cols-3 gap-[30px] w-[90%] tablet:w-[85%]  pt-[30px] tablet:pt-[2%] pb-[4%] mx-auto bg-white">
 
         <div  style={{zIndex: "1"}} className=" overflow-hidden shadow-lg bg-white border-[1px] border-[#00000040]">
 
@@ -305,8 +317,93 @@ export default function AboutUs() {
   </div>
         </div>
 
+      </div>}
 
-      </div>
+
+      {!isLargerThan900 && <div className=" gap-[30px] w-[90%]  pt-[30px] pb-[4%] mx-auto bg-white">
+
+        <Swiper
+// Configure Swiper options
+// modules={[Navigation, Pagination]}
+modules={[Autoplay, Pagination]}
+spaceBetween={50}
+slidesPerView={1}
+pagination={{ clickable: true }}
+loop={true}
+autoplay={{
+  delay: 3000, // 5000ms = 5 seconds
+  disableOnInteraction: false,
+}}
+>
+
+        <SwiperSlide>
+        <div style={{zIndex: "1"}} className=" overflow-hidden shadow-lg bg-white border-[1px] border-[#00000040]">
+
+  <div className="w-full h-[190px] bg-gray-200">
+           <iframe
+              title="Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.8307539786832!2d77.05125026624508!3d28.43659134187296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191172e5422d%3A0xdf0acbbafc3d160c!2sOahfeo%20Workspaces%20-%20Frappe%20-%20Best%20Coworking%20Space%20Gurugram%20Sector%2046%20%7C%20Private%20Office%20on%20Rent%20%7C%20Virtual%20Office!5e0!3m2!1sen!2sin!4v1725026872968!5m2!1sen!2sin"
+
+              style={{ border: 0, width: "100%", height: "100%"}} // Corrected: style should be an object
+              allowFullScreen // Corrected: React uses camelCase for attributes
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+  </div>
+
+  <div className="p-6 text-[14px] text-[#000000]">
+    <h3 className="text-[24px] font-[900] text-[#212121]">India - Gurgaon</h3>
+    <p className="mt-[20px]">Gurgaon (Head office)</p>
+    <p className="mt-[8px]">Mediotix Agency</p>
+    <p className=" mt-[16px]">
+      1094P, Oahfeo Frappe, Sector 46<br />
+      Gurgaon, Haryana - 122001
+    </p>
+  </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div style={{zIndex: "1"}} className=" overflow-hidden shadow-lg bg-white border-[1px] border-[#00000040]">
+
+  <div className="w-full h-[190px] bg-gray-200">
+        
+            <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.4614044841283!2d-123.13531372347973!3d49.28660207139339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867229c3d21c6b%3A0xfbacb87c93f9323f!2s1414%20Barclay%20St%20%231101%2C%20Vancouver%2C%20BC%20V6G%201J4%2C%20Canada!5e0!3m2!1sen!2sin!4v1734612996857!5m2!1sen!2sin" 
+              style={{ border: 0, width: "100%", height: "100%"}} 
+             allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div className="p-6 text-[14px] text-[#000000]">
+    <h3 className="text-[24px] font-[900] text-[#212121]">Canada - Vancouver</h3>
+    <p className="mt-[20px]">Vancouver ( Branch office)</p>
+    <p className="mt-[8px]">Mediotix Agency</p>
+    <p className=" mt-[16px]">1101-1414 Barclay Street, Vancouver, British Columbia, Canada, V6G1J4</p>
+  </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div style={{zIndex: "1"}} className=" overflow-hidden shadow-lg bg-white border-[1px] border-[#00000040]">
+
+  <div className="w-full h-[190px] bg-gray-200">
+            <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.1770037728757!2d-97.6592396243859!3d30.54430277467562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644d16b5595f353%3A0xb3a0fc360ae152d7!2s3200%20College%20Park%20Dr%20%23111%2C%20Round%20Rock%2C%20TX%2078665%2C%20USA!5e0!3m2!1sen!2sin!4v1734613139422!5m2!1sen!2sin" 
+            allowfullscreen style={{ border: 0, width: "100%", height: "100%"}}  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div className="p-6 text-[14px] text-[#000000]">
+    <h3 className="text-[24px] font-[900] text-[#212121]">US - Texas</h3>
+    <p className="mt-[20px]">Texas ( Branch office)</p>
+    <p className="mt-[8px]">Mediotix Agency</p>
+    <p className=" mt-[16px]">3200 College Pk Dr, Unit 111, <br/> Round Rock, TX, 78665</p>
+  </div>
+        </div>
+        </SwiperSlide>
+
+        </Swiper>
+      </div>}
+
+
+
       </div>
 
         {/* section 7 */}

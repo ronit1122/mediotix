@@ -239,7 +239,7 @@ export default function Navbar() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent >
+        <DrawerContent fontSize="14px">
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
 
@@ -248,7 +248,7 @@ export default function Navbar() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as='span' flex='1' textAlign='left'>
+        <Box fontSize="14px" as='span' flex='1' textAlign='left'>
            Solution
         </Box>
         <AccordionIcon />
@@ -262,7 +262,7 @@ export default function Navbar() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as='span' flex='1' textAlign='left'>
+        <Box fontSize="14px"  as='span' flex='1' textAlign='left'>
            Resources
         </Box>
         <AccordionIcon />
@@ -276,7 +276,7 @@ export default function Navbar() {
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as='span' flex='1' textAlign='left'>
+        <Box fontSize="14px"  as='span' flex='1' textAlign='left'>
           About Us
         </Box>
         <AccordionIcon />
@@ -292,11 +292,11 @@ export default function Navbar() {
           <DrawerFooter p="10px !important">
           <Link 
         href={"/contact-us"}>
-         <Button colorScheme='gray' variant='ghost'>
+         <Button fontSize="14px"  colorScheme='gray' variant='ghost'>
     Contact us
   </Button>
     </Link>
-            <Button variant='outline' mr={3} onClick={onClose}>
+            <Button fontSize="14px"  variant='outline' mr={3} onClick={onClose}>
               Close
             </Button>
           </DrawerFooter>
@@ -664,7 +664,7 @@ const AboutUsMenuData = () => {
            <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself.</p>
            <Link href={'/about-us'}>
              <div className="flex flex-row gap-[5px] items-center mt-[13px] hover:underline">
-               <p className="text-[10px] font-[700]  cursor-pointer">Read more about Mediotix</p>
+               <p className="text-[10px] font-[700]  cursor-pointer">Read More About Mediotix</p>
                <IoIosArrowRoundForward className="text-[20px]"/>
              </div>
            </Link>
