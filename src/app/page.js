@@ -19,6 +19,9 @@ import LetsTalkButton from './../components/Buttons/letsTalkButton';
 import BookADemoButton from './../components/Buttons/bookADemo';
 import { Metadata } from 'next';
 
+
+
+
 export const metadata = {
   title: 'Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix',
   description: 'An Award winning digital marketing & web analytics agency, Equipped with GAIQ Certified professionals. Specialized team for GTM, Google Data Studio, Funnel Optimization etc',
@@ -126,13 +129,13 @@ export default function Home() {
       {/* section 1 */}
       <div style={{paddingTop: "70px"}}  className="flex items-center justify-center text-center h-[370px] tablet:h-[620px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
-          <Image src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
+          <Image alt="section one banner" src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
          <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
          <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-fit text-white">
           <div className="flex flex-col items-center ">
            <div className="border-b-2 w-fit mb-[26px]">
-             <h3 className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</h3>
+             <p className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</p>
            </div>
            <h1 className="text-[clamp(20px,4vw,48px)] font-[800] tablet:leading-[1.1]">Fueling Brand Growth with <br/> Intelligent Marketing & AI Power Analytics</h1>
            {/* <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]"></h1> */}
@@ -154,14 +157,16 @@ export default function Home() {
          <div className=" flex w-[85%] gap-[4%] py-[3%] mx-auto">
           <div className="w-[100%] tablet:w-[50%]">
             {/* <h2 style={{fontSize: "clamp(18px, 3vw, 35px)"}} className="font-medium">Take off your marketing funnel with</h2> */}
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}} className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Transform Data Insights</h2>
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">into Business Success</h2>
+            {/* <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}} className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Transform Data Insights</h2> */}
+            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[40px]">Transform Data Insights <br/> into Business Success</h2>
             <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself. We've helped numerous businesses to achieve outstanding growth and success with our data-driven approach.</p>
-            <button className="gradientButton mt-[10px] tablet:mt-[50px]">Know More</button>
+            <Link href={'/case-studies'}>
+             <button className="gradientButton mt-[10px] tablet:mt-[50px]">Know More</button>
+            </Link>
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%] hidden tablet:block">
-            <Image src={sectionTwoImage} style={{objectFit: "contain"}} />
+            <Image alt="section two image" src={sectionTwoImage} style={{objectFit: "contain"}} />
           </div>
          </div>
 
@@ -170,7 +175,7 @@ export default function Home() {
       {/* section 3 */}
       <div className="bg-white">
         <div className="flex flex-col w-[90%] gap-[4%] pt-[3%] pb-[7%] mx-auto tablet:w-[85%]">
-          <h2 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What We Do</h2>
+          <h3 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What We Do</h3>
           
           <div className="w-full flex flex-col gap-[10px] mt-8 tablet:flex-row ">
 
@@ -186,7 +191,7 @@ export default function Home() {
 
           <div className="w-[100%] min-h-full p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
               <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
-                 <Image src={whatWeDoTwo} alt="solution"  className="ml-3"/>
+                 <Image src={whatWeDoTwo} alt="marketing"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Marketing</p>
               </div>
               <div className="flex flex-col h-full py-[30px]">
@@ -196,7 +201,7 @@ export default function Home() {
 
           <div className="w-[100%] min-h-full p-[10px] border-[2px] border-[#FF9363] rounded-[5px] bg-white">
               <div className="h-[152px] p-[10px] flex flex-col justify-center rounded-[5px]" style={{background: "linear-gradient(180deg, rgba(255, 125, 120, 0.7) 0%, rgba(255, 147, 99, 0.7) 100%)"}}>
-                 <Image src={whatWeDoThree} alt="solution"  className="ml-3"/>
+                 <Image src={whatWeDoThree} alt="architecture"  className="ml-3"/>
                  <p className="font-bold text-[20px]">Architecture</p>
               </div>
               <div className="flex flex-col py-[30px]">
@@ -212,15 +217,15 @@ export default function Home() {
        {/* section 4  */}
       <div className="bg-[#EAF6FF] ">
       <div className="flex flex-col gap-2 w-fit mx-auto">
-      <Image src={mx360Logo} className="mx-auto pt-[40px] tablet:pt-[50px] w-[160px] tablet:w-[100%]" style={{objectFit: "contain"}}/>
+      <Image alt="mx360 logo" src={mx360Logo} className="mx-auto pt-[40px] tablet:pt-[50px] w-[160px] tablet:w-[100%]" style={{objectFit: "contain"}}/>
       <p className="text-end font-[900]">Digital Growth Pilot</p>
       </div>
       <div className=" flex w-[95%] tablet:w-[85%] gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
           <div className=" w-[100%] tablet:w-[50%]">
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and Analyze </h2>
-            <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]" >All-In-One Data-Driven Marketing Solution.</h2>
+            {/* <h2 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.3"}}  className="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#FF9363] to-[#FF7D78] ">Integrate, Automate and Analyze </h2> */}
+            <h3 style={{fontSize: "clamp(22px, 3vw, 35px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]" >Integrate, Automate and Analyze <br /> All-In-One Data-Driven Marketing Solution.</h3>
             <div className="w-[100%] my-[20px] block tablet:hidden">
-            <Image src={sectionThreeImage} style={{objectFit: "contain"}} />
+            <Image alt="section three" src={sectionThreeImage} style={{objectFit: "contain"}} />
             </div>
             <p style={{fontSize: "clamp(14px, 2vw, 15px)"}}>MX360 is an all-in-one marketing powerhouse and Digital Growth Pilot that effortlessly delivers AI-powered enhanced reporting and insights across many platforms. We create customized solutions that resonate with each brand's voice by integrating media, SEO, hyperlocal strategies, and analytics reporting.</p>
             <Link href="https://mx360.io" aria-label="mx360">
@@ -229,7 +234,7 @@ export default function Home() {
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%] hidden tablet:block">
-            <Image src={sectionThreeImage} style={{objectFit: "contain"}} />
+            <Image alt="mx360 dashboard" src={sectionThreeImage} style={{objectFit: "contain"}} />
           </div>
       </div>
       </div>

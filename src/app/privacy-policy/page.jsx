@@ -33,7 +33,7 @@ export default function Privacy() {
       <div key={index} className="flex flex-col">
         <div className="flex text-[#263238] text-2xl font-bold gap-2.5">
           {item.heading && <span>{index}. </span>}
-          <span>{item.heading}</span>
+          {item.heading}
         </div>
         <p>
           {item.data}
@@ -80,7 +80,7 @@ const data = [
     data: `Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.`
   },
   {
-    heading: "How We Collect Information",
+    heading: <h2>How We Collect Information</h2>,
     data: 'Refers to information concerning an identifiable living person derived from specific data or a combination of that data and additional information in our possession or likely to be acquired.',
     list: [
         `Log Files: Like many other Web sites, our site makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.`,
@@ -88,7 +88,7 @@ const data = [
     ]
   },
   {
-    heading: "How We Use Your Information",
+    heading: <h3>How We Use Your Information</h3>,
     data: 'We may use the information we collect from you when you fill out a form or sign up for our newsletter, respond to a survey or marketing communication in the following ways:',
     list: [
         `To allow us to better service you in responding to your requests.`,
@@ -97,25 +97,25 @@ const data = [
     desc: `NOTE: We do not sell, misuse or distribute your data for any purpose, unless required by law or as authorized by you or your signatory. We are obligated to share your information in case it is required by law or when required by law-enforcement or government officials.`
   },
   {
-    heading: "How We Protect Your Information",
+    heading: <h3>How We Protect Your Information</h3>,
     data: 'We maintain strict technical, administrative, and physical safeguards to protect your personal information against loss, misuse, or unauthorized access. We train our employees to maintain appropriate standards of conduct with regard to the protection of information. We also take the necessary steps to require that third parties who assist in our provision of services follow our privacy practices and comply with data protection laws',
     desc: 'Our data Privacy Policy is protected by Industry endorsed technology and widely deployed security protocol used in today’s cut-throat market scenarios. Bringing such advanced and stringent security protocol into the practice ensures you a safe transmission of collected data.'
   },
   {
-    heading: "Third Party Links",
+    heading: <h3>Third Party Links</h3>,
     data: 'Occasionally, at our discretion, we may include or offer third party products or services on our website. These third party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.'
   },
   {
-    heading: "Policy Changes",
+    heading: <h4>Policy Changes</h4>,
     data: `These policies may be amended by us at any time and without notice, but will be posted on this page. You agree that your continued use of our websites, product or service after that date will constitute your consent and acceptance of the amendment.`
   },
   {
-    heading: "Disclaimer",
+    heading: <h4>Disclaimer</h4>,
     data: `Information shared over the Internet is subject to several security perils. Therefore, in the case of any losses/damage, alteration or deletion, incidental or consequential or any malfunction in the system due to unlawful use or access, Mediotix holds no responsibilities for any such consequences.`
   },
 
   {
-    heading: 'Google Play Distribution Agreement',
+    heading: <h5>Google Play Distribution Agreement</h5>,
     data: 'Please be aware that our app, when distributed on Google Play, is subject to the Google Play Developer Distribution Agreement.'
   },
   // {

@@ -67,9 +67,9 @@ const Carousel = ({ props }) => {
     <div className="w-[90%] mx-auto min-h-[30rem] py-[40px] tablet:pb-[10%] flex flex-col  justify-between gap-4 relative text-[clamp(13px,1.5vw,15px)] font-medium">
       {/* <!--Carousel items--> */}
       <div className= " tablet:ml-[5%] w-full flex justify-center tablet:justify-start items-center">
-        <h2  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className="py-[10px] tablet:py-[30px] text-[#000000] font-[900]">
+        <h3  style={{fontSize: "clamp(26px, 3vw, 40px)"}} className="py-[10px] tablet:py-[30px] text-[#000000] font-[900]">
             Testimonials
-       </h2>
+       </h3>
       </div>
 
 
@@ -130,7 +130,7 @@ const Carousel = ({ props }) => {
               className="object-cover aspect-square rounded-full w-full h-full"
               loading="lazy"
               src={carouselInfo[imgIndex].img}
-              alt="Wild Landscape"
+              alt={carouselInfo?.[imgIndex].img}
               />
               </div>
               <div className="absolute bottom-0 right-0  w-[50px] h-[50px] flex justify-center items-center rounded-full bg-white ">
@@ -204,7 +204,7 @@ const Carousel = ({ props }) => {
            className="object-cover aspect-square rounded-full w-full h-full"
            loading="lazy"
            src={item.img}
-           alt="Wild Landscape"
+           alt={item?.img}
            />
            </div>
            <div className="absolute bottom-0 right-0  w-[50px] h-[50px] flex justify-center items-center rounded-full bg-white ">
@@ -243,7 +243,7 @@ const carouselInfo = [
       imgAltText: "Vishal",
       statement: "We saw a transformative shift in our marketing reports and are able to strategize even better than before. All thanks to that magical tool for delivering accurate insights that empowered our data-driven decisions eventually resulting in substantial ROI growth.",
       rating: 5,
-      brandLogo: <Image src={maxHealth} className="object-cover w-[30px]" />,
+      brandLogo: <Image src={maxHealth} className="object-cover w-[30px]" alt="max health" />,
     },
     {
       name: "Nishant Kumar ",
@@ -252,7 +252,7 @@ const carouselInfo = [
       img: PVR_NishantKumar,
       statement: "Working with Mediotix has been a pleasure. Their team consistently demonstrates a high level of professionalism and expertise. Their dedication to delivering results is evident in the remarkable increase in our online visibility and engagement. Their insights and strategic approach have been instrumental in our success, and we highly recommend their services.",
       rating: 5,
-      brandLogo: <Image src={pvr}className="object-cover w-[30px]" />,
+      brandLogo: <Image src={pvr}className="object-cover w-[30px]"  alt="pvr inox" />,
     },
     {
       name: "Saurabhjyot Singh",
@@ -261,7 +261,7 @@ const carouselInfo = [
       img: QuboHeroElectronix_SaurabhjyotSingh,
       statement: "We have been able to improve our conversion funnels and strategies based on reports and insights provided by them, leading to 5X growth in end results. Also, their user-friendly interface is easy to use and understand without any dependency on tech experts. I would highly recommend this tool for businesses of all sizes.",
       rating: 4,
-      brandLogo: <Image src={heroElectronix}className="object-cover w-[30px]" />,
+      brandLogo: <Image src={heroElectronix}className="object-cover w-[30px]" alt="hero electronix"  />,
     },
     {
       name: "Harsh Mehta",
@@ -270,7 +270,7 @@ const carouselInfo = [
       img: GSK_HarshMehta,
       statement: "“Their team is knowledgeable, responsive and committed to support our initiatives, making them invaluable partners, Mediotix has been involved in helping us build an incredible lead generating machine by funnel optimization & quick conversions”",
       rating: 5,
-      brandLogo: <Image src={gsk}className="object-cover w-[30px]" />,
+      brandLogo: <Image src={gsk}className="object-cover w-[30px]"  alt="gsk" />,
     },
     {
       name: "Dipu Pandey",
@@ -279,6 +279,6 @@ const carouselInfo = [
       img: DiceAcademy_DipuPandey,
       statement: "The PPC and ad services provided by our marketing agency – Mediotix have been a game-changer for us. Their strategic campaigns and meticulous optimization have led to impressive results. Our ROI has soared by 65%, and our online visibility has never been better. With their expertise, we're confidently scaling our digital advertising efforts for even greater success.",
       rating: 5,
-      brandLogo: <Image src={diceAcademy}className="object-cover w-[30px]" />,
+      brandLogo: <Image src={diceAcademy}className="object-cover w-[30px]"  alt="dice academy" />,
     },
   ];

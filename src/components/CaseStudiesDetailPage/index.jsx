@@ -96,10 +96,10 @@ export default function Index({clientName}) {
         >
           <Flex w='100%' minH="400px" maxH="450px" position="relative" justifyContent="center" bg='white' color='white'>
             <Flex style={{ backgroundImage: 'linear-gradient(to right, #F06D5A 54%, rgba(255, 125, 120, 0) 100%)', minHeight:"100%", minWidth:"100%", position: "absolute"}} ></Flex>
-            <Image src={caseStudyData?.img} style={{ objectFit: "cover", marginLeft: "auto"}} />
+            <Image  alt={caseStudyData?.img} src={caseStudyData?.img} style={{ objectFit: "cover", marginLeft: "auto"}} />
             <Flex w={isLargerThan900 ? "80%" : "95%"} mx='auto' h="100%" position='absolute' zIndex={10}>
             <Flex  w={isLargerThan900 ? "50%" : "95%"}  justifyContent="center"  gap="18px" flexDir='column'>
-              <Image src={caseStudyData?.logo} />
+              <Image  alt={caseStudyData?.logo} src={caseStudyData?.logo} />
               <h1 style={{fontSize: "clamp(20px, 3vw, 35px)", fontWeight: 900}}>About {caseStudyData?.name}</h1>
               <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="400">{caseStudyData?.desc}</Text>
             </Flex>

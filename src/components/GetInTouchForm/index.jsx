@@ -145,9 +145,9 @@ export default function Home() {
     <div className=" flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
         <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-4 w-full">
            <div className="mt-12">
-              <h2 className=" text-[#FF7D78] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
+              <h5 className=" text-[#FF7D78] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
                   Get in Touch
-              </h2>
+              </h5>
               <p >Please feel free to connect with us for your quick enquiry
                 <br />
               For additional enquiries or support, kindly drop us an email at <br /> <a className="text-[#ff7554] hover:underline" href="mailto:info@mediotix.com">info@mediotix.com</a>.</p>

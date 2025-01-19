@@ -53,11 +53,11 @@ const CardGrid = () => {
     qualification: "MBA",
     experience: "14",
     brandImage: [
-      <Image src={aquaguard} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
-      <Image src={marutiSuzuki} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
-      <Image src={dominos} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
-      <Image src={maxHealthcare} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-      <Image src={dulux} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image  alt="aquaguard" src={aquaguard} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
+      <Image alt="marutiSuzuki" src={marutiSuzuki} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
+      <Image alt="dominos" src={dominos} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
+      <Image alt="maxHealthacare" src={maxHealthcare} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image alt="dulux" src={dulux} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
     ],
     dataLayer: () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
@@ -88,11 +88,11 @@ const CardGrid = () => {
     qualification: "MBA",
     experience: "14",
     brandImage: [
-      <Image src={tataMotors} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
-      <Image src={asianPaints} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
-      <Image src={zee5} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
-      <Image src={airtel} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-      <Image src={azentio} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image alt="tatamotors" src={tataMotors} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
+      <Image alt="asian paints" src={asianPaints} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
+      <Image alt="zee5" src={zee5} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
+      <Image alt="airtel" src={airtel} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image alt="azentio" src={azentio} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
     ],
     dataLayer: () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
@@ -123,11 +123,11 @@ const CardGrid = () => {
     qualification: "MBA",
     experience: "14",
     brandImage: [
-      <Image src={spinny} style={{objectFit: "contain", width: "60%", height: "60%"}} />,
-      <Image src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
-      <Image src={pvr} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
-      <Image src={lumen} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
-      <Image src={watcho} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image alt="spinny" src={spinny} style={{objectFit: "contain", width: "60%", height: "60%"}} />,
+      <Image alt="digbihealth" src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
+      <Image alt="pvr" src={pvr} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
+      <Image alt="lumen" src={lumen} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
+      <Image alt="watcho" src={watcho} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
     ],
     dataLayer: () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
@@ -263,7 +263,7 @@ const CardGrid = () => {
       <Flex  mt={!isLargerThan900 && "20px"} gap={isLargerThan900 ? "70px" : "20px"} flexDir={isLargerThan900 ? "row" : "column" }>
         {/* Left Section */}
         <Box w="100%" maxW="400px" maxH="380px" borderRadius="10px" overflow="hidden"> 
-           <Image src={images?.[selectedCard]} style={{objectFit: "cover", width: "100%", height: "100%"}} />
+           <Image  alt={images?.[selectedCard]} src={images?.[selectedCard]} style={{objectFit: "cover", width: "100%", height: "100%"}} />
         </Box>
 
         {/* Right Section */}
@@ -287,10 +287,10 @@ const CardGrid = () => {
           {/* Social Icons */}
           <Flex gap={4} mt="20px">
             <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("linkedin")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
-              <Image style={{width: "25px", height: "25px"}} src={linkedin} />
+              <Image  alt="linkedin" style={{width: "25px", height: "25px"}} src={linkedin} />
             </Flex>
             <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("instagram")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
-              <Image style={{width: "30px", height: "30px"}} src={instagram} />
+              <Image alt="instagram" style={{width: "30px", height: "30px"}} src={instagram} />
             </Flex>
           </Flex>
 

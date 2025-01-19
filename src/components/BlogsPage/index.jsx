@@ -39,7 +39,7 @@ export default function Index() {
             fontSize={["clamp(25px, 3vw, 48px)"]}
             fontWeight="900"
             color="#263238"
-            as="h1"
+            as="h2"
           >
             Blogs
           </Text>

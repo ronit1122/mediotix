@@ -94,7 +94,7 @@ export default function Index({blog}) {
         >
           <Flex w='100%' minH="400px" maxH="450px" position="relative" justifyContent="center" bg='white' color='white'>
             <Flex style={{ backgroundImage: 'linear-gradient(to right, #F06D5A 45%, #ffc3b7 100%)', minHeight:"100%", minWidth:"100%", position: "absolute"}} ></Flex>
-            {/* <Image src={blogData?.img} style={{ objectFit: "cover", marginLeft: "auto"}} /> */}
+         
             <Flex w={isLargerThan900 ? "80%" : "95%"} mx='auto' h="100%" position='absolute' zIndex={10}>
             <Flex  w={isLargerThan900 ? "50%" : "95%"} width="100%" justifyContent="center" gap="18px" flexDir='column'>
               <Text as="h1" fontSize={["clamp(20px, 3vw, 35px)"]} fontWeight="900">{blogData?.name}</Text>

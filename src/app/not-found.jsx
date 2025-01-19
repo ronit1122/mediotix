@@ -18,7 +18,7 @@ export default function NotFound() {
       {/* <div style={{zIndex: "0"}} className=" absolute bottom-0 left-0  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[8rem]"></div> */}
         <div style={{zIndex: "10"}} className="flex items-center justify-center w-[95%] tablet:w-[75%] h-full gap-14 ">
           <div className="w-[30%] ">
-            <Image src={GirlPng} style={{objectFit: "cover", width: "100%", maxWidth: "280px", height: "100%"}}/>
+            <Image alt="girl png" src={GirlPng} style={{objectFit: "cover", width: "100%", maxWidth: "280px", height: "100%"}}/>
           </div>
           <div className="w-[70%] flex flex-col  items-start">
             <div className="underline text-[35px] font-[500]">Error <span className="text-[#FA5306]">404</span></div>

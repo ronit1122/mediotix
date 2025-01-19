@@ -100,9 +100,9 @@
     return (
       <div className="flex flex-col pb-[8%] w-[95%] tablet:w-[85%] mx-auto rounded-[30px] text-[clamp(14px,1.5vw,16px)] font-medium">
   
-          <h2 style={{fontSize: "clamp(26px, 3vw, 40px)"}}  className="py-[30px]  tablet:pt-[5rem] tablet:pb-[2rem] text-[#FF7D78] text-center font-[900]">
+          <h3 style={{fontSize: "clamp(26px, 3vw, 40px)"}}  className="py-[30px]  tablet:pt-[5rem] tablet:pb-[2rem] text-[#FF7D78] text-center font-[900]">
             Case Studies
-          </h2>
+          </h3>
         
         <div className="tablet:mt-[2rem] relative">
           <div className="flex gap-[20px] tablet:gap-12 mb-[20px]">

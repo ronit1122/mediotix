@@ -38,7 +38,7 @@ import {
   <p style="font-size: 1rem; line-height: 1.5;">
     Data visualization refers to the graphical depiction of information and data. Through visual elements such as <strong>charts</strong>, <strong>graphs</strong>, and <strong>maps</strong>, these tools provide a clearer perspective on trends, anomalies, and patterns within data. Visual representations allow stakeholders to grasp complex concepts and reveal new patterns, making the data both easier to interpret and more practical for decision-making.
   </p>
-  <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">The Impact of Visualization on Data Interpretation</h2>
+  <h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">The Impact of Visualization on Data Interpretation</h3>
   <ol style="list-style-type: decimal; margin-left: 20px; padding-left: 20px; font-size: 1rem; line-height: 1.8;">
     <li style="margin-bottom: 20px;">
       <p style="margin-top: 10px;">
@@ -65,7 +65,7 @@ import {
       </p>
     </li>
   </ol>
-  <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Best Practices for Effective Data Visualization</h2>
+  <h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Best Practices for Effective Data Visualization</h4>
  <ol style="list-style-type: decimal; margin-left: 20px; padding-left: 20px; font-size: 1rem; line-height: 1.8;">
     <li style="margin-bottom: 20px;">
     <p style="margin-top: 10px;">
@@ -92,7 +92,7 @@ import {
       </p>
     </li>
   </ol>
-  <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+  <h5 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h5>
   <p style="font-size: 1rem; line-height: 1.5;">
     Data visualization is a powerful tool that transforms raw numbers into meaningful insights. By simplifying complex information, revealing trends, fostering better communication, and enabling faster decision-making, businesses can fully leverage their data to drive success.
   </p>
@@ -184,7 +184,7 @@ import {
     <p>
       Referral traffic consists of visitors who arrive at your website through external sources such as other websites, blogs, social media platforms, or any link that directs users to your site. It is a significant aspect of your total traffic and offers valuable insights into the sources driving the most visitors to your site.
     </p>
-    <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Setting Up GA4 for Analyzing Referral Traffic</h2>
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Setting Up GA4 for Analyzing Referral Traffic</h3>
     <p style="margin-bottom: 5px">To begin optimizing your referral traffic, it is important to ensure your GA4 setup is correctly configured. Follow these initial steps:</p>
     <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
       <li>
@@ -197,7 +197,7 @@ import {
         <strong>Configure Referral Exclusions:</strong> In the GA4 property settings, exclude self-referrals and irrelevant domains to maintain the accuracy of your referral traffic data.
       </li>
     </ul>
-    <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Analyzing Referral Traffic in GA4</h2>
+    <h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Analyzing Referral Traffic in GA4</h4>
     <p style="margin-bottom: 5px">Once your GA4 property is ready, you can begin analyzing your referral traffic. Here’s how to do it:</p>
     <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
       <li>
@@ -210,7 +210,7 @@ import {
         <strong>Evaluate Key Metrics:</strong> Look closely at metrics such as sessions, bounce rate, average session duration, and conversions to gauge the quality of your referral traffic and its impact on your business objectives.
       </li>
     </ul>
-    <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Optimizing Referral Traffic</h2>
+    <h5 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Optimizing Referral Traffic</h5>
     <p style="margin-bottom: 5px">With a clear understanding of your referral traffic, it's time to improve its quality and outcomes. Here are some optimization strategies to consider:</p>
     <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;  line-height: 1.8;">
       <li>
@@ -229,7 +229,7 @@ import {
         <strong>Monitor and Refine Strategies:</strong> Regularly track your referral traffic performance in GA4 and make data-driven adjustments to your marketing strategies based on the insights you uncover.
       </li>
     </ul>
-    <h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+    <h6 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h6>
     <p>
       Optimizing referral traffic in GA4 is crucial for gaining deeper insights into your audience and enhancing your digital marketing efforts. By setting up GA4 correctly, analyzing your referral data, and applying effective optimization strategies, you can improve the quality of traffic to your site and better achieve your business goals. At Mediotix, we specialize in helping businesses reach these objectives. Our expert team is committed to providing the insights and strategies needed to optimize referral traffic and drive business success.
     </p>
@@ -328,63 +328,63 @@ import {
 
 <ul style="list-style-type: decimal; margin-top: 10px; margin-left: 20px; padding-left: 20px; font-size: 1rem; line-height: 1.8;">
   <li>
-    <strong>Complete and Accurate Business Profile</strong>
+    <h3 style="font-weight: 600;">Complete and Accurate Business Profile</h3>
     <p>
       Your GMB profile is like your business's online business card. Be sure that your business name, address, phone number, and website are accurate and consistent with the information you have on other platforms. Include also your business hours, services, and a clear description of what you provide. This helps customers locate you easily and know what to expect when they visit.
     </p>
   </li>
 
   <li>
-    <strong>Selecting the Right Categories and Attributes</strong>
+    <h3  style="font-weight: 600;">Selecting the Right Categories and Attributes</h3>
     <p>
       When you start creating your GMB profile, you will have to select the categories that describe your business the best. Categories help Google understand what exactly your business does and will therefore show it to the right people. It is also possible to add attributes like "parking" or "wheelchair accessible." These little details can be helpful for customers to find your business while searching for specific requirements.
     </p>
   </li>
 
   <li>
-    <strong>Posting Local Updates and Offers</strong>
+    <h3 style="font-weight: 600;">Posting Local Updates and Offers</h3>
     <p>
       GMB also enables you to make posts based on deals, events, or news. You may use the posts to convey local updates—for instance, a discount price only for persons residing within the locality, or an event going on within the locality. Such posts ensure that your local target audience remains in your mind. This, too, improves your prospects of appearing within local search results.
     </p>
   </li>
 
   <li>
-    <strong>Collect and Respond to Reviews</strong>
+    <h3 style="font-weight: 600;">Collect and Respond to Reviews</h3>
     <p>
       Some of the most powerful things on GMB are customer reviews. Positive reviews can increase your chances of being found by new customers. Do encourage happy customers to leave reviews and be sure to respond to them, whether positive or negative. Engaging with reviews shows that you care about your customers and builds trust in your business.
     </p>
   </li>
 
   <li>
-    <strong>Add Photos and Videos</strong>
+    <h3 style="font-weight: 600;">Add Photos and Videos</h3>
     <p>
       People like to see what they're going to experience. Upload photos and videos regularly that capture your products, services, or inside your store. Quality, current images will give customers a vibe for your business, which will encourage them to come and visit.
     </p>
   </li>
 
   <li>
-    <strong>Use GMB Insights to Learn About Your Customers</strong>
+    <h3 style="font-weight: 600;">Use GMB Insights to Learn About Your Customers</h3>
     <p>
       GMB gives you great insights on how people are finding your business. You get to see such things as how many are calling you for directions, or visiting your website. In a nutshell, it helps you know your data and manage your marketing and local strategy better.
     </p>
   </li>
 
   <li>
-    <strong>Link it up with Google Maps</strong>
+    <h3 style="font-weight: 600;">Link it up with Google Maps</h3>
     <p>
       GMB is linked to Google Maps, which will help people find your business when searching for "near me" or other similar searches. Double-check the location of your business on the map. It makes local customers go an easier way to your store or office.
     </p>
   </li>
 
   <li>
-    <strong>List Your Products or Services</strong>
+    <h3 style="font-weight: 600;">List Your Products or Services</h3>
     <p>
       You can add a list of products or services directly to your profile with GMB. This will enable customers to see what you are offering from the GMB page without even having to leave it. It is a simple way to attract local customers and convert them.
     </p>
   </li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h4>
 <p>
   Google My Business is a very powerful tool for reaching local customers and growing a business in hyperlocal markets. Update your profile, respond to customers through reviews and posts, and use insights to understand your audience to boost visibility and raise your conversions. Use the key features listed above, and you're ready to conquer your local market.
 </p>
@@ -478,7 +478,7 @@ In today’s data-driven landscape, having the right data analytics tools is ess
 <li>Integration with multiple data sources</li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">2. Power BI</h2>
+<h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">2. Power BI</h3>
 <p><strong>Overview:</strong> Microsoft Power BI is well-known for its comprehensive data visualization and reporting features. It provides a full suite of tools to convert raw data into meaningful insights. Power BI’s seamless integration with Microsoft products and an expanding selection of connectors make it an ideal choice for businesses embedded in the Microsoft ecosystem.</p>
 <h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h3>
 <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
@@ -487,34 +487,34 @@ In today’s data-driven landscape, having the right data analytics tools is ess
 <li>Advanced AI capabilities</li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">3. Looker</h2>
+<h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">3. Looker</h3>
 <p><strong>Overview:</strong> Now part of Google Cloud, Looker is a modern data analytics platform that emphasizes data exploration and collaborative insights. Its LookML modeling language allows users to build a flexible data model tailored to specific business requirements. Looker’s cloud-native design makes it a suitable choice for organizations looking for scalable solutions.</p>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h3>
+<h4 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h4>
 <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
 <li>Cloud-native and scalable architecture</li>
 <li>Advanced data modeling with LookML</li>
 <li>Integration with Google Cloud services</li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">4. Qlik Sense</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">4. Qlik Sense</h4>
 <p><strong>Overview:</strong> Qlik Sense offers powerful self-service data analytics, focusing on associative data exploration. Its unique associative engine enables users to seamlessly explore data from various sources. With features like augmented intelligence and machine learning, Qlik Sense helps to uncover hidden patterns and trends.</p>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h3>
+<h5 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h5>
 <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
 <li>Associative data exploration capabilities</li>
 <li>AI and machine learning integration</li>
 <li>Scalable and customizable solutions</li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">5. SAS Analytics</h2>
+<h5 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">5. SAS Analytics</h5>
 <p><strong>Overview:</strong> SAS Analytics provides a wide range of tools for advanced statistical analysis and predictive modeling. Its robust algorithms and data management capabilities make it ideal for handling complex data scenarios. SAS remains a strong player in industries that require deep statistical insights.</p>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h3>
+<h5 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Key Features:</h5>
 <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
 <li>Advanced statistical and predictive modeling</li>
 <li>Extensive data management capabilities</li>
 <li>Industry-specific solutions</li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+<h6 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h6>
 <p>
 As data analytics continues to evolve, these leading tools and software for 2024 provide a variety of features to meet diverse business requirements. From real-time reporting and advanced visualization to scalable big data processing, these tools are designed to empower organizations with insights that help them stay competitive. At Mediotix, we specialize in helping businesses leverage these powerful tools to drive data-driven success.
 </p>
@@ -599,32 +599,32 @@ As data analytics continues to evolve, these leading tools and software for 2024
   Artificial Intelligence (AI) is changing the game in marketing analytics. "AI Awakens" marks a turning point where businesses use AI to simplify complex data, get instant insights, and create smarter strategies.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Understanding Complex Data</h2>
+<h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Understanding Complex Data</h3>
 <p>
   AI helps break down complicated data to find useful insights that guide better decision-making. It quickly spots trends and unusual patterns, allowing businesses to adjust their marketing plans. With deep data analysis, companies can customize their strategies and make campaigns more effective.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Real-time Insights</h2>
+<h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Real-time Insights</h3>
 <p>
   AI allows businesses to track customer behaviour instantly, helping them change their strategies in real time. This quick response means businesses can stay ahead by giving customers the right experience at the right time.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Turning Data into Action</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Turning Data into Action</h4>
 <p>
   AI helps convert data into useful insights that guide smarter marketing decisions. Businesses can personalize their messages and products, improving customer satisfaction and loyalty. With optimised strategies, they can achieve better results.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Planning with Predictive Analytics</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Planning with Predictive Analytics</h4>
 <p>
   AI can predict future customer behaviour, helping businesses adjust their marketing efforts early. By anticipating trends, companies can plan and execute strategies that minimize risks and take advantage of opportunities.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Navigating Ethics in AI</h2>
+<h5 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Navigating Ethics in AI</h5>
 <p>
   Businesses need to be transparent, and accountable, and protect customer privacy when using AI. Building trust through ethical data practices helps maintain strong and long-lasting relationships with customers.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+<h6 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h6>
 <p>
   By using AI responsibly, businesses can unlock new possibilities, create stronger connections with their audience, and shape the future of marketing. At Mediotix, we're here to help you on this exciting journey and grow your business.
 </p>
@@ -709,7 +709,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
   In a competitive landscape where countless apps vie for user attention, understanding user engagement is crucial. This is where Google Analytics and Firebase come into play. Together, they form a powerful duo that empowers mobile app marketers and developers to achieve unparalleled success. In this article, we’ll explore why the combination of Firebase and Google Analytics is a game-changer for mobile app analytics.
 </p>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">The Synergy of Firebase and Google Analytics</h2>
+<h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">The Synergy of Firebase and Google Analytics</h3>
 <p>Here’s how this dynamic partnership elevates your mobile app analytics:</p>
 
 <ul style="list-style-type: decimal; margin-top: 5px; margin-left: 20px; padding-left: 20px; line-height: 1.8;">
@@ -727,7 +727,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
   </li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion</h4>
 <p>
   In the fiercely competitive mobile app industry, the combination of Firebase and Google Analytics offers a winning solution for app analytics. Firebase provides a solid foundation for app development, while Google Analytics enriches it with valuable insights into user behaviour and engagement. Together, they empower you to make informed decisions, refine user experiences, and drive the success of your mobile app.
 </p>
@@ -822,42 +822,42 @@ As data analytics continues to evolve, these leading tools and software for 2024
 
 <ul style="list-style-type: decimal; margin-top: 10px; margin-left: 20px; padding-left: 20px; font-size: 1rem; line-height: 1.8;">
 <li>
-  <strong>Simplified Real-Time and Historical Data Processing</strong>
+  <h3 style="font-weight: 600;">Simplified Real-Time and Historical Data Processing</h3>
   <p>
     GA4 offers real-time insights into user activity on your website, but with BigQuery, you can also analyze historical data from the moment you started using GA4. This allows businesses to identify long-term trends and patterns that might not be immediately visible through real-time reports, giving a broader perspective on user behaviour.
   </p>
 </li>
 
 <li>
-  <strong>Custom Queries for Enhanced Insights</strong>
+  <h3 style="font-weight: 600;">Custom Queries for Enhanced Insights</h3>
   <p>
     BigQuery allows you to create custom queries, enabling deeper analysis of your data beyond the constraints of GA4’s predefined reports. It’s like asking your data complex questions to uncover more meaningful insights. With BigQuery, you gain more detailed responses, which can be visualized to help you understand what’s happening within your datasets.
   </p>
 </li>
 
 <li>
-  <strong>Advanced Segmentation and Analysis</strong>
+  <h3 style="font-weight: 600;">Advanced Segmentation and Analysis</h3>
   <p>
     While GA4’s segmentation capabilities are robust, the addition of BigQuery allows for even more granular segmentation. This integration lets you dive deeper into specific user behaviours, helping you better understand different audience segments and tailor your strategies accordingly.
   </p>
 </li>
 
 <li>
-  <strong>Cross-Device and Cross-Platform Insights</strong>
+  <h3 style="font-weight: 600;">Cross-Device and Cross-Platform Insights</h3>
   <p>
     In today’s multi-device and multi-platform environment, tracking user interactions across various touchpoints is critical. By integrating Google Analytics 4 with BigQuery, businesses can create a unified view of user journeys across different devices and platforms. This holistic view enables companies to optimize user experiences and marketing efforts with greater precision.
   </p>
 </li>
 
 <li>
-  <strong>Scalability and Cost Efficiency</strong>
+  <h3 style="font-weight: 600;">Scalability and Cost Efficiency</h3>
   <p>
     BigQuery’s infrastructure is built to scale with your growing data needs, ensuring that you can analyze increasing volumes of information without the hassle of managing the underlying systems. Moreover, you only pay for the data processing you use, making it a cost-effective solution suitable for businesses of all sizes.
   </p>
 </li>
 </ul>
 
-<h2 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion: Elevating Your Analytics with BigQuery Integration</h2>
+<h4 style="font-size: 1.5rem; font-weight: bold; margin-top: 20px; margin-bottom: 10px">Conclusion: Elevating Your Analytics with BigQuery Integration</h4>
 <p>
   In today’s fast-paced digital world, staying competitive requires moving beyond basic data analysis. The integration of BigQuery with Google Analytics 4 provides a powerful solution for businesses looking to delve deeper into their data, make informed decisions based on insights, and enhance their online performance.
 </p>
@@ -966,21 +966,21 @@ As data analytics continues to evolve, these leading tools and software for 2024
   </li>
   
   <li>
-    <h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Analyzing Behavior Trends</h3>
+    <h4 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Analyzing Behavior Trends</h4>
     <p style="margin-left: 20px; margin-top: 10px">
       GA4's machine learning capabilities enable it to automatically surface valuable insights from user data. By leveraging predictive metrics like churn probability, businesses can proactively identify users at risk of churn and take preventive measures to retain them. Additionally, GA4's audience insights feature provides demographic and interest data, further enriching the understanding of user behavior.
     </p>
   </li>
   
   <li>
-    <h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Optimizing Retention Strategies</h3>
+    <h5 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Optimizing Retention Strategies</h5>
     <p style="margin-left: 20px; margin-top: 10px">
       Armed with insights from GA4, businesses can optimize their retention strategies to better meet the needs of their audience. Whether it's refining marketing campaigns, improving product offerings, or enhancing the user experience, data-driven decisions can drive more effective retention efforts.
     </p>
   </li>
   
   <li>
-    <h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Case Studies</h3>
+    <h6 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Case Studies</h6>
     <p style="margin-left: 20px; margin-top: 10px">
       To illustrate the practical application of GA4 in retention analytics, we'll delve into real-world case studies of businesses that have successfully leveraged the platform to improve retention rates. From e-commerce to SaaS companies, the versatility of GA4 makes it a valuable asset for organizations across industries.
     </p>
@@ -1178,21 +1178,21 @@ As data analytics continues to evolve, these leading tools and software for 2024
 </li>
 
 <li>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Solutions Offered by Digital Analytics</h3>
+<h4 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Solutions Offered by Digital Analytics</h4>
 <p>
   Digital analytics overcomes these challenges by providing real-time feedback, allowing marketers to quickly adjust their campaigns for better performance. It identifies patterns and trends in consumer behaviour, enabling more targeted and personalized marketing efforts. Furthermore, digital analytics tracks the entire customer journey, offering opportunities for optimization and enhancing the overall customer experience.
 </p>
 </li>
 
 <li>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Harnessing the Power of Digital Analytics with Mediotix</h3>
+<h5 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Harnessing the Power of Digital Analytics with Mediotix</h5>
 <p>
   Mediotix provides tailored analytics solutions designed to meet the specific needs of businesses. These solutions equip marketers with actionable insights that drive strategic decision-making. By leveraging data-driven optimization techniques and personalized strategies, Mediotix helps businesses maximize their ROI and achieve success in the ever-changing digital landscape.
 </p>
 </li>
 
 <li>
-<h3 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Conclusion</h3>
+<h6 style="font-size: 1.25rem; font-weight: bold; margin-top: 20px;">Conclusion</h6>
 <p>
   In today’s marketing environment, digital analytics is an essential tool. It enables data-driven decision-making, refines marketing strategies, and boosts ROI. With Mediotix’s advanced analytics solutions, marketers can harness valuable insights to stay competitive and excel in the digital world.
 </p>

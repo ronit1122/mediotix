@@ -60,7 +60,7 @@ export default function CardComp({ item, readOtherCaseStudiesDataLayerPush }) {
       <Flex flexDir="column" >
         <Flex h="180px" cursor='pointer' position='relative'>
           <Image style={{objectFit: "cover"}} src={img} loading='lazy' alt={imgAlt}/>
-          <Image src={logo} style={{position: "absolute", objectFit: "contain", bottom: "10px", right: "10px"}} />
+          <Image  alt="logo" src={logo} style={{position: "absolute", objectFit: "contain", bottom: "10px", right: "10px"}} />
         </Flex>
         <Stack mt="6" spacing="3" p='20px'>
           <Text fontSize="18px" fontWeight="900">{name}</Text>

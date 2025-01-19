@@ -31,7 +31,7 @@ export default function ContactUs() {
       {/* section 1 */}
       <div style={{paddingTop: "70px"}} className="flex items-center justify-center text-center h-[350px] tablet:h-[500px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
-          <Image src={HeadBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
+          <Image  alt="contact-us banner" src={HeadBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
         </div>
          <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
          <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center justify-between text-white">
@@ -63,12 +63,12 @@ export default function ContactUs() {
       <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
       {/* <div style={{zIndex: "0"}} className=" absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
            <div className=" mx-auto text-center mb-[20px]">
-              <h2 className=" text-[#FF7D78] text-[clamp(25px,3vw,40px)] font-[900]">
+              <h3 className=" text-[#FF7D78] text-[clamp(25px,3vw,40px)] font-[900]">
                  Our Presence
-              </h2>
+              </h3>
            </div>
            <div className="mx-auto">
-           <Image src={worldMap} />
+           <Image  alt="world map" src={worldMap} />
            </div>
 
       </div>

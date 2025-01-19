@@ -326,19 +326,19 @@ const SolutionsMenuData = () => {
         },
         {
           name: "GTM 360",
-          icon: <Image src={gtm360} alt="google analytics" />
+          icon: <Image src={gtm360} alt="gtm 360" />
         },
         {
           name: "Adobe Analytics",
-          icon: <Image src={adobeAnalytics} alt="google analytics" />
+          icon: <Image src={adobeAnalytics} alt="adobe analytics" />
         },
         {
           name: "App Analytics",
-          icon: <Image src={appAnalytics} alt="google analytics" />
+          icon: <Image src={appAnalytics} alt="app analytics" />
         },
         {
           name: "E-commerce Analytics",
-          icon: <Image src={ecommerceAnalytics} alt="google analytics" />
+          icon: <Image src={ecommerceAnalytics} alt="ecommerce analytics" />
         },
       ]
     },
@@ -349,23 +349,23 @@ const SolutionsMenuData = () => {
       childs: [
         {
           name: "Media Activation ",
-          icon: <Image src={mediaActivation} alt="google analytics" />
+          icon: <Image src={mediaActivation} alt="media activation" />
         },
         {
           name: "DV360",
-          icon: <Image src={dv360} alt="google analytics" />
+          icon: <Image src={dv360} alt="dv360" />
         },
         {
           name: "Performance Marketing",
-          icon: <Image src={affiliateMarketing} alt="google analytics" />
+          icon: <Image src={affiliateMarketing} alt="performance marketing" />
         },
         {
           name: "Hyper Local",
-          icon: <Image src={paidAds} alt="google analytics" />
+          icon: <Image src={paidAds} alt="hyper local" />
         },
         {
           name: "CRO",
-          icon: <Image src={paidAds} alt="google analytics" />
+          icon: <Image src={paidAds} alt="cro " />
         },
       ]
     },
@@ -376,19 +376,19 @@ const SolutionsMenuData = () => {
       childs: [
         {
           name: "MX360",
-          icon: <Image src={mx360} alt="google analytics" />
+          icon: <Image src={mx360} alt="mx360 logo" />
         },
         {
           name: "Google Maps Platform (GMP)",
-          icon: <Image src={googleMapsPlatform} alt="google analytics" />
+          icon: <Image src={googleMapsPlatform} alt="google maps platform logo" />
         },
         {
           name: "Google Cloud Platform (GCP)",
-          icon: <Image src={googleCloudPlatform} alt="google analytics" />
+          icon: <Image src={googleCloudPlatform} alt="google cloud platform" />
         },
         {
           name: "Power BI & Looker Studio",
-          icon: <Image src={powerBi} alt="google analytics" />
+          icon: <Image src={powerBi} alt="power bi" />
         },
       ]
     },
@@ -399,19 +399,19 @@ const SolutionsMenuData = () => {
       childs: [
         {
           name: "DCO",
-          icon: <Image src={content} alt="google analytics" />
+          icon: <Image src={content} alt="dco" />
         },
         {
           name: "Social Communication",
-          icon: <Image src={social} alt="google analytics" />
+          icon: <Image src={social} alt="social communication" />
         },
         {
           name: "Digital Content",
-          icon: <Image src={nativeContent} alt="google analytics" />
+          icon: <Image src={nativeContent} alt="digital content" />
         },
         {
           name: "Video Production",
-          icon: <Image src={video} alt="google analytics" />
+          icon: <Image src={video} alt="video production" />
         },
       ]
     },
@@ -482,27 +482,27 @@ const ResourcesMenuData = () => {
   const menuItems = {
     caseStudy: [
       {
-        icon: <Image src={pvr} className="object-contain" />,
+        icon: <Image src={pvr} className="object-contain"  alt="pvr" />,
         desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
         takeTo: "/case-studies/pvr-cinemas",
         dataLayer: () => caseStudyDataLayerPush("PVR")
       },
       {
-        icon: <Image src={maxHealth} className="object-contain" />,
+        icon: <Image src={maxHealth} className="object-contain" alt="max health" />,
         desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
         takeTo: "/case-studies/max-healthcare",
         dataLayer: () => caseStudyDataLayerPush("Max Healthcare")
 
       },
       {
-        icon: <Image src={finolex} className="object-contain" />,
+        icon: <Image src={finolex} className="object-contain" alt="finolex" />,
         desc: "Finolex Pipes & Fitting: Unique SEO Strategy that Achieved 90% Boost in Keyword Visibility & Performance",
         takeTo: "/case-studies/finolex-pipes-and-fitting",
         dataLayer: () => caseStudyDataLayerPush("Finolex pipes & fitting")
 
       },
       {
-        icon: <Image src={gsk} className="object-contain" />,
+        icon: <Image src={gsk} className="object-contain" alt="gsk" />,
         desc: "GSK: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
         takeTo: "/case-studies/gsk",
         dataLayer: () => caseStudyDataLayerPush("GSK")
@@ -512,25 +512,25 @@ const ResourcesMenuData = () => {
     ],
     blogs: [
       {
-        icon: <Image src={L1} className="object-cover" />,
+        icon: <Image src={L1} className="object-cover" alt="data visualization" />,
         desc: "Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights",
         takeTo: "/blogs/data-visualization-for-actionable-insights",
         dataLayer: () => blogsDataLayerPush("Read Today's Monday Analytics Insight on Data Visualization: Turning Numbers into Actionable Insights")
       },
       {
-        icon: <Image src={R1} className="object-cover" />,
+        icon: <Image src={R1} className="object-cover" alt="ga4 referral traffic" />,
         desc: "Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.",
         takeTo: "/blogs/ga4-referral-traffic-optimization",
         dataLayer: () => blogsDataLayerPush("Read Today's Newsletter on How to Optimize Your Referral Traffic in GA4 for Better Insights.")
       },
       {
-        icon: <Image src={essentialFeatures} className="object-cover" />,
+        icon: <Image src={essentialFeatures} className="object-cover" alt="essential features" />,
         desc: "Essential Features of GMB to Dominate Hyperlocal Markets",
         takeTo: "/blogs/features-of-gmb-to-dominate-hyperlocal-markets",
         dataLayer: () => blogsDataLayerPush("Content Performance Analysis: Measuring What Matters Most")
       },
       {
-        icon: <Image src={aiAwakens} className="object-cover" />,
+        icon: <Image src={aiAwakens} className="object-cover" alt="ai awakens" />,
         desc: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
         takeTo: "/blogs/how-ai-redefines-marketing-analytics",
         dataLayer: () => blogsDataLayerPush("AI Awakens: Redefining Marketing Analytics for the Digital Era")
@@ -673,28 +673,28 @@ const AboutUsMenuData = () => {
         <p className="font-semibold mb-4">About Clients</p>
         <div className=" w-full grid grid-cols-2 tablet:grid-cols-4 gap-3">
           <div className="bg-white w-[100px] h-[60px] rounded-[5px] p-[10px] flex justify-center">
-            <Image src={pvr} className="object-contain" />
+            <Image src={pvr} className="object-contain" alt="pvr" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] p-[10px]  flex justify-center">
-            <Image src={maxHealth} className="object-contain"  />
+            <Image src={maxHealth} className="object-contain" alt="maxhealth"  />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] p-[10px]  flex justify-center">
-            <Image src={gsk} className="object-contain"  />
+            <Image src={gsk} className="object-contain"  alt="gsk" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] p-[10px]  flex justify-center">
-            <Image src={heroElectronix} className="object-contain"  />
+            <Image src={heroElectronix} className="object-contain"  alt="heroelectronix" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] p-[10px]  flex justify-center">
-            <Image src={finolex} className="object-contain"  />
+            <Image src={finolex} className="object-contain"  alt="finolex" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] flex justify-center">
-            <Image src={reliance} className="object-contain"  />
+            <Image src={reliance} className="object-contain"  alt="reliance" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] flex justify-center">
-            <Image src={spinny} className="object-contain"  />
+            <Image src={spinny} className="object-contain"  alt="spinny" />
           </div>
           <div className="bg-white  w-[100px] h-[60px]  rounded-[5px] p-[10px]  flex justify-center">
-            <Image src={watcho} className="object-contain"  />
+            <Image src={watcho} className="object-contain"  alt="watcho" />
           </div>
  
         </div>

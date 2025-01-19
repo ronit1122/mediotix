@@ -157,9 +157,9 @@ export default function Home() {
     <div className="  flex w-[90%] tablet:w-[85%]  gap-[4%] py-[50px] tablet:py-[6%] mx-auto relative">
         <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-[35px] tablet:gap-4 w-full">
            <div className="tablet:mt-12">
-              <h2 className=" text-[#212121] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
+              <h4 className=" text-[#212121] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
                 Want to work with us? <br/> Join Our Team
-              </h2>
+              </h4>
               <p className="tablet:mt-[40px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
            </div>
            <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
