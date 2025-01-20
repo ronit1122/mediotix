@@ -166,7 +166,7 @@ export default function Home() {
             {/* <p style={{fontSize: "clamp(12px, 2vw, 15px)"}}>MX360 is a comprehensive marketing solution that offers AI-based advanced reporting & insights, seamlessly integrated across multiple platforms. Together with a combination of media and reporting services we aim to provide tailored solutions for individual brand voices.</p> */}
           </div>
           <div className="w-[50%] hidden tablet:block">
-            <Image alt="section two image" src={sectionTwoImage} style={{objectFit: "contain"}} />
+            <Image alt="section two image" src={sectionTwoImage} style={{objectFit: "contain", width: "100%", height: "100%"}} />
           </div>
          </div>
 

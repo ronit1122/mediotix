@@ -239,7 +239,7 @@ export default function Navbar() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent fontSize="14px">
+        <DrawerContent fontSize="14px"  className="font-nexa">
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
 
@@ -700,7 +700,7 @@ const AboutUsMenuData = () => {
         </div>
         <Link href={"/case-studies"}>
         <div onClick={() => top_navi_view_all_clients()} className="flex gap-1 items-center mt-4 hover:underline cursor-pointer">
-          <p className="font-light text-[13px] ">View All Clients</p>
+          <p className="text-[10px] font-[700] ">View All Clients</p>
           <IoIosArrowRoundForward />
         </div>
         </Link>
