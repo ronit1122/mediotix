@@ -84,7 +84,7 @@ const CardGrid = () => {
     instagram: "https://www.instagram.com/apkaarya",
     linkedin: "https://www.linkedin.com/in/deepakkumararya/",
     email: "deepak.arya@mediotix.com",
-    specialist: "Digital Performance Marketing",
+    specialist: "Digital Analytics",
     qualification: "MBA",
     experience: "14",
     brandImage: [
@@ -119,7 +119,7 @@ const CardGrid = () => {
     instagram: "",
     linkedin: "https://www.linkedin.com/in/maanash/",
     email: "maanash.saamal@mediotix.com",
-    specialist: "Digital Analytics",
+    specialist: "Data Analytics",
     qualification: "MBA",
     experience: "14",
     brandImage: [
