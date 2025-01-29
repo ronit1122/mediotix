@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Mediotix Blog - Data Analytics, Marketing Insights & Trends',
   description: 'Explore the Mediotix blog for expert insights on data analytics, marketing strategies, AI innovations, & the latest industry trends',
   alternates: {
-    canonical: 'https://www.mediotix.com/blogs/',
+    canonical: 'https://www.mediotix.com/blogs',
   },
 };
 

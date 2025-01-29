@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Privacy Policy | How Mediotix Protects Your Personal Data',
   description: 'Understand how Mediotix handles your personal data with transparency and care. Review our Privacy Policy for details on data collection and protection',
   alternates: {
-    canonical: 'https://www.mediotix.com/privacy-policy/',
+    canonical: 'https://www.mediotix.com/privacy-policy',
   },
 };
 

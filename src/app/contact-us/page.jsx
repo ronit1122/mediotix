@@ -18,7 +18,7 @@ export const metadata = {
   title: 'Mediotix MarTech Agency Contact Details | Phone & Address',
   description: 'Contact Mediotix for any analytics or digital marketing related requests. Our Branches are located in Gurgaon, New Delhi, Mumbai, Hyderabad in India',
   alternates: {
-    canonical: 'https://www.mediotix.com/contact-us/',
+    canonical: 'https://www.mediotix.com/contact-us',
   },
 };
 export default function ContactUs() {

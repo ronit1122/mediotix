@@ -1,3 +1,5 @@
+
+
 import Image from "next/image";
 import Head from 'next/head';
 import styles from "./page.module.css";
@@ -17,10 +19,8 @@ import Accordion from './../components/Accordion/index.jsx'
 import MarqueeComponent from './../components/marquee/index.jsx'
 import LetsTalkButton from './../components/Buttons/letsTalkButton';
 import BookADemoButton from './../components/Buttons/bookADemo';
+
 import { Metadata } from 'next';
-
-
-
 
 export const metadata = {
   title: 'Analytics & Digital Marketing Agency in Gurgaon, Delhi | Meditoix',
@@ -117,6 +117,9 @@ export default function Home() {
     console.log('Event pushed to dataLayer');
   };
 
+
+
+
   return (
     <main className="font-nexa">
       {/* <Head>
@@ -129,9 +132,22 @@ export default function Home() {
       {/* section 1 */}
       <div style={{paddingTop: "70px"}}  className="flex items-center justify-center text-center h-[370px] tablet:h-[620px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
-          <Image alt="section one banner" src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/>
+          {/* <Image alt="section one banner" src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/> */}
+    <div className="h-[650px] overflow-hidden">
+    <div style={{opacity: "0.6", zIndex: "5"}} className="absolute  w-full h-[650px] bg-black "></div>
+    <video
+      width="100%"
+      height="100%"
+      autoPlay
+      loop
+      muted
+      playsInline
+      >
+      <source src="/headerClip.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+      </div>
         </div>
-         <div style={{opacity: "0.6", zIndex: "5"}} className="absolute w-full h-full bg-black "></div>
          <div style={{zIndex: "5"}} className="flex flex-col gap-3 items-center h-fit text-white">
           <div className="flex flex-col items-center ">
            <div className="border-b-2 w-fit mb-[26px]">

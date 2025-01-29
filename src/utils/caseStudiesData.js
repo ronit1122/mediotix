@@ -585,7 +585,7 @@ import {
       route: 'euro-kids',
       metaTitle: "EuroKids SEO Growth Case Study | Mediotix",
       metaDescription: "Learn how Mediotix boosted EuroKids' SEO, driving organic traffic & achieving top rankings for preschool education keywords across India",
-      canonical: "https://www.mediotix.com/case-studies/euro-kids/",
+      canonical: "https://www.mediotix.com/case-studies/euro-kids",
       organizationSchema: {
         "@context": "https://schema.org",
         "@type": "Organization",

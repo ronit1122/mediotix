@@ -85,7 +85,7 @@ function Index() {
 
           <div className="flex flex-col tablet:flex-row justify-evenly tablet:w-[30%] gap-4 text-left">
             <div className="flex flex-col gap-2 w-[60%]  text-[13px]">
-              <h5 className="mb-[10px] font-semibold text-[14px]">Solution</h5>
+              <h6 className="mb-[10px] font-semibold text-[14px]">Solution</h6>
               <Link onClick={() => bottom_navi_click("Advanced Funnel Optimization")} href="/" aria-label="about-us" className="hover:underline">
                 <p className="font-[300]">Advanced Funnel Optimization</p>
               </Link>
@@ -104,7 +104,7 @@ function Index() {
             </div>
 
             <div className="flex flex-col gap-2 w-[40%] text-[13px] mt-[30px] tablet:mt-[0px] items-start text-left">
-            <h5 className="mb-[10px] font-semibold text-[14px]">Quick Links</h5>
+            <h6 className="mb-[10px] font-semibold text-[14px]">Quick Links</h6>
             <Link onClick={() => bottom_navi_click("Contact Us")} href="/contact-us" aria-label="contact-us"  className="hover:underline">
                 <p className="font-[300]">Contact Us</p>
             </Link>

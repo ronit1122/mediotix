@@ -26,7 +26,7 @@ import {
       img: dataVisualization,
       metaTitle: "Data Visualization | Turning Data into Actionable Strategies",
       metaDesc: "Discover how data visualization simplifies complex data, uncovers trends, & drives actionable insights with best practices for better decision-making",
-      canonical: `https://www.mediotix.com/blog/data-visualization-for-actionable-insights/`,
+      canonical: `https://www.mediotix.com/blog/data-visualization-for-actionable-insights`,
      
       htmlString:`
 <div>
@@ -118,7 +118,7 @@ import {
     img: optimizingReferral,
     metaTitle: "Optimizing Referral Traffic in GA4 for Better Insights",
     metaDesc: "Learn how to optimize referral traffic in Google Analytics 4 (GA4) to improve your website's performance with detailed insights and optimization strategies",
-    canonical: `https://www.mediotix.com/blog/ga4-referral-traffic-optimization/`,
+    canonical: `https://www.mediotix.com/blog/ga4-referral-traffic-optimization`,
     organizationSchema: {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -248,7 +248,7 @@ import {
   url: "features-of-gmb-to-dominate-hyperlocal-markets",
   metaTitle: "Essential Features of GMB to Dominate Hyperlocal Markets",
   metaDesc: "Master hyperlocal marketing with essential GMB features to boost your business reach",
-  canonical: `https://www.mediotix.com/blog/features-of-gmb-to-dominate-hyperlocal-markets/`,
+  canonical: `https://www.mediotix.com/blog/features-of-gmb-to-dominate-hyperlocal-markets`,
   img: essentialFeatures,
   organizationSchema: {
     "@context": "https://schema.org",
@@ -407,7 +407,7 @@ import {
   img: topDataAnalyticsTools,
   metaTitle: "Top Data Analytics Tools and Software 2025",
   metaDesc: "Explore the best data analytics tools, including Tableau, Power BI, & Looker, to enhance business insights and growth.",
-  canonical: `https://www.mediotix.com/blog/best-data-analytics-tools-and-software/`,
+  canonical: `https://www.mediotix.com/blog/best-data-analytics-tools-and-software`,
   organizationSchema: {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -535,7 +535,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
     img: aiAwakens,
     metaTitle: "AI Awakens: Redefining Marketing Analytics for the Digital Era",
     metaDesc: "Explore how AI is revolutionizing marketing analytics by delivering real-time insights, predictive analytics, & smarter strategies for businesses",
-    canonical: `https://www.mediotix.com/blog/how-ai-redefines-marketing-analytics/`,
+    canonical: `https://www.mediotix.com/blog/how-ai-redefines-marketing-analytics`,
     organizationSchema: {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -645,7 +645,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
     img: firebaseAndGoogleAnalytics,
     metaTitle: "Firebase & Google Analytics: Powering Mobile App Insights",
     metaDesc: "Discover how Firebase and Google Analytics together provide powerful insights into user engagement, performance monitoring, & personalized experiences for mobile apps.",
-    canonical: `https://www.mediotix.com/blog/firebase-google-analytics-mobile-app-insights/`,
+    canonical: `https://www.mediotix.com/blog/firebase-google-analytics-mobile-app-insights`,
     organizationSchema: {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -751,7 +751,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
     url: "the-power-of-bigquery-integration-in-ga4",
     metaTitle: "The Power of BigQuery Integration in Google Analytics 4",
     metaDesc: "Unlock advanced insights with the BigQuery integration in GA4. Learn how businesses can leverage BigQuery for deeper data analysis, custom queries, and enhanced decision-making",
-    canonical: `https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4/`,
+    canonical: `https://www.mediotix.com/blog/the-power-of-bigquery-integration-in-ga4`,
     img: thePowerOfBigQuery,
     organizationSchema: {
       "@context": "https://schema.org",
@@ -883,7 +883,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
       url: "retention-roadmap-tracking-user-trends-with-ga4",
       metaTitle: "Retention Roadmap: Tracking User Trends with GA4",
       metaDesc: "Know how GA4 helps businesses track user behavior trends, optimize retention strategies, & enhance customer loyalty with data-driven insights.",
-      canonical: `https://www.mediotix.com/blog/retention-roadmap-tracking-user-trends-with-ga4/`,
+      canonical: `https://www.mediotix.com/blog/retention-roadmap-tracking-user-trends-with-ga4`,
       organizationSchema: {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -1095,7 +1095,7 @@ As data analytics continues to evolve, these leading tools and software for 2024
   url: "power-of-digital-analytics-in-marketing",
   metaTitle: "Quantifying Success: The Power of Digital Analytics in Marketing",
   metaDesc: "Explore how digital analytics drives data-driven decisions, enhances marketing strategies, & maximizes ROI.",
-  canonical: `https://www.mediotix.com/blog/power-of-digital-analytics-in-marketing/`,
+  canonical: `https://www.mediotix.com/blog/power-of-digital-analytics-in-marketing`,
   organizationSchema: {
     "@context": "https://schema.org",
     "@type": "Organization",
