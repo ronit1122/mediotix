@@ -157,6 +157,52 @@ const nextConfig = {
           destination: '/case-studies',
           permanent: true,
         },
+        {
+          source: '/blog/retention-roadmap-tracking-user-trends-with-ga4',
+          destination: '/blogs/retention-roadmap-tracking-user-trends-with-ga4',
+          permanent: true,
+        },
+        {
+          source: '/blog/firebase-google-analytics-mobile-app-insights',
+          destination: '/blogs/firebase-google-analytics-mobile-app-insights',
+          permanent: true,
+        },
+        {
+          source: '/blog/the-power-of-bigquery-integration-in-ga4',
+          destination: '/blogs/the-power-of-bigquery-integration-in-ga4',
+          permanent: true,
+        },
+        {
+          source: '/blog/ga4-referral-traffic-optimization',
+          destination: '/blogs/ga4-referral-traffic-optimization',
+          permanent: true,
+        },
+        {
+          source: '/blog/data-visualization-for-actionable-insights',
+          destination: '/blogs/data-visualization-for-actionable-insights',
+          permanent: true,
+        },
+        {
+          source: '/blog/features-of-gmb-to-dominate-hyperlocal-markets',
+          destination: '/blogs/features-of-gmb-to-dominate-hyperlocal-markets',
+          permanent: true,
+        },
+        {
+          source: '/blog/how-ai-redefines-marketing-analytics',
+          destination: '/blogs/how-ai-redefines-marketing-analytics',
+          permanent: true,
+        },
+        {
+          source: '/blog/best-data-analytics-tools-and-software',
+          destination: '/blogs/best-data-analytics-tools-and-software',
+          permanent: true,
+        },
+        {
+          source: '/blog/power-of-digital-analytics-in-marketing',
+          destination: '/blogs/power-of-digital-analytics-in-marketing',
+          permanent: true,
+        },
+        
       ];
     },
   };

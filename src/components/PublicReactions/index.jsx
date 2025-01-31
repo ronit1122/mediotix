@@ -21,10 +21,10 @@ export default function Home() {
            Public Reaction with Mediotix
         </h4>
         <div class=" grid-cols-4 gap-4 w-full hidden tablet:grid">
-           <div className="hover:scale-105 transition-all"><Link href={""}><Image src={publicReactionsOne} alt="public reations first banner" /></Link></div>
-           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C83vbyxtboA/?igsh=MTViaTEyNjYxcmpqcw=="}><Image src={publicReactionsTwo} alt="public reations second banner" /></Link></div>
-           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C-Rrtlst2ap/?igsh=cGFhdWI0eDFkbGJ4"}><Image src={publicReactionsThree} alt="public reations third banner" /></Link></div>
-           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C88unk-AWPE/?igsh=NmZrdWJzemRoenB2"}><Image src={publicReactionsFour} alt="public reations fourth banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={""}><Image src={publicReactionsOne} alt="public reactions first banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C83vbyxtboA/?igsh=MTViaTEyNjYxcmpqcw=="}><Image src={publicReactionsTwo} alt="public reactions second banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C-Rrtlst2ap/?igsh=cGFhdWI0eDFkbGJ4"}><Image src={publicReactionsThree} alt="public reactions third banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C88unk-AWPE/?igsh=NmZrdWJzemRoenB2"}><Image src={publicReactionsFour} alt="public reactions fourth banner" /></Link></div>
          </div>
         <div class=" w-full block tablet:hidden">
          <Swiper
@@ -43,14 +43,14 @@ export default function Home() {
 
       <SwiperSlide>
         <div class="grid grid-cols-2 gap-4 w-full">
-          <div className="hover:scale-105 transition-all"><Link href={""}><Image src={publicReactionsOne} alt="public reations first banner" /></Link></div>
-          <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C83vbyxtboA/?igsh=MTViaTEyNjYxcmpqcw=="}><Image src={publicReactionsTwo} alt="public reations second banner" /></Link></div>
+          <div className="hover:scale-105 transition-all"><Link href={""}><Image src={publicReactionsOne} alt="public reactions first banner" /></Link></div>
+          <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C83vbyxtboA/?igsh=MTViaTEyNjYxcmpqcw=="}><Image src={publicReactionsTwo} alt="public reactions second banner" /></Link></div>
          </div>
       </SwiperSlide>
       <SwiperSlide>
         <div class="grid grid-cols-2 gap-4 w-full">
-           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C-Rrtlst2ap/?igsh=cGFhdWI0eDFkbGJ4"}><Image src={publicReactionsThree} alt="public reations third banner" /></Link></div>
-           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C88unk-AWPE/?igsh=NmZrdWJzemRoenB2"}><Image src={publicReactionsFour} alt="public reations fourth banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C-Rrtlst2ap/?igsh=cGFhdWI0eDFkbGJ4"}><Image src={publicReactionsThree} alt="public reactions third banner" /></Link></div>
+           <div className="hover:scale-105 transition-all"><Link href={"https://www.instagram.com/reel/C88unk-AWPE/?igsh=NmZrdWJzemRoenB2"}><Image src={publicReactionsFour} alt="public reactions fourth banner" /></Link></div>
          </div>
       </SwiperSlide>
          </Swiper>

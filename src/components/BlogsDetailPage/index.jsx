@@ -147,7 +147,7 @@ export default function Index({blog}) {
             </Flex>
           </Flex>
           <Flex py="80px" w={isLargerThan900 ? "80%" : "95%"} mx='auto' gap="20px" justifyContent='space-between' position='relative'>
-            <Flex flexDir='column' w="65%" maxH="90vh" overflowY='scroll'>
+            <Flex flexDir='column' w="65%" pr="20px" maxH="90vh" overflowY='scroll'>
             {blogData?.htmlString ? (
     <Flex dangerouslySetInnerHTML={{ __html: blogData.htmlString }} />
   ) : (

@@ -155,7 +155,7 @@ export default function AboutUs() {
       <div className="bg-[#EAF6FF] py-[50px] tablet:py-[70px] ">
       <div className="flex w-[90%] tablet:w-[85%] flex-col items-center justify-center gap-2 mx-auto">
         <p className="text-end text-[clamp(10px,3vw,14px)] underline">Our History</p>
-        <h3 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] text-center mb-[10px] tablet:mb-[40px]">Success Story <br/> of our company</h3>
+        <h3 style={{fontSize: "clamp(24px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] text-center mb-[10px] tablet:mb-[40px]">Success Story <br/> of Our Company</h3>
       </div>
       <div className=" flex w-[90%] tablet:w-[85%] flex-row justify-center gap-[4%] pt-[30px] tablet:pt-[4%] pb-[7%] mx-auto bg-[#EAF6FF]">
             <Image alt="success story" src={successStory} className="hidden mobile:block" style={{objectFit: "contain", width: "100%"}} />

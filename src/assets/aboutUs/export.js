@@ -27,6 +27,7 @@ import pvr from './pvr.png';
 import spinny from './spinny.png';
 import tataMotors from './tataMotors.png';
 import zee5 from './zee5.png';
+import jll from './jll.png';
 
 export {
   approach,
@@ -42,6 +43,7 @@ export {
   successStoryMobile,
   linkedin,
   instagram,
+  jll,
   // Exporting remaining images
   airtel,
   aquaguard,

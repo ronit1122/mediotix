@@ -15,6 +15,8 @@ import { Box, Flex, Text,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import Link from 'next/link';
+
 import {gaurav, maanas, deepak, instagram, linkedin, airtel,
   aquaguard,
   asianPaints,
@@ -29,6 +31,7 @@ import {gaurav, maanas, deepak, instagram, linkedin, airtel,
   spinny,
   tataMotors,
   zee5,
+  jll,
 } from './../../assets/aboutUs/export.js';
 import Image from "next/image"
 import { FaPlay } from "react-icons/fa";
@@ -45,12 +48,12 @@ const CardGrid = () => {
   {
     name: "Gaurav K Vats", 
     designation: "CMO",
-    desc: "Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients.",
+    desc: <Text fontSize="15px" color="#000000" w="90%">Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients. | <b>EX- GroupM & Publicis Group</b></Text>,
     instagram: "https://www.instagram.com/gk_vats/",
     linkedin: "https://linkedin.com/in/digital-gk/",
     email: "gaurav.k@mediotix.com",
     specialist: "Digital Performance Marketing",
-    qualification: "MBA",
+    qualification: "MBA (Sales & Marketing)",
     experience: "14",
     brandImage: [
       <Image  alt="aquaguard" src={aquaguard} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
@@ -80,13 +83,13 @@ const CardGrid = () => {
   {
     name: "Deepak Arya", 
     designation: "COO",
-    desc: "Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. | EX-GroupM (WPP) & EX Dentsu.",
+    desc: <Text fontSize="15px"  color="#000000" w="90%">Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. | <b>EX-GroupM (WPP) & EX Dentsu.</b></Text>,
     instagram: "https://www.instagram.com/apkaarya",
     linkedin: "https://www.linkedin.com/in/deepakkumararya/",
     email: "deepak.arya@mediotix.com",
     specialist: "Digital Analytics",
-    qualification: "MBA",
-    experience: "14",
+    qualification: "MBA (Data Analytics)",
+    experience: "15",
     brandImage: [
       <Image alt="tatamotors" src={tataMotors} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
       <Image alt="asian paints" src={asianPaints} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
@@ -115,17 +118,16 @@ const CardGrid = () => {
   {
     name: "Maanash Saamal", 
     designation: "CEO",
-    desc: "Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.",
-    instagram: "",
+    desc: <Text>Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.| <b>EX- Microsoft</b></Text>,
     linkedin: "https://www.linkedin.com/in/maanash/",
     email: "maanash.saamal@mediotix.com",
-    specialist: "Data Analytics",
-    qualification: "MBA",
-    experience: "14",
+    specialist: "Data Science",
+    qualification: "Doctorate (Data Science)",
+    experience: "12",
     brandImage: [
       <Image alt="spinny" src={spinny} style={{objectFit: "contain", width: "60%", height: "60%"}} />,
       <Image alt="digbihealth" src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
-      <Image alt="pvr" src={pvr} style={{objectFit: "contain", width: "60%", height: "60%"}}  />,
+      <Image alt="jll" src={jll} style={{objectFit: "contain", width: "60%", height: "40%", marginBottom: "20px", marginTop: "20px"}}  />,
       <Image alt="lumen" src={lumen} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
       <Image alt="watcho" src={watcho} style={{objectFit: "contain", width: "50%", height: "50%"}}  />,
     ],
@@ -280,18 +282,22 @@ const CardGrid = () => {
           </Text>
           <ModalCloseButton />
           </Flex>
-          <Text  fontSize="15px"  color="#000000"  w="90%">
+        
             {names?.[selectedCard]?.desc}
-          </Text>
+       
 
           {/* Social Icons */}
           <Flex gap={4} mt="20px">
+            <Link href={names?.[selectedCard]?.linkedin}>
             <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("linkedin")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
               <Image  alt="linkedin" style={{width: "25px", height: "25px"}} src={linkedin} />
             </Flex>
+            </Link>
+            {names?.[selectedCard]?.instagram && <Link href={names?.[selectedCard]?.instagram ?? ""}>
             <Flex onClick={() => names?.[selectedCard]?.socialDataLayer("instagram")} cursor="pointer" alignItems="center" justify="center"  h="40px" w="40px" bg="white" borderRadius="full" style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset"}}>
               <Image alt="instagram" style={{width: "30px", height: "30px"}} src={instagram} />
             </Flex>
+            </Link>}
           </Flex>
 
           {/* Info Grid */}
@@ -309,15 +315,16 @@ const CardGrid = () => {
               <Text fontSize="14px" >Specialist</Text>
               <Text>{names?.[selectedCard]?.specialist}</Text>
             </Box>
-            <Box>
-              <Text fontSize="14px" >Qualification</Text>
-              <Text>{names?.[selectedCard]?.qualification}</Text>
-            </Box>
-            </Flex>
-            <Flex gap="15px" flexDir="column">
             <Box >
               <Text fontSize="14px" >Email</Text>
               <Text>{names?.[selectedCard]?.email}</Text>
+            </Box>
+            </Flex>
+
+            <Flex gap="15px" flexDir="column">
+            <Box>
+              <Text fontSize="14px" >Qualification</Text>
+              <Text>{names?.[selectedCard]?.qualification}</Text>
             </Box>
             <Box >
               <Text fontSize="14px">Industry Experience</Text>
