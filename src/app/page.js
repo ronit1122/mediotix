@@ -133,16 +133,16 @@ export default function Home() {
       <div style={{paddingTop: "70px"}}  className="flex items-center justify-center text-center h-[370px] tablet:h-[620px] relative">
         <div  style={{zIndex: "3"}}  className="absolute flex items-center justify-center w-full h-full">
           {/* <Image alt="section one banner" src={sectionOneBanner} style={{objectFit: "cover", width: "100%", height: "100%"}}/> */}
-    <div className="h-[650px] overflow-hidden">
-    <div style={{opacity: "0.6", zIndex: "5"}} className="absolute  w-full h-[650px] bg-black "></div>
+    <div className=" h-[400px] tablet:h-[650px] w-full overflow-hidden">
+    <div style={{opacity: "0.6", zIndex: "5"}} className="absolute  w-full  h-[400px] tablet:h-[650px] bg-black "></div>
     <video
-      width="100%"
-      height="100%"
-      autoPlay
-      loop
-      muted
-      playsInline
-      >
+  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+  className="w-full h-full" 
+  autoPlay 
+  loop 
+  muted 
+  playsInline
+>
       <source src="/headerClip.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -152,8 +152,9 @@ export default function Home() {
           <div className="flex flex-col items-center ">
            <div className="border-b-2 w-fit mb-[26px]">
              <p className="font-medium text-[clamp(10px,3vw,14px)]">Experience the Best Agency</p>
-           </div>
-           <h1 className="text-[clamp(20px,4vw,48px)] font-[800] tablet:leading-[1.1]">Fueling Brand Growth with <br/> Intelligent Marketing & AI Power Analytics</h1>
+           </div> 
+
+           <h1 className="text-[clamp(20px,4vw,48px)] font-[800] tablet:leading-[1.1]">Fueling Brand Growth with <br/> New Edge Marketing & AI Powered Analytics</h1>
            {/* <h1 className="text-[clamp(20px,4vw,48px)] font-black tablet:leading-[0.5]"></h1> */}
            <p className=" mt-[40px] hidden tablet:block font-light">Our AI-driven MarTech solutions help to provide actionable insights, optimize marketing <br/> campaigns, and drive business growth.</p>
           </div>

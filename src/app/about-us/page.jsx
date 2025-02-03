@@ -168,7 +168,7 @@ export default function AboutUs() {
       <div className="w-full flex flex-col tablet:flex-row justify-between items-center gap-[20px]" >
         <div className="tablet:w-[30%]">
           <h3 style={{fontSize: "clamp(22px, 3vw, 48px)", lineHeight: "1.2"}} className="font-[900] mb-[10px] tablet:mb-[30px]">Founder Footprints</h3>
-          <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence and a proven track record; we're your trusted partner for all your digital needs. delivering cutting-edge solutions to clients worldwide.</p>
+          <p style={{fontSize: "clamp(14px, 2vw, 15px)"}} >Mediotix is a leading MarTech agency with a global presence and a proven track record. We're your trusted partner for all your digital needs. Delivering cutting-edge solutions to clients worldwide.</p>
         </div>
         <div className="tablet:w-[60%] mt-[20px] tablet:mt-0 flex justify-end">
           <FounderFootprints />

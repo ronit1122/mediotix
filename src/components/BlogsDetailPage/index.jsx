@@ -170,10 +170,9 @@ export default function Index({blog}) {
 
     <Text fontSize="18px" mt="22px" fontWeight="900">Popular Tags</Text>
                <Flex flexWrap="wrap" gap="8px" mt="5px">
-               <Flex px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">#DataDriven</Flex>
-               <Flex px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">#PowerBI</Flex>
-               <Flex px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">#GoogleAnalytics4</Flex>
-               <Flex px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">#BigData</Flex>
+                {blogData?.tags?.map((item, index) => (
+                 <Flex key={index} px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">{item}</Flex>
+                ))}
                </Flex>
                <Text fontSize="18px" fontWeight="900"  mt="30px">Share Blogs on</Text>
                <Flex className="flex gap-5 mt-[20px]">

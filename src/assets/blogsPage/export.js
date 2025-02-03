@@ -8,6 +8,9 @@ import retentionRoadmap from './retentionRoadmap.png';
 import thePowerOfBigQuery from './thePowerOfBigQuery.png';
 import topDataAnalyticsTools from './topDataAnalyticsTools.png';
 import essentialFeatures from './essentialFeatures.png';
+import howToOptimizeWebsiteWithVoiceSearch from './howToOptimizeWebsiteWithVoiceSearch.jpg';
+import shapingSeoWithAi from './shapingSeoWithAi.jpg';
+import upcomingTrendsInHyperLocalMarketing from './upcomingTrendsInHyperLocalMarketing.jpg';
 
 export {
   aiAwakens,
@@ -20,4 +23,7 @@ export {
   thePowerOfBigQuery,
   topDataAnalyticsTools,
   essentialFeatures,
+  howToOptimizeWebsiteWithVoiceSearch,
+  shapingSeoWithAi,
+  upcomingTrendsInHyperLocalMarketing,
 };

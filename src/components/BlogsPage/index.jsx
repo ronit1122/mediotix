@@ -1,6 +1,6 @@
 'use client'
-import React from "react";
-import { Flex, SimpleGrid, Text, useMediaQuery, Box } from "@chakra-ui/react";
+import React, {useState} from "react";
+import { Flex, SimpleGrid, Text, useMediaQuery, Box, Button} from "@chakra-ui/react";
 import CardComp from '../BlogsCard/index.jsx';
 import Navbar from '../Navbar/index.jsx';
 import Footer from '../Footer/index.jsx';
@@ -12,8 +12,19 @@ import {blogs} from './../../utils/blogsData.js';
 export default function Index() {
   const [isLargerThan900] = useMediaQuery("(min-width: 900px)");
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
+  const [selectedPage, setSelectedPage ] = useState(0)
 
 
+  const paginationList = [
+    {
+      name: 1,
+      value: 0
+    },
+    {
+      name: 2,
+      value: 9
+    },
+  ]
 
   return (
     <Box
@@ -56,13 +67,21 @@ export default function Index() {
             columns={isLargerThan900 ? 3 : isLargerThan600 ? 2 : 1}
             spacing={40}
           >
-            {blogs?.map((item) => (
+            {blogs?.slice(selectedPage, selectedPage + 9)?.map((item) => (
               <React.Fragment key={uuidv4()}>
                 <CardComp item={item} />
               </React.Fragment>
             ))}
           </SimpleGrid>
         </Flex>
+
+        <Flex  h="50px" mt="40px" justifyContent="center" alignItems="center">
+            {paginationList?.map((item, index) => (
+               <Button w="35px" h="35px" borderRadius="50px" color={selectedPage === item?.value ? "white" : "black"} bg={selectedPage === item?.value ? "#FF7D78" : "transparent"} onClick={() => setSelectedPage(item?.value)} >{item?.name}</Button>
+            ))}
+        </Flex>
+
+
       </Flex>
       <Footer />
     </Box>

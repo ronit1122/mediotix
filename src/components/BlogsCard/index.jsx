@@ -55,7 +55,7 @@ export default function CardComp({ item, blogsReadMoreClickDataLayerPush}) {
     >
       <Flex flexDir="column" >
         <Flex h="180px" cursor='pointer' position='relative'>
-          <Image  borderRadius="20px" objectFit="cover" src={img} loading='lazy' alt={imgAlt}/>
+          <Image   style={{objectFit: "cover"}} src={img} loading='lazy' alt={imgAlt}/>
         </Flex>
         <Stack mt="6" spacing="3" p='20px'>
           <Flex mb="13px">
