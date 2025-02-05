@@ -572,7 +572,7 @@ const ResourcesMenuData = () => {
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
       <div className="flex flex-col tablet:flex-row justify-between items-center">
         <div className="w-full tablet:h-[250px] tablet:w-[350px] flex flex-row tablet:flex-col bg-white gap-2 items-center p-[10px] rounded-[10px]">
-         <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() =>{ setSelectedMenu("caseStudy"); top_navi_resources_click("Case study")}}>Case study</button>
+         <button className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "caseStudy" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() =>{ setSelectedMenu("caseStudy"); top_navi_resources_click("Case study")}}>Case Study</button>
          <button  className={` rounded-[10px] w-full text-start p-[10px] ${selectedMenu === "blogs" ? 'text-white bg-[#FF7A7A]' : 'bg-white text-black'}`} onClick={() => {setSelectedMenu("blogs"); top_navi_resources_click("Blogs")}}>Blogs</button>
         </div>
         <div className="w-full">

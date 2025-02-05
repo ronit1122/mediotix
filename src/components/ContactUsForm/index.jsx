@@ -274,37 +274,41 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-2">
-              <div
-                className="w-[50px] h-[50px] flex justify-center items-center rounded-full"
-                style={{
-                  background:
-                    isLargerThan900 && "linear-gradient(180deg, rgba(255, 147, 99, 0.4) 0%, rgba(255, 122, 122, 0.4) 100%)",
-                }}
-              >
-                <FaPhoneVolume style={{ color: "#ff7554", fontSize: "25px" }} />
-              </div>
-              <div className="flex flex-col ">
-                <p>Phone Number:</p>
-                <p>(+91) 99906 63211</p>
-              </div>
-            </div>
+            <a href="tel:+919990663211" className="flex gap-2 items-center hover:opacity-80 transition">
+        <div
+          className="w-[50px] h-[50px] flex justify-center items-center rounded-full"
+          style={{
+            background: isLargerThan900
+              ? "linear-gradient(180deg, rgba(255, 147, 99, 0.4) 0%, rgba(255, 122, 122, 0.4) 100%)"
+              : "none",
+          }}
+        >
+          <FaPhoneVolume style={{ color: "#ff7554", fontSize: "25px" }} />
+        </div>
+        <div className="flex flex-col">
+          <p>Phone Number:</p>
+          <p className="hover:underline">(+91) 99906 63211</p>
+        </div>
+      </a>
 
-            <div className="flex gap-2">
-              <div
-                className="w-[50px] h-[50px] flex justify-center items-center rounded-full"
-                style={{
-                  background:
-                    isLargerThan900 &&"linear-gradient(180deg, rgba(255, 147, 99, 0.4) 0%, rgba(255, 122, 122, 0.4) 100%)",
-                }}
-              >
-                <HiMail style={{ color: "#ff7554", fontSize: "25px" }} />
-              </div>
-              <div className="flex flex-col ">
-                <p>Email:</p>
-                <p>info@mediotix.com</p>
-              </div>
-            </div>
+      {/* Email Section */}
+      <a href="mailto:info@mediotix.com" className="flex gap-2 items-center  hover:opacity-80 transition">
+        <div
+          className="w-[50px] h-[50px] flex justify-center items-center rounded-full"
+          style={{
+            background: isLargerThan900
+              ? "linear-gradient(180deg, rgba(255, 147, 99, 0.4) 0%, rgba(255, 122, 122, 0.4) 100%)"
+              : "none",
+          }}
+        >
+          <HiMail style={{ color: "#ff7554", fontSize: "25px" }} />
+        </div>
+        <div className="flex flex-col">
+          <p>Email:</p>
+          <p className=" hover:underline">info@mediotix.com</p>
+        </div>
+      </a>
+
           </div>
         </div>
       </div>

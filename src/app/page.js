@@ -192,7 +192,7 @@ export default function Home() {
       {/* section 3 */}
       <div className="bg-white">
         <div className="flex flex-col w-[90%] gap-[4%] pt-[3%] pb-[7%] mx-auto tablet:w-[85%]">
-          <h3 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  text-[#FF7D78]" >What We Do</h3>
+          <h3 style={{fontSize: "clamp(22px, 3vw, 35px)"}}  className="font-[900] text-center  " >What We Do</h3>
           
           <div className="w-full flex flex-col gap-[10px] mt-8 tablet:flex-row ">
 

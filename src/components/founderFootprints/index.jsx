@@ -48,7 +48,8 @@ const CardGrid = () => {
   {
     name: "Gaurav K Vats", 
     designation: "CMO",
-    desc: <Text fontSize="15px" color="#000000" w="90%">Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients. <br/> <b>EX- GroupM & Publicis Group.</b></Text>,
+    desc: <Text fontSize="15px" color="#000000" w="90%">Over 14 Years of experience in Performance & Digital Marketing which includes Search Engine Marketing, Facebook Ads & Display Ads. During my tenure, I have spent more than 500 Crores collectively on various Digital Marketing Platforms for my clients.</Text>,
+    ex: <Text fontSize="15px" fontWeight="600">EX- GroupM & Publicis Group.</Text>,
     instagram: "https://www.instagram.com/gk_vats/",
     linkedin: "https://linkedin.com/in/digital-gk/",
     email: "gaurav.k@mediotix.com",
@@ -83,7 +84,8 @@ const CardGrid = () => {
   {
     name: "Deepak Arya", 
     designation: "COO",
-    desc: <Text fontSize="15px"  color="#000000" w="90%">Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights. <br/> <b>EX-GroupM (WPP) & EX Dentsu.</b></Text>,
+    desc: <Text fontSize="15px"  color="#000000" w="90%">Delivering data-driven insights that help brands to boost their conversions, sales, and ROI across a wide range of industries, including entertainment, healthcare, lifestyle, business, technology, finance, and e-commerce, to convert data into valuable insights.</Text>,
+    ex: <Text fontSize="15px" fontWeight="600">EX-GroupM (WPP) & EX Dentsu.</Text>,
     instagram: "https://www.instagram.com/apkaarya",
     linkedin: "https://www.linkedin.com/in/deepakkumararya/",
     email: "deepak.arya@mediotix.com",
@@ -118,7 +120,8 @@ const CardGrid = () => {
   {
     name: "Maanash Saamal", 
     designation: "CEO",
-    desc: <Text>Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.<br/> <b>EX- Microsoft.</b></Text>,
+    desc: <Text>Specialized in data analytics, product design, development, and marketing. Expert in turning data into actionable insights and crafting innovative solutions to drive growth. Skilled at combining technical expertise with strategic thinking for impactful products and marketing strategies.</Text>,
+    ex: <Text fontSize="15px" fontWeight="600">EX- Microsoft.</Text>,
     linkedin: "https://www.linkedin.com/in/maanash/",
     email: "maanash.saamal@mediotix.com",
     specialist: "Data Science",
@@ -284,6 +287,7 @@ const CardGrid = () => {
           </Flex>
         
             {names?.[selectedCard]?.desc}
+            {names?.[selectedCard]?.ex}
        
 
           {/* Social Icons */}
