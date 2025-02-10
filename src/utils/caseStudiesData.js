@@ -264,10 +264,10 @@ import {
           desc: "Increased CVR",
         },
       ],
-      route: 'lakme-academy-paidAds',
+      route: 'lakme-academy-paidads',
       metaTitle: "Lakmé Academy Paid Ads Success Story | Mediotix",
-      metaDescription: "Discover how Mediotix enhanced Lakmé Academy's local SEO, improving visibility & keyword rankings for beauty & cosmetology courses",
-      canonical: "https://www.mediotix.com/case-studies/lakme-academy-paidAds",
+      metaDescription: "See how Mediotix helped Lakmé Academy achieve 6X better leads, reduce CPL by 40%, and double CVR with targeted Google and Meta ads",
+      canonical: "https://www.mediotix.com/case-studies/lakme-academy-paidads",
       organizationSchema: {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -696,7 +696,7 @@ import {
         },
       ],
       route: 'invest-up',
-      metaTitle: "Invest UP Digital Transformation | SEO Case Study by Mediotix",
+      metaTitle: "Invest UP SEO Case Study by Mediotix",
       metaDescription: "Mediotix partnered with Invest UP to improve SEO strategies, enhancing visibility for investment opportunities in Uttar Pradesh. Discover the impact here",
       canonical: "https://www.mediotix.com/case-studies/invest-up",
       organizationSchema: {

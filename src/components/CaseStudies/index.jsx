@@ -20,7 +20,7 @@
       {
         name: "Finolex Case Study",
         src: finolex,
-        tagline: "Unique SEO Strategy that Achieved 90% Boost in Keyword Visibility & Performance",
+        tagline: <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">Unique SEO Strategy that Achieved <b>90%</b> Boost in Keyword Visibility & Performance</p>,
         imgAltText: "icon of finolex",
         bgAltText: "A set of image of clapper board,Camera, reel, popcorn",
         bg: finolexBg,
@@ -31,7 +31,7 @@
       },
       {
         name: "Watcho Case Study",
-        tagline: "A Well-informed Data-driven Strategy that Boosted Sign-ups by 200%",
+        tagline: <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">A Well-informed Data-driven Strategy that Boosted Sign-ups by <b>200%</b></p>,
         imgAltText: "icon of watcho",
         bgAltText: "image of microscope plate",
         src: watcho,
@@ -43,7 +43,7 @@
       {
         name: "Lakmé Academy (Paid ads)",
         src: lakme,
-        tagline: "Boosting Results with 6X Better Quality Leads Through Paid Ads.",
+        tagline: <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">Boosting Results with <b>6X</b> Better Quality Leads Through Paid Ads.</p>,
         imgAltText: "icon of lakme",
         bgAltText: "image of a girl",
         bg: lakmeAcademyPaidAdsBg,
@@ -53,7 +53,7 @@
       },
       {
         name: "PVR Case Study",
-        tagline:  "Know how 85% Increment happened in Conversion Rate within 3 months",
+        tagline:  <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">Know how <b>85%</b> Increment happened in Conversion Rate within 3 months</p>,
         imgAltText: "icon of pvr ",
         bgAltText: "image of statoscope",
         src: pvr,
@@ -66,7 +66,7 @@
       {
         name: "MaxHealth Study",
         src: maxHealth,
-        tagline: "150% Increased Conversions Rate within 6 months by Optimizing Conversion Funnel",
+        tagline: <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]"><b>150%</b> Increased Conversions Rate within 6 months by Optimizing Conversion Funnel</p>,
         imgAltText: "icon of max health",
         bgAltText: "image of Go Pro Camera ",
         bg: maxHealthBg,
@@ -143,9 +143,9 @@
                      
                         <div className="order-2">
                           <div className={`rounded-[25px] tablet:rounded-[10px] p-[2rem] tablet:p-[3rem] text-[#546E7A] flex flex-col bg-[rgba(255,255,255,0.72)]`}>
-                            <p className="text-[clamp(16px,3vw,22px)] leading-[110%] font-bold text-[#263238]">
+                            
                               {item.tagline}
-                            </p>
+                       
                             <button
                               className="mt-[2rem] w-[10rem] text-white naviteButton"
                               onClick={() => {

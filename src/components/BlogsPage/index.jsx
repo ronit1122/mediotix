@@ -26,6 +26,18 @@ export default function Index() {
     },
   ]
 
+      
+  const readMoreCaseStudiesDataLayerPush = (blogName) => {
+    
+    if (typeof window !== 'undefined' &&  window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'case_studies_read_more',
+          'case_studies': blogName,
+        });
+    };
+  }
+
+
   return (
     <Box
       className="font-nexa"
@@ -69,7 +81,7 @@ export default function Index() {
           >
             {blogs?.slice(selectedPage, selectedPage + 9)?.map((item) => (
               <React.Fragment key={uuidv4()}>
-                <CardComp item={item} />
+                <CardComp item={item} blogsReadMoreClickDataLayerPush={readMoreCaseStudiesDataLayerPush} />
               </React.Fragment>
             ))}
           </SimpleGrid>

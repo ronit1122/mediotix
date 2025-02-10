@@ -126,13 +126,13 @@ export default function Index({clientName}) {
 
           <Flex  w={isLargerThan900 ? "80%" : "95%"} flexDir={isLargerThan700 ? "row" : "column"} mx='auto' gap="20px" position='relative'>
             <Flex flexDir='column' w={isLargerThan700 ? "60%" : "100%"}>
-            <Text fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Challenges</Text>
+            <Text as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Challenges</Text>
             <UnorderedList my="24px">
               {caseStudyData?.challenges?.map((item, index) => (
                 <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>
               ))}
             </UnorderedList>
-            <Text fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Approach</Text>
+            <Text  as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Approach</Text>
             <UnorderedList my="24px">
             {caseStudyData?.approach?.map((item, index) => (
                 <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>

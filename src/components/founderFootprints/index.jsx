@@ -55,7 +55,7 @@ const CardGrid = () => {
     email: "gaurav.k@mediotix.com",
     specialist: "Digital Performance Marketing",
     qualification: "MBA in Sales & Marketing",
-    experience: "14",
+    experience: "14 years",
     brandImage: [
       <Image  alt="aquaguard" src={aquaguard} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
       <Image alt="marutiSuzuki" src={marutiSuzuki} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
@@ -91,7 +91,7 @@ const CardGrid = () => {
     email: "deepak.arya@mediotix.com",
     specialist: "Digital Analytics",
     qualification: "MBA in Data Analytics",
-    experience: "15",
+    experience: "15 years",
     brandImage: [
       <Image alt="tatamotors" src={tataMotors} style={{objectFit: "contain", width: "70%", height: "70%"}} />,
       <Image alt="asian paints" src={asianPaints} style={{objectFit: "contain", width: "70%", height: "70%"}}  />,
@@ -126,7 +126,7 @@ const CardGrid = () => {
     email: "maanash.saamal@mediotix.com",
     specialist: "Data Science",
     qualification: "Doctorate in Data Science",
-    experience: "12",
+    experience: "12 years",
     brandImage: [
       <Image alt="spinny" src={spinny} style={{objectFit: "contain", width: "60%", height: "60%"}} />,
       <Image alt="digbihealth" src={digbiHealth} style={{objectFit: "contain", width: "70%", height: "70%"}} />,

@@ -114,7 +114,7 @@ export default function Navbar() {
 
   const navbarLinksData = [
     { 
-      name: "Solution",
+      name: "Solutions",
       takeTo: "/",
       hover: () => _handleTabsHover("solution"),
     },
@@ -483,27 +483,27 @@ const ResourcesMenuData = () => {
     caseStudy: [
       {
         icon: <Image src={pvr} className="object-contain"  alt="pvr" />,
-        desc: "PVR: Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
+        desc: "Smart tagging drives 25% cost reduction, boosting PVR Cinemas' digital strategy and partnership growth",
         takeTo: "/case-studies/pvr-cinemas",
         dataLayer: () => caseStudyDataLayerPush("PVR")
       },
       {
         icon: <Image src={maxHealth} className="object-contain" alt="max health" />,
-        desc: "Max Healthcare: Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
+        desc: "Max Healthcare's targeted strategy doubled conversions in just three months, enhancing patient engagement and care.",
         takeTo: "/case-studies/max-healthcare",
         dataLayer: () => caseStudyDataLayerPush("Max Healthcare")
 
       },
       {
         icon: <Image src={finolex} className="object-contain" alt="finolex" />,
-        desc: "Finolex Pipes & Fitting: Unique SEO Strategy that Achieved 90% Boost in Keyword Visibility & Performance",
+        desc: "Unique SEO Strategy that Achieved 90% Boost in Keyword Visibility & Performance",
         takeTo: "/case-studies/finolex-pipes-and-fitting",
         dataLayer: () => caseStudyDataLayerPush("Finolex pipes & fitting")
 
       },
       {
         icon: <Image src={gsk} className="object-contain" alt="gsk" />,
-        desc: "GSK: Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
+        desc: "Increased ROAS by 40% through optimized ad strategies and data-driven insights for GSK.",
         takeTo: "/case-studies/gsk",
         dataLayer: () => caseStudyDataLayerPush("GSK")
 
@@ -567,6 +567,8 @@ const ResourcesMenuData = () => {
           
   };
   }
+
+
 
   return (
     <div className="w-[100%] tablet:w-[80%] mx-auto  relative ">
@@ -655,6 +657,17 @@ const AboutUsMenuData = () => {
       console.log('Event pushed to dataLayer');
   };
 
+  const readMoreAboutMediotix = () => {
+    
+    if (typeof window !== 'undefined' &&  window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'read_more_about_mediotix'
+        });
+    };
+  }
+
+
+
 
   return (
     <div className=" w-[100%] tablet:w-[80%] mx-auto relative ">
@@ -662,7 +675,7 @@ const AboutUsMenuData = () => {
         <div className=" tablet:w-[500px] flex flex-col  gap-2  text-start tablet:text-white">
            <p className="font-semibold mb-4">About Mediotix</p>
            <p className="text-[clamp(12px,3vw,14px)]">Mediotix is a leading MarTech agency with a global presence, serving clients worldwide through our large network of offices and strategic relationships. We believe in the power of data. Our team uses advanced analytics techniques to uncover actionable insights that drive successful marketing strategies. Our track record talks for itself.</p>
-           <Link href={'/about-us'}>
+           <Link href={'/about-us'} onClick={readMoreAboutMediotix}>
              <div className="flex flex-row gap-[5px] items-center mt-[13px] hover:underline">
                <p className="text-[10px] font-[700]  cursor-pointer">Read More About Mediotix</p>
                <IoIosArrowRoundForward className="text-[20px]"/>

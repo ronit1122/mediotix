@@ -3,7 +3,7 @@ import LandingFooter from './../../components/Footer/index.jsx';
 import LandingNavbar from './../../components/Navbar/index.jsx';
 
 export const metadata = {
-  title: 'Mediotix Terms & Conditions | Billing, Service Policies & Agreement',
+  title: 'Mediotix Terms & Conditions | Policies & Agreement',
   description: 'Read the Mediotix Terms & Conditions to understand service charges, billing policies, cancellation terms, & legal agreements.',
   alternates: {
     canonical: 'https://www.mediotix.com/terms-and-conditions',
