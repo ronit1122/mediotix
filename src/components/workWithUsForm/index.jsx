@@ -112,7 +112,6 @@ export default function Home() {
       if (formRef.current) {
         const formData = new FormData(formRef.current);
   
-        console.log(formData, "formData")
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -120,7 +119,6 @@ export default function Home() {
           });
   
           const result = await response.text();
-          console.log("Response from Google Script:", result, formRef.current, formData);
         } catch (error) {
           console.error("Error submitting form:", error);
         }
@@ -147,7 +145,6 @@ export default function Home() {
             'job_applied_for': job
           })
         }
-        console.log('Event pushed to dataLayer');
     };
 
 
@@ -160,7 +157,7 @@ export default function Home() {
               <h4 className=" text-[#212121] font-[900]" style={{fontSize: "clamp(26px, 3vw, 48px)", lineHeight: "1.2"}}>
                 Want to work with us? <br/> Join Our Team
               </h4>
-              <p className="tablet:mt-[30px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
+              <p className="mt-[15px] tablet:mt-[30px]">We'd love to have more skilled and talented people on board.<br/> Check out our job opening!</p>
            </div>
            <form ref={formRef} onSubmit={e =>{handleSubmit(e)}} >
            <div className="rounded-[8px] flex flex-col gap-4 p-[20px] tablet:p-[30px]" style={{background: isLargerThan900 ? "linear-gradient(180deg, #FF7D78 0%, #FF9363 100%)" : "white", border: !isLargerThan900 ? "2px solid #ccc" : "none"}}>

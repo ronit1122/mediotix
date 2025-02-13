@@ -67,7 +67,6 @@ export default function Index({blog}) {
 
   const blogsReadMoreClickDataLayerPush = (blog) => {
 
-    console.log(blogsReadMoreClickDataLayerPush, 'blogsReadMoreClickDataLayerPush in main ')
 
 
     if (typeof window !== 'undefined' && window.dataLayer) {

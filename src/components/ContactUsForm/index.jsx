@@ -127,7 +127,6 @@ export default function Home() {
         'event': 'contactus_get_in_touch_form_submit',
       });
       }
-      console.log('Event pushed to dataLayer');
   };
 
 

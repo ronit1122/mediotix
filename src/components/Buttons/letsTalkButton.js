@@ -8,7 +8,6 @@ const LetsTalkButton = () => {
           event: 'home_banner_lets_talk',
         });
       }
-      console.log('Event pushed to dataLayer');
   };
 
 

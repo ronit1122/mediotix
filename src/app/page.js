@@ -23,8 +23,8 @@ import BookADemoButton from './../components/Buttons/bookADemo';
 import { Metadata } from 'next';
 
 export const metadata = {
-  title: 'Mediotix |Best Analytics, CRO, Hyperlocal & Digital Marketing Agency',
-  description: 'Meta Description: Maximize conversions with Mediotix—your trusted partner for digital analytics, conversion rate, SEO, PPC, SMM, and hyperlocal marketing solutions In Delhi NCR',
+  title: 'Mediotix | Best Analytics, CRO, Hyperlocal & Digital Marketing Agency',
+  description: 'Maximize conversions with Mediotix—your trusted partner for digital analytics, conversion rate, SEO, PPC, SMM, and hyperlocal marketing solutions In Delhi NCR',
   alternates: {
     canonical: 'https://www.mediotix.com/',
   },
@@ -114,7 +114,6 @@ export default function Home() {
         event: 'book_a_demo',
       });
     }
-    console.log('Event pushed to dataLayer');
   };
 
 

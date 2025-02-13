@@ -31,7 +31,7 @@ export default function Index() {
     
     if (typeof window !== 'undefined' &&  window.dataLayer) {
         window.dataLayer.push({
-          'event': 'case_studies_read_more',
+          'event': 'blogs_read_more',
           'case_studies': blogName,
         });
     };

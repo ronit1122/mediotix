@@ -18,7 +18,6 @@ function Index() {
         'var_bottom_navi': navigation
       });
       }
-      console.log('Event pushed to dataLayer');
   };
 
   const social_media_link_click = (navigation) => {
@@ -28,7 +27,6 @@ function Index() {
         'social_media': navigation
       });
       }
-      console.log('Event pushed to dataLayer');
   };
 
   return (

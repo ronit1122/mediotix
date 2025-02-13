@@ -8,7 +8,6 @@ const LetsTalkButton = () => {
           event: 'book_a_demo',
         });
       }
-      console.log('Event pushed to dataLayer');
   };
 
   return (

@@ -83,7 +83,6 @@
               'case_studies': navigation,
           });
         }
-        console.log('Event pushed to dataLayer');
     };
   
 
@@ -94,7 +93,6 @@
               'case_studies': navigation,
           });
         }
-        console.log('Event pushed to dataLayer');
     };
   
     return (

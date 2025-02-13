@@ -51,7 +51,7 @@ export default function ContactUs() {
       {/* section 8 */}
       <div className="bg-white relative flex flex-col gap-6  pt-[70px] tablet:pt-[100px]">
            <div className=" mx-auto text-center">
-              <h2 className=" text-[#FF7D78] text-[clamp(25px,3vw,40px)] font-[900]">
+              <h2 className=" text-[#000000] text-[clamp(25px,3vw,40px)] font-[900]">
                   Get in Touch
               </h2>
               <p className="">Reach out with your queries, We’re here to help!</p>

@@ -10,7 +10,6 @@ export async function generateMetadata({ params }) {
     const title = `${blogData?.metaTitle}`;
     const description = `${blogData?.metaDesc}`;
 
-    console.log(blogData, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
 
     if (!blogData) {
       notFound(); // Redirect to the not-found page
@@ -37,7 +36,6 @@ export default function Index({params}) {
 
   const blogData = blogs?.filter((item) => item?.url === decodeURIComponent(blog))?.[0];
   
-  console.log(blogData, "blogData------------------------------------------------------------------------------------------------------------------------------------------------------------------")
   
   return (
       <main>

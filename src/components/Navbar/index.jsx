@@ -109,7 +109,6 @@ export default function Navbar() {
         'event': 'top_navi_about_us'
       })
     }
-    console.log('Event pushed to dataLayer');
   };
 
   const navbarLinksData = [
@@ -148,7 +147,6 @@ export default function Navbar() {
         event: 'mediotix_logo_click',
       });
     }
-    console.log('Event pushed to dataLayer');
   };
 
   const handletop_navi_contact_us  = () => {
@@ -157,7 +155,6 @@ export default function Navbar() {
         event: 'top_navi_contact_us',
       });
     }
-    console.log('Event pushed to dataLayer');
   };
 
   const handletop_navi_mx360_click  = () => {
@@ -166,7 +163,6 @@ export default function Navbar() {
         event: 'top_navi_mx360_click',
       });
     }
-    console.log('Event pushed to dataLayer');
   };
 
 
@@ -249,7 +245,7 @@ export default function Navbar() {
     <h2>
       <AccordionButton>
         <Box fontSize="14px" as='span' flex='1' textAlign='left'>
-           Solution
+           Solutions
         </Box>
         <AccordionIcon />
       </AccordionButton>
@@ -424,7 +420,6 @@ const SolutionsMenuData = () => {
         'var_top_navi_solution': navigation
        });
       }
-      console.log('Event pushed to dataLayer');
   };
 
 
@@ -545,7 +540,6 @@ const ResourcesMenuData = () => {
         'var_top_navi_resources': navigation
       });
       }
-      console.log('Event pushed to dataLayer');
   };
 
   const viewAllCaseStudiesDataLayerPush = () => {
@@ -654,7 +648,6 @@ const AboutUsMenuData = () => {
         'event': 'top_navi_view_all_clients'
       });
       }
-      console.log('Event pushed to dataLayer');
   };
 
   const readMoreAboutMediotix = () => {

@@ -105,7 +105,6 @@ export default function Home() {
       if (formRef.current) {
         const formData = new FormData(formRef.current);
   
-        console.log(formData, "formData")
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -113,7 +112,6 @@ export default function Home() {
           });
   
           const result = await response.text();
-          console.log("Response from Google Script:", result, formRef.current, formData);
         } catch (error) {
           console.error("Error submitting form:", error);
         }
@@ -138,14 +136,13 @@ export default function Home() {
               'event': 'home_get_in_touch_form_submit'
           });
         }
-        console.log('Event pushed to dataLayer');
     };
   
   return (
     <div className=" flex w-[90%] tablet:w-[85%]  gap-[4%] pt-[4%] pb-[6%] mx-auto relative">
         <div style={{zIndex: "10"}}  class="grid grid-cols-1 tablet:grid-cols-2 gap-4 w-full">
            <div className="mt-12">
-              <h5 className=" text-[#FF7D78] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
+              <h5 className=" text-[#000000] font-[900]"  style={{fontSize: "clamp(26px, 3vw, 40px)"}}>
                   Get in Touch
               </h5>
               <p >Please feel free to connect with us for your quick enquiry

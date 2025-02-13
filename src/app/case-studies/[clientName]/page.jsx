@@ -34,7 +34,6 @@ export async function generateMetadata({ params }) {
     const { clientName } = params;
     const caseStudyData = cases?.filter((item) => item?.route === decodeURIComponent(clientName))?.[0];
 
-    console.log(caseStudyData?.canonical, "caseStudyData?.canonical")
 
     
     return (
