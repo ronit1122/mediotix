@@ -63,7 +63,7 @@ export default function ContactUs() {
       <div style={{zIndex: "0"}} className="hidden tablet:block absolute bottom-[50%] right-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
       {/* <div style={{zIndex: "0"}} className=" absolute top-[0%] left-[-10%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div> */}
            <div className=" mx-auto text-center mb-[20px]">
-              <h3 className=" text-[#FF7D78] text-[clamp(25px,3vw,40px)] font-[900]">
+              <h3 className=" text-[#000000] text-[clamp(25px,3vw,40px)] font-[900]">
                  Our Presence
               </h3>
            </div>
