@@ -77,13 +77,13 @@ export default function Home() {
       link: "/",
     },
     {
-      title: "Affiliate Marketing",
-      desc: "Expand your reach and sales with effective affiliate marketing techniques compatible with your company's specific needs.",
+      title: "Lead Generation",
+      desc: "Turn clicks into customers with our data-driven lead generation services! We help businesses attract, engage, and convert into high-quality leads with targeted strategies that bring the right customers.",
       link: "/",
     },
     {
-      title: "Paid Social",
-      desc: "Amplify your brand’s presence on social media with targeted paid campaigns that engage and convert.",
+      title: "Ecommerce Marketing",
+      desc: "Boost sales and scale your online store with our performance-driven ecommerce marketing. we craft strategies that drive traffic, increase sales, and maximize ROI.",
       link: "/",
     },
   ]
