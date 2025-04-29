@@ -109,15 +109,52 @@ export default function Home() {
     
       };
   
-      const handleSubmit = (e) => {
-        e.preventDefault()
-        
-        toast.promise(_MutationContactUsForm(), {
-          success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
-          error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
-          loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
-        })
-      }
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+      
+        toast.promise(
+          (async () => {
+            try {
+              // Send email
+              handleSendMail();
+      
+              // Push to Google Tag Manager (dataLayer)
+              contactus_get_in_touch_form_submit();
+      
+              // Reset form fields
+              setEmail('');
+              setFirstName('');
+              setSecondName('');
+              setPhone('');
+              setMessage('');
+      
+              return "Form submitted successfully";
+            } catch (err) {
+              console.error(err);
+              throw new Error("Form submission failed");
+            }
+          })(),
+          {
+            success: {
+              title: "Done!",
+              description: "Form submitted successfully",
+              duration: 1000,
+              position: "top-right",
+            },
+            error: {
+              title: "Wait!!",
+              description: "Something went wrong",
+              position: "top-right",
+            },
+            loading: {
+              title: "Sending...",
+              description: "Please wait",
+              position: "top-right",
+            },
+          }
+        );
+      };
+      
 
 
       

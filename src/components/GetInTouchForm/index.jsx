@@ -89,11 +89,11 @@ export default function Home() {
           from_phone: phone,
       }
   
-      // emailjs.send(serviceID, templateID, userData, userID)
-      //   .then((response) => {
-      //   }, (error) => {
+      emailjs.send(serviceID, templateID, userData, userID)
+        .then((response) => {
+        }, (error) => {
   
-      //   });
+        });
   
     };
 
@@ -118,17 +118,44 @@ export default function Home() {
       }
     };
 
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      
-      toast.promise(_MutationGetInTouchForm(), {
-        success: { title: 'Done!', description: 'Form submitted successfully', duration: 1000, position: 'top-right' },
-        error: { title: 'Wait!!', description: 'Something went wrong', position: 'top-right' },
-        loading: { title: 'Sending...', description: 'Please wait', position: 'top-right' },
-      })
-
-      
-    }
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      toast.promise(
+        (async () => {
+          try {
+            // Run all non-GraphQL form actions
+            await handleRunDriveScript();
+            handleSendMail();
+            home_get_in_touch_form_submit();
+    
+            return "Form submitted successfully";
+          } catch (err) {
+            console.error(err);
+            throw new Error("Form submission failed");
+          }
+        })(),
+        {
+          success: {
+            title: "Done!",
+            description: "Form submitted successfully",
+            duration: 3000,
+            position: "top-right",
+          },
+          error: {
+            title: "Wait!!",
+            description: "Something went wrong",
+            position: "top-right",
+          },
+          loading: {
+            title: "Sending...",
+            description: "Please wait",
+            position: "top-right",
+          },
+        }
+      );
+    };
+    
 
     const home_get_in_touch_form_submit = () => {
       if (typeof window !== 'undefined' && window.dataLayer) {
