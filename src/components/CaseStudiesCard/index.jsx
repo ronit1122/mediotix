@@ -46,7 +46,7 @@ export default function CardComp({ item, readOtherCaseStudiesDataLayerPush }) {
     <Flex
     onClick={(e) => { readOtherCaseStudiesDataLayerPush && readOtherCaseStudiesDataLayerPush(name)}}
     h="100%"
-      classname="font-nexa"
+      classname="font-poppins"
       fontSize={["clamp(12px, 1.5vw, 15px)"]}
       color="#000000"
       borderRadius="12px"

@@ -42,7 +42,7 @@ export default function CardComp({ item, blogsReadMoreClickDataLayerPush}) {
     <Flex
     h="100%"
     onClick={() => blogsReadMoreClickDataLayerPush && blogsReadMoreClickDataLayerPush(name)}
-      classname="font-nexa"
+      classname="font-poppins"
       fontSize={["clamp(12px, 1.5vw, 15px)"]}
       color="#000000"
       borderRadius="12px"

@@ -235,7 +235,7 @@ export default function Navbar() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent fontSize="14px"  className="font-nexa">
+        <DrawerContent fontSize="14px"  className="font-poppins">
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
 

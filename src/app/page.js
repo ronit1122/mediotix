@@ -120,7 +120,7 @@ export default function Home() {
 
 
   return (
-    <main className="font-nexa">
+    <main className="font-poppins">
       {/* <Head>
         <title>Mediotix MarTech Agency Contact Details | Phone & Address</title>
         <meta name="description" content="An Award winning digital marketing & web analytics agency, Equipped with GAIQ Certified professionals. Specialized team for GTM, Google Data Studio, Funnel Optimization etc" />

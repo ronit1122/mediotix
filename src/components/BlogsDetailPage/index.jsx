@@ -79,7 +79,7 @@ export default function Index({blog}) {
   
   return (
       <Box
-        className="font-nexa"
+        className="font-poppins"
         fontSize={["clamp(13px, 1.5vw, 15px)"]}
         fontWeight="500"
         color="#263238"

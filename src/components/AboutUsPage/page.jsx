@@ -76,7 +76,7 @@ export default function AboutUs() {
 
   return (
     <ChakraProvider>
-    <main className="font-nexa">
+    <main className="font-poppins">
       <Navbar />
 
       {/* section 1 */}
@@ -89,7 +89,7 @@ export default function AboutUs() {
            {/* <div className="border-b-2 w-fit">
              <h3 className="font-medium ">Experience the Best Agency</h3>
            </div> */}
-           {/* <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2> */}
+           {/* <h2 className="text-5xl font-medium font-poppins">Fueling Brand Growth with</h2> */}
            <h1 className="text-[clamp(20px,3vw,48px)]  font-black">About Us</h1>
            <p className="font-[400] text-[clamp(14px,3vw,18px)]">Welcome to Mediotix, your trusted AI-powered MarTech solutions partner focusing on <br /> digital growth with data-driven actionable insights.</p>
           </div>

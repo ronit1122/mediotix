@@ -25,7 +25,7 @@ export default function ContactUs() {
 
 
   return (
-    <main className="font-nexa">
+    <main className="font-poppins">
       <Navbar />
 
       {/* section 1 */}
@@ -39,7 +39,7 @@ export default function ContactUs() {
            {/* <div className="border-b-2 w-fit">
              <h3 className="font-medium ">Experience the Best Agency</h3>
            </div> */}
-           {/* <h2 className="text-5xl font-medium font-nexa">Fueling Brand Growth with</h2> */}
+           {/* <h2 className="text-5xl font-medium font-poppins">Fueling Brand Growth with</h2> */}
            <h1 className="text-[clamp(25px,3vw,40px)]  font-black">Contact Us</h1>
            <p className="font-light text-[clamp(13px,3vw,15px)]">Connect with us today to unlock data-driven insights and boost your <br /> business with advanced analytics solutions.</p>
           </div>

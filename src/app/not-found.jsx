@@ -8,7 +8,7 @@ export default function NotFound() {
 
 
   return (
-    <main className="font-nexa bg-white">
+    <main className="font-poppins bg-white">
       <Navbar />
 
       {/* section 1 */}

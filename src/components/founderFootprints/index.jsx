@@ -161,7 +161,7 @@ const CardGrid = () => {
       width="100%"
       align="center"
       justify="center"
-       className="font-nexa"
+       className="font-poppins"
     >
       <Flex
         wrap="wrap"
@@ -251,7 +251,7 @@ const CardGrid = () => {
      <Modal w="fit-content" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent minW="fit-content" >
-          <ModalBody  className="font-nexa" p="0" minW="100%" maxW="70vw">
+          <ModalBody  className="font-poppins" p="0" minW="100%" maxW="70vw">
           <Flex
       direction="column"
   
