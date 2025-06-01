@@ -61,7 +61,7 @@ export default function CardComp({ item, blogsReadMoreClickDataLayerPush}) {
           <Flex mb="13px">
             <Text mr="8px">{dateCreated}</Text> | <Text ml="8px">{views} views</Text>
           </Flex>
-          <Heading size="md" fontWeight="900">{name}</Heading>
+          <Heading size="md" fontWeight="700">{name}</Heading>
           <Text>{desc}</Text>
         </Stack>
       </Flex>

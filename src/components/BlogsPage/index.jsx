@@ -60,7 +60,7 @@ export default function Index() {
         <div style={{zIndex: "0"}} className="hidden tablet:block absolute top-[20%] left-[-20%]  w-80 h-80 bg-[#ffd2c9] rounded-full mix-blend-normal filter blur-[5rem]"></div>
           <Text
             fontSize={["clamp(25px, 3vw, 48px)"]}
-            fontWeight="900"
+            fontWeight="700"
             color="#263238"
             as="h1"
           >

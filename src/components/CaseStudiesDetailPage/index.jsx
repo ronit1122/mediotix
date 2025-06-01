@@ -126,13 +126,13 @@ export default function Index({clientName}) {
 
           <Flex  w={isLargerThan900 ? "80%" : "95%"} flexDir={isLargerThan700 ? "row" : "column"} mx='auto' gap="20px" position='relative'>
             <Flex flexDir='column' w={isLargerThan700 ? "60%" : "100%"}>
-            <Text as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Challenges</Text>
+            <Text as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="700">Challenges</Text>
             <UnorderedList my="24px">
               {caseStudyData?.challenges?.map((item, index) => (
                 <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>
               ))}
             </UnorderedList>
-            <Text  as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="900">Approach</Text>
+            <Text  as="h2" fontSize={["clamp(20px, 3vw, 32px)"]} fontWeight="700">Approach</Text>
             <UnorderedList my="24px">
             {caseStudyData?.approach?.map((item, index) => (
                 <ListItem key={index} fontSize={["clamp(13px, 3vw, 18px) !important"]} >{item}</ListItem>
@@ -141,7 +141,7 @@ export default function Index({clientName}) {
             </Flex>
             <Flex w={isLargerThan700 ? "40%" : "100%"} flexDir='column'>
                <DownloadForm clientName={clientName} />
-               <Text fontSize="18px" fontWeight="900">Share Case Study on</Text>
+               <Text fontSize="18px" fontWeight="700">Share Case Study on</Text>
                <div className="flex gap-5 mt-[20px]">
                <Flex
                   cursor='pointer'
@@ -185,7 +185,7 @@ export default function Index({clientName}) {
 
           <Flex bg="#EAF6FFCC" mt="80px" pb={"50px" }>
             <Flex w={isLargerThan900 ? "80%" : "95%"} flexDir='column' minH="75vh" mx='auto' alignItems="center" >
-              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Case Studies</Text>
+              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="700">Other Case Studies</Text>
             <SimpleGrid
             mx="auto"
             columns={isLargerThan900 ? 3 : isLargerThan600 ? 2 : 1}

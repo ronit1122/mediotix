@@ -96,14 +96,14 @@ export default function Index({blog}) {
          
             <Flex w={isLargerThan900 ? "80%" : "95%"} mx='auto' h="100%" position='absolute' zIndex={10}>
             <Flex  w={isLargerThan900 ? "50%" : "95%"} width="100%" justifyContent="center" gap="18px" flexDir='column'>
-              <Text as="h1" fontSize={["clamp(20px, 3vw, 35px)"]} fontWeight="900">{blogData?.name}</Text>
+              <Text as="h1" fontSize={["clamp(20px, 3vw, 35px)"]} fontWeight="700">{blogData?.name}</Text>
               <Flex justifyContent="space-between" w="70%">
                 <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="400">Last Updated: {blogData?.dateCreated}</Text>
                 <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="400">Views: {blogData?.views}</Text>
                 <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="400">Category: {blogData?.category}</Text>
               </Flex>
               <Flex  mt="10px" alignItems="center" gap="30px" >
-                <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="900">Share Blogs on</Text>
+                <Text fontSize={["clamp(14px, 3vw, 18px)"]} fontWeight="700">Share Blogs on</Text>
                 <Flex gap="20px">
                <Flex
                   cursor='pointer'
@@ -158,7 +158,7 @@ export default function Index({blog}) {
                {/* <label for="name" class="block mb-2 text-sm font-medium tablet:text-white ">Full name</label> */}
                <input type="text" id="name" class="bg-white border outline-none border-gray-300 text-gray-900 text-sm rounded-md focus:ring-green-700 focus:border-green-700 block w-full p-2.5 " placeholder="Search" />
               </div>
-              <Text fontSize="18px" mt="22px" fontWeight="900">Categories</Text>
+              <Text fontSize="18px" mt="22px" fontWeight="700">Categories</Text>
               <UnorderedList>
       <ListItem>Data analytics</ListItem>
       <ListItem>Artificial intelligence</ListItem>
@@ -167,13 +167,13 @@ export default function Index({blog}) {
       <ListItem>Marketing</ListItem>
     </UnorderedList>
 
-    <Text fontSize="18px" mt="22px" fontWeight="900">Popular Tags</Text>
+    <Text fontSize="18px" mt="22px" fontWeight="700">Popular Tags</Text>
                <Flex flexWrap="wrap" gap="8px" mt="5px">
                 {blogData?.tags?.map((item, index) => (
                  <Flex key={index} px="30px" h="38px" borderRadius="10px" border="1px solid #bfbfbf" w="fit-content" justifyContent="center" alignItems="center">{item}</Flex>
                 ))}
                </Flex>
-               <Text fontSize="18px" fontWeight="900"  mt="30px">Share Blogs on</Text>
+               <Text fontSize="18px" fontWeight="700"  mt="30px">Share Blogs on</Text>
                <Flex className="flex gap-5 mt-[20px]">
                <Flex
                   cursor='pointer'
@@ -216,7 +216,7 @@ export default function Index({blog}) {
           </Flex>
           <Flex bg="#EAF6FFCC" mt="80px">
             <Flex w={isLargerThan900 ? "80%" : "95%"} flexDir='column' minH="75vh" pb="50px" mx='auto' alignItems="center" >
-              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="900">Other Blogs</Text>
+              <Text fontSize={["clamp(20px, 3vw, 32px)"]} my="35px" alignSelf='start' fontWeight="700">Other Blogs</Text>
             <SimpleGrid
             mx="auto"
             columns={isLargerThan900 ? 3 : isLargerThan600 ? 2 : 1}

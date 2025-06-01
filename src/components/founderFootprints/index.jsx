@@ -276,11 +276,10 @@ const CardGrid = () => {
           direction="column"
           gap="5px"
           flex="2"
-           
           color="#000000"
         >
           <Flex >
-          <Text  fontSize="clamp(24px,3vw,48px)" fontWeight="900">
+          <Text  fontSize="clamp(24px,3vw,48px)" fontWeight="700">
             {names?.[selectedCard]?.name}
           </Text>
           <ModalCloseButton />
