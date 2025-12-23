@@ -283,7 +283,7 @@ export default function Home() {
           >
             <iframe
               title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.8307539786832!2d77.05125026624508!3d28.43659134187296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191172e5422d%3A0xdf0acbbafc3d160c!2sOahfeo%20Workspaces%20-%20Frappe%20-%20Best%20Coworking%20Space%20Gurugram%20Sector%2046%20%7C%20Private%20Office%20on%20Rent%20%7C%20Virtual%20Office!5e0!3m2!1sen!2sin!4v1725026872968!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.989765549173!2d77.03604327474787!3d28.419565675781712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d229e71ef44dd%3A0x9931b80f30d32dd3!2sJMD%20Megapolis!5e0!3m2!1sen!2sin!4v1766486795741!5m2!1sen!2sin"
               
               height="250"
               style={{ border: 0, width: isLargerThan900 ? "500px" : "100%"}} // Corrected: style should be an object
@@ -306,7 +306,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col ">
                 <p className="">Address:</p>
-                <p>1094P, Oahfeo Frappe, sector 46 Gurgaon</p>
+                <p>Unit No. 464, 4th Floor, JMD Megapolis, Sohna Road, Sector 48, Gurugram, Haryana, 122018</p>
               </div>
             </div>
 
